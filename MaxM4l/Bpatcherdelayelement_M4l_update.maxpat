@@ -23,7 +23,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 703.6363395452499, 689.0908855199814, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 26.0, 173.0, 33.06451636552811, 18.0 ],
+                    "presentation_rect": [ 29.16666555404663, 172.9166600704193, 33.06451636552811, 18.0 ],
                     "text": "Input"
                 }
             },
@@ -37,7 +37,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 688.6363395452499, 674.0908855199814, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 23.0, 149.0, 37.90322607755661, 18.0 ],
+                    "presentation_rect": [ 24.999999046325684, 148.95832765102386, 37.90322607755661, 18.0 ],
                     "text": "Shifter"
                 }
             },
@@ -70,19 +70,17 @@
             },
             {
                 "box": {
+                    "appearance": 1,
                     "fontsize": 10.0,
-                    "format": 6,
                     "id": "input-fade",
-                    "maxclass": "flonum",
-                    "maximum": 2.0,
-                    "minimum": 0.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 960.0, 300.0, 65.0, 20.0 ],
+                    "patching_rect": [ 960.0, 300.0, 65.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 26.0, 55.0, 46.0, 20.0 ],
+                    "presentation_rect": [ 26.04166567325592, 57.291664481163025, 46.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 0.05 ],
@@ -100,34 +98,34 @@
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "bgoncolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgoncolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activetextcolor": [ 1.0, 0.0, 0.0, 1.0 ],
+                    "activetextoncolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
+                    "automation": "Unlinked",
+                    "automationon": "Linked",
                     "fontsize": 11.0,
                     "id": "obj-53",
-                    "legacytextcolor": 1,
-                    "maxclass": "textbutton",
-                    "mode": 1,
+                    "maxclass": "live.text",
                     "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "int" ],
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "outputmode": 1,
                     "parameter_enable": 1,
                     "patching_rect": [ 142.528733253479, 663.5330975055695, 55.74712550640106, 34.16804027557373 ],
                     "presentation": 1,
-                    "presentation_rect": [ 107.0, 103.0, 49.99999952316284, 39.73727464675903 ],
+                    "presentation_rect": [ 114.58332896232605, 103.12499606609344, 53.645831286907196, 39.583331823349 ],
                     "saved_attribute_attributes": {
-                        "bgcolor": {
+                        "activebgcolor": {
                             "expression": ""
                         },
-                        "bgoncolor": {
+                        "activebgoncolor": {
                             "expression": ""
                         },
-                        "textcolor": {
+                        "activetextcolor": {
                             "expression": ""
                         },
-                        "textoncolor": {
-                            "expression": ""
-                        },
-                        "textovercolor": {
+                        "activetextoncolor": {
                             "expression": ""
                         },
                         "valueof": {
@@ -143,12 +141,7 @@
                         }
                     },
                     "text": "Unlinked",
-                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ],
                     "texton": "Linked",
-                    "textoncolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
-                    "textovercolor": [ 1.0, 1.0, 1.0, 1.0 ],
-                    "usebgoncolor": 1,
-                    "usetextovercolor": 1,
                     "varname": "FreqshiftLink"
                 }
             },
@@ -565,22 +558,25 @@
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "appearance": 1,
                     "fontsize": 12.0,
-                    "format": 6,
                     "id": "up",
-                    "maxclass": "flonum",
-                    "maximum": 5000.0,
-                    "minimum": 0.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "parameter_mappable": 0,
-                    "patching_rect": [ 332.3421015739441, 502.38094758987427, 50.0, 22.0 ],
+                    "patching_rect": [ 332.3421015739441, 502.38094758987427, 50.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 162.0, 85.0, 50.0, 22.0 ],
+                    "presentation_rect": [ 175.5208266377449, 80.72916358709335, 50.0, 18.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "textcolor": {
+                            "expression": ""
+                        },
                         "valueof": {
                             "parameter_initial": [ 50.0 ],
                             "parameter_initial_enable": 1,
@@ -588,7 +584,8 @@
                             "parameter_mmax": 5000.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "D1 Freqshift Up Hz",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
                         }
                     },
                     "textcolor": [ 0.5294117647058824, 0.7529411764705882, 1.0, 1.0 ],
@@ -607,21 +604,25 @@
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "appearance": 1,
                     "fontsize": 12.0,
-                    "format": 6,
                     "id": "down",
-                    "maxclass": "flonum",
-                    "maximum": 5000.0,
-                    "minimum": 0.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 439.4849576950073, 502.38094758987427, 50.0, 22.0 ],
+                    "patching_rect": [ 439.4849576950073, 502.38094758987427, 50.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 161.0, 126.0, 50.0, 22.0 ],
+                    "presentation_rect": [ 174.47916001081467, 122.91666197776794, 50.0, 18.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "textcolor": {
+                            "expression": ""
+                        },
                         "valueof": {
                             "parameter_initial": [ 50.0 ],
                             "parameter_initial_enable": 1,
@@ -629,7 +630,8 @@
                             "parameter_mmax": 5000.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "D1 Freqshift Down Hz",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
                         }
                     },
                     "textcolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
@@ -679,7 +681,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 434.52380537986755, 428.57142448425293, 51.11111354827881, 29.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 149.0, 57.0, 18.0 ],
+                    "presentation_rect": [ 172.3958267569542, 139.58332800865173, 57.0, 18.0 ],
                     "text": "Shift Down"
                 }
             },
@@ -716,35 +718,36 @@
             },
             {
                 "box": {
-                    "bgcolor": [ 0.7215686274509804, 0.7215686274509804, 0.7215686274509804, 1.0 ],
-                    "bgoncolor": [ 1.0, 1.0, 1.0, 1.0 ],
+                    "activebgcolor": [ 0.7215686274509804, 0.7215686274509804, 0.7215686274509804, 1.0 ],
+                    "activebgoncolor": [ 1.0, 1.0, 1.0, 1.0 ],
+                    "activetextcolor": [ 0.6941176470588235, 0.0, 0.0, 1.0 ],
+                    "activetextoncolor": [ 0.1411764705882353, 0.8470588235294118, 0.0, 1.0 ],
                     "fontsize": 10.0,
                     "id": "obj-31",
-                    "legacytextcolor": 1,
-                    "maxclass": "textbutton",
-                    "mode": 1,
+                    "maxclass": "live.text",
                     "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "int" ],
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "outputmode": 1,
                     "parameter_enable": 1,
                     "patching_rect": [ 755.9523737430573, 335.7142825126648, 62.09677463769913, 20.16129046678543 ],
                     "presentation": 1,
-                    "presentation_rect": [ 107.0, 77.0, 50.2342372238636, 22.522522509098053 ],
+                    "presentation_rect": [ 115.88541224598885, 77.08333039283752, 52.3437480032444, 22.39583247900009 ],
                     "saved_attribute_attributes": {
-                        "bgcolor": {
+                        "activebgcolor": {
                             "expression": ""
                         },
-                        "bgoncolor": {
+                        "activebgoncolor": {
                             "expression": ""
                         },
-                        "textcolor": {
+                        "activetextcolor": {
                             "expression": ""
                         },
-                        "textoncolor": {
+                        "activetextoncolor": {
                             "expression": ""
                         },
                         "valueof": {
-                            "parameter_enum": [ "off", "on" ],
+                            "parameter_enum": [ "val1", "val2" ],
                             "parameter_initial": [ 0 ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Filter Ein/Aus",
@@ -755,10 +758,7 @@
                         }
                     },
                     "text": "FilterOFF",
-                    "textcolor": [ 0.6941176470588235, 0.0, 0.0, 1.0 ],
                     "texton": "FilterON",
-                    "textoncolor": [ 0.1411764705882353, 0.8470588235294118, 0.0, 1.0 ],
-                    "usebgoncolor": 1,
                     "varname": "DelaymodulONOFF[1]"
                 }
             },
@@ -1384,30 +1384,31 @@
             },
             {
                 "box": {
-                    "bgoncolor": [ 0.5372549019607843, 0.5372549019607843, 0.5372549019607843, 1.0 ],
+                    "activebgoncolor": [ 0.5372549019607843, 0.5372549019607843, 0.5372549019607843, 1.0 ],
+                    "activetextcolor": [ 1.0, 0.0, 0.0, 1.0 ],
+                    "activetextoncolor": [ 0.168627450980392, 1.0, 0.0, 1.0 ],
                     "id": "obj-36",
-                    "legacytextcolor": 1,
-                    "maxclass": "textbutton",
-                    "mode": 1,
+                    "maxclass": "live.text",
                     "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [ "", "", "int" ],
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "outputmode": 1,
                     "parameter_enable": 1,
                     "patching_rect": [ 161.90476036071777, 58.333332777023315, 37.22627717256546, 14.59854006767273 ],
                     "presentation": 1,
                     "presentation_rect": [ 26.0, 9.0, 55.64516168832779, 24.923387050628662 ],
                     "saved_attribute_attributes": {
-                        "bgoncolor": {
+                        "activebgoncolor": {
                             "expression": ""
                         },
-                        "textcolor": {
+                        "activetextcolor": {
                             "expression": ""
                         },
-                        "textoncolor": {
+                        "activetextoncolor": {
                             "expression": ""
                         },
                         "valueof": {
-                            "parameter_enum": [ "off", "on" ],
+                            "parameter_enum": [ "val1", "val2" ],
                             "parameter_initial": [ 0 ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Ein/Aus",
@@ -1418,10 +1419,7 @@
                         }
                     },
                     "text": "OFF",
-                    "textcolor": [ 1.0, 0.0, 0.0, 1.0 ],
                     "texton": "ON",
-                    "textoncolor": [ 0.168627450980392, 1.0, 0.0, 1.0 ],
-                    "usebgoncolor": 1,
                     "varname": "DelaymodulONOFF"
                 }
             },
@@ -1446,8 +1444,8 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 258.3333308696747, 148.8095223903656, 88.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 64.0, 147.0, 92.75806546211243, 23.0 ],
-                    "text": "Beide An",
+                    "presentation_rect": [ 64.06249755620956, 147.0, 107.29166257381439, 23.0 ],
+                    "text": "Alle Aus",
                     "textjustification": 1
                 }
             },
@@ -1680,7 +1678,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 765.4761831760406, 460.7142813205719, 68.88889217376709, 16.111111879348755 ],
                     "presentation": 1,
-                    "presentation_rect": [ 22.0, 76.0, 83.06451672315598, 24.193548560142517 ],
+                    "presentation_rect": [ 21.874999165534973, 76.04166376590729, 90.6249965429306, 23.958332419395447 ],
                     "saved_attribute_attributes": {
                         "activebgoncolor": {
                             "expression": "themecolor.live_macro_assignment"
@@ -2040,10 +2038,10 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 308.3333303928375, 67.85714221000671, 66.94444763660431, 38.000000953674316 ],
                     "presentation": 1,
-                    "presentation_rect": [ 22.0, 99.0, 83.06451672315598, 43.54838740825653 ],
+                    "presentation_rect": [ 21.874999165534973, 98.9583295583725, 90.6249965429306, 43.749998331069946 ],
                     "saved_attribute_attributes": {
                         "valueof": {
-                            "parameter_enum": [ "OFF", "UP", "DOWN", "UPDOWN" ],
+                            "parameter_enum": [ "Alle Aus", "Oberes Band", "Unteres Band", "Beide An" ],
                             "parameter_initial": [ 3 ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Seitenbänder",
@@ -2182,25 +2180,23 @@
                     "numoutlets": 0,
                     "patching_rect": [ 673.6363395452499, 659.0908855199814, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 188.0, 57.0, 18.0 ],
+                    "presentation_rect": [ 174.47916001081467, 181.77082639932632, 57.0, 18.0 ],
                     "text": "Filter Q"
                 }
             },
             {
                 "box": {
+                    "appearance": 1,
                     "fontsize": 12.0,
-                    "format": 6,
                     "id": "obj-15",
-                    "maxclass": "flonum",
-                    "maximum": 0.98,
-                    "minimum": 0.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 675.4545212984085, 681.8181574344635, 42.0, 22.0 ],
+                    "patching_rect": [ 675.4545212984085, 681.8181574344635, 42.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 167.0, 57.0, 22.0 ],
+                    "presentation_rect": [ 175.5208266377449, 164.0624937415123, 57.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 0.35 ],
@@ -2209,7 +2205,8 @@
                             "parameter_mmax": 0.98,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Q",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
                         }
                     },
                     "varname": "FilterQDelayelement"
@@ -2225,7 +2222,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 571.4285659790039, 384.5238058567047, 53.88889145851135, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 24.0, 53.88889145851135, 18.0 ],
+                    "presentation_rect": [ 171.35416013002396, 16.66666603088379, 53.88889145851135, 18.0 ],
                     "text": "Feedback"
                 }
             },
@@ -2239,7 +2236,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 481.2725239396095, 661.8181581497192, 60.22221755981445, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 66.0, 57.0, 18.0 ],
+                    "presentation_rect": [ 170.31249350309372, 55.72916454076767, 57.0, 18.0 ],
                     "text": "FilterCutoff"
                 }
             },
@@ -2253,7 +2250,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 361.90475845336914, 430.9523768424988, 51.11111354827881, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 108.0, 58.15606927871704, 18.0 ],
+                    "presentation_rect": [ 175.5208266377449, 97.39582961797714, 48.95833146572113, 18.0 ],
                     "text": "Shift Up"
                 }
             },
@@ -2267,7 +2264,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 590.3225848674774, 701.5240452289581, 53.21100473403931, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 89.0, 34.0, 53.21100473403931, 18.0 ],
+                    "presentation_rect": [ 93.2291631102562, 33.8541653752327, 53.21100473403931, 18.0 ],
                     "text": "Delaytime"
                 }
             },
@@ -2287,7 +2284,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 590.3225848674774, 675.7175934314728, 49.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 90.0, 12.0, 52.98183512687683, 22.0 ],
+                    "presentation_rect": [ 94.27082973718643, 11.979166209697723, 52.98183512687683, 22.0 ],
                     "textcolor": [ 1.0, 1.0, 1.0, 1.0 ],
                     "varname": "DelaytimeinabstractionDelay1"
                 }
@@ -2777,21 +2774,37 @@
             },
             {
                 "box": {
-                    "activecolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.16, 0.16, 0.16, 1.0 ],
+                    "activebgoncolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
                     "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "disabled": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
+                    "fontsize": 9.0,
                     "id": "obj-813",
-                    "itemtype": 0,
-                    "maxclass": "radiogroup",
+                    "maxclass": "live.tab",
+                    "num_lines_patching": 8,
+                    "num_lines_presentation": 8,
                     "numinlets": 1,
-                    "numoutlets": 1,
-                    "offset": 24,
-                    "outlettype": [ "" ],
+                    "numoutlets": 3,
+                    "outlettype": [ "", "", "float" ],
                     "parameter_enable": 1,
                     "patching_rect": [ 324.9999969005585, 190.47618865966797, 18.33333420753479, 194.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 5.0, 9.0, 18.0, 194.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "activebgoncolor": {
+                            "expression": ""
+                        },
+                        "bgcolor": {
+                            "expression": ""
+                        },
+                        "textcolor": {
+                            "expression": ""
+                        },
+                        "textoncolor": {
+                            "expression": ""
+                        },
                         "valueof": {
                             "parameter_enum": [ "No Input", "DPA oben", "DPA unten", "Schertler oben", "Schertler unten", "Alle Luftmikrofone", "Alle Klappen", "Tutti" ],
                             "parameter_initial": [ 2 ],
@@ -2804,9 +2817,12 @@
                             "parameter_unitstyle": 9
                         }
                     },
-                    "shape": 1,
-                    "size": 8,
-                    "value": 2,
+                    "spacing_x": 3.0,
+                    "spacing_y": 3.0,
+                    "textcolor": [ 0.0, 0.0, 0.0, 0.0 ],
+                    "textoncolor": [ 0.0, 0.0, 0.0, 0.0 ],
+                    "valuepopup": 1,
+                    "valuepopuplabel": 1,
                     "varname": "radiogroupDelayinswitch"
                 }
             },
@@ -2848,31 +2864,35 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 219.04761695861816, 395.23809146881104, 87.0, 23.0 ],
+                    "patching_rect": [ 219.04761695861816, 395.23809146881104, 113.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 64.0, 171.0, 93.5483877658844, 23.0 ],
-                    "text": "DPA unten",
+                    "presentation_rect": [ 64.0, 171.0, 113.0, 23.0 ],
+                    "text": "Alle Luftmikrofone",
                     "textcolor": [ 0.0, 0.0, 0.0, 1.0 ],
                     "textjustification": 1
                 }
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "appearance": 1,
                     "fontsize": 12.0,
-                    "format": 6,
                     "id": "obj-67",
-                    "maxclass": "flonum",
-                    "maximum": 0.98,
-                    "minimum": 0.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 534.5238044261932, 383.3333296775818, 39.0, 22.0 ],
+                    "patching_rect": [ 534.5238044261932, 383.3333296775818, 39.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 3.0, 56.0, 22.0 ],
+                    "presentation_rect": [ 170.31249350309372, 3.1249998807907104, 56.0, 18.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "textcolor": {
+                            "expression": ""
+                        },
                         "valueof": {
                             "parameter_initial": [ 0.21 ],
                             "parameter_initial_enable": 1,
@@ -2880,7 +2900,8 @@
                             "parameter_mmax": 0.98,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Feedback",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
                         }
                     },
                     "textcolor": [ 0.168627450980392, 1.0, 0.0, 1.0 ],
@@ -2889,22 +2910,25 @@
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
+                    "appearance": 1,
                     "fontsize": 12.0,
-                    "format": 6,
-                    "htricolor": [ 0.929411764705882, 0.352941176470588, 0.352941176470588, 1.0 ],
                     "id": "obj-66",
-                    "maxclass": "flonum",
-                    "maximum": 10000.0,
-                    "minimum": 20.0,
+                    "maxclass": "live.numbox",
                     "numinlets": 1,
                     "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
+                    "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 479.45434218645096, 680.9090665578842, 56.0, 22.0 ],
+                    "patching_rect": [ 479.45434218645096, 680.9090665578842, 56.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 157.0, 43.0, 56.0, 22.0 ],
+                    "presentation_rect": [ 170.31249350309372, 40.10416513681412, 56.0, 18.0 ],
                     "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "textcolor": {
+                            "expression": ""
+                        },
                         "valueof": {
                             "parameter_initial": [ 1000.0 ],
                             "parameter_initial_enable": 1,
@@ -2913,7 +2937,8 @@
                             "parameter_mmin": 20.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "D1 Cutoff Hz",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
                         }
                     },
                     "textcolor": [ 1.0, 0.0, 0.0, 1.0 ],
