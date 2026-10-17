@@ -585,7 +585,8 @@
                             "parameter_modmode": 0,
                             "parameter_shortname": "D1 Freqshift Up Hz",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 1
+                            "parameter_unitstyle": 1,
+                            "parameter_exponent": 4.0
                         }
                     },
                     "textcolor": [ 0.5294117647058824, 0.7529411764705882, 1.0, 1.0 ],
@@ -631,7 +632,8 @@
                             "parameter_modmode": 0,
                             "parameter_shortname": "D1 Freqshift Down Hz",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 1
+                            "parameter_unitstyle": 1,
+                            "parameter_exponent": 4.0
                         }
                     },
                     "textcolor": [ 1.0, 0.933333333333333, 0.0, 1.0 ],
@@ -2901,7 +2903,8 @@
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Feedback",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 1
+                            "parameter_unitstyle": 1,
+                            "parameter_exponent": 0.25
                         }
                     },
                     "textcolor": [ 0.168627450980392, 1.0, 0.0, 1.0 ],
