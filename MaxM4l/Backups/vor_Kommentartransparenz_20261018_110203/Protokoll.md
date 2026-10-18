@@ -1,0 +1,2 @@
+Kommentarhintergründe hellgrau mit 50 Prozent Deckkraft. Texte in Zeitwechsel-Sperre mit expliziten Zeilenumbrüchen und ausreichend Platz versehen. Rechtecke auf Überschneidungen geprüft. Alle Funktionsobjekte, Positionen und Kabel unverändert (rekursiver Vergleich). Darstellung nicht in Max live geprüft.
+Backup: /Users/macbook/Dropbox/KUG/ZKF Eigene Arbeiten/Frequencyshiftedelays_M4lDevice/FrequencyShiftedDelays_M4lDevice/MaxM4l/Backups/vor_Kommentartransparenz_20261018_110203
