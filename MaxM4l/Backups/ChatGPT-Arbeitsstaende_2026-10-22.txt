@@ -1,0 +1,7 @@
+Dateiablage vom 22.10.2026
+
+112 frühere Arbeitsdateien aus Dropbox/Cloud/ChatGpt wurden vollständig in das gleichnamige ZIP-Archiv verschoben.
+Alle Archivdateien wurden anhand ihrer SHA-256-Prüfsummen verifiziert.
+Die aktuellen Projektdateien blieben unverändert.
+Keine alten Geräte, Max-Patches oder Processing-Programmdateien wurden lose in Suchpfade kopiert.
+Das Archiv zum Nachschlagen geschlossen lassen; nicht in den Projekt- oder Max-Suchpfad entpacken.

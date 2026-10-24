@@ -1,0 +1,3663 @@
+{
+    "patcher": {
+        "fileversion": 1,
+        "appversion": {
+            "major": 9,
+            "minor": 1,
+            "revision": 4,
+            "architecture": "x64",
+            "modernui": 1
+        },
+        "classnamespace": "dsp.gen",
+        "rect": [
+            294.0,
+            194.0,
+            1600.0,
+            950.0
+        ],
+        "default_fontname": "Lato",
+        "statusbarvisible": 0,
+        "boxes": [
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-86",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        541.0,
+                        752.0,
+                        256.0,
+                        21.0
+                    ],
+                    "text": "Zwei versetzte Lesekopf-Paare an getrennten Ausgängen."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-85",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        318.416656,
+                        724.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "in 1",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-83",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        365.0,
+                        752.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "out 1",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-84",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        365.0,
+                        724.0,
+                        46.0,
+                        23.0
+                    ],
+                    "text": "mix",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-82",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        441.333313,
+                        724.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "in 1",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-80",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        482.333313,
+                        752.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "out 2",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-79",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        553.083313,
+                        724.0,
+                        180.0,
+                        23.0
+                    ],
+                    "text": "param xfade 1 @min 0 @max 1",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-78",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        56.333328,
+                        139.0,
+                        108.0,
+                        35.0
+                    ],
+                    "text": "noise / abs / blur: Erklärung 02–03 rechts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-74",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        241.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "+ 1",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-75",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        241.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "+ 1",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-76",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        241.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "+ 1",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-77",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        241.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "+ 1",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-62",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        435.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "15 — PHASE × GEHALTENE LÄNGE → DELAY — Die vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-67",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        435.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "15 — PHASE × GEHALTENE LÄNGE → DELAY — Die vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-68",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        435.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "15 — PHASE × GEHALTENE LÄNGE → DELAY — Die vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-73",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        435.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "15 — PHASE × GEHALTENE LÄNGE → DELAY — Die vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-60",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        56.333328,
+                        364.0,
+                        120.0,
+                        50.0
+                    ],
+                    "text": "delta → sah: Erklärung 04–06 und 09 rechts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-56",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        153.0,
+                        39.0,
+                        23.0
+                    ],
+                    "text": "noise",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-57",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        153.0,
+                        39.0,
+                        23.0
+                    ],
+                    "text": "noise",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-58",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        153.0,
+                        39.0,
+                        23.0
+                    ],
+                    "text": "noise",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-59",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        153.0,
+                        39.0,
+                        23.0
+                    ],
+                    "text": "noise",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-55",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        78.333328,
+                        180.0,
+                        78.0,
+                        23.0
+                    ],
+                    "text": "param blur 0",
+                    "annotation": "03 — param blur 0 UND MULTIPLIKATION — param blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-47",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        214.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "03 — param blur 0 UND MULTIPLIKATION — param blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-48",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        180.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "abs",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-49",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        392.0,
+                        40.0,
+                        23.0
+                    ],
+                    "text": "sah 0",
+                    "annotation": "Hier wird die Fensterlänge in Samples gehalten. Linker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen. Während einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-50",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        647.833313,
+                        364.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "delta",
+                    "annotation": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE — delta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-51",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        214.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "03 — param blur 0 UND MULTIPLIKATION — param blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-52",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        180.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "abs",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-53",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        392.0,
+                        40.0,
+                        23.0
+                    ],
+                    "text": "sah 0",
+                    "annotation": "Hier wird die Fensterlänge in Samples gehalten. Linker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen. Während einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-54",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        497.0,
+                        364.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "delta",
+                    "annotation": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE — delta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-26",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        214.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "03 — param blur 0 UND MULTIPLIKATION — param blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-27",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        180.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "abs",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-28",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        392.0,
+                        40.0,
+                        23.0
+                    ],
+                    "text": "sah 0",
+                    "annotation": "Hier wird die Fensterlänge in Samples gehalten. Linker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen. Während einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-29",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        346.166656,
+                        364.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "delta",
+                    "annotation": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE — delta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-25",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        214.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "03 — param blur 0 UND MULTIPLIKATION — param blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-24",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        180.0,
+                        30.0,
+                        23.0
+                    ],
+                    "text": "abs",
+                    "annotation": "02 — noise UND abs — noise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-23",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        392.0,
+                        40.0,
+                        23.0
+                    ],
+                    "text": "sah 0",
+                    "annotation": "Hier wird die Fensterlänge in Samples gehalten. Linker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen. Während einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-20",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        195.333328,
+                        364.0,
+                        37.0,
+                        23.0
+                    ],
+                    "text": "delta",
+                    "annotation": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE — delta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-72",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        56.333328,
+                        421.0,
+                        103.0,
+                        35.0
+                    ],
+                    "text": "Phase in Verzögerung (Samples) umrechnen."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-71",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        732.0,
+                        571.0,
+                        117.0,
+                        35.0
+                    ],
+                    "text": "Phase in Bogenmaß umrechnen."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-70",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        732.0,
+                        299.0,
+                        125.0,
+                        35.0
+                    ],
+                    "text": "Vier Phasen: 0, ¼, ½ und ¾ Zyklus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-69",
+                    "linecount": 4,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        732.0,
+                        629.0,
+                        117.0,
+                        64.0
+                    ],
+                    "text": "Zwei um ½ Zyklus versetzte Cosinus²-Fenster ergänzen sich zu 1."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-65",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        621.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-66",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        621.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-64",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        621.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-63",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        621.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-40",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        674.5,
+                        648.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "18 — AUDIO × FENSTER UND SUMMIERUNG — Die unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-41",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        626.833313,
+                        277.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-42",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        585.0,
+                        29.0,
+                        23.0
+                    ],
+                    "text": "cos",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-43",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        557.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "* pi",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-44",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        527.0,
+                        35.0,
+                        23.0
+                    ],
+                    "text": "- 0.5",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-45",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        327.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "% 1",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-46",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        688.0,
+                        299.0,
+                        44.0,
+                        23.0
+                    ],
+                    "text": "+ 0.75",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-33",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        527.5,
+                        648.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "18 — AUDIO × FENSTER UND SUMMIERUNG — Die unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-34",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        476.0,
+                        277.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-35",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        585.0,
+                        29.0,
+                        23.0
+                    ],
+                    "text": "cos",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-36",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        557.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "* pi",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-37",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        527.0,
+                        35.0,
+                        23.0
+                    ],
+                    "text": "- 0.5",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-38",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        327.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "% 1",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-39",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        541.0,
+                        299.0,
+                        38.0,
+                        23.0
+                    ],
+                    "text": "+ 0.5",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-32",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        433.0,
+                        94.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "/",
+                    "annotation": "10 — in 2, !- 1., * 1000 UND / — in 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-31",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        433.0,
+                        67.0,
+                        45.0,
+                        23.0
+                    ],
+                    "text": "* 1000",
+                    "annotation": "10 — in 2, !- 1., * 1000 UND / — in 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-30",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        433.0,
+                        40.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "!- 1.",
+                    "annotation": "10 — in 2, !- 1., * 1000 UND / — in 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-22",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        433.0,
+                        10.0,
+                        172.0,
+                        23.0
+                    ],
+                    "text": "in 2 @comment \"shift amount\"",
+                    "annotation": "10 — in 2, !- 1., * 1000 UND / — in 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-21",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        482.333313,
+                        724.0,
+                        46.0,
+                        23.0
+                    ],
+                    "text": "mix",
+                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-19",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        378.5,
+                        648.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "18 — AUDIO × FENSTER UND SUMMIERUNG — Die unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-18",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        231.5,
+                        648.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "18 — AUDIO × FENSTER UND SUMMIERUNG — Die unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-17",
+                    "maxclass": "newobj",
+                    "numinlets": 5,
+                    "numoutlets": 4,
+                    "outlettype": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "patching_rect": [
+                        23.5,
+                        499.0,
+                        622.333313,
+                        23.0
+                    ],
+                    "text": "delay 88200 4",
+                    "annotation": "16 — delay 88200 4: EIN SPEICHER, VIER LESEKÖPFE — Der linke Eingang schreibt das Audiosignal. Die vier weiteren Eingänge geben die vier Verzögerungen in Samples vor; die vier Ausgänge liefern die entsprechenden Audiosignale. 88200 ist die Speicherkapazität in Samples, 4 die Zahl der Leseköpfe. Bei 48000 Hz entspricht die Kapazität etwa 1837.5 ms. Das ist kein buffer~-Dateiname."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-11",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        325.166656,
+                        277.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-12",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        585.0,
+                        29.0,
+                        23.0
+                    ],
+                    "text": "cos",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-13",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        557.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "* pi",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-14",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        527.0,
+                        35.0,
+                        23.0
+                    ],
+                    "text": "- 0.5",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-15",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        327.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "% 1",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-16",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        392.0,
+                        299.0,
+                        44.0,
+                        23.0
+                    ],
+                    "text": "+ 0.25",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-10",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        23.5,
+                        236.0,
+                        72.0,
+                        23.0
+                    ],
+                    "text": "mstosamps",
+                    "annotation": "12 — param window UND mstosamps — window ist die Fensterdauer in Millisekunden, voreingestellt auf 100; erlaubt sind 0.1 bis 1000 ms. mstosamps rechnet bei der aktuellen Abtastrate in Samples um. Beispiel: 100 ms bei 48000 Hz ergeben 4800 Samples. Größere Fenster verändern zeitliche Überlagerungen, Klangfarbe und Wiederholungsrate. Beim Verstellen können zusätzliche Tonhöhenbewegungen auftreten."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-9",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        23.5,
+                        63.0,
+                        234.0,
+                        23.0
+                    ],
+                    "text": "param window 100 @min 0.1 @max 1000",
+                    "annotation": "12 — param window UND mstosamps — window ist die Fensterdauer in Millisekunden, voreingestellt auf 100; erlaubt sind 0.1 bis 1000 ms. mstosamps rechnet bei der aktuellen Abtastrate in Samples um. Beispiel: 100 ms bei 48000 Hz ergeben 4800 Samples. Größere Fenster verändern zeitliche Überlagerungen, Klangfarbe und Wiederholungsrate. Beim Verstellen können zusätzliche Tonhöhenbewegungen auftreten."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-8",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        174.333328,
+                        277.0,
+                        32.5,
+                        23.0
+                    ],
+                    "text": "*",
+                    "annotation": "14 — RATEBLUR: WOZU + 1? — Hier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        585.0,
+                        29.0,
+                        23.0
+                    ],
+                    "text": "cos",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-6",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        557.0,
+                        28.0,
+                        23.0
+                    ],
+                    "text": "* pi",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        527.0,
+                        35.0,
+                        23.0
+                    ],
+                    "text": "- 0.5",
+                    "annotation": "17 — − 0.5 → * pi → cos → QUADRAT — Die Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        327.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "% 1",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        245.0,
+                        299.0,
+                        31.0,
+                        23.0
+                    ],
+                    "text": "+ 0.",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        433.0,
+                        119.0,
+                        47.0,
+                        23.0
+                    ],
+                    "text": "phasor",
+                    "annotation": "11 — phasor, PHASENVERSATZ UND % 1 — phasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Lato",
+                    "fontsize": 12.0,
+                    "id": "obj-1",
+                    "linecount": 2,
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        23.5,
+                        458.0,
+                        103.0,
+                        37.0
+                    ],
+                    "text": "in 1 @comment \"input to shift\"",
+                    "annotation": "16 — delay 88200 4: EIN SPEICHER, VIER LESEKÖPFE — Der linke Eingang schreibt das Audiosignal. Die vier weiteren Eingänge geben die vier Verzögerungen in Samples vor; die vier Ausgänge liefern die entsprechenden Audiosignale. 88200 ist die Speicherkapazität in Samples, 4 die Zahl der Leseköpfe. Bei 48000 Hz entspricht die Kapazität etwa 1837.5 ms. Das ist kein buffer~-Dateiname."
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-0",
+                    "maxclass": "comment",
+                    "text": "01 — GEN RECHNET SAMPLE FÜR SAMPLE\nGen verarbeitet pro Audiokanal jeden einzelnen Samplewert. Bei 48000 Hz passiert das 48000-mal pro Sekunde. Die Kabel übertragen Zahlenfolgen: Audiosamples, Phasen, Verzögerungen oder Steuersignale. Ein Sample ist ein einzelner Wert, kein kompletter Klangabschnitt.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        10.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-1",
+                    "maxclass": "comment",
+                    "text": "02 — noise UND abs\nnoise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        10.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-2",
+                    "maxclass": "comment",
+                    "text": "03 — param blur 0 UND MULTIPLIKATION\nparam blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        215.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-3",
+                    "maxclass": "comment",
+                    "text": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE\ndelta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        215.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-4",
+                    "maxclass": "comment",
+                    "text": "05 — sah 0: SAMPLE AND HOLD\nLinker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        420.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-5",
+                    "maxclass": "comment",
+                    "text": "06 — WARUM delta → RECHTER sah-EINGANG?\nWährend einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        420.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-6",
+                    "maxclass": "comment",
+                    "text": "07 — history: GENAU EIN SAMPLE SPEICHER\nhistory gibt den Eingangswert des vorherigen Samples aus: y[n] = x[n−1]. Anfangs ist der gespeicherte Wert hier 0. Bei 48000 Hz sind ein Sample etwa 0.0208 ms. history hält NICHT selbst einen Wert für ein ganzes Fenster und glättet nichts. Das längere Halten übernimmt sah. History unterbricht eine sonst unmittelbare Rückkopplung im Rechenweg.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        625.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-7",
+                    "maxclass": "comment",
+                    "text": "08 — HISTORY IM KONKRETEN PHASEBLUR-ZWEIG\nNur PhaseBlur enthält history: sah übernimmt einen Zufallsversatz, history reicht ihn ein Sample später an + 0., + 0.25, + 0.5 oder + 0.75 weiter. Diese Phase geht über % 1 und delta zum Trigger desselben sah zurück. history macht diese Rückkopplung berechenbar. RateBlur hat diesen Rückkopplungsweg nicht und enthält deshalb kein history.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        625.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-8",
+                    "maxclass": "comment",
+                    "text": "09 — DIE ZWEI ARTEN VON sah IN DIESEM PROJEKT\nBei PhaseBlur halten die oberen sah den Zufallsversatz; die unteren sah halten die Fensterlänge in Samples. Bei RateBlur gibt es nur die unteren sah: Sie halten die bereits zufällig skalierte Fensterlänge. Der gehaltene Wert bleibt über einen Lesedurchlauf konstant. Neue Reglerwerte werden daher nicht überall unmittelbar übernommen.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        830.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-9",
+                    "maxclass": "comment",
+                    "text": "10 — in 2, !- 1., * 1000 UND /\nin 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        830.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-10",
+                    "maxclass": "comment",
+                    "text": "11 — phasor, PHASENVERSATZ UND % 1\nphasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        1035.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-11",
+                    "maxclass": "comment",
+                    "text": "12 — param window UND mstosamps\nwindow ist die Fensterdauer in Millisekunden, voreingestellt auf 100; erlaubt sind 0.1 bis 1000 ms. mstosamps rechnet bei der aktuellen Abtastrate in Samples um. Beispiel: 100 ms bei 48000 Hz ergeben 4800 Samples. Größere Fenster verändern zeitliche Überlagerungen, Klangfarbe und Wiederholungsrate. Beim Verstellen können zusätzliche Tonhöhenbewegungen auftreten.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        1035.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-12",
+                    "maxclass": "comment",
+                    "text": "13 — PHASEBLUR: WO GREIFT DER ZUFALL EIN?\nDie Phasenadditionen erhalten zusätzlich den von sah und history bereitgestellten Zufallsversatz. Die Fensterlänge wird davon getrennt gehalten. Der Zufall verschiebt somit die Lage des nächsten Lesedurchlaufs. Bei konstantem Fenster bleibt die Delay-Steigung zwischen den Änderungen gleich. Die Änderungen können trotzdem hörbare Artefakte verursachen.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        1240.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-13",
+                    "maxclass": "comment",
+                    "text": "14 — RATEBLUR: WOZU + 1?\nHier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        1240.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-14",
+                    "maxclass": "comment",
+                    "text": "15 — PHASE × GEHALTENE LÄNGE → DELAY\nDie vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        1445.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-15",
+                    "maxclass": "comment",
+                    "text": "16 — delay 88200 4: EIN SPEICHER, VIER LESEKÖPFE\nDer linke Eingang schreibt das Audiosignal. Die vier weiteren Eingänge geben die vier Verzögerungen in Samples vor; die vier Ausgänge liefern die entsprechenden Audiosignale. 88200 ist die Speicherkapazität in Samples, 4 die Zahl der Leseköpfe. Bei 48000 Hz entspricht die Kapazität etwa 1837.5 ms. Das ist kein buffer~-Dateiname.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        1445.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-16",
+                    "maxclass": "comment",
+                    "text": "17 — − 0.5 → * pi → cos → QUADRAT\nDie Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        1650.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-17",
+                    "maxclass": "comment",
+                    "text": "18 — AUDIO × FENSTER UND SUMMIERUNG\nDie unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        1650.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-18",
+                    "maxclass": "comment",
+                    "text": "19 — mix, xfade, in 1 UND out\nmix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus.",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        900.0,
+                        1855.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            },
+            {
+                "box": {
+                    "id": "de-detail-19",
+                    "maxclass": "comment",
+                    "text": "20 — ZUM NACHVOLLZIEHEN UND HÖREN\nBeide Varianten enthalten Blur. Zuerst blur = 0 und xfade = 1 setzen, dann einen konstanten Pitch-Faktor ungleich 1 wählen. Erst danach Blur langsam erhöhen. PhaseBlur verändert die zeitlichen Versätze; RateBlur zusätzlich die Geschwindigkeit. Blur ist eine Klangveränderung, keine verlässliche Reparatur von Artefakten. Hinweise zu jedem Objekt stehen außerdem in seiner Annotation (Clue-Fenster).",
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "patching_rect": [
+                        1470.0,
+                        1855.0,
+                        550.0,
+                        190.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 0
+                }
+            }
+        ],
+        "lines": [
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-17",
+                        0
+                    ],
+                    "source": [
+                        "obj-1",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-11",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-10",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-34",
+                        1
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-10",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-41",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-10",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-8",
+                        1
+                    ],
+                    "order": 3,
+                    "source": [
+                        "obj-10",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-28",
+                        0
+                    ],
+                    "source": [
+                        "obj-11",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-64",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-12",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-64",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-12",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-12",
+                        0
+                    ],
+                    "source": [
+                        "obj-13",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-13",
+                        0
+                    ],
+                    "source": [
+                        "obj-14",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-14",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-15",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-29",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-15",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-68",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-15",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-15",
+                        0
+                    ],
+                    "source": [
+                        "obj-16",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-18",
+                        0
+                    ],
+                    "source": [
+                        "obj-17",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-19",
+                        0
+                    ],
+                    "source": [
+                        "obj-17",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-33",
+                        0
+                    ],
+                    "source": [
+                        "obj-17",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-40",
+                        0
+                    ],
+                    "source": [
+                        "obj-17",
+                        3
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-84",
+                        1
+                    ],
+                    "source": [
+                        "obj-18",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-21",
+                        1
+                    ],
+                    "source": [
+                        "obj-19",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-16",
+                        0
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-3",
+                        0
+                    ],
+                    "order": 3,
+                    "source": [
+                        "obj-2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-39",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-46",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-23",
+                        1
+                    ],
+                    "source": [
+                        "obj-20",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-80",
+                        0
+                    ],
+                    "source": [
+                        "obj-21",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-30",
+                        0
+                    ],
+                    "source": [
+                        "obj-22",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-73",
+                        0
+                    ],
+                    "source": [
+                        "obj-23",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-25",
+                        0
+                    ],
+                    "source": [
+                        "obj-24",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-77",
+                        0
+                    ],
+                    "source": [
+                        "obj-25",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-76",
+                        0
+                    ],
+                    "source": [
+                        "obj-26",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-26",
+                        0
+                    ],
+                    "source": [
+                        "obj-27",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-68",
+                        0
+                    ],
+                    "source": [
+                        "obj-28",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-28",
+                        1
+                    ],
+                    "source": [
+                        "obj-29",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-4",
+                        0
+                    ],
+                    "source": [
+                        "obj-3",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-31",
+                        0
+                    ],
+                    "source": [
+                        "obj-30",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-32",
+                        0
+                    ],
+                    "source": [
+                        "obj-31",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-2",
+                        0
+                    ],
+                    "source": [
+                        "obj-32",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-84",
+                        1
+                    ],
+                    "source": [
+                        "obj-33",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-53",
+                        0
+                    ],
+                    "source": [
+                        "obj-34",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-66",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-35",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-66",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-35",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-35",
+                        0
+                    ],
+                    "source": [
+                        "obj-36",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-36",
+                        0
+                    ],
+                    "source": [
+                        "obj-37",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-37",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-38",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-54",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-38",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-67",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-38",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-38",
+                        0
+                    ],
+                    "source": [
+                        "obj-39",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-20",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-4",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-5",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-4",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-73",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-4",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-21",
+                        1
+                    ],
+                    "source": [
+                        "obj-40",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-49",
+                        0
+                    ],
+                    "source": [
+                        "obj-41",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-65",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-42",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-65",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-42",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-42",
+                        0
+                    ],
+                    "source": [
+                        "obj-43",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-43",
+                        0
+                    ],
+                    "source": [
+                        "obj-44",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-44",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-45",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-50",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-45",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-62",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-45",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-45",
+                        0
+                    ],
+                    "source": [
+                        "obj-46",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-74",
+                        0
+                    ],
+                    "source": [
+                        "obj-47",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-47",
+                        0
+                    ],
+                    "source": [
+                        "obj-48",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-62",
+                        0
+                    ],
+                    "source": [
+                        "obj-49",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-6",
+                        0
+                    ],
+                    "source": [
+                        "obj-5",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-49",
+                        1
+                    ],
+                    "source": [
+                        "obj-50",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-75",
+                        0
+                    ],
+                    "source": [
+                        "obj-51",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-51",
+                        0
+                    ],
+                    "source": [
+                        "obj-52",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-67",
+                        0
+                    ],
+                    "source": [
+                        "obj-53",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-53",
+                        1
+                    ],
+                    "source": [
+                        "obj-54",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.8,
+                        0.4,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-25",
+                        1
+                    ],
+                    "order": 3,
+                    "source": [
+                        "obj-55",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.8,
+                        0.4,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-26",
+                        1
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-55",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.8,
+                        0.4,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-47",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-55",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.8,
+                        0.4,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-51",
+                        1
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-55",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-48",
+                        0
+                    ],
+                    "source": [
+                        "obj-56",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-52",
+                        0
+                    ],
+                    "source": [
+                        "obj-57",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-27",
+                        0
+                    ],
+                    "source": [
+                        "obj-58",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-24",
+                        0
+                    ],
+                    "source": [
+                        "obj-59",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-7",
+                        0
+                    ],
+                    "source": [
+                        "obj-6",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-17",
+                        4
+                    ],
+                    "source": [
+                        "obj-62",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-18",
+                        1
+                    ],
+                    "source": [
+                        "obj-63",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-19",
+                        1
+                    ],
+                    "source": [
+                        "obj-64",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        1.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-40",
+                        1
+                    ],
+                    "source": [
+                        "obj-65",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-33",
+                        1
+                    ],
+                    "source": [
+                        "obj-66",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        1.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-17",
+                        3
+                    ],
+                    "source": [
+                        "obj-67",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.0,
+                        0.501961,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-17",
+                        2
+                    ],
+                    "source": [
+                        "obj-68",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-63",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-7",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-63",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-7",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        1.0,
+                        0.501961,
+                        0.0,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-17",
+                        1
+                    ],
+                    "source": [
+                        "obj-73",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-41",
+                        0
+                    ],
+                    "source": [
+                        "obj-74",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-34",
+                        0
+                    ],
+                    "source": [
+                        "obj-75",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-11",
+                        0
+                    ],
+                    "source": [
+                        "obj-76",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-8",
+                        0
+                    ],
+                    "source": [
+                        "obj-77",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-21",
+                        2
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-79",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-84",
+                        2
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-79",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-23",
+                        0
+                    ],
+                    "source": [
+                        "obj-8",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-21",
+                        0
+                    ],
+                    "source": [
+                        "obj-82",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-83",
+                        0
+                    ],
+                    "source": [
+                        "obj-84",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-84",
+                        0
+                    ],
+                    "source": [
+                        "obj-85",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.25098,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-10",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-9",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "color": [
+                        0.0,
+                        0.501961,
+                        0.25098,
+                        1.0
+                    ],
+                    "destination": [
+                        "obj-32",
+                        1
+                    ],
+                    "order": 0,
+                    "source": [
+                        "obj-9",
+                        0
+                    ]
+                }
+            }
+        ],
+        "autosave": 0,
+        "styles": [
+            {
+                "name": "AudioStatus_Menu",
+                "default": {
+                    "bgfillcolor": {
+                        "angle": 270.0,
+                        "autogradient": 0,
+                        "color": [
+                            0.294118,
+                            0.313726,
+                            0.337255,
+                            1
+                        ],
+                        "color1": [
+                            0.454902,
+                            0.462745,
+                            0.482353,
+                            0.0
+                        ],
+                        "color2": [
+                            0.290196,
+                            0.309804,
+                            0.301961,
+                            1.0
+                        ],
+                        "proportion": 0.39,
+                        "type": "color"
+                    }
+                },
+                "parentstyle": "",
+                "multi": 0
+            }
+        ]
+    }
+}

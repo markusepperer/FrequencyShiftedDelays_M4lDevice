@@ -1314,8 +1314,8 @@
                         },
                         "valueof": {
                             "parameter_enum": [
-                                "val1",
-                                "val2"
+                                "Off",
+                                "On"
                             ],
                             "parameter_initial": [
                                 0
