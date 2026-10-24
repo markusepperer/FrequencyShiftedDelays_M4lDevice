@@ -12,7 +12,7 @@
         "rect": [
             134.0,
             92.0,
-            1172.0,
+            1400,
             1026.0
         ],
         "openinpresentation": 1,
@@ -56,10 +56,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        269.1588764190674,
-                        37.383177280426025,
-                        10.0,
-                        130.0
+                        221,
+                        38,
+                        7,
+                        100
                     ],
                     "setminmax": [
                         0.0,
@@ -89,10 +89,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        188.78504526615143,
-                        37.383177280426025,
-                        10.0,
-                        130.0
+                        157,
+                        38,
+                        7,
+                        100
                     ],
                     "setminmax": [
                         0.0,
@@ -122,10 +122,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        110.28037297725677,
-                        37.383177280426025,
-                        10.0,
-                        130.0
+                        93,
+                        38,
+                        7,
+                        100
                     ],
                     "setminmax": [
                         0.0,
@@ -155,10 +155,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        30.84112125635147,
-                        37.383177280426025,
-                        10.0,
-                        130.0
+                        29,
+                        38,
+                        7,
+                        100
                     ],
                     "setminmax": [
                         0.0,
@@ -188,7 +188,7 @@
                         900.0,
                         32.0
                     ],
-                    "text": "HAUPTMIXER · VIER QUELLEN → STEREO",
+                    "text": "HAUPTMIXER · FÜNF QUELLEN → STEREO",
                     "textcolor": [
                         0.15,
                         0.19,
@@ -246,7 +246,7 @@
                         930.0,
                         21.0
                     ],
-                    "text": "Zehn Live-Parameter: vier Pegel, vier Panoramen, Shift-Mix und Delay-Mix.",
+                    "text": "Fünf Pegel und Panoramen; Frequency Shift Mix, Pitch Shift Mix und gemeinsamer Delay-Mix.",
                     "textcolor": [
                         0.15,
                         0.19,
@@ -257,7 +257,7 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 10,
                     "id": "c0name",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -271,10 +271,10 @@
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        18.0,
-                        0.0,
-                        46.0,
-                        31.0
+                        3,
+                        0,
+                        61,
+                        31
                     ],
                     "text": "SHIFT UP",
                     "textcolor": [
@@ -304,10 +304,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        2.0,
-                        32.0,
-                        30.0,
-                        150.0
+                        3,
+                        34,
+                        25,
+                        130
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -348,10 +348,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        41.84112125635147,
-                        143.0,
-                        42.0,
-                        20.0
+                        32,
+                        141,
+                        32,
+                        20
                     ]
                 }
             },
@@ -375,10 +375,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        12.149532616138458,
-                        185.04672753810883,
-                        77.0,
-                        31.0
+                        3,
+                        177,
+                        60,
+                        25
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -1156,7 +1156,7 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 10,
                     "id": "c1name",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -1170,10 +1170,10 @@
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        99.06541979312897,
-                        0.0,
-                        44.0,
-                        31.0
+                        67,
+                        0,
+                        61,
+                        31
                     ],
                     "text": "SHIFT DOWN",
                     "textcolor": [
@@ -1203,10 +1203,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        79.4392517209053,
-                        31.77570068836212,
-                        30.0,
-                        150.0
+                        67,
+                        34,
+                        25,
+                        130
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -1247,10 +1247,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        121.49532616138458,
-                        142.99065309762955,
-                        42.0,
-                        20.0
+                        96,
+                        141,
+                        32,
+                        20
                     ]
                 }
             },
@@ -1274,10 +1274,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        85.98130774497986,
-                        185.04672753810883,
-                        83.0,
-                        31.0
+                        67,
+                        177,
+                        60,
+                        25
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -2056,7 +2056,7 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 10,
                     "id": "c2name",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -2070,10 +2070,10 @@
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        171.96261548995972,
-                        0.0,
-                        81.0,
-                        31.0
+                        131,
+                        0,
+                        61,
+                        31
                     ],
                     "text": "DELAY OHNE SHIFT",
                     "textcolor": [
@@ -2103,10 +2103,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        158.8785034418106,
-                        31.77570068836212,
-                        30.0,
-                        150.0
+                        131,
+                        34,
+                        25,
+                        130
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -2147,10 +2147,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        199.99999845027924,
-                        142.99065309762955,
-                        42.0,
-                        20.0
+                        160,
+                        141,
+                        32,
+                        20
                     ]
                 }
             },
@@ -2174,10 +2174,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        168.22429776191711,
-                        185.04672753810883,
-                        77.0,
-                        31.0
+                        131,
+                        177,
+                        60,
+                        25
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -2956,7 +2956,7 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 10,
                     "id": "c3name",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -2970,10 +2970,10 @@
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        258.8785026669502,
-                        0.0,
-                        71.0,
-                        31.0
+                        195,
+                        0,
+                        61,
+                        31
                     ],
                     "text": "MIKROFON DIREKT",
                     "textcolor": [
@@ -3003,10 +3003,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        238.3177551627159,
-                        31.77570068836212,
-                        30.0,
-                        150.0
+                        195,
+                        34,
+                        25,
+                        130
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -3047,10 +3047,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        280.3738296031952,
-                        142.99065309762955,
-                        42.0,
-                        20.0
+                        224,
+                        141,
+                        32,
+                        20
                     ]
                 }
             },
@@ -3074,10 +3074,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        246.72897005081177,
-                        185.04672753810883,
-                        83.0,
-                        31.0
+                        195,
+                        177,
+                        60,
+                        25
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
@@ -3858,7 +3858,7 @@
                 "box": {
                     "id": "matrix",
                     "maxclass": "newobj",
-                    "numinlets": 4,
+                    "numinlets": 5,
                     "numoutlets": 3,
                     "outlettype": [
                         "signal",
@@ -3871,7 +3871,7 @@
                         300.0,
                         22.0
                     ],
-                    "text": "matrix~ 4 2 1. @ramp 30"
+                    "text": "matrix~ 5 2 1. @ramp 30"
                 }
             },
             {
@@ -3887,7 +3887,7 @@
                         600.0,
                         22.0
                     ],
-                    "text": "Vier Quellen → eine gemeinsame Stereo-Mischung",
+                    "text": "Fünf Quellen → gemeinsame Stereo-Mischung",
                     "textcolor": [
                         0.15,
                         0.19,
@@ -3910,7 +3910,7 @@
                         642.0,
                         33.0
                     ],
-                    "text": "Shift-Mix vor Up/Down-Pegel. Delay-Mix ersetzt jeden Delayzweig anteilig durch Original vor dessen Pegel/Pan. Separater Mikrofon-Fader unabhängig. Ausgang 3 steuert Schatten.",
+                    "text": "Pitch: Pitch_Shift_Mix → Delay_Mix → Kanal_5 → Matrixeingang 5. Frequency-Wege bleiben getrennt. Schatten-Pitch folgt später.",
                     "textcolor": [
                         0.15,
                         0.19,
@@ -4017,7 +4017,7 @@
                         446.0,
                         38.0
                     ],
-                    "text": "Shift-Mix: 0 % ohne Shift, 100 % Shift. Delay-Mix: 0 % Direkt, 100 % Delay. Up/Down-Hüllkurven und Pan bleiben wirksam.",
+                    "text": "Frequency und Pitch getrennt gegen Delay ohne Shift. Delay-Mix gemeinsam gegen Mikrofon direkt.",
                     "textcolor": [
                         0.15,
                         0.19,
@@ -4101,8 +4101,10 @@
                     "id": "refresh",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 8,
+                    "numoutlets": 10,
                     "outlettype": [
+                        "bang",
+                        "bang",
                         "bang",
                         "bang",
                         "bang",
@@ -4118,7 +4120,7 @@
                         180.0,
                         22.0
                     ],
-                    "text": "t b b b b b b b b"
+                    "text": "t b b b b b b b b b b"
                 }
             },
             {
@@ -4138,7 +4140,7 @@
             },
             {
                 "box": {
-                    "hint": "Shift-Anteil: 0 % Delay ohne Shift; 100 % Frequency Shift. Beide folgen Up/Down-Pegel und Panorama; separater Delay-Fader unabhängig.",
+                    "hint": "0 % Delay ohne Shift; 100 % Frequency Shift. Steuert nur SHIFT UP und SHIFT DOWN.",
                     "id": "shift-mix",
                     "maxclass": "live.slider",
                     "numinlets": 1,
@@ -4157,10 +4159,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        12.0,
-                        239.0,
-                        153.0,
-                        31.0
+                        3,
+                        239,
+                        100,
+                        28
                     ],
                     "saved_attribute_attributes": {
                         "slidercolor": {
@@ -4200,7 +4202,7 @@
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "shift-mix-label",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -4213,23 +4215,24 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        12.0,
-                        219.0,
-                        153.0,
-                        18.0
+                        3,
+                        207,
+                        100,
+                        30
                     ],
-                    "text": "SHIFT-MIX",
+                    "text": "Frequency Shift Mix",
                     "textcolor": [
                         0.15,
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 2
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 9.0,
                     "id": "shift-mix-left",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -4238,27 +4241,29 @@
                         62.49995422363281,
                         1603.077075958252,
                         200.0,
-                        18.0
+                        28
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        12.0,
-                        272.0,
-                        70.0,
-                        18.0
+                        3,
+                        267,
+                        55,
+                        25
                     ],
-                    "text": "Ohne Shift",
+                    "text": "Delay ohne\nShift",
                     "textcolor": [
                         0.15,
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 2,
+                    "linecount": 2
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 9.0,
                     "id": "shift-mix-right",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -4267,22 +4272,24 @@
                         62.49995422363281,
                         1576.9232273101807,
                         200.0,
-                        18.0
+                        28
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        119.0,
-                        272.0,
-                        46.0,
-                        18.0
+                        59,
+                        267,
+                        44,
+                        25
                     ],
-                    "text": "Shift",
+                    "text": "Frequency\nShift",
                     "textcolor": [
                         0.15,
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 2,
+                    "linecount": 2
                 }
             },
             {
@@ -4860,7 +4867,7 @@
                             1.0
                         ]
                     },
-                    "text": "p Shift_Mix"
+                    "text": "p Frequency_Shift_Mix"
                 }
             },
             {
@@ -4868,8 +4875,9 @@
                     "id": "shift-mix-init",
                     "maxclass": "newobj",
                     "numinlets": 1,
-                    "numoutlets": 2,
+                    "numoutlets": 3,
                     "outlettype": [
+                        "bang",
                         "bang",
                         "bang"
                     ],
@@ -4879,12 +4887,12 @@
                         65.0,
                         22.0
                     ],
-                    "text": "t b b"
+                    "text": "t b b b"
                 }
             },
             {
                 "box": {
-                    "hint": "0 % Original innerhalb der drei Delayzweige; 100 % Delay-Mix. Beide folgen denselben Delay-Pegeln und Panoramen. Mikrofon direkt ist unabhängig und darf auf null stehen.",
+                    "hint": "Alle vier Delaywege gegen Mikrofon direkt, vor den einzelnen Pegeln/Panoramen. Der separate Mikrofonkanal bleibt unabhängig.",
                     "id": "delay-mix",
                     "maxclass": "live.slider",
                     "modulationcolor": [
@@ -4909,10 +4917,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        174.0,
-                        239.0,
-                        153.0,
-                        31.0
+                        217,
+                        239,
+                        100,
+                        28
                     ],
                     "saved_attribute_attributes": {
                         "modulationcolor": {
@@ -4964,7 +4972,7 @@
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "delay-mix-label",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -4977,10 +4985,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        174.0,
-                        219.0,
-                        153.0,
-                        18.0
+                        217,
+                        207,
+                        100,
+                        30
                     ],
                     "text": "DELAY-MIX",
                     "textcolor": [
@@ -4988,12 +4996,13 @@
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 2
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 9.0,
                     "id": "delay-mix-left",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -5002,27 +5011,29 @@
                         562.5000019073486,
                         1603.077075958252,
                         200.0,
-                        18.0
+                        28
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        174.0,
-                        272.0,
-                        55.0,
-                        18.0
+                        217,
+                        267,
+                        55,
+                        25
                     ],
-                    "text": "Direkt",
+                    "text": "Mikrofon\ndirekt",
                     "textcolor": [
                         0.15,
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 2,
+                    "linecount": 2
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 9.0,
                     "id": "delay-mix-right",
                     "maxclass": "comment",
                     "numinlets": 1,
@@ -5031,14 +5042,14 @@
                         562.5000019073486,
                         1576.9232273101807,
                         200.0,
-                        18.0
+                        28
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        280.0,
-                        272.0,
-                        47.0,
-                        18.0
+                        273,
+                        267,
+                        44,
+                        25
                     ],
                     "text": "Delay",
                     "textcolor": [
@@ -5046,7 +5057,9 @@
                         0.19,
                         0.23,
                         1.0
-                    ]
+                    ],
+                    "presentation_linecount": 1,
+                    "linecount": 1
                 }
             },
             {
@@ -5089,9 +5102,10 @@
                 "box": {
                     "id": "delay-mix-audio",
                     "maxclass": "newobj",
-                    "numinlets": 5,
-                    "numoutlets": 4,
+                    "numinlets": 6,
+                    "numoutlets": 5,
                     "outlettype": [
+                        "signal",
                         "signal",
                         "signal",
                         "signal",
@@ -5110,7 +5124,7 @@
                         "rect": [
                             100.0,
                             100.0,
-                            950.0,
+                            1400,
                             570.0
                         ],
                         "boxes": [
@@ -5413,7 +5427,7 @@
                                         850.0,
                                         60.0
                                     ],
-                                    "text": "Je Delayzweig: x*Delay + (1-x)*Original, danach vorhandener Pegel/Pan. Original folgt so den drei Delay-Hüllkurven. Separater Mikrofon-Fader bleibt unabhängig; 30 ms geglättet."
+                                    "text": "Vier Delaywege: x*Delayweg + (1-x)*Mikrofon, jeweils vor eigenem Pegel/Pan; Mikrofon direkt bleibt unabhängig. 30 ms."
                                 }
                             },
                             {
@@ -5486,6 +5500,77 @@
                                         22.0
                                     ],
                                     "text": "+~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift Mix",
+                                    "id": "pitch-in",
+                                    "index": 6,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        990.0,
+                                        40.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "pitch-gain",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        1010.0,
+                                        320.0,
+                                        60.0,
+                                        22.0
+                                    ],
+                                    "text": "*~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "pitch-blend",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        1010.0,
+                                        360.0,
+                                        60.0,
+                                        22.0
+                                    ],
+                                    "text": "+~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch gegen Mikrofon direkt",
+                                    "id": "pitch-out",
+                                    "index": 5,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        1010.0,
+                                        420.0,
+                                        30.0,
+                                        30.0
+                                    ]
                                 }
                             }
                         ],
@@ -5762,13 +5847,73 @@
                                         0
                                     ]
                                 }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "pitch-in",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "pitch-gain",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "ramp",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "pitch-gain",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "pitch-gain",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "pitch-blend",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "dry-shared",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "pitch-blend",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "pitch-blend",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "pitch-out",
+                                        0
+                                    ]
+                                }
                             }
                         ]
                     },
                     "patching_rect": [
                         62.49995422363281,
                         1058.4616394042969,
-                        260.0,
+                        360,
                         22.0
                     ],
                     "saved_object_attributes": {
@@ -5811,6 +5956,1520 @@
                         22.0
                     ],
                     "text": "t b b"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10,
+                    "id": "c4name",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        985.0,
+                        215.0,
+                        159.0,
+                        19.0
+                    ],
+                    "presentation": 1,
+                    "presentation_linecount": 2,
+                    "presentation_rect": [
+                        259,
+                        0,
+                        61,
+                        31
+                    ],
+                    "text": "PITCH SHIFT",
+                    "textcolor": [
+                        0.15,
+                        0.19,
+                        0.23,
+                        1.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "c4level",
+                    "maxclass": "live.slider",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        "float"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        997.0,
+                        286.0,
+                        30.0,
+                        150.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        259,
+                        34,
+                        25,
+                        130
+                    ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_initial": [
+                                0
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Shift Pegel",
+                            "parameter_mmax": 100.0,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift Pegel",
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 5
+                        }
+                    },
+                    "showname": 0,
+                    "varname": "mix_pitch_level"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10.0,
+                    "id": "c4read",
+                    "ignoreclick": 1,
+                    "maxclass": "number",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        "bang"
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        1060.0,
+                        415.0,
+                        63.0,
+                        20.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        288,
+                        141,
+                        32,
+                        20
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "c4pan",
+                    "maxclass": "live.slider",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "orientation": 1,
+                    "outlettype": [
+                        "",
+                        "float"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        985.0,
+                        485.0,
+                        215.0,
+                        31.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        259,
+                        177,
+                        60,
+                        25
+                    ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_initial": [
+                                0
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Shift Panorama",
+                            "parameter_mmax": 100.0,
+                            "parameter_mmin": -100.0,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift Panorama",
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 6
+                        }
+                    },
+                    "showname": 0,
+                    "varname": "mix_pitch_pan"
+                }
+            },
+            {
+                "box": {
+                    "comment": "PITCH SHIFT externes Mono-Signal",
+                    "id": "c4in",
+                    "index": 6,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        1007.0,
+                        581.0,
+                        30.0,
+                        30.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "c4channel",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "signal",
+                        "",
+                        ""
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            100.0,
+                            100.0,
+                            900.0,
+                            540.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Audio extern",
+                                    "id": "in0",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        65.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label0",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        25.0,
+                                        190.0,
+                                        20.0
+                                    ],
+                                    "text": "Audio extern"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Lautstärke 0–100",
+                                    "id": "in1",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        240.0,
+                                        65.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label1",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        240.0,
+                                        25.0,
+                                        190.0,
+                                        20.0
+                                    ],
+                                    "text": "Lautstärke 0–100"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pan −100 links / 0 Mitte / +100 rechts",
+                                    "id": "in2",
+                                    "index": 3,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        450.0,
+                                        65.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label2",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        450.0,
+                                        25.0,
+                                        190.0,
+                                        20.0
+                                    ],
+                                    "text": "Pan −100…+100"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "norm",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        240.0,
+                                        135.0,
+                                        70.0,
+                                        22.0
+                                    ],
+                                    "text": "/ 100."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "frac",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        450.0,
+                                        135.0,
+                                        70.0,
+                                        22.0
+                                    ],
+                                    "text": "/ 100."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "calc",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        ""
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            100.0,
+                                            100.0,
+                                            810.0,
+                                            390.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Linearer Pegel 0..1",
+                                                    "id": "gain",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        45.0,
+                                                        30.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Pan -1 links / 0 Mitte / +1 rechts",
+                                                    "id": "pan",
+                                                    "index": 2,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        260.0,
+                                                        45.0,
+                                                        30.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pak",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        95.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "pak 0. 0."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "unpack",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "float",
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        140.0,
+                                                        110.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "unpack 0. 0."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "L",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        195.0,
+                                                        360.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "expr $f1 * cos(($f2 + 1.) * 0.7853981633974483)"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Matrixfaktor L",
+                                                    "id": "outL",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        250.0,
+                                                        30.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "R",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        410.0,
+                                                        195.0,
+                                                        360.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "expr $f1 * sin(($f2 + 1.) * 0.7853981633974483)"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Matrixfaktor R",
+                                                    "id": "outR",
+                                                    "index": 2,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        410.0,
+                                                        250.0,
+                                                        30.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "note",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        300.0,
+                                                        740.0,
+                                                        52.0
+                                                    ],
+                                                    "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "outL",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "L",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "outR",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "R",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pak",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "gain",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "unpack",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pak",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pak",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "pan",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "L",
+                                                        1
+                                                    ],
+                                                    "order": 1,
+                                                    "source": [
+                                                        "unpack",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "L",
+                                                        0
+                                                    ],
+                                                    "order": 1,
+                                                    "source": [
+                                                        "unpack",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "R",
+                                                        1
+                                                    ],
+                                                    "order": 0,
+                                                    "source": [
+                                                        "unpack",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "R",
+                                                        0
+                                                    ],
+                                                    "order": 0,
+                                                    "source": [
+                                                        "unpack",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        240.0,
+                                        250.0,
+                                        230.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p Pegel_und_Pan"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Audio zur Matrix",
+                                    "id": "outaudio",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        390.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "msgL",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        240.0,
+                                        315.0,
+                                        115.0,
+                                        22.0
+                                    ],
+                                    "text": "prepend 4 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Matrixkoeffizient L",
+                                    "id": "outL",
+                                    "index": 2,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        240.0,
+                                        390.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "msgR",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        450.0,
+                                        315.0,
+                                        115.0,
+                                        22.0
+                                    ],
+                                    "text": "prepend 4 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Matrixkoeffizient R",
+                                    "id": "outR",
+                                    "index": 3,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        450.0,
+                                        390.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "note",
+                                    "linecount": 2,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        450.0,
+                                        730.0,
+                                        33.0
+                                    ],
+                                    "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "msgL",
+                                        0
+                                    ],
+                                    "source": [
+                                        "calc",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "msgR",
+                                        0
+                                    ],
+                                    "source": [
+                                        "calc",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "calc",
+                                        1
+                                    ],
+                                    "source": [
+                                        "frac",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "outaudio",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in0",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "norm",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "frac",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "outL",
+                                        0
+                                    ],
+                                    "source": [
+                                        "msgL",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "outR",
+                                        0
+                                    ],
+                                    "source": [
+                                        "msgR",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "calc",
+                                        0
+                                    ],
+                                    "source": [
+                                        "norm",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        1089.2308502197266,
+                        1118.4616451263428,
+                        215.0,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Kanal_5"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-level-display",
+                    "ignoreclick": 1,
+                    "maxclass": "multislider",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        1035.0,
+                        286.0,
+                        20.0,
+                        150.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        285,
+                        38,
+                        7,
+                        100
+                    ],
+                    "setminmax": [
+                        0.0,
+                        100.0
+                    ],
+                    "setstyle": 1,
+                    "signed": 1
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-mix-audio",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            100.0,
+                            100.0,
+                            860.0,
+                            540.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift",
+                                    "id": "up",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        45.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Delay ohne Shift vor eigenem Fader",
+                                    "id": "dry",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        430.0,
+                                        45.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Shift-Anteil 0..1: 0 ohne Shift, 1 Shift",
+                                    "id": "mix",
+                                    "index": 3,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        630.0,
+                                        45.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "clip",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        630.0,
+                                        110.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "clip 0. 1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "pack",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        630.0,
+                                        150.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "pack 0. 30"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "ramp",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        630.0,
+                                        190.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "line~ 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "inverse",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        490.0,
+                                        230.0,
+                                        80.0,
+                                        22.0
+                                    ],
+                                    "text": "!-~ 1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "up-shift",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        300.0,
+                                        60.0,
+                                        22.0
+                                    ],
+                                    "text": "*~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "dry-shared",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        430.0,
+                                        300.0,
+                                        60.0,
+                                        22.0
+                                    ],
+                                    "text": "*~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "up-sum",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        360.0,
+                                        60.0,
+                                        22.0
+                                    ],
+                                    "text": "+~"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch / Delay ohne Shift",
+                                    "id": "up-out",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        420.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "doc",
+                                    "linecount": 2,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        470.0,
+                                        790.0,
+                                        33.0
+                                    ],
+                                    "text": "Pitch Shift Mix: x*Pitch + (1-x)*Delay ohne Shift; linear, 30 ms. Keine Verbindung zu Frequency-Up/Down."
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "pack",
+                                        0
+                                    ],
+                                    "source": [
+                                        "clip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "dry-shared",
+                                        0
+                                    ],
+                                    "source": [
+                                        "dry",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "up-sum",
+                                        1
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "dry-shared",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "up-shift",
+                                        1
+                                    ],
+                                    "source": [
+                                        "ramp",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "clip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mix",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "ramp",
+                                        0
+                                    ],
+                                    "source": [
+                                        "pack",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "dry-shared",
+                                        1
+                                    ],
+                                    "source": [
+                                        "inverse",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "inverse",
+                                        0
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "ramp",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "up-shift",
+                                        0
+                                    ],
+                                    "source": [
+                                        "up",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "up-sum",
+                                        0
+                                    ],
+                                    "source": [
+                                        "up-shift",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "up-out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "up-sum",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        854.9999542236328,
+                        836.923168182373,
+                        220,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Pitch_Shift_Mix"
+                }
+            },
+            {
+                "box": {
+                    "hint": "0 % Delay ohne Shift; 100 % Pitch Shift. Unabhängig vom Frequency Shift Mix.",
+                    "id": "pitch-mix",
+                    "maxclass": "live.slider",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "orientation": 1,
+                    "outlettype": [
+                        "",
+                        "float"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        1005.0,
+                        636.7521421909332,
+                        455.0,
+                        31.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        110,
+                        239,
+                        100,
+                        28
+                    ],
+                    "saved_attribute_attributes": {
+                        "slidercolor": {
+                            "expression": "themecolor.live_spectrum_alternative_color"
+                        },
+                        "tribordercolor": {
+                            "expression": "themecolor.live_gain_reduction_line_color"
+                        },
+                        "valueof": {
+                            "parameter_initial": [
+                                100
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Shift Mix",
+                            "parameter_mmax": 100.0,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift Mix",
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 5
+                        }
+                    },
+                    "showname": 0,
+                    "slidercolor": [
+                        0.10196078431372549,
+                        0.49019607843137253,
+                        0.9450980392156862,
+                        1.0
+                    ],
+                    "tribordercolor": [
+                        1.0,
+                        0.7254901960784313,
+                        0.00392156862745098,
+                        1.0
+                    ],
+                    "varname": "mix_pitch_blend"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-mix-normalize",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patching_rect": [
+                        1005.0,
+                        749.5726561546326,
+                        80.0,
+                        22.0
+                    ],
+                    "text": "/ 100."
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10,
+                    "id": "pitch-mix-label",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1042.4999542236328,
+                        1650.7693786621094,
+                        200.0,
+                        18.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        110,
+                        207,
+                        100,
+                        30
+                    ],
+                    "text": "Pitch Shift Mix",
+                    "textcolor": [
+                        0.15,
+                        0.19,
+                        0.23,
+                        1.0
+                    ],
+                    "presentation_linecount": 2
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 9.0,
+                    "id": "pitch-mix-left",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1042.4999542236328,
+                        1703.077075958252,
+                        200.0,
+                        28
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        110,
+                        267,
+                        55,
+                        25
+                    ],
+                    "text": "Delay ohne\nShift",
+                    "textcolor": [
+                        0.15,
+                        0.19,
+                        0.23,
+                        1.0
+                    ],
+                    "presentation_linecount": 2,
+                    "linecount": 2
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 9.0,
+                    "id": "pitch-mix-right",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1042.4999542236328,
+                        1676.9232273101807,
+                        200.0,
+                        28
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        166,
+                        267,
+                        44,
+                        25
+                    ],
+                    "text": "Pitch\nShift",
+                    "textcolor": [
+                        0.15,
+                        0.19,
+                        0.23,
+                        1.0
+                    ],
+                    "presentation_linecount": 2,
+                    "linecount": 2
                 }
             }
         ],
@@ -6697,6 +8356,198 @@
                     ],
                     "source": [
                         "shift-mix-shadow-message",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4level",
+                        0
+                    ],
+                    "destination": [
+                        "c4read",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4level",
+                        0
+                    ],
+                    "destination": [
+                        "pitch-level-display",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4level",
+                        0
+                    ],
+                    "destination": [
+                        "c4channel",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4pan",
+                        0
+                    ],
+                    "destination": [
+                        "c4channel",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4channel",
+                        0
+                    ],
+                    "destination": [
+                        "matrix",
+                        4
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4channel",
+                        1
+                    ],
+                    "destination": [
+                        "matrix",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4channel",
+                        2
+                    ],
+                    "destination": [
+                        "matrix",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "pitch-mix",
+                        0
+                    ],
+                    "destination": [
+                        "pitch-mix-normalize",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "pitch-mix-normalize",
+                        0
+                    ],
+                    "destination": [
+                        "pitch-mix-audio",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c4in",
+                        0
+                    ],
+                    "destination": [
+                        "pitch-mix-audio",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "c2in",
+                        0
+                    ],
+                    "destination": [
+                        "pitch-mix-audio",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "pitch-mix-audio",
+                        0
+                    ],
+                    "destination": [
+                        "delay-mix-audio",
+                        5
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "delay-mix-audio",
+                        4
+                    ],
+                    "destination": [
+                        "c4channel",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shift-mix-init",
+                        2
+                    ],
+                    "destination": [
+                        "pitch-mix",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "refresh",
+                        9
+                    ],
+                    "destination": [
+                        "c4pan",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "refresh",
+                        8
+                    ],
+                    "destination": [
+                        "c4level",
                         0
                     ]
                 }
