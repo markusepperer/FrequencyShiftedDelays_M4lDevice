@@ -10,7 +10,7 @@
         },
         "classnamespace": "box",
         "rect": [
-            66.0,
+            34.0,
             92.0,
             1947.0,
             996.0
@@ -20,36 +20,674 @@
         "boxes": [
             {
                 "box": {
-                    "comment": "06 · Pitchshift-Parallel-Delay ohne Shift: Unverschobenes Pitch-Parallel-Delay mit eigenem Pitch-Feedback; Mono-Audio nach Modulfreigabe",
+                    "comment": "07 · PITCH SHIFT 2: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe",
+                    "id": "obj-87",
+                    "index": 7,
+                    "maxclass": "outlet",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1675.0,
+                        863.0,
+                        30.0,
+                        30.0
+                    ],
+                    "hint": "07 · PITCH SHIFT 2: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe",
+                    "annotation": "07 · PITCH SHIFT 2: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 12.0,
+                    "id": "obj-91",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1669.0,
+                        903.0,
+                        205.0,
+                        33.0
+                    ],
+                    "presentation_linecount": 3,
+                    "text": "07 · Pitch Shift 2\nAUDIO OUT"
+                }
+            },
+            {
+                "box": {
+                    "activebgcolor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "activebgoncolor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "activetextcolor": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "activetextoncolor": [
+                        1.0,
+                        0.933333333333333,
+                        0.0,
+                        1.0
+                    ],
+                    "automation": "Unlinked",
+                    "automationon": "Linked",
+                    "fontsize": 11.0,
+                    "hint": "Pitch Shift 1 und 2 um Null spiegeln: Halbtöne und Cent mit entgegengesetztem Vorzeichen. Beim Aktivieren führt die zuletzt bearbeitete Seite.",
+                    "id": "pitch-link-button",
+                    "maxclass": "live.text",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        ""
+                    ],
+                    "outputmode": 1,
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        1480.3168570399284,
+                        367.0445833802223,
+                        62.0,
+                        34.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        247.0,
+                        192.0,
+                        94.0,
+                        18.0
+                    ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": ""
+                        },
+                        "activebgoncolor": {
+                            "expression": ""
+                        },
+                        "activetextcolor": {
+                            "expression": ""
+                        },
+                        "activetextoncolor": {
+                            "expression": ""
+                        },
+                        "valueof": {
+                            "parameter_enum": [
+                                "Unlinked",
+                                "Linked"
+                            ],
+                            "parameter_initial": [
+                                0
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Shift Link",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift Link",
+                            "parameter_type": 2,
+                            "parameter_unitstyle": 9
+                        }
+                    },
+                    "text": "Unlinked",
+                    "texton": "Linked",
+                    "varname": "pitchShiftLink"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-101",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        156.30434900522232,
+                        262.82608902454376,
+                        150.0,
+                        20.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        226.45386573672295,
+                        213.0,
+                        150.0,
+                        20.0
+                    ],
+                    "text": "PITCHSHIFTER"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-100",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        141.30434900522232,
+                        247.82608902454376,
+                        150.0,
+                        20.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        -2.173913061618805,
+                        202.46376997232437,
+                        150.0,
+                        20.0
+                    ],
+                    "text": "FREQSHIFTER"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-96",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        267.89855283498764,
+                        246.88405990600586,
+                        150.0,
+                        20.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        226.45386573672295,
+                        172.16232854127884,
+                        23.188405990600586,
+                        20.0
+                    ],
+                    "text": "#2"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-95",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        252.89855283498764,
+                        231.88405990600586,
+                        150.0,
+                        20.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        226.45386573672295,
+                        156.05570274591446,
+                        23.188405990600586,
+                        20.0
+                    ],
+                    "text": "#1"
+                }
+            },
+            {
+                "box": {
+                    "activebgcolor": [
+                        0.10196078431372549,
+                        0.49019607843137253,
+                        0.9450980392156862,
+                        1.0
+                    ],
+                    "fontsize": 12.0,
+                    "hint": "Pitch Shift 2: Cent-Feinstimmung mit Nachkommastellen; 100 Cent = ein Halbton.",
+                    "id": "obj-85",
+                    "maxclass": "live.numbox",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        "float"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        1731.9561941027641,
+                        367.0445833802223,
+                        66.0,
+                        18.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        294.0006937980652,
+                        173.16232854127884,
+                        48.0,
+                        18.0
+                    ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": "themecolor.live_prelisten"
+                        },
+                        "textcolor": {
+                            "expression": "themecolor.live_display_line_one"
+                        },
+                        "valueof": {
+                            "parameter_initial": [
+                                0
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Shift 2 Cent",
+                            "parameter_mmax": 100.0,
+                            "parameter_mmin": -100.0,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift 2 Cent",
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 1
+                        }
+                    },
+                    "textcolor": [
+                        1.0,
+                        0.7254901960784313,
+                        0.00392156862745098,
+                        1.0
+                    ],
+                    "varname": "pitchFineCents[1]"
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.0,
+                        0.549019607843137,
+                        1.0,
+                        0.0
+                    ],
+                    "id": "obj-86",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1734.4152104258537,
+                        343.27409225702286,
+                        55.0,
+                        20.0
+                    ],
+                    "text": "Cent"
+                }
+            },
+            {
+                "box": {
+                    "activebgcolor": [
+                        0.1411764705882353,
+                        0.1411764705882353,
+                        0.1411764705882353,
+                        1.0
+                    ],
+                    "fontsize": 12.0,
+                    "hint": "Pitch Shift 2: ganze Halbtöne; wird mit der Cent-Feinstimmung kombiniert.",
+                    "id": "obj-88",
+                    "maxclass": "live.numbox",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        "float"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        1608.1857058405876,
+                        371.142943918705,
+                        63.0,
+                        18.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        247.623881816864,
+                        173.16232854127884,
+                        46.0,
+                        18.0
+                    ],
+                    "saved_attribute_attributes": {
+                        "activebgcolor": {
+                            "expression": "themecolor.live_meter_bg"
+                        },
+                        "textcolor": {
+                            "expression": "themecolor.live_value_arc_zombie"
+                        },
+                        "valueof": {
+                            "parameter_longname": "D1 Pitch Shift 2 Halbtöne",
+                            "parameter_mmax": 60.0,
+                            "parameter_mmin": -60.0,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "D1 Pitch Shift 2 Halbtöne",
+                            "parameter_type": 1,
+                            "parameter_unitstyle": 0
+                        }
+                    },
+                    "textcolor": [
+                        0.9450980392156862,
+                        0.9450980392156862,
+                        0.9450980392156862,
+                        1.0
+                    ],
+                    "varname": "pitchShiftSemitones[1]"
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.0,
+                        0.549019607843137,
+                        1.0,
+                        0.0
+                    ],
+                    "id": "obj-89",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1607.366033732891,
+                        349.8314691185951,
+                        65.0,
+                        20.0
+                    ],
+                    "text": "Semi"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-90",
+                    "linecount": 3,
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            100.0,
+                            100.0,
+                            660.0,
+                            460.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Halbtöne, ganzzahlig",
+                                    "id": "semitones",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        40.0,
+                                        40.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Cent-Feinstimmung mit Nachkommastellen",
+                                    "id": "cents",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        350.0,
+                                        40.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "values",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        40.0,
+                                        110.0,
+                                        180.0,
+                                        22.0
+                                    ],
+                                    "text": "pak 0 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "sum-cents",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        40.0,
+                                        170.0,
+                                        180.0,
+                                        22.0
+                                    ],
+                                    "text": "expr ($i1 * 100.) + $f2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "to-semitones",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        40.0,
+                                        230.0,
+                                        180.0,
+                                        22.0
+                                    ],
+                                    "text": "/ 100."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Gesamttransposition in Halbtönen, einschließlich Cent-Bruchteil",
+                                    "id": "out",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        40.0,
+                                        300.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "doc",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        250.0,
+                                        170.0,
+                                        370.0,
+                                        47.0
+                                    ],
+                                    "text": "Gesamt-Cent = ganze Halbtöne * 100 + Cent als Float. /100. erhält die Halbton-Schnittstelle einschließlich Cent-Bruchteilen. Jede Änderung berechnet neu."
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "values",
+                                        1
+                                    ],
+                                    "source": [
+                                        "cents",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "values",
+                                        0
+                                    ],
+                                    "source": [
+                                        "semitones",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "to-semitones",
+                                        0
+                                    ],
+                                    "source": [
+                                        "sum-cents",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "to-semitones",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "sum-cents",
+                                        0
+                                    ],
+                                    "source": [
+                                        "values",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        1667.2130670547485,
+                        513.9344115257263,
+                        142.6356611251831,
+                        49.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Pitch_Halbtöne_und_Cent"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-92",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "bang",
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        1608.1857058405876,
+                        308.02819162607193,
+                        55.01695102453232,
+                        22.0
+                    ],
+                    "text": "t b b"
+                }
+            },
+            {
+                "box": {
+                    "comment": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2 mit Pitch-Feedback; Mono-Audio nach Modulfreigabe",
                     "id": "obj-82",
                     "index": 6,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1607.3697226047511,
+                        1460.9434613585472,
                         839.0,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2 mit Pitch-Feedback; Mono-Audio nach Modulfreigabe",
+                    "annotation": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2 mit Pitch-Feedback; Mono-Audio nach Modulfreigabe"
                 }
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-83",
                     "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1601.3697226047511,
-                        879.0,
-                        205,
-                        58
+                        1455.586318552494,
+                        879.1785710453987,
+                        205.0,
+                        47.0
                     ],
-                    "presentation_linecount": 5,
-                    "text": "06 · Pitchshift-Parallel-Delay\nohne Shift\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "06 · Pitch-Delay ohne Shift\nReferenz für Pitch 1 und 2\nAUDIO OUT"
                 }
             },
             {
@@ -72,15 +710,15 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        1320.0000550746918,
-                        491.76472640037537,
+                        1340.1529266238213,
+                        363.7658949494362,
                         66.0,
                         18.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        278.98086977005005,
-                        161.14648413658142,
+                        293.2760561108589,
+                        154.32174867391586,
                         48.0,
                         18.0
                     ],
@@ -118,15 +756,15 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1322.3529963493347,
-                        467.05884301662445,
+                        1341.7922708392143,
+                        339.1757317185402,
                         55.0,
                         20.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        278.98086977005005,
-                        138.85349225997925,
+                        297.6238822340965,
+                        134.03189343214035,
                         40.0,
                         20.0
                     ],
@@ -145,8 +783,8 @@
                         "int"
                     ],
                     "patching_rect": [
-                        1196.4706381559372,
-                        372.9411920309067,
+                        1305.7266981005669,
+                        197.37245708703995,
                         83.0,
                         22.0
                     ],
@@ -1086,8 +1724,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        326.1904730796814,
-                        64.28571367263794,
+                        333.3333361148834,
+                        64.49275416135788,
                         56.0,
                         18.0
                     ],
@@ -1165,8 +1803,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        375.5952345132828,
-                        -1.1904761791229248,
+                        382.60869884490967,
+                        -1.4492753744125366,
                         42.0,
                         18.0
                     ],
@@ -1237,8 +1875,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        328.02545189857483,
-                        170.0636808872223,
+                        348.55072754621506,
+                        170.28985649347305,
                         74.16502118110657,
                         18.0
                     ],
@@ -1294,8 +1932,8 @@
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        326.1904730796814,
-                        -2.3809523582458496,
+                        333.3333361148834,
+                        -2.173913061618805,
                         91.0,
                         33.0
                     ],
@@ -1316,16 +1954,16 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1536.4706523418427,
+                        1536.4130141735077,
                         764.5915284454823,
-                        150.0,
+                        100.95670843124344,
                         33.0
                     ],
                     "presentation": 1,
                     "presentation_linecount": 2,
                     "presentation_rect": [
-                        325.59523499011993,
-                        35.714285373687744,
+                        332.60869842767715,
+                        35.50724667310715,
                         92.66054272651672,
                         33.0
                     ],
@@ -1352,12 +1990,12 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        326.1146240234375,
-                        149.68151688575745,
-                        103.12499606609344,
+                        347.8260898590088,
+                        150.00000125169754,
+                        76.08695715665817,
                         20.0
                     ],
-                    "text": "Feedback PDelay"
+                    "text": "Feedback "
                 }
             },
             {
@@ -1381,8 +2019,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        326.1904730796814,
-                        100.66666555404663,
+                        345.65217679739,
+                        104.34782695770264,
                         76.0,
                         17.0
                     ],
@@ -1421,8 +2059,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        326.1146240234375,
-                        133.75795125961304,
+                        345.65217679739,
+                        132.6086967587471,
                         76.0758490562439,
                         17.0
                     ],
@@ -1477,15 +2115,15 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        1196.4706381559372,
-                        496.47060894966125,
+                        1204.0873567461967,
+                        364.5855670571327,
                         63.0,
                         18.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        233.12100076675415,
-                        161.14648413658142,
+                        248.34851950407028,
+                        155.04638636112213,
                         46.0,
                         18.0
                     ],
@@ -1633,35 +2271,37 @@
             },
             {
                 "box": {
-                    "comment": "05 · Pitchshift-Delay mit Shift: Pitch-Delay mit Transposition und eigenem Pitch-Feedback; Mono-Audio nach Modulfreigabe",
+                    "comment": "05 · PITCH SHIFT 1: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe",
                     "id": "obj-57",
                     "index": 5,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1349.7160079002376,
-                        826.0,
+                        1244.6428452730179,
+                        848.2142776250839,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "05 · PITCH SHIFT 1: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe",
+                    "annotation": "05 · PITCH SHIFT 1: Mono-Audio mit Transposition und eigener Rückführung, nach Modulfreigabe"
                 }
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-58",
-                    "linecount": 3,
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1343.7160079002376,
-                        866.0,
-                        205,
-                        58
+                        1238.3928453326225,
+                        888.3928486704826,
+                        205.0,
+                        33.0
                     ],
-                    "text": "05 · Pitchshift-Delay\nmit Shift\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "05 · Pitch Shift 1\nAUDIO OUT"
                 }
             },
             {
@@ -1684,8 +2324,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        326.1146240234375,
-                        83.28571367263794,
+                        333.3333361148834,
+                        83.33333402872086,
                         86.62419700622559,
                         20.0
                     ],
@@ -1712,8 +2352,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        322.9299108982086,
-                        116.66666555404663,
+                        346.37681448459625,
+                        117.39130532741547,
                         89.80891013145447,
                         20.0
                     ],
@@ -1761,15 +2401,15 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1196.4706381559372,
-                        464.7059017419815,
+                        1204.0873567461967,
+                        333.43802696466446,
                         65.0,
                         20.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        233.75794339179993,
-                        138.85349225997925,
+                        251.24707025289536,
+                        134.03189343214035,
                         39.8573734164238,
                         20.0
                     ],
@@ -1846,8 +2486,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        703.4545212984085,
-                        598.1308364868164,
+                        172.04761695861816,
+                        403.0,
                         46.0,
                         18.0
                     ],
@@ -1875,8 +2515,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        703.4545212984085,
-                        579.1308364868164,
+                        172.04761695861816,
+                        384.0,
                         46.0,
                         18.0
                     ],
@@ -1927,8 +2567,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1032.0,
-                        300.0,
+                        1029.906534075737,
+                        420.6058484315872,
                         145.0,
                         17.0
                     ],
@@ -1956,8 +2596,8 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        960.0,
-                        300.0,
+                        957.9439178109169,
+                        420.6058484315872,
                         65.0,
                         15.0
                     ],
@@ -2866,8 +3506,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        635.0,
-                        -285.0,
+                        641.6363395452499,
+                        -243.93937242031097,
                         110.0,
                         20.0
                     ],
@@ -2943,8 +3583,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        495.0,
-                        -285.0,
+                        502.2424124479294,
+                        -243.93937242031097,
                         70.0,
                         20.0
                     ],
@@ -3022,8 +3662,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        878.5714201927185,
-                        423.80951976776123,
+                        887.8504604101181,
+                        675.4545212984085,
                         140.0,
                         22.0
                     ],
@@ -3040,8 +3680,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        878.5714201927185,
-                        401.19047236442566,
+                        887.8504604101181,
+                        651.8181585073471,
                         69.0,
                         22.0
                     ],
@@ -3055,8 +3695,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        779.7618973255157,
-                        369.0476155281067,
+                        888.5352714061737,
+                        627.3871012330055,
                         114.0,
                         22.0
                     ],
@@ -3103,8 +3743,8 @@
                     "outputmode": 1,
                     "parameter_enable": 1,
                     "patching_rect": [
-                        755.9523737430573,
-                        335.7142825126648,
+                        865.4205540418625,
+                        579.1308364868164,
                         62.09677463769913,
                         20.16129046678543
                     ],
@@ -3157,8 +3797,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        578.181797504425,
-                        720.0908826589584,
+                        573.9049534797668,
+                        608.3871012330055,
                         86.04626750946045,
                         60.0
                     ],
@@ -3167,35 +3807,37 @@
             },
             {
                 "box": {
-                    "comment": "04 · Mikrofon direkt: Gewähltes Mikrofonsignal nach Quellenrouting, ohne Delay; Mono-Audio nach Modulfreigabe",
+                    "comment": "04 · MIKROFON DIREKT: gewählte Quelle ohne Delay, nach Modulfreigabe",
                     "id": "obj-30",
                     "index": 4,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1098.8434392213821,
-                        826.0,
+                        1012.9439178109169,
+                        855.3571346998215,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "04 · MIKROFON DIREKT: gewählte Quelle ohne Delay, nach Modulfreigabe",
+                    "annotation": "04 · MIKROFON DIREKT: gewählte Quelle ohne Delay, nach Modulfreigabe"
                 }
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-24",
                     "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1092.8434392213821,
-                        866.0,
-                        205,
-                        58
+                        1006.6939178705215,
+                        894.642848610878,
+                        205.0,
+                        33.0
                     ],
-                    "text": "04 · Mikrofon direkt\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "04 · Mikrofon direkt\nAUDIO OUT"
                 }
             },
             {
@@ -3334,8 +3976,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        534.5238044261932,
-                        423.80951976776123,
+                        565.3225848674774,
+                        446.728968501091,
                         69.0,
                         22.0
                     ],
@@ -3344,23 +3986,24 @@
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-55",
                     "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        572.181797504425,
-                        866.0,
-                        205,
-                        58
+                        533.9285663366318,
+                        883.9285629987717,
+                        205.0,
+                        33.0
                     ],
-                    "text": "02 · Freqshift DOWN\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "02 · Frequency Shift DOWN\nAUDIO OUT"
                 }
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-54",
                     "linecount": 2,
                     "maxclass": "comment",
@@ -3369,28 +4012,27 @@
                     "patching_rect": [
                         313.10114908218384,
                         871.0,
-                        205,
-                        58
+                        205.0,
+                        33.0
                     ],
-                    "text": "01 · Freqshift UP\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "01 · Frequency Shift UP\nAUDIO OUT"
                 }
             },
             {
                 "box": {
+                    "fontsize": 12.0,
                     "id": "obj-20",
                     "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        828.4085784912107,
-                        866.0,
-                        205,
-                        58
+                        765.275975717049,
+                        879.1785710453987,
+                        205.0,
+                        47.0
                     ],
-                    "text": "03 · Freqshift-Parallel-Delay\nohne Shift\nAUDIO OUT",
-                    "fontsize": 12.0
+                    "text": "03 · Frequency-Delay\nohne Shift\nAUDIO OUT"
                 }
             },
             {
@@ -5450,7 +6092,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "02 · Panel-Steuerung (Darstellung/Hintergrund, kein Audio)",
                     "id": "obj-26",
                     "index": 2,
                     "maxclass": "inlet",
@@ -5464,7 +6106,9 @@
                         -128.57142734527588,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "02 · Panel-Steuerung (Darstellung/Hintergrund, kein Audio)",
+                    "annotation": "02 · Panel-Steuerung (Darstellung/Hintergrund, kein Audio)"
                 }
             },
             {
@@ -5534,8 +6178,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        534.5238044261932,
-                        448.80951952934265,
+                        565.3225848674774,
+                        471.96261316537857,
                         99.0,
                         22.0
                     ],
@@ -5719,8 +6363,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        571.4285659790039,
-                        384.5238058567047,
+                        602.7057621479034,
+                        407.4766323566437,
                         53.88889145851135,
                         18.0
                     ],
@@ -5867,7 +6511,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "01 · Gemeinsame Delayzeit für Frequency-, Pitch- und Parallel-Delays (ms)",
                     "id": "obj-8",
                     "index": 1,
                     "maxclass": "inlet",
@@ -5877,48 +6521,54 @@
                         ""
                     ],
                     "patching_rect": [
-                        590.3225848674774,
-                        623.3871012330055,
+                        584.8225848674774,
+                        518.8235510587692,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "01 · Gemeinsame Delayzeit für Frequency-, Pitch- und Parallel-Delays (ms)",
+                    "annotation": "01 · Gemeinsame Delayzeit für Frequency-, Pitch- und Parallel-Delays (ms)"
                 }
             },
             {
                 "box": {
-                    "comment": "03 · Freqshift-Parallel-Delay ohne Shift: Unverschobenes Parallel-Delay mit bisherigem Frequency-Feedback; Mono-Audio nach Modulfreigabe",
+                    "comment": "03 · FREQUENCY-DELAY OHNE SHIFT: eigener Parallelzweig mit Frequency-Feedback; Mono-Audio nach Modulfreigabe",
                     "id": "obj-6",
                     "index": 3,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        834.4085784912107,
-                        826.0,
+                        771.5259756574444,
+                        839.0,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "03 · FREQUENCY-DELAY OHNE SHIFT: eigener Parallelzweig mit Frequency-Feedback; Mono-Audio nach Modulfreigabe",
+                    "annotation": "03 · FREQUENCY-DELAY OHNE SHIFT: eigener Parallelzweig mit Frequency-Feedback; Mono-Audio nach Modulfreigabe"
                 }
             },
             {
                 "box": {
-                    "comment": "02 · Freqshift DOWN: Frequency-Delay mit Abwärtsverschiebung; Mono-Audio nach Modulfreigabe",
+                    "comment": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe",
                     "id": "obj-3",
                     "index": 2,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        578.181797504425,
-                        826.0,
+                        540.1785662770271,
+                        843.749991953373,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe",
+                    "annotation": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe"
                 }
             },
             {
                 "box": {
-                    "comment": "01 · Freqshift UP: Frequency-Delay mit Aufwärtsverschiebung; Mono-Audio nach Modulfreigabe",
+                    "comment": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe",
                     "id": "obj-2",
                     "index": 1,
                     "maxclass": "outlet",
@@ -5929,7 +6579,9 @@
                         831.0,
                         30.0,
                         30.0
-                    ]
+                    ],
+                    "hint": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe",
+                    "annotation": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe"
                 }
             },
             {
@@ -6705,9 +7357,10 @@
                 "box": {
                     "id": "obj-922",
                     "maxclass": "newobj",
-                    "numinlets": 20,
-                    "numoutlets": 6,
+                    "numinlets": 21,
+                    "numoutlets": 7,
                     "outlettype": [
+                        "signal",
                         "signal",
                         "signal",
                         "signal",
@@ -6716,9 +7369,9 @@
                         "signal"
                     ],
                     "patching_rect": [
-                        319.10114908218384,
+                        319.0,
                         792.1052556037903,
-                        1307.2685735225673,
+                        1376.5779269723332,
                         22.0
                     ],
                     "text": "MS_Delayelementextended_M4l_update #1 #0",
@@ -6930,7 +7583,7 @@
                         113.0,
                         23.0
                     ],
-                    "text": "Alle Luftmikrofone",
+                    "text": "No Input",
                     "textcolor": [
                         0.0,
                         0.0,
@@ -6960,8 +7613,8 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        534.5238044261932,
-                        383.3333296775818,
+                        565.3225848674774,
+                        406.542052924633,
                         39.0,
                         18.0
                     ],
@@ -7086,10 +7739,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        -2.453865736722946,
-                        -5.444295704364777,
-                        227.9077314734459,
-                        208.44429570436478
+                        -2.173913061618805,
+                        -5.7971014976501465,
+                        228.26087146997452,
+                        226.81159609556198
                     ],
                     "proportion": 0.5,
                     "saved_attribute_attributes": {
@@ -7129,8 +7782,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        933.3333745002747,
-                        179.56990039348602,
+                        1099.0,
+                        46.0,
                         637.0,
                         60.0
                     ],
@@ -7162,8 +7815,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        960.0,
-                        335.0,
+                        957.9439178109169,
+                        455.1852874159813,
                         85.0,
                         22.0
                     ],
@@ -7177,8 +7830,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        960.0,
-                        370.0,
+                        957.9439178109169,
+                        489.76472640037537,
                         210.0,
                         22.0
                     ],
@@ -7221,7 +7874,7 @@
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [
-                                        ""
+                                        "float"
                                     ],
                                     "patching_rect": [
                                         40.0,
@@ -7240,7 +7893,7 @@
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [
-                                        ""
+                                        "float"
                                     ],
                                     "patching_rect": [
                                         350.0,
@@ -7401,7 +8054,7 @@
                         ]
                     },
                     "patching_rect": [
-                        1196.4706381559372,
+                        1465.038442850113,
                         518.8235510587692,
                         142.6356611251831,
                         49.0
@@ -7439,8 +8092,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        1196.4706381559372,
-                        401.176487326622,
+                        1305.7266981005669,
+                        226.88065296411514,
                         55.01695102453232,
                         22.0
                     ],
@@ -7458,8 +8111,8 @@
                         "bang"
                     ],
                     "patching_rect": [
-                        1196.4706381559372,
-                        431.7647238969803,
+                        1204.0873567461967,
+                        300.65114265680313,
                         55.01695102453232,
                         22.0
                     ],
@@ -7488,10 +8141,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        215.2866072654724,
-                        -5.095541000366211,
-                        214.01272201538086,
-                        205.09552526474
+                        222.46376997232437,
+                        -0.7246376872062683,
+                        213.76811772584915,
+                        223.18840765953064
                     ],
                     "proportion": 0.5,
                     "saved_attribute_attributes": {
@@ -7499,6 +8152,1885 @@
                             "expression": ""
                         }
                     }
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-mirror-link",
+                    "maxclass": "newobj",
+                    "numinlets": 5,
+                    "numoutlets": 8,
+                    "outlettype": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "float",
+                        "float",
+                        "float",
+                        "float"
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            134.0,
+                            164.0,
+                            1250.0,
+                            900.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift 1: Halbtöne",
+                                    "id": "in-semi1",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        20.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift 1: Cent",
+                                    "id": "in-cent1",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        260.0,
+                                        20.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "0 = Unlinked; 1 = gespiegelt um Null",
+                                    "id": "in-link",
+                                    "index": 3,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        490.0,
+                                        20.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift 2: Halbtöne",
+                                    "id": "in-semi2",
+                                    "index": 4,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        720.0,
+                                        20.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Pitch Shift 2: Cent",
+                                    "id": "in-cent2",
+                                    "index": 5,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        950.0,
+                                        20.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "event-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        100.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "side-semi1",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        150.0,
+                                        135.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "store-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        190.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "f 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "fan-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        250.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gate-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        310.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "gate 1 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "neg-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        370.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "* -1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "mirror-semi1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        430.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "set-semi1",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        490.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "set $1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "semi1: set-Anzeige ohne erneute Ausgabe",
+                                    "id": "out-set-semi1",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "semi1: Wert zur Halbton/Cent-Berechnung",
+                                    "id": "out-value-semi1",
+                                    "index": 5,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        550.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "event-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        100.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "side-cent1",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        430.0,
+                                        135.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "store-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        190.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "f 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "fan-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        250.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gate-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        310.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "gate 1 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "neg-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        370.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "* -1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "mirror-cent1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        430.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "set-cent1",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        310.0,
+                                        490.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "set $1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "cent1: set-Anzeige ohne erneute Ausgabe",
+                                    "id": "out-set-cent1",
+                                    "index": 2,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        130.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "cent1: Wert zur Halbton/Cent-Berechnung",
+                                    "id": "out-value-cent1",
+                                    "index": 6,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        650.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "event-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        715.0,
+                                        60.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "side-semi2",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        710.0,
+                                        135.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "store-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        190.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "f 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "fan-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        250.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gate-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        310.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "gate 1 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "neg-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        370.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "* -1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "mirror-semi2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        430.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "set-semi2",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        590.0,
+                                        490.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "set $1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "semi2: set-Anzeige ohne erneute Ausgabe",
+                                    "id": "out-set-semi2",
+                                    "index": 3,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        230.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "semi2: Wert zur Halbton/Cent-Berechnung",
+                                    "id": "out-value-semi2",
+                                    "index": 7,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        750.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "event-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        100.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "side-cent2",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        990.0,
+                                        135.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "store-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        190.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "f 0."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "fan-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        250.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gate-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        310.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "gate 1 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "neg-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        370.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "* -1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "mirror-cent2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        430.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "set-cent2",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        870.0,
+                                        490.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "set $1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "cent2: set-Anzeige ohne erneute Ausgabe",
+                                    "id": "out-set-cent2",
+                                    "index": 4,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        330.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "cent2: Wert zur Halbton/Cent-Berechnung",
+                                    "id": "out-value-cent2",
+                                    "index": 8,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        850.0,
+                                        700.0,
+                                        140.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "link-trigger",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        490.0,
+                                        65.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "link-on",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        480.0,
+                                        115.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "last-side",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        480.0,
+                                        160.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "i 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "choose-side",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        480.0,
+                                        205.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 1 2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "recall1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        440.0,
+                                        550.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "recall2",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        690.0,
+                                        550.0,
+                                        140.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "doc",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        780.0,
+                                        324.0,
+                                        47.0
+                                    ],
+                                    "text": "Linked: beide Komponenten mit -1 spiegeln. set aktualisiert die Gegenanzeige ohne Nachrichtenrückkopplung. Beim Aktivieren führt die zuletzt bearbeitete Seite."
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "recall1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "choose-side",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "recall2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "choose-side",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "fan-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "side-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-cent1",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "event-cent1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "fan-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "side-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-cent2",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "event-cent2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "fan-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "side-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-semi1",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "event-semi1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "fan-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "side-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "event-semi2",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "event-semi2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-cent1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "fan-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "fan-cent1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-cent2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "fan-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "fan-cent2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-semi1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "fan-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "fan-semi1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-semi2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "fan-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "fan-semi2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "neg-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gate-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "neg-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gate-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "neg-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gate-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "neg-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gate-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "link-trigger",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in-link",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "choose-side",
+                                        0
+                                    ],
+                                    "source": [
+                                        "last-side",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "last-side",
+                                        0
+                                    ],
+                                    "source": [
+                                        "link-on",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-cent1",
+                                        0
+                                    ],
+                                    "order": 2,
+                                    "source": [
+                                        "link-trigger",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-cent2",
+                                        0
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "link-trigger",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-semi1",
+                                        0
+                                    ],
+                                    "order": 3,
+                                    "source": [
+                                        "link-trigger",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gate-semi2",
+                                        0
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "link-trigger",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "link-on",
+                                        0
+                                    ],
+                                    "source": [
+                                        "link-trigger",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "set-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-cent1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "mirror-cent1",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "set-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-cent2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "mirror-cent2",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "set-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-semi1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi2",
+                                        1
+                                    ],
+                                    "source": [
+                                        "mirror-semi1",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-value-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "set-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "mirror-semi2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi1",
+                                        1
+                                    ],
+                                    "source": [
+                                        "mirror-semi2",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "mirror-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "neg-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "mirror-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "neg-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "mirror-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "neg-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "mirror-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "neg-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "recall1",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "recall1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "recall2",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "store-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "recall2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-set-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "set-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-set-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "set-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-set-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "set-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out-set-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "set-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "last-side",
+                                        1
+                                    ],
+                                    "source": [
+                                        "side-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "last-side",
+                                        1
+                                    ],
+                                    "source": [
+                                        "side-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "last-side",
+                                        1
+                                    ],
+                                    "source": [
+                                        "side-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "last-side",
+                                        1
+                                    ],
+                                    "source": [
+                                        "side-semi2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-cent1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "store-cent1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-cent2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "store-cent2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-semi1",
+                                        0
+                                    ],
+                                    "source": [
+                                        "store-semi1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "event-semi2",
+                                        0
+                                    ],
+                                    "source": [
+                                        "store-semi2",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        1204.0873567461967,
+                        471.96261316537857,
+                        550.0,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Pitch_Link_Spiegelung"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-link-startup",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "bang",
+                        "bang",
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        1309.005386531353,
+                        252.29048830270767,
+                        80.0,
+                        22.0
+                    ],
+                    "text": "t b b b"
                 }
             }
         ],
@@ -7823,7 +10355,7 @@
                         "obj-35",
                         0
                     ],
-                    "order": 2,
+                    "order": 1,
                     "source": [
                         "obj-31",
                         0
@@ -7849,7 +10381,7 @@
                         "obj-922",
                         8
                     ],
-                    "order": 1,
+                    "order": 2,
                     "source": [
                         "obj-31",
                         0
@@ -8135,7 +10667,7 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-transposition-combine",
+                        "pitch-mirror-link",
                         0
                     ],
                     "source": [
@@ -8540,6 +11072,66 @@
             {
                 "patchline": {
                     "destination": [
+                        "pitch-mirror-link",
+                        4
+                    ],
+                    "source": [
+                        "obj-85",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-mirror-link",
+                        3
+                    ],
+                    "source": [
+                        "obj-88",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-922",
+                        20
+                    ],
+                    "source": [
+                        "obj-90",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-85",
+                        0
+                    ],
+                    "source": [
+                        "obj-92",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-88",
+                        0
+                    ],
+                    "source": [
+                        "obj-92",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "obj-2",
                         0
                     ],
@@ -8612,6 +11204,18 @@
             {
                 "patchline": {
                     "destination": [
+                        "obj-87",
+                        0
+                    ],
+                    "source": [
+                        "obj-922",
+                        6
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "obj-922",
                         14
                     ],
@@ -8624,12 +11228,194 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-transposition-combine",
+                        "pitch-mirror-link",
                         1
                     ],
                     "source": [
                         "pitch-fine-cents",
                         0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-mirror-link",
+                        2
+                    ],
+                    "source": [
+                        "pitch-link-button",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-92",
+                        0
+                    ],
+                    "source": [
+                        "pitch-link-startup",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-link-button",
+                        0
+                    ],
+                    "source": [
+                        "pitch-link-startup",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-transposition-recall",
+                        0
+                    ],
+                    "source": [
+                        "pitch-link-startup",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-62",
+                        0
+                    ],
+                    "midpoints": [
+                        1213.5873567461967,
+                        495.0,
+                        1191.0,
+                        495.0,
+                        1191.0,
+                        360.0,
+                        1213.5873567461967,
+                        360.0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-85",
+                        0
+                    ],
+                    "midpoints": [
+                        1441.1587853176254,
+                        504.0,
+                        1764.0,
+                        504.0,
+                        1764.0,
+                        396.0,
+                        1728.0,
+                        396.0,
+                        1728.0,
+                        363.0,
+                        1741.4561941027641,
+                        363.0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        3
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-88",
+                        0
+                    ],
+                    "midpoints": [
+                        1365.3016424604825,
+                        504.0,
+                        1191.0,
+                        504.0,
+                        1191.0,
+                        411.0,
+                        1593.0,
+                        411.0,
+                        1593.0,
+                        366.0,
+                        1617.6857058405876,
+                        366.0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-90",
+                        1
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        7
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-90",
+                        0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        6
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-fine-cents",
+                        0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-transposition-combine",
+                        1
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        5
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-transposition-combine",
+                        0
+                    ],
+                    "source": [
+                        "pitch-mirror-link",
+                        4
                     ]
                 }
             },
@@ -8648,7 +11434,7 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-transposition-recall",
+                        "pitch-link-startup",
                         0
                     ],
                     "source": [

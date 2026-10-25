@@ -18,6 +18,100 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-67",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        1849.968282699585,
+                        1214.2857331037521,
+                        34.0,
+                        22.0
+                    ],
+                    "text": "*~ 1."
+                }
+            },
+            {
+                "box": {
+                    "annotation": "07 · PITCH SHIFT 2: Mono-Audio nach Modulfreigabe",
+                    "comment": "07 · PITCH SHIFT 2: Mono-Audio nach Modulfreigabe",
+                    "hint": "07 · PITCH SHIFT 2: Mono-Audio nach Modulfreigabe",
+                    "id": "obj-66",
+                    "index": 7,
+                    "maxclass": "outlet",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1853.968282699585,
+                        1251.9568878412247,
+                        30.0,
+                        30.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-65",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1838.0952665805817,
+                        1315.4489523172379,
+                        73.0,
+                        33.0
+                    ],
+                    "text": "PitchShift\nOUT 2"
+                }
+            },
+            {
+                "box": {
+                    "annotation": "21 · Pitch Shift 2: Transposition (Halbtöne, Nachkommastellen für Cent)",
+                    "comment": "21 · Pitch Shift 2: Transposition (Halbtöne, Nachkommastellen für Cent)",
+                    "hint": "21 · Pitch Shift 2: Transposition (Halbtöne, Nachkommastellen für Cent)",
+                    "id": "obj-64",
+                    "index": 21,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patching_rect": [
+                        2790.4762337207794,
+                        377.77778363227844,
+                        30.0,
+                        30.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.0,
+                        0.549019607843137,
+                        1.0,
+                        0.13
+                    ],
+                    "id": "obj-286",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        2774.603217601776,
+                        344.0,
+                        150.0,
+                        20.0
+                    ],
+                    "text": "Pitchshift Amount 2"
+                }
+            },
+            {
+                "box": {
                     "color": [
                         0.168627450980392,
                         1.0,
@@ -281,22 +375,24 @@
             {
                 "box": {
                     "id": "obj-42",
-                    "linecount": 6,
+                    "linecount": 5,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
                         1546.2498525381088,
                         1265.99999666214,
-                        73.0,
-                        87.0
+                        39.0,
+                        74.0
                     ],
                     "text": "Pitch-Delay\nohne Shift\nOUT"
                 }
             },
             {
                 "box": {
-                    "comment": "06 · PITCH-DELAY OHNE SHIFT: Mono-Audio, eigene Rückführung mit Pitch-Feedback, nach Modulfreigabe",
+                    "annotation": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2, eigene Rückführung mit Pitch-Feedback, nach Modulfreigabe",
+                    "comment": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2, eigene Rückführung mit Pitch-Feedback, nach Modulfreigabe",
+                    "hint": "06 · PITCH-DELAY OHNE SHIFT: gemeinsamer paralleler Referenzzweig für Pitch Shift 1 und 2, eigene Rückführung mit Pitch-Feedback, nach Modulfreigabe",
                     "id": "obj-44",
                     "index": 6,
                     "maxclass": "outlet",
@@ -312,7 +408,9 @@
             },
             {
                 "box": {
-                    "comment": "20 · Pitch-Filter: Q",
+                    "annotation": "20 · Pitch Shift 1 und 2: gemeinsames Filter-Q",
+                    "comment": "20 · Pitch Shift 1 und 2: gemeinsames Filter-Q",
+                    "hint": "20 · Pitch Shift 1 und 2: gemeinsames Filter-Q",
                     "id": "obj-37",
                     "index": 20,
                     "maxclass": "inlet",
@@ -337,7 +435,9 @@
             },
             {
                 "box": {
-                    "comment": "19 · Pitch-Filter: Cutoff (Hz)",
+                    "annotation": "19 · Pitch Shift 1 und 2: gemeinsamer Filter-Cutoff (Hz)",
+                    "comment": "19 · Pitch Shift 1 und 2: gemeinsamer Filter-Cutoff (Hz)",
+                    "hint": "19 · Pitch Shift 1 und 2: gemeinsamer Filter-Cutoff (Hz)",
                     "id": "obj-39",
                     "index": 19,
                     "maxclass": "inlet",
@@ -362,7 +462,9 @@
             },
             {
                 "box": {
-                    "comment": "18 · Pitch-Delay: Feedback (Faktor)",
+                    "annotation": "18 · Pitch Shift 1 und 2 sowie Pitch-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
+                    "comment": "18 · Pitch Shift 1 und 2 sowie Pitch-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
+                    "hint": "18 · Pitch Shift 1 und 2 sowie Pitch-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
                     "id": "obj-40",
                     "index": 18,
                     "maxclass": "inlet",
@@ -464,7 +566,7 @@
                         73.0,
                         33.0
                     ],
-                    "text": "PitchShift\nOUT"
+                    "text": "PitchShift\nOUT 1"
                 }
             },
             {
@@ -487,7 +589,9 @@
             },
             {
                 "box": {
-                    "comment": "05 · PITCH SHIFT: Mono-Audio nach Modulfreigabe",
+                    "annotation": "05 · PITCH SHIFT 1: Mono-Audio nach Modulfreigabe",
+                    "comment": "05 · PITCH SHIFT 1: Mono-Audio nach Modulfreigabe",
+                    "hint": "05 · PITCH SHIFT 1: Mono-Audio nach Modulfreigabe",
                     "id": "obj-35",
                     "index": 5,
                     "maxclass": "outlet",
@@ -524,7 +628,9 @@
             },
             {
                 "box": {
-                    "comment": "17 · Transposer: Fenstergröße (ms)",
+                    "annotation": "17 · Pitch Shift 1 und 2: gemeinsames Transposer-Fenster (ms)",
+                    "comment": "17 · Pitch Shift 1 und 2: gemeinsames Transposer-Fenster (ms)",
+                    "hint": "17 · Pitch Shift 1 und 2: gemeinsames Transposer-Fenster (ms)",
                     "id": "obj-177",
                     "index": 17,
                     "maxclass": "inlet",
@@ -571,7 +677,9 @@
             },
             {
                 "box": {
-                    "comment": "16 · Overlap Gen: Fenstergröße (ms)",
+                    "annotation": "16 · Pitch Shift 1 und 2: gemeinsames GEN-Fenster (ms)",
+                    "comment": "16 · Pitch Shift 1 und 2: gemeinsames GEN-Fenster (ms)",
+                    "hint": "16 · Pitch Shift 1 und 2: gemeinsames GEN-Fenster (ms)",
                     "id": "obj-174",
                     "index": 16,
                     "maxclass": "inlet",
@@ -617,7 +725,9 @@
             },
             {
                 "box": {
-                    "comment": "15 · Pitch-Algorithmus: Matrixliste; Spalten 0 Gen, 1 Transposer, 2 Gadget, 3 Ztx",
+                    "annotation": "15 · Pitch Shift 1 und 2: gemeinsame Algorithmuswahl (Matrixliste: 0 GEN, 1 TRP, 2 FFT/Gadget, 3 ZTX)",
+                    "comment": "15 · Pitch Shift 1 und 2: gemeinsame Algorithmuswahl (Matrixliste: 0 GEN, 1 TRP, 2 FFT/Gadget, 3 ZTX)",
+                    "hint": "15 · Pitch Shift 1 und 2: gemeinsame Algorithmuswahl (Matrixliste: 0 GEN, 1 TRP, 2 FFT/Gadget, 3 ZTX)",
                     "id": "obj-171",
                     "index": 15,
                     "maxclass": "inlet",
@@ -663,7 +773,9 @@
             },
             {
                 "box": {
-                    "comment": "14 · Pitch Shift: Transposition (Halbtöne)",
+                    "annotation": "14 · Pitch Shift 1: Transposition (Halbtöne, Nachkommastellen für Cent)",
+                    "comment": "14 · Pitch Shift 1: Transposition (Halbtöne, Nachkommastellen für Cent)",
+                    "hint": "14 · Pitch Shift 1: Transposition (Halbtöne, Nachkommastellen für Cent)",
                     "id": "obj-167",
                     "index": 14,
                     "maxclass": "inlet",
@@ -710,7 +822,9 @@
             },
             {
                 "box": {
-                    "comment": "13 · Pitch-Filter: 0 = Bypass, 1 = Filter",
+                    "annotation": "13 · Pitch Shift 1 und 2: Filter gemeinsam; 0 = Bypass, 1 = Filter",
+                    "comment": "13 · Pitch Shift 1 und 2: Filter gemeinsam; 0 = Bypass, 1 = Filter",
+                    "hint": "13 · Pitch Shift 1 und 2: Filter gemeinsam; 0 = Bypass, 1 = Filter",
                     "id": "obj-166",
                     "index": 13,
                     "maxclass": "inlet",
@@ -757,7 +871,9 @@
             },
             {
                 "box": {
-                    "comment": "12 · Pitch-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
+                    "annotation": "12 · Pitch Shift 1 und 2: gemeinsamer Filtertyp (Matrixliste: LP / HP / BP / Notch)",
+                    "comment": "12 · Pitch Shift 1 und 2: gemeinsamer Filtertyp (Matrixliste: LP / HP / BP / Notch)",
+                    "hint": "12 · Pitch Shift 1 und 2: gemeinsamer Filtertyp (Matrixliste: LP / HP / BP / Notch)",
                     "id": "obj-160",
                     "index": 12,
                     "maxclass": "inlet",
@@ -803,7 +919,9 @@
             },
             {
                 "box": {
+                    "annotation": "10 · Frequency Shift DOWN: Verschiebung (Hz)",
                     "comment": "10 · Frequency Shift DOWN: Verschiebung (Hz)",
+                    "hint": "10 · Frequency Shift DOWN: Verschiebung (Hz)",
                     "id": "obj-33",
                     "index": 10,
                     "maxclass": "inlet",
@@ -889,7 +1007,9 @@
             },
             {
                 "box": {
+                    "annotation": "09 · Frequency-Filter: 0 = Bypass, 1 = Filter",
                     "comment": "09 · Frequency-Filter: 0 = Bypass, 1 = Filter",
+                    "hint": "09 · Frequency-Filter: 0 = Bypass, 1 = Filter",
                     "id": "obj-30",
                     "index": 9,
                     "maxclass": "inlet",
@@ -1050,8 +1170,8 @@
                         "multichannelsignal"
                     ],
                     "patching_rect": [
-                        573.75284075737,
-                        654.545431137085,
+                        544.5365045368671,
+                        591.6666948795319,
                         289.887663602829,
                         22.0
                     ],
@@ -1078,7 +1198,9 @@
             },
             {
                 "box": {
+                    "annotation": "04 · MIKROFON DIREKT: gewählte Quelle nach Routing und Modulfreigabe",
                     "comment": "04 · MIKROFON DIREKT: gewählte Quelle nach Routing und Modulfreigabe",
+                    "hint": "04 · MIKROFON DIREKT: gewählte Quelle nach Routing und Modulfreigabe",
                     "id": "obj-15",
                     "index": 4,
                     "maxclass": "outlet",
@@ -1421,7 +1543,9 @@
             },
             {
                 "box": {
+                    "annotation": "08 · Frequency-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
                     "comment": "08 · Frequency-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
+                    "hint": "08 · Frequency-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
                     "id": "obj-2",
                     "index": 8,
                     "maxclass": "inlet",
@@ -1496,7 +1620,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        551.0,
+                        577.2809408307076,
                         278.1180019378662,
                         34.83146345615387,
                         47.0
@@ -1592,7 +1716,9 @@
             },
             {
                 "box": {
+                    "annotation": "07 · Frequency-Filter: Q",
                     "comment": "07 · Frequency-Filter: Q",
+                    "hint": "07 · Frequency-Filter: Q",
                     "id": "obj-1",
                     "index": 7,
                     "maxclass": "inlet",
@@ -1890,17 +2016,18 @@
                     ],
                     "id": "obj-201",
                     "maxclass": "newobj",
-                    "numinlets": 19,
-                    "numoutlets": 3,
+                    "numinlets": 20,
+                    "numoutlets": 4,
                     "outlettype": [
+                        "signal",
                         "signal",
                         "signal",
                         "signal"
                     ],
                     "patching_rect": [
-                        518.1817724704742,
+                        517.4603254795074,
                         812.0,
-                        1562.1210743188858,
+                        1871.4286004304886,
                         22.0
                     ],
                     "text": "MS_Freqshiftdelayfilter2feedbacks_M4l 1 #2",
@@ -1909,7 +2036,9 @@
             },
             {
                 "box": {
+                    "annotation": "01 · Mikrofonquelle: Auswahlindex 0–7; 0 = No Input",
                     "comment": "01 · Mikrofonquelle: Auswahlindex 0–7; 0 = No Input",
+                    "hint": "01 · Mikrofonquelle: Auswahlindex 0–7; 0 = No Input",
                     "id": "obj-882",
                     "index": 1,
                     "maxclass": "inlet",
@@ -1928,7 +2057,9 @@
             },
             {
                 "box": {
+                    "annotation": "02 · Frequency Shift: Bandmatrix (Liste: Eingang Ausgang Pegel)",
                     "comment": "02 · Frequency Shift: Bandmatrix (Liste: Eingang Ausgang Pegel)",
+                    "hint": "02 · Frequency Shift: Bandmatrix (Liste: Eingang Ausgang Pegel)",
                     "id": "obj-891",
                     "index": 2,
                     "maxclass": "inlet",
@@ -1947,7 +2078,9 @@
             },
             {
                 "box": {
+                    "annotation": "03 · Frequency Shift UP: Verschiebung (Hz)",
                     "comment": "03 · Frequency Shift UP: Verschiebung (Hz)",
+                    "hint": "03 · Frequency Shift UP: Verschiebung (Hz)",
                     "id": "obj-892",
                     "index": 3,
                     "maxclass": "inlet",
@@ -1957,8 +2090,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        542.6966725587845,
-                        340.4494653940201,
+                        568.7095120549202,
+                        339.5465748310089,
                         30.0,
                         30.0
                     ]
@@ -1966,7 +2099,9 @@
             },
             {
                 "box": {
-                    "comment": "06 · Gemeinsame Delayzeit: Frequency, Pitch und Delay ohne Shift (ms)",
+                    "annotation": "06 · Gemeinsame Delayzeit: Frequency Shift, Pitch Shift 1 und 2 sowie beide Delays ohne Shift (ms)",
+                    "comment": "06 · Gemeinsame Delayzeit: Frequency Shift, Pitch Shift 1 und 2 sowie beide Delays ohne Shift (ms)",
+                    "hint": "06 · Gemeinsame Delayzeit: Frequency Shift, Pitch Shift 1 und 2 sowie beide Delays ohne Shift (ms)",
                     "id": "obj-893",
                     "index": 6,
                     "maxclass": "inlet",
@@ -1985,7 +2120,9 @@
             },
             {
                 "box": {
+                    "annotation": "04 · Frequency-Filter: Cutoff (Hz)",
                     "comment": "04 · Frequency-Filter: Cutoff (Hz)",
+                    "hint": "04 · Frequency-Filter: Cutoff (Hz)",
                     "id": "obj-894",
                     "index": 4,
                     "maxclass": "inlet",
@@ -2004,7 +2141,9 @@
             },
             {
                 "box": {
-                    "comment": "05 · Frequency-Delays und Delay ohne Shift: Feedback (Faktor)",
+                    "annotation": "05 · Frequency Shift und Frequency-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
+                    "comment": "05 · Frequency Shift und Frequency-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
+                    "hint": "05 · Frequency Shift und Frequency-Delay ohne Shift: gemeinsamer Feedbackwert (Faktor)",
                     "id": "obj-895",
                     "index": 5,
                     "maxclass": "inlet",
@@ -2023,7 +2162,9 @@
             },
             {
                 "box": {
-                    "comment": "01 · SHIFT UP: Mono-Audio nach Modulfreigabe",
+                    "annotation": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe",
+                    "comment": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe",
+                    "hint": "01 · FREQUENCY SHIFT UP: Mono-Audio nach Modulfreigabe",
                     "id": "obj-897",
                     "index": 1,
                     "maxclass": "outlet",
@@ -2039,7 +2180,9 @@
             },
             {
                 "box": {
-                    "comment": "02 · SHIFT DOWN: Mono-Audio nach Modulfreigabe",
+                    "annotation": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe",
+                    "comment": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe",
+                    "hint": "02 · FREQUENCY SHIFT DOWN: Mono-Audio nach Modulfreigabe",
                     "id": "obj-898",
                     "index": 2,
                     "maxclass": "outlet",
@@ -2055,7 +2198,9 @@
             },
             {
                 "box": {
-                    "comment": "03 · DELAY OHNE SHIFT: Mono-Audio nach Modulfreigabe",
+                    "annotation": "03 · FREQUENCY-DELAY OHNE SHIFT: Mono-Audio mit Frequency-Feedback, nach Modulfreigabe",
+                    "comment": "03 · FREQUENCY-DELAY OHNE SHIFT: Mono-Audio mit Frequency-Feedback, nach Modulfreigabe",
+                    "hint": "03 · FREQUENCY-DELAY OHNE SHIFT: Mono-Audio mit Frequency-Feedback, nach Modulfreigabe",
                     "id": "obj-899",
                     "index": 3,
                     "maxclass": "outlet",
@@ -2126,7 +2271,9 @@
             },
             {
                 "box": {
+                    "annotation": "11 · Input-Fadezeit (s), 0–2; gleiche Rampe für Ein und Aus",
                     "comment": "11 · Input-Fadezeit (s), 0–2; gleiche Rampe für Ein und Aus",
+                    "hint": "11 · Input-Fadezeit (s), 0–2; gleiche Rampe für Ein und Aus",
                     "id": "input-fade-in",
                     "index": 11,
                     "maxclass": "inlet",
@@ -2456,7 +2603,7 @@
                         "obj-10",
                         1
                     ],
-                    "order": 5,
+                    "order": 6,
                     "source": [
                         "obj-18",
                         0
@@ -2469,7 +2616,7 @@
                         "obj-12",
                         1
                     ],
-                    "order": 4,
+                    "order": 5,
                     "source": [
                         "obj-18",
                         0
@@ -2482,7 +2629,7 @@
                         "obj-14",
                         1
                     ],
-                    "order": 3,
+                    "order": 4,
                     "source": [
                         "obj-18",
                         0
@@ -2495,7 +2642,7 @@
                         "obj-36",
                         1
                     ],
-                    "order": 1,
+                    "order": 2,
                     "source": [
                         "obj-18",
                         0
@@ -2507,6 +2654,19 @@
                     "destination": [
                         "obj-45",
                         1
+                    ],
+                    "order": 1,
+                    "source": [
+                        "obj-18",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-67",
+                        0
                     ],
                     "order": 0,
                     "source": [
@@ -2521,7 +2681,7 @@
                         "obj-8",
                         1
                     ],
-                    "order": 2,
+                    "order": 3,
                     "source": [
                         "obj-18",
                         0
@@ -2591,6 +2751,18 @@
                     "source": [
                         "obj-201",
                         0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-67",
+                        1
+                    ],
+                    "source": [
+                        "obj-201",
+                        3
                     ]
                 }
             },
@@ -2759,7 +2931,7 @@
                         0
                     ],
                     "midpoints": [
-                        583.25284075737,
+                        554.0365045368671,
                         698.5,
                         834.0,
                         698.5,
@@ -3292,6 +3464,30 @@
                     ],
                     "source": [
                         "obj-63",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-201",
+                        19
+                    ],
+                    "source": [
+                        "obj-64",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-66",
+                        0
+                    ],
+                    "source": [
+                        "obj-67",
                         0
                     ]
                 }

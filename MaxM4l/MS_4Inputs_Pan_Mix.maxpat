@@ -14,21 +14,37 @@
         "boxes": [
             {
                 "box": {
-                    "comment": "07 · PITCH-DELAY OHNE SHIFT: eigener Parallelzweig mit Pitch-Feedback",
-                    "id": "obj-2",
-                    "index": 0,
+                    "comment": "",
+                    "id": "obj-3",
+                    "index": 8,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
+                    "patching_rect": [ 1618.5186477899551, 579.0123919248581, 30.0, 30.0 ]
+                }
+            },
+            {
+                "box": {
+                    "annotation": "07 · PITCH-DELAY OHNE SHIFT: zum Pitch Shift Mix und separaten Zusatzkanal",
+                    "comment": "07 · PITCH-DELAY OHNE SHIFT: zum Pitch Shift Mix und separaten Zusatzkanal",
+                    "hint": "07 · PITCH-DELAY OHNE SHIFT: zum Pitch Shift Mix und separaten Zusatzkanal",
+                    "id": "obj-2",
+                    "index": 7,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 1341.4286034107208, 586.0, 30.0, 30.0 ]
                 }
             },
             {
                 "box": {
-                    "comment": "01 · Steuerung / Patcher öffnen (kein Audio)",
+                    "annotation": "01 · Unbenutzter Steueranschluss (kein Audio, aktuell nicht verbunden)",
+                    "comment": "01 · Unbenutzter Steueranschluss (kein Audio, aktuell nicht verbunden)",
+                    "hint": "01 · Unbenutzter Steueranschluss (kein Audio, aktuell nicht verbunden)",
                     "id": "obj-1",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -239,13 +255,15 @@
             },
             {
                 "box": {
-                    "comment": "02 · SHIFT UP: Frequency-Delay mit Shift",
+                    "annotation": "02 · FREQUENCY SHIFT UP: Mono-Audio zum Frequency Shift Mix",
+                    "comment": "02 · FREQUENCY SHIFT UP: Mono-Audio zum Frequency Shift Mix",
+                    "hint": "02 · FREQUENCY SHIFT UP: Mono-Audio zum Frequency Shift Mix",
                     "id": "c0in",
-                    "index": 0,
+                    "index": 2,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ -18.80341899394989, 574.358980178833, 30.0, 30.0 ]
                 }
             },
@@ -535,10 +553,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -670,10 +685,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 1.538461685180664, 1163.077033996582, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -777,13 +789,15 @@
             },
             {
                 "box": {
-                    "comment": "03 · SHIFT DOWN: Frequency-Delay mit Shift",
+                    "annotation": "03 · FREQUENCY SHIFT DOWN: Mono-Audio zum Frequency Shift Mix",
+                    "comment": "03 · FREQUENCY SHIFT DOWN: Mono-Audio zum Frequency Shift Mix",
+                    "hint": "03 · FREQUENCY SHIFT DOWN: Mono-Audio zum Frequency Shift Mix",
                     "id": "c1in",
-                    "index": 0,
+                    "index": 3,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 264.86484718322754, 581.0810422897339, 30.0, 30.0 ]
                 }
             },
@@ -1073,10 +1087,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -1209,10 +1220,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 268.84613609313965, 1170.7693424224854, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -1316,13 +1324,15 @@
             },
             {
                 "box": {
-                    "comment": "04 · DELAY OHNE SHIFT: Frequency-Parallelzweig mit bisherigem Feedback",
+                    "annotation": "04 · FREQUENCY-DELAY OHNE SHIFT: zum Frequency Shift Mix und separaten Zusatzkanal",
+                    "comment": "04 · FREQUENCY-DELAY OHNE SHIFT: zum Frequency Shift Mix und separaten Zusatzkanal",
+                    "hint": "04 · FREQUENCY-DELAY OHNE SHIFT: zum Frequency Shift Mix und separaten Zusatzkanal",
                     "id": "c2in",
-                    "index": 0,
+                    "index": 4,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 441.5385036468506, 590.0, 30.0, 30.0 ]
                 }
             },
@@ -1612,10 +1622,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -1748,10 +1755,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 523.0769729614258, 1173.8462657928467, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -1854,13 +1858,15 @@
             },
             {
                 "box": {
+                    "annotation": "05 · MIKROFON DIREKT: ausgewählte Quelle ohne Delay",
                     "comment": "05 · MIKROFON DIREKT: ausgewählte Quelle ohne Delay",
+                    "hint": "05 · MIKROFON DIREKT: ausgewählte Quelle ohne Delay",
                     "id": "c3in",
-                    "index": 0,
+                    "index": 5,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 767.0, 581.0, 30.0, 30.0 ]
                 }
             },
@@ -1870,7 +1876,7 @@
                     "maxclass": "newobj",
                     "numinlets": 3,
                     "numoutlets": 3,
-                    "outlettype": [ "", "", "" ],
+                    "outlettype": [ "signal", "", "" ],
                     "patcher": {
                         "fileversion": 1,
                         "appversion": {
@@ -1891,7 +1897,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 30.0, 65.0, 30.0, 30.0 ]
                                 }
                             },
@@ -2150,10 +2156,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -2286,10 +2289,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 849.2308502197266, 1118.4616451263428, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -2338,9 +2338,11 @@
             },
             {
                 "box": {
+                    "annotation": "01 · Stereo-Ausgang links",
                     "comment": "01 · Stereo-Ausgang links",
+                    "hint": "01 · Stereo-Ausgang links",
                     "id": "outL",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -2361,9 +2363,11 @@
             },
             {
                 "box": {
+                    "annotation": "02 · Stereo-Ausgang rechts",
                     "comment": "02 · Stereo-Ausgang rechts",
+                    "hint": "02 · Stereo-Ausgang rechts",
                     "id": "outR",
-                    "index": 0,
+                    "index": 2,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -2390,19 +2394,21 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 776.3461761474609, 1478.4616794586182, 490.0, 38.0 ],
+                    "patching_rect": [ 776.3461761474609, 1478.4616794586182, 493.0, 38.0 ],
                     "presentation": 1,
                     "presentation_linecount": 2,
-                    "presentation_rect": [ 9.78260850906372, 344.5652108192444, 490.0, 38.0 ],
+                    "presentation_rect": [ 9.78260850906372, 344.5652108192444, 493.0, 38.0 ],
                     "text": "Mix-Pegel regeln die Ergebnisse der Überblendungen. Zusatz-Fader mischen unverschobene Delays separat dazu. Mikrofon direkt bleibt unabhängig.",
                     "textcolor": [ 0.15, 0.19, 0.23, 1.0 ]
                 }
             },
             {
                 "box": {
+                    "annotation": "03 · Steuerdaten für Schattenmixer (kein Audio; Pitch-Anbindung folgt separat)",
                     "comment": "03 · Steuerdaten für Schattenmixer (kein Audio; Pitch-Anbindung folgt separat)",
+                    "hint": "03 · Steuerdaten für Schattenmixer (kein Audio; Pitch-Anbindung folgt separat)",
                     "id": "controlout",
-                    "index": 0,
+                    "index": 3,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -2596,7 +2602,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 30.0, 45.0, 30.0, 30.0 ]
                                 }
                             },
@@ -2608,7 +2614,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 230.0, 45.0, 30.0, 30.0 ]
                                 }
                             },
@@ -2620,7 +2626,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 430.0, 45.0, 30.0, 30.0 ]
                                 }
                             },
@@ -2871,10 +2877,7 @@
                                     "source": [ "up-sum", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 54.99995422363281, 956.923168182373, 230.0, 22.0 ],
                     "saved_object_attributes": {
@@ -3014,7 +3017,7 @@
                     "maxclass": "newobj",
                     "numinlets": 7,
                     "numoutlets": 6,
-                    "outlettype": [ "signal", "signal", "signal", "", "signal", "signal" ],
+                    "outlettype": [ "signal", "signal", "signal", "signal", "signal", "signal" ],
                     "patcher": {
                         "fileversion": 1,
                         "appversion": {
@@ -3059,7 +3062,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 390.0, 40.0, 30.0, 30.0 ]
                                 }
                             },
@@ -3071,7 +3074,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 570.0, 40.0, 30.0, 30.0 ]
                                 }
                             },
@@ -3315,7 +3318,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 1220.0, 40.0, 30.0, 30.0 ]
                                 }
                             },
@@ -3559,10 +3562,7 @@
                                     "source": [ "ramp", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 62.49995422363281, 1058.4616394042969, 420.0, 22.0 ],
                     "saved_object_attributes": {
@@ -3677,13 +3677,15 @@
             },
             {
                 "box": {
-                    "comment": "06 · PITCH SHIFT: Pitch-Delay mit Transposition",
+                    "annotation": "06 · PITCH SHIFT 1: Mono-Audio zum Pitch Shift Mix",
+                    "comment": "06 · PITCH SHIFT 1: Mono-Audio zum Pitch Shift Mix",
+                    "hint": "06 · PITCH SHIFT 1: Mono-Audio zum Pitch Shift Mix",
                     "id": "c4in",
-                    "index": 0,
+                    "index": 6,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "signal" ],
                     "patching_rect": [ 1007.0, 581.0, 30.0, 30.0 ]
                 }
             },
@@ -3973,10 +3975,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -4109,10 +4108,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 1089.2308502197266, 1118.4616451263428, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -4167,7 +4163,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 30.0, 45.0, 30.0, 30.0 ]
                                 }
                             },
@@ -4179,7 +4175,7 @@
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
+                                    "outlettype": [ "signal" ],
                                     "patching_rect": [ 430.0, 45.0, 30.0, 30.0 ]
                                 }
                             },
@@ -4364,10 +4360,7 @@
                                     "source": [ "up-sum", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 854.9999542236328, 836.923168182373, 220.0, 22.0 ],
                     "saved_object_attributes": {
@@ -4850,10 +4843,7 @@
                                                     "source": [ "unpack", 0 ]
                                                 }
                                             }
-                                        ],
-                                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                                        ]
                                     },
                                     "patching_rect": [ 240.0, 250.0, 230.0, 22.0 ],
                                     "saved_object_attributes": {
@@ -4986,10 +4976,7 @@
                                     "source": [ "norm", 0 ]
                                 }
                             }
-                        ],
-                        "patchlinecolor": [ 0.30980392156862746, 0.30980392156862746, 0.30980392156862746, 1.0 ],
-                        "bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ],
-                        "editing_bgcolor": [ 0.6470588235294118, 0.6470588235294118, 0.6470588235294118, 1.0 ]
+                        ]
                     },
                     "patching_rect": [ 1369.2308502197266, 1118.4616451263428, 215.0, 22.0 ],
                     "saved_object_attributes": {
@@ -5650,34 +5637,15 @@
                 }
             }
         ],
-        "parameters": {
-            "c0level": [ "D1 Shift Up Pegel", "D1 Shift Up Pegel", 0 ],
-            "c0pan": [ "D1 Shift Up Panorama", "D1 Shift Up Panorama", 0 ],
-            "c1level": [ "D1 Shift Down Pegel", "D1 Shift Down Pegel", 0 ],
-            "c1pan": [ "D1 Shift Down Panorama", "D1 Shift Down Panorama", 0 ],
-            "c2level": [ "D1 Delay Pegel", "D1 Delay Pegel", 0 ],
-            "c2pan": [ "D1 Delay Panorama", "D1 Delay Panorama", 0 ],
-            "c3level": [ "D1 Mikrofon direkt Pegel", "D1 Mikrofon direkt Pegel", 0 ],
-            "c3pan": [ "D1 Mikrofon direkt Panorama", "D1 Mikrofon direkt Panorama", 0 ],
-            "c4level": [ "D1 Pitch Shift Pegel", "D1 Pitch Shift Pegel", 0 ],
-            "c4pan": [ "D1 Pitch Shift Panorama", "D1 Pitch Shift Panorama", 0 ],
-            "c5level": [ "D1 Pitch Delay ohne Shift Pegel", "D1 Pitch Delay ohne Shift Pegel", 0 ],
-            "c5pan": [ "D1 Pitch Delay ohne Shift Panorama", "D1 Pitch Delay ohne Shift Panorama", 0 ],
-            "delay-mix": [ "D1 Delay-Mix", "D1 Delay-Mix", 0 ],
-            "pitch-mix": [ "D1 Pitch Shift Mix", "D1 Pitch Shift Mix", 0 ],
-            "shift-mix": [ "D1 Shift-Mix", "D1 Shift-Mix", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
-            "inherited_shortname": 1
-        },
-        "autosave": 0,
         "bgcolor": [ 0.95, 0.96, 0.97, 1.0 ],
-        "editing_bgcolor": [ 0.95, 0.96, 0.97, 1.0 ]
+        "editing_bgcolor": [ 0.95, 0.96, 0.97, 1.0 ],
+        "saved_attribute_attributes": {
+            "editing_bgcolor": {
+                "expression": ""
+            },
+            "locked_bgcolor": {
+                "expression": ""
+            }
+        }
     }
 }
