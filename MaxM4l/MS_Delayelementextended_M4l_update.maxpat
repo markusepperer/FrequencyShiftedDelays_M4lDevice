@@ -9,8 +9,83 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ -222.0, 205.0, 1660.0, 943.0 ],
+        "rect": [ 34.0, 140.0, 1935.0, 913.0 ],
         "boxes": [
+            {
+                "box": {
+                    "comment": "20 · Pitch-Filter: Q",
+                    "id": "obj-37",
+                    "index": 20,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 2597.368396282196, 372.0, 30.0, 30.0 ],
+                    "tricolor": [ 0.0, 0.513725490196078, 1.0, 0.741176470588235 ]
+                }
+            },
+            {
+                "box": {
+                    "comment": "19 · Pitch-Filter: Cutoff (Hz)",
+                    "id": "obj-39",
+                    "index": 19,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 2428.9473452568054, 372.0, 30.0, 30.0 ],
+                    "tricolor": [ 0.0, 0.513725490196078, 1.0, 0.741176470588235 ]
+                }
+            },
+            {
+                "box": {
+                    "comment": "18 · Pitch-Delay: Feedback (Faktor)",
+                    "id": "obj-40",
+                    "index": 18,
+                    "maxclass": "inlet",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 2288.157872915268, 372.0, 30.0, 30.0 ],
+                    "tricolor": [ 0.0, 0.513725490196078, 1.0, 0.741176470588235 ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.13 ],
+                    "id": "obj-115",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 2603.9473435878754, 337.5, 150.0, 33.0 ],
+                    "text": "Filter Q\nPitchshift Delay"
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.13 ],
+                    "id": "obj-104",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 2434.210503101349, 337.5, 150.0, 33.0 ],
+                    "text": "Filter Cutoff\nPitchshift Delay"
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.13 ],
+                    "id": "obj-84",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 2263.1578731536865, 337.5, 150.0, 33.0 ],
+                    "text": "Feedback\nPitchshift Delay"
+                }
+            },
             {
                 "box": {
                     "id": "obj-38",
@@ -35,7 +110,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "05 · PITCH SHIFT: Mono-Audio nach Modulfreigabe",
                     "id": "obj-35",
                     "index": 5,
                     "maxclass": "outlet",
@@ -57,7 +132,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "17 · Transposer: Fenstergröße (ms)",
                     "id": "obj-177",
                     "index": 17,
                     "maxclass": "inlet",
@@ -82,7 +157,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "16 · Overlap Gen: Fenstergröße (ms)",
                     "id": "obj-174",
                     "index": 16,
                     "maxclass": "inlet",
@@ -106,13 +181,13 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "15 · Pitch-Algorithmus: Matrixliste; Spalten 0 Gen, 1 Transposer, 2 Gadget, 3 Ztx",
                     "id": "obj-171",
                     "index": 15,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "list" ],
                     "patching_rect": [ 1780.0, 372.0, 30.0, 30.0 ],
                     "tricolor": [ 0.0, 0.513725490196078, 1.0, 0.741176470588235 ]
                 }
@@ -130,7 +205,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "14 · Pitch Shift: Transposition (Halbtöne)",
                     "id": "obj-167",
                     "index": 14,
                     "maxclass": "inlet",
@@ -155,7 +230,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "13 · Pitch-Filter: 0 = Bypass, 1 = Filter",
                     "id": "obj-166",
                     "index": 13,
                     "maxclass": "inlet",
@@ -180,13 +255,13 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "12 · Pitch-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
                     "id": "obj-160",
                     "index": 12,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
+                    "outlettype": [ "list" ],
                     "patching_rect": [ 1420.0, 378.0, 30.0, 30.0 ],
                     "tricolor": [ 0.0, 0.513725490196078, 1.0, 0.741176470588235 ]
                 }
@@ -204,7 +279,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "10 · Frequency Shift DOWN: Verschiebung (Hz)",
                     "id": "obj-33",
                     "index": 10,
                     "maxclass": "inlet",
@@ -251,7 +326,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "09 · Frequency-Filter: 0 = Bypass, 1 = Filter",
                     "id": "obj-30",
                     "index": 9,
                     "maxclass": "inlet",
@@ -372,7 +447,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "04 · MIKROFON DIREKT: gewählte Quelle nach Routing und Modulfreigabe",
                     "id": "obj-15",
                     "index": 4,
                     "maxclass": "outlet",
@@ -574,7 +649,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "08 · Frequency-Filtertyp: Matrixliste (LP / HP / BP / Notch)",
                     "id": "obj-2",
                     "index": 8,
                     "maxclass": "inlet",
@@ -668,7 +743,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "07 · Frequency-Filter: Q",
                     "id": "obj-1",
                     "index": 7,
                     "maxclass": "inlet",
@@ -842,17 +917,17 @@
                     "color": [ 1.0, 0.0, 0.0, 1.0 ],
                     "id": "obj-201",
                     "maxclass": "newobj",
-                    "numinlets": 16,
+                    "numinlets": 19,
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
-                    "patching_rect": [ 519.4805145263672, 769.791637301445, 265.0, 22.0 ],
+                    "patching_rect": [ 518.4210476875305, 812.0, 1035.5263059139252, 22.0 ],
                     "text": "MS_Freqshiftdelayfilter2feedbacks_M4l 1 #2",
                     "varname": "MS_Freqshiftdelayfilter2feedbacks"
                 }
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "01 · Mikrofonquelle: Auswahlindex 0–7; 0 = No Input",
                     "id": "obj-882",
                     "index": 1,
                     "maxclass": "inlet",
@@ -864,7 +939,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "02 · Frequency Shift: Bandmatrix (Liste: Eingang Ausgang Pegel)",
                     "id": "obj-891",
                     "index": 2,
                     "maxclass": "inlet",
@@ -876,7 +951,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "03 · Frequency Shift UP: Verschiebung (Hz)",
                     "id": "obj-892",
                     "index": 3,
                     "maxclass": "inlet",
@@ -888,7 +963,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "06 · Gemeinsame Delayzeit: Frequency, Pitch und Delay ohne Shift (ms)",
                     "id": "obj-893",
                     "index": 6,
                     "maxclass": "inlet",
@@ -900,7 +975,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "04 · Frequency-Filter: Cutoff (Hz)",
                     "id": "obj-894",
                     "index": 4,
                     "maxclass": "inlet",
@@ -912,7 +987,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "05 · Frequency-Delays und Delay ohne Shift: Feedback (Faktor)",
                     "id": "obj-895",
                     "index": 5,
                     "maxclass": "inlet",
@@ -924,7 +999,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "01 · SHIFT UP: Mono-Audio nach Modulfreigabe",
                     "id": "obj-897",
                     "index": 1,
                     "maxclass": "outlet",
@@ -935,7 +1010,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "02 · SHIFT DOWN: Mono-Audio nach Modulfreigabe",
                     "id": "obj-898",
                     "index": 2,
                     "maxclass": "outlet",
@@ -946,7 +1021,7 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "03 · DELAY OHNE SHIFT: Mono-Audio nach Modulfreigabe",
                     "id": "obj-899",
                     "index": 3,
                     "maxclass": "outlet",
@@ -990,18 +1065,7 @@
             },
             {
                 "box": {
-                    "id": "delay-fresh-doc",
-                    "linecount": 3,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1100.0, 690.0, 510.0, 47.0 ],
-                    "text": "No Input: einstellbare Rampe (0–2 s, Ein und Aus gleich) schließt nur frisches Mikrofon-Audio zu den drei Delays. Die Zeit wird beim nächsten Quellenwechsel benutzt. Direktzweig und Feedback-Rückführungen bleiben unverändert."
-                }
-            },
-            {
-                "box": {
-                    "comment": "Input-Fadezeit in Sekunden, 0–2; gilt für Ein und Aus",
+                    "comment": "11 · Input-Fadezeit (s), 0–2; gleiche Rampe für Ein und Aus",
                     "id": "input-fade-in",
                     "index": 11,
                     "maxclass": "inlet",
@@ -1388,6 +1452,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-201", 18 ],
+                    "source": [ "obj-37", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-201", 17 ],
+                    "source": [ "obj-39", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-427", 0 ],
                     "source": [ "obj-391", 0 ]
                 }
@@ -1403,9 +1479,15 @@
                 "patchline": {
                     "color": [ 0.8722826086956521, 0.0, 0.017720061162914896, 1.0 ],
                     "destination": [ "obj-22", 0 ],
-                    "midpoints": [ 1024.3148958683014, 1028.3636718988419, 893.9805998802185, 1028.3636718988419, 893.9805998802185, 657.8636718988419, 930.5, 657.8636718988419 ],
+                    "midpoints": [ 1024.3148958683014, 1110.8636718988419, 893.9805998802185, 1110.8636718988419, 893.9805998802185, 657.8636718988419, 930.5, 657.8636718988419 ],
                     "order": 1,
                     "source": [ "obj-4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-201", 16 ],
+                    "source": [ "obj-40", 0 ]
                 }
             },
             {
