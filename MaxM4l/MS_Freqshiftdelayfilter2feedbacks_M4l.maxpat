@@ -1351,7 +1351,7 @@
                     "fontname": "Lato",
                     "fontsize": 11.595187,
                     "id": "obj-119",
-                    "maxclass": "number",
+                    "maxclass": "flonum",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [
@@ -1364,7 +1364,9 @@
                         882.4999158382416,
                         70.20690751075745,
                         22.0
-                    ]
+                    ],
+                    "format": 6,
+                    "comment": "Gesamttransposition in Cent; Float vermeidet Abschneiden durch Rundungsfehler."
                 }
             },
             {

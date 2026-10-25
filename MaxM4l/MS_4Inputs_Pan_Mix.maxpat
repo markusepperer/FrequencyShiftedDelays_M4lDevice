@@ -6027,7 +6027,8 @@
                         }
                     },
                     "showname": 0,
-                    "varname": "mix_pitch_level"
+                    "varname": "mix_pitch_level",
+                    "hint": "Pegel des fünften Kanals nach Pitch Shift Mix und Delay-Mix."
                 }
             },
             {
@@ -6099,7 +6100,8 @@
                         }
                     },
                     "showname": 0,
-                    "varname": "mix_pitch_pan"
+                    "varname": "mix_pitch_pan",
+                    "hint": "Stereo-Position des fünften Pitch-Kanals."
                 }
             },
             {
