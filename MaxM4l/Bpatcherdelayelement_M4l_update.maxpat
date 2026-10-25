@@ -10,14 +10,48 @@
         },
         "classnamespace": "box",
         "rect": [
-            34.0,
-            138.0,
-            1767.0,
-            929.0
+            66.0,
+            92.0,
+            1947.0,
+            996.0
         ],
         "openinpresentation": 1,
         "subpatcher_template": "Default Max 7",
         "boxes": [
+            {
+                "box": {
+                    "comment": "06 · Pitchshift-Parallel-Delay ohne Shift: Unverschobenes Pitch-Parallel-Delay mit eigenem Pitch-Feedback; Mono-Audio nach Modulfreigabe",
+                    "id": "obj-82",
+                    "index": 6,
+                    "maxclass": "outlet",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1607.3697226047511,
+                        839.0,
+                        30.0,
+                        30.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-83",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        1601.3697226047511,
+                        879.0,
+                        205,
+                        58
+                    ],
+                    "presentation_linecount": 5,
+                    "text": "06 · Pitchshift-Parallel-Delay\nohne Shift\nAUDIO OUT",
+                    "fontsize": 12.0
+                }
+            },
             {
                 "box": {
                     "activebgcolor": [
@@ -45,8 +79,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        279.16666400432587,
-                        153.5714271068573,
+                        278.98086977005005,
+                        161.14648413658142,
                         48.0,
                         18.0
                     ],
@@ -91,8 +125,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        279.16666400432587,
-                        131.5476177930832,
+                        278.98086977005005,
+                        138.85349225997925,
                         40.0,
                         20.0
                     ],
@@ -509,6 +543,7 @@
             },
             {
                 "box": {
+                    "hint": "Pitch-Verfahren: GEN / TRP / FFT / ZTX.",
                     "id": "obj-78",
                     "maxclass": "live.tab",
                     "num_lines_patching": 1,
@@ -529,8 +564,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        233.33333110809326,
-                        104.76190376281738,
+                        233.12100076675415,
+                        108.28024625778198,
                         85.59322237968445,
                         20.3389835357666
                     ],
@@ -550,8 +585,7 @@
                             "parameter_unitstyle": 9
                         }
                     },
-                    "varname": "pitchAlgorithm",
-                    "hint": "Pitch-Verfahren: GEN / TRP / FFT / ZTX."
+                    "varname": "pitchAlgorithm"
                 }
             },
             {
@@ -562,6 +596,7 @@
                         0.2823529411764706,
                         1.0
                     ],
+                    "hint": "Filtertyp des Pitch-Delays: LP / HP / BP / Notch.",
                     "id": "obj-77",
                     "maxclass": "live.tab",
                     "num_lines_patching": 1,
@@ -610,8 +645,7 @@
                             "parameter_unitstyle": 9
                         }
                     },
-                    "varname": "pitchFilterType",
-                    "hint": "Filtertyp des Pitch-Delays: LP / HP / BP / Notch."
+                    "varname": "pitchFilterType"
                 }
             },
             {
@@ -1034,6 +1068,7 @@
                     ],
                     "appearance": 1,
                     "fontsize": 12.0,
+                    "hint": "Cutoff des eigenen Pitch-Filters in Hertz.",
                     "id": "obj-75",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -1083,8 +1118,7 @@
                         0.0,
                         1.0
                     ],
-                    "varname": "pitchFilterCutoffHz",
-                    "hint": "Cutoff des eigenen Pitch-Filters in Hertz."
+                    "varname": "pitchFilterCutoffHz"
                 }
             },
             {
@@ -1113,6 +1147,7 @@
                 "box": {
                     "appearance": 1,
                     "fontsize": 12.0,
+                    "hint": "Resonanz des eigenen Pitch-Filters.",
                     "id": "obj-71",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -1149,8 +1184,7 @@
                             "parameter_unitstyle": 1
                         }
                     },
-                    "varname": "pitchFilterQ",
-                    "hint": "Resonanz des eigenen Pitch-Filters."
+                    "varname": "pitchFilterQ"
                 }
             },
             {
@@ -1185,6 +1219,7 @@
                     ],
                     "appearance": 1,
                     "fontsize": 12.0,
+                    "hint": "Rückführungsfaktor des eigenen Pitch-Delays.",
                     "id": "obj-69",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -1202,9 +1237,9 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        389.8809486627579,
-                        151.7857128381729,
-                        39.0,
+                        328.02545189857483,
+                        170.0636808872223,
+                        74.16502118110657,
                         18.0
                     ],
                     "saved_attribute_attributes": {
@@ -1234,8 +1269,7 @@
                         0.0,
                         1.0
                     ],
-                    "varname": "pitchFeedbackAmount",
-                    "hint": "Rückführungsfaktor des eigenen Pitch-Delays."
+                    "varname": "pitchFeedbackAmount"
                 }
             },
             {
@@ -1307,7 +1341,6 @@
                         0.0
                     ],
                     "id": "obj-84",
-                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -1315,21 +1348,22 @@
                         1468.2353553771973,
                         604.577528834343,
                         150.0,
-                        33.0
+                        20.0
                     ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
                     "presentation_rect": [
-                        325.59523499011993,
-                        149.40476047992706,
+                        326.1146240234375,
+                        149.68151688575745,
                         103.12499606609344,
-                        33.0
+                        20.0
                     ],
-                    "text": "Feedback\nPitchshift Delay"
+                    "text": "Feedback PDelay"
                 }
             },
             {
                 "box": {
+                    "fontsize": 11.0,
+                    "hint": "Fenstergröße des TRP-Pitchshifters in Millisekunden.",
                     "id": "obj-65",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -1342,33 +1376,34 @@
                     "patching_rect": [
                         1403.958895206451,
                         709.9756240546703,
-                        44.0,
-                        15.0
+                        51.0,
+                        17.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        404.76190090179443,
-                        99.40476095676422,
-                        44.0,
-                        15.0
+                        326.1904730796814,
+                        100.66666555404663,
+                        76.0,
+                        17.0
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "D1 Pitch Transposer Fenster ms",
                             "parameter_mmax": 400.0,
-                            "parameter_mmin": 10.0,
+                            "parameter_mmin": 1.0,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Pitch Transposer Fenster ms",
                             "parameter_type": 0,
                             "parameter_unitstyle": 1
                         }
                     },
-                    "varname": "pitchTransposerWindowMs",
-                    "hint": "Fenstergröße des TRP-Pitchshifters in Millisekunden."
+                    "varname": "pitchTransposerWindowMs"
                 }
             },
             {
                 "box": {
+                    "fontsize": 11.0,
+                    "hint": "Fenstergröße des GEN-Pitchshifters in Millisekunden.",
                     "id": "obj-63",
                     "maxclass": "live.numbox",
                     "numinlets": 1,
@@ -1381,29 +1416,28 @@
                     "patching_rect": [
                         1337.7359112501144,
                         756.603808760643,
-                        44.0,
-                        15.0
+                        50.0,
+                        17.0
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        405.95237708091736,
-                        119.64285600185394,
-                        41.28440022468567,
-                        15.0
+                        326.1146240234375,
+                        133.75795125961304,
+                        76.0758490562439,
+                        17.0
                     ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "D1 Pitch Overlap Gen Fenster ms",
-                            "parameter_mmax": 400.0,
-                            "parameter_mmin": 10.0,
+                            "parameter_mmax": 1000.0,
+                            "parameter_mmin": 0.1,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Pitch Overlap Gen Fenster ms",
                             "parameter_type": 0,
                             "parameter_unitstyle": 1
                         }
                     },
-                    "varname": "pitchOverlapWindowMs",
-                    "hint": "Fenstergröße des GEN-Pitchshifters in Millisekunden."
+                    "varname": "pitchOverlapWindowMs"
                 }
             },
             {
@@ -1450,8 +1484,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        233.33333110809326,
-                        153.5714271068573,
+                        233.12100076675415,
+                        161.14648413658142,
                         46.0,
                         18.0
                     ],
@@ -1498,6 +1532,7 @@
                     "automation": "Off",
                     "automationon": "On",
                     "fontsize": 10.0,
+                    "hint": "Filter im Pitch-Delaykreis einschalten oder umgehen.",
                     "id": "obj-60",
                     "maxclass": "live.text",
                     "numinlets": 1,
@@ -1516,8 +1551,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        236.30952155590057,
-                        63.095237493515015,
+                        240.1273696422577,
+                        60.509549379348755,
                         62.09677463769913,
                         20.16129046678543
                     ],
@@ -1552,8 +1587,7 @@
                     },
                     "text": "FilterOFF",
                     "texton": "FilterON",
-                    "varname": "pitchFilterEnabled",
-                    "hint": "Filter im Pitch-Delaykreis einschalten oder umgehen."
+                    "varname": "pitchFilterEnabled"
                 }
             },
             {
@@ -1599,15 +1633,15 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "05 · Pitchshift-Delay mit Shift: Pitch-Delay mit Transposition und eigenem Pitch-Feedback; Mono-Audio nach Modulfreigabe",
                     "id": "obj-57",
                     "index": 5,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1604.0873567461967,
-                        905.6180498600006,
+                        1349.7160079002376,
+                        826.0,
                         30.0,
                         30.0
                     ]
@@ -1616,17 +1650,18 @@
             {
                 "box": {
                     "id": "obj-58",
-                    "linecount": 2,
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1591.727805197239,
-                        941.5731089115143,
-                        67.92790585756302,
-                        33.0
+                        1343.7160079002376,
+                        866.0,
+                        205,
+                        58
                     ],
-                    "text": "PitchShift\nOUT"
+                    "text": "05 · Pitchshift-Delay\nmit Shift\nAUDIO OUT",
+                    "fontsize": 12.0
                 }
             },
             {
@@ -1649,9 +1684,9 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        322.6190445423126,
-                        97.02380859851837,
-                        115.59632062911987,
+                        326.1146240234375,
+                        83.28571367263794,
+                        86.62419700622559,
                         20.0
                     ],
                     "text": "Window Trans"
@@ -1677,9 +1712,9 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        322.6190445423126,
+                        322.9299108982086,
                         116.66666555404663,
-                        115.59632062911987,
+                        89.80891013145447,
                         20.0
                     ],
                     "text": "Overlap Gen "
@@ -1733,8 +1768,8 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        233.92856919765472,
-                        131.5476177930832,
+                        233.75794339179993,
+                        138.85349225997925,
                         39.8573734164238,
                         20.0
                     ],
@@ -3132,15 +3167,15 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "04 · Mikrofon direkt: Gewähltes Mikrofonsignal nach Quellenrouting, ohne Delay; Mono-Audio nach Modulfreigabe",
                     "id": "obj-30",
                     "index": 4,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1284.5495487749577,
-                        864.0450128316879,
+                        1098.8434392213821,
+                        826.0,
                         30.0,
                         30.0
                     ]
@@ -3149,17 +3184,18 @@
             {
                 "box": {
                     "id": "obj-24",
-                    "linecount": 6,
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1272.1899972259998,
-                        896.6292850971222,
-                        58.0,
-                        87.0
+                        1092.8434392213821,
+                        866.0,
+                        205,
+                        58
                     ],
-                    "text": "Direkt Mikrofon nach Matrixrouting Outmix"
+                    "text": "04 · Mikrofon direkt\nAUDIO OUT",
+                    "fontsize": 12.0
                 }
             },
             {
@@ -3314,44 +3350,47 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        629.2135334014893,
-                        910.1124322414398,
-                        60.70971179008484,
-                        33.0
+                        572.181797504425,
+                        866.0,
+                        205,
+                        58
                     ],
-                    "text": "Freqshift DOWN"
+                    "text": "02 · Freqshift DOWN\nAUDIO OUT",
+                    "fontsize": 12.0
                 }
             },
             {
                 "box": {
                     "id": "obj-54",
-                    "linecount": 3,
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        307.71535313129425,
-                        934.8315353393555,
-                        43.697476387023926,
-                        47.0
+                        313.10114908218384,
+                        871.0,
+                        205,
+                        58
                     ],
-                    "text": "Freqshift UP"
+                    "text": "01 · Freqshift UP\nAUDIO OUT",
+                    "fontsize": 12.0
                 }
             },
             {
                 "box": {
                     "id": "obj-20",
-                    "linecount": 5,
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        951.9994798898695,
-                        878.6517555713654,
-                        78.0,
-                        74.0
+                        828.4085784912107,
+                        866.0,
+                        205,
+                        58
                     ],
-                    "text": "PAralles gleiches Delay \nOHNE Freqshifter"
+                    "text": "03 · Freqshift-Parallel-Delay\nohne Shift\nAUDIO OUT",
+                    "fontsize": 12.0
                 }
             },
             {
@@ -5847,15 +5886,15 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "03 · Freqshift-Parallel-Delay ohne Shift: Unverschobenes Parallel-Delay mit bisherigem Frequency-Feedback; Mono-Audio nach Modulfreigabe",
                     "id": "obj-6",
                     "index": 3,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        963.2354358434675,
-                        838.2023141384125,
+                        834.4085784912107,
+                        826.0,
                         30.0,
                         30.0
                     ]
@@ -5863,15 +5902,15 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "02 · Freqshift DOWN: Frequency-Delay mit Abwärtsverschiebung; Mono-Audio nach Modulfreigabe",
                     "id": "obj-3",
                     "index": 2,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        644.9438717365265,
-                        858.4270348548889,
+                        578.181797504425,
+                        826.0,
                         30.0,
                         30.0
                     ]
@@ -5879,15 +5918,15 @@
             },
             {
                 "box": {
-                    "comment": "",
+                    "comment": "01 · Freqshift UP: Frequency-Delay mit Aufwärtsverschiebung; Mono-Audio nach Modulfreigabe",
                     "id": "obj-2",
                     "index": 1,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        313.33333110809326,
-                        891.0113071203232,
+                        319.10114908218384,
+                        831.0,
                         30.0,
                         30.0
                     ]
@@ -6667,8 +6706,9 @@
                     "id": "obj-922",
                     "maxclass": "newobj",
                     "numinlets": 20,
-                    "numoutlets": 5,
+                    "numoutlets": 6,
                     "outlettype": [
+                        "signal",
                         "signal",
                         "signal",
                         "signal",
@@ -6890,7 +6930,7 @@
                         113.0,
                         23.0
                     ],
-                    "text": "No Input",
+                    "text": "Alle Luftmikrofone",
                     "textcolor": [
                         0.0,
                         0.0,
@@ -7448,10 +7488,10 @@
                     ],
                     "presentation": 1,
                     "presentation_rect": [
-                        215.4761884212494,
-                        -5.357142806053162,
-                        231.76058888435364,
-                        208.35714280605316
+                        215.2866072654724,
+                        -5.095541000366211,
+                        214.01272201538086,
+                        205.09552526474
                     ],
                     "proportion": 0.5,
                     "saved_attribute_attributes": {
@@ -8554,6 +8594,18 @@
                     "source": [
                         "obj-922",
                         2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-82",
+                        0
+                    ],
+                    "source": [
+                        "obj-922",
+                        5
                     ]
                 }
             },

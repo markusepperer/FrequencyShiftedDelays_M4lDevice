@@ -1194,7 +1194,7 @@
                     "id": "obj-86",
                     "maxclass": "flonum",
                     "maximum": 400.0,
-                    "minimum": 10.0,
+                    "minimum": 1.0,
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [
