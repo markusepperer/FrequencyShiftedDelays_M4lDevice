@@ -1831,7 +1831,7 @@
                 "box": {
                     "id": "obj-213",
                     "maxclass": "number",
-                    "maximum": 6,
+                    "maximum": 7,
                     "minimum": 0,
                     "numinlets": 1,
                     "numoutlets": 2,
