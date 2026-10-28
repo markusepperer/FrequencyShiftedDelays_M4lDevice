@@ -9283,34 +9283,6 @@
                             },
                             {
                                 "box": {
-                                    "id": "reset",
-                                    "maxclass": "textbutton",
-                                    "numinlets": 1,
-                                    "numoutlets": 3,
-                                    "outlettype": [
-                                        "",
-                                        "",
-                                        "int"
-                                    ],
-                                    "parameter_enable": 0,
-                                    "patching_rect": [
-                                        165.0,
-                                        185.0,
-                                        100.0,
-                                        24.0
-                                    ],
-                                    "presentation": 1,
-                                    "presentation_rect": [
-                                        364.2276420593262,
-                                        39.8373983502388,
-                                        100.0,
-                                        24.0
-                                    ],
-                                    "text": "Von vorn"
-                                }
-                            },
-                            {
-                                "box": {
                                     "id": "format",
                                     "linecount": 3,
                                     "maxclass": "comment",
@@ -11294,18 +11266,6 @@
                                     ],
                                     "source": [
                                         "remaining",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "restart",
-                                        0
-                                    ],
-                                    "source": [
-                                        "reset",
                                         0
                                     ]
                                 }
