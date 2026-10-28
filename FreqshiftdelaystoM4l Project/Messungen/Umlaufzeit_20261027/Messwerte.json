@@ -1,0 +1,579 @@
+{
+  "0_cent": {
+    "file": "Pitch_Loops_1000ms_0cent.wav",
+    "sha256": "b25cc28e4d2c8aa79ba9d3477dfd27a5631d6a1aae834636a3a3e0650a9cb490",
+    "sample_rate": 48000,
+    "reference_sample": 24000,
+    "channels": {
+      "GEN": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 74662,
+            "peak_sample": 74662,
+            "end_sample": 74662,
+            "peak_amplitude": 0.089111328125,
+            "peak_after_input_ms": 1055.4583333333333
+          },
+          {
+            "event": 2,
+            "start_sample": 125324,
+            "peak_sample": 125324,
+            "end_sample": 125324,
+            "peak_amplitude": 0.039703369140625,
+            "peak_after_input_ms": 2110.9166666666665
+          },
+          {
+            "event": 3,
+            "start_sample": 175986,
+            "peak_sample": 175986,
+            "end_sample": 175986,
+            "peak_amplitude": 0.0177001953125,
+            "peak_after_input_ms": 3166.375
+          },
+          {
+            "event": 4,
+            "start_sample": 226648,
+            "peak_sample": 226648,
+            "end_sample": 226648,
+            "peak_amplitude": 0.00787353515625,
+            "peak_after_input_ms": 4221.833333333333
+          },
+          {
+            "event": 5,
+            "start_sample": 277310,
+            "peak_sample": 277310,
+            "end_sample": 277310,
+            "peak_amplitude": 0.003509521484375,
+            "peak_after_input_ms": 5277.291666666667
+          },
+          {
+            "event": 6,
+            "start_sample": 327972,
+            "peak_sample": 327972,
+            "end_sample": 327972,
+            "peak_amplitude": 0.001556396484375,
+            "peak_after_input_ms": 6332.75
+          },
+          {
+            "event": 7,
+            "start_sample": 378634,
+            "peak_sample": 378634,
+            "end_sample": 378634,
+            "peak_amplitude": 0.000701904296875,
+            "peak_after_input_ms": 7388.208333333333
+          },
+          {
+            "event": 8,
+            "start_sample": 429296,
+            "peak_sample": 429296,
+            "end_sample": 429296,
+            "peak_amplitude": 0.00030517578125,
+            "peak_after_input_ms": 8443.666666666666
+          },
+          {
+            "event": 9,
+            "start_sample": 479958,
+            "peak_sample": 479958,
+            "end_sample": 479958,
+            "peak_amplitude": 0.000152587890625,
+            "peak_after_input_ms": 9499.125
+          }
+        ],
+        "intervals_ms": [
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333,
+          1055.4583333333333
+        ],
+        "median_interval_ms": 1055.4583333333333
+      },
+      "TRP": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 74725,
+            "peak_sample": 74726,
+            "end_sample": 74728,
+            "peak_amplitude": 0.07440185546875,
+            "peak_after_input_ms": 1056.7916666666667
+          },
+          {
+            "event": 2,
+            "start_sample": 125450,
+            "peak_sample": 125452,
+            "end_sample": 125455,
+            "peak_amplitude": 0.023895263671875,
+            "peak_after_input_ms": 2113.5833333333335
+          },
+          {
+            "event": 3,
+            "start_sample": 176176,
+            "peak_sample": 176179,
+            "end_sample": 176182,
+            "peak_amplitude": 0.0106201171875,
+            "peak_after_input_ms": 3170.3958333333335
+          },
+          {
+            "event": 4,
+            "start_sample": 226903,
+            "peak_sample": 226905,
+            "end_sample": 226908,
+            "peak_amplitude": 0.004180908203125,
+            "peak_after_input_ms": 4227.1875
+          },
+          {
+            "event": 5,
+            "start_sample": 277629,
+            "peak_sample": 277632,
+            "end_sample": 277633,
+            "peak_amplitude": 0.001861572265625,
+            "peak_after_input_ms": 5284.0
+          },
+          {
+            "event": 6,
+            "start_sample": 328357,
+            "peak_sample": 328359,
+            "end_sample": 328360,
+            "peak_amplitude": 0.000701904296875,
+            "peak_after_input_ms": 6340.8125
+          },
+          {
+            "event": 7,
+            "start_sample": 379084,
+            "peak_sample": 379085,
+            "end_sample": 379086,
+            "peak_amplitude": 0.000335693359375,
+            "peak_after_input_ms": 7397.604166666667
+          },
+          {
+            "event": 8,
+            "start_sample": 429812,
+            "peak_sample": 429812,
+            "end_sample": 429812,
+            "peak_amplitude": 0.000152587890625,
+            "peak_after_input_ms": 8454.416666666666
+          }
+        ],
+        "intervals_ms": [
+          1056.7916666666667,
+          1056.8125,
+          1056.7916666666667,
+          1056.8125,
+          1056.8125,
+          1056.7916666666667,
+          1056.8125
+        ],
+        "median_interval_ms": 1056.8125
+      },
+      "FFT": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 76152,
+            "peak_sample": 76294,
+            "end_sample": 76438,
+            "peak_amplitude": 0.087799072265625,
+            "peak_after_input_ms": 1089.4583333333333
+          },
+          {
+            "event": 2,
+            "start_sample": 128543,
+            "peak_sample": 128588,
+            "end_sample": 128632,
+            "peak_amplitude": 0.038970947265625,
+            "peak_after_input_ms": 2178.9166666666665
+          },
+          {
+            "event": 3,
+            "start_sample": 180846,
+            "peak_sample": 180882,
+            "end_sample": 180918,
+            "peak_amplitude": 0.017364501953125,
+            "peak_after_input_ms": 3268.375
+          },
+          {
+            "event": 4,
+            "start_sample": 233156,
+            "peak_sample": 233176,
+            "end_sample": 233196,
+            "peak_amplitude": 0.00775146484375,
+            "peak_after_input_ms": 4357.833333333333
+          },
+          {
+            "event": 5,
+            "start_sample": 285470,
+            "peak_sample": 285470,
+            "end_sample": 285470,
+            "peak_amplitude": 0.003448486328125,
+            "peak_after_input_ms": 5447.291666666667
+          },
+          {
+            "event": 6,
+            "start_sample": 337764,
+            "peak_sample": 337764,
+            "end_sample": 337764,
+            "peak_amplitude": 0.00152587890625,
+            "peak_after_input_ms": 6536.75
+          },
+          {
+            "event": 7,
+            "start_sample": 390058,
+            "peak_sample": 390058,
+            "end_sample": 390058,
+            "peak_amplitude": 0.00067138671875,
+            "peak_after_input_ms": 7626.208333333333
+          },
+          {
+            "event": 8,
+            "start_sample": 442352,
+            "peak_sample": 442352,
+            "end_sample": 442352,
+            "peak_amplitude": 0.00030517578125,
+            "peak_after_input_ms": 8715.666666666666
+          },
+          {
+            "event": 9,
+            "start_sample": 494646,
+            "peak_sample": 494646,
+            "end_sample": 494646,
+            "peak_amplitude": 0.0001220703125,
+            "peak_after_input_ms": 9805.125
+          }
+        ],
+        "intervals_ms": [
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333,
+          1089.4583333333333
+        ],
+        "median_interval_ms": 1089.4583333333333
+      },
+      "ZTX": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 76359,
+            "peak_sample": 76362,
+            "end_sample": 76366,
+            "peak_amplitude": 0.06683349609375,
+            "peak_after_input_ms": 1090.875
+          },
+          {
+            "event": 2,
+            "start_sample": 128720,
+            "peak_sample": 128725,
+            "end_sample": 128730,
+            "peak_amplitude": 0.047088623046875,
+            "peak_after_input_ms": 2181.7708333333335
+          },
+          {
+            "event": 3,
+            "start_sample": 181082,
+            "peak_sample": 181087,
+            "end_sample": 181093,
+            "peak_amplitude": 0.01910400390625,
+            "peak_after_input_ms": 3272.6458333333335
+          },
+          {
+            "event": 4,
+            "start_sample": 233445,
+            "peak_sample": 233450,
+            "end_sample": 233455,
+            "peak_amplitude": 0.012969970703125,
+            "peak_after_input_ms": 4363.541666666667
+          },
+          {
+            "event": 5,
+            "start_sample": 285808,
+            "peak_sample": 285812,
+            "end_sample": 285817,
+            "peak_amplitude": 0.005462646484375,
+            "peak_after_input_ms": 5454.416666666667
+          },
+          {
+            "event": 6,
+            "start_sample": 338173,
+            "peak_sample": 338175,
+            "end_sample": 338177,
+            "peak_amplitude": 0.003509521484375,
+            "peak_after_input_ms": 6545.3125
+          },
+          {
+            "event": 7,
+            "start_sample": 390535,
+            "peak_sample": 390537,
+            "end_sample": 390540,
+            "peak_amplitude": 0.00146484375,
+            "peak_after_input_ms": 7636.1875
+          },
+          {
+            "event": 8,
+            "start_sample": 442899,
+            "peak_sample": 442900,
+            "end_sample": 442901,
+            "peak_amplitude": 0.000885009765625,
+            "peak_after_input_ms": 8727.083333333334
+          },
+          {
+            "event": 9,
+            "start_sample": 495262,
+            "peak_sample": 495262,
+            "end_sample": 495263,
+            "peak_amplitude": 0.000274658203125,
+            "peak_after_input_ms": 9817.958333333334
+          }
+        ],
+        "intervals_ms": [
+          1090.8958333333333,
+          1090.875,
+          1090.8958333333333,
+          1090.875,
+          1090.8958333333333,
+          1090.875,
+          1090.8958333333333,
+          1090.875
+        ],
+        "median_interval_ms": 1090.8854166666665
+      }
+    }
+  },
+  "700_cent": {
+    "file": "Pitch_Loops_1000ms_700cent_spaeterStart.wav",
+    "sha256": "58555776c884b30d2450147623bfa7984e1ab076951f33b56bca856dda4f1a57",
+    "sample_rate": 48000,
+    "reference_sample": 24000,
+    "channels": {
+      "GEN": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 72337,
+            "peak_sample": 73939,
+            "end_sample": 75541,
+            "peak_amplitude": 0.066009521484375,
+            "peak_after_input_ms": 1040.3958333333333
+          },
+          {
+            "event": 2,
+            "start_sample": 123287,
+            "peak_sample": 124889,
+            "end_sample": 127560,
+            "peak_amplitude": 0.019317626953125,
+            "peak_after_input_ms": 2101.8541666666665
+          },
+          {
+            "event": 3,
+            "start_sample": 172241,
+            "peak_sample": 176514,
+            "end_sample": 179899,
+            "peak_amplitude": 0.00439453125,
+            "peak_after_input_ms": 3177.375
+          },
+          {
+            "event": 4,
+            "start_sample": 223603,
+            "peak_sample": 226988,
+            "end_sample": 229780,
+            "peak_amplitude": 0.00128173828125,
+            "peak_after_input_ms": 4228.916666666667
+          },
+          {
+            "event": 5,
+            "start_sample": 274434,
+            "peak_sample": 278295,
+            "end_sample": 279682,
+            "peak_amplitude": 0.000457763671875,
+            "peak_after_input_ms": 5297.8125
+          }
+        ],
+        "intervals_ms": [
+          1061.4583333333333,
+          1075.5208333333333,
+          1051.5416666666667,
+          1068.8958333333333
+        ],
+        "median_interval_ms": 1065.1770833333333
+      },
+      "TRP": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 72724,
+            "peak_sample": 75936,
+            "end_sample": 75937,
+            "peak_amplitude": 0.05987548828125,
+            "peak_after_input_ms": 1082.0
+          },
+          {
+            "event": 2,
+            "start_sample": 121378,
+            "peak_sample": 126738,
+            "end_sample": 128344,
+            "peak_amplitude": 0.017303466796875,
+            "peak_after_input_ms": 2140.375
+          },
+          {
+            "event": 3,
+            "start_sample": 172663,
+            "peak_sample": 176781,
+            "end_sample": 181066,
+            "peak_amplitude": 0.00543212890625,
+            "peak_after_input_ms": 3182.9375
+          },
+          {
+            "event": 4,
+            "start_sample": 221956,
+            "peak_sample": 227922,
+            "end_sample": 232394,
+            "peak_amplitude": 0.001556396484375,
+            "peak_after_input_ms": 4248.375
+          },
+          {
+            "event": 5,
+            "start_sample": 273669,
+            "peak_sample": 277117,
+            "end_sample": 280996,
+            "peak_amplitude": 0.00048828125,
+            "peak_after_input_ms": 5273.270833333333
+          },
+          {
+            "event": 6,
+            "start_sample": 328765,
+            "peak_sample": 329643,
+            "end_sample": 330558,
+            "peak_amplitude": 0.00018310546875,
+            "peak_after_input_ms": 6367.5625
+          }
+        ],
+        "intervals_ms": [
+          1058.375,
+          1042.5625,
+          1065.4375,
+          1024.8958333333333,
+          1094.2916666666667
+        ],
+        "median_interval_ms": 1058.375
+      },
+      "FFT": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 74551,
+            "peak_sample": 76217,
+            "end_sample": 78204,
+            "peak_amplitude": 0.0133056640625,
+            "peak_after_input_ms": 1087.8541666666667
+          },
+          {
+            "event": 2,
+            "start_sample": 127079,
+            "peak_sample": 128579,
+            "end_sample": 130072,
+            "peak_amplitude": 0.002349853515625,
+            "peak_after_input_ms": 2178.7291666666665
+          },
+          {
+            "event": 3,
+            "start_sample": 180132,
+            "peak_sample": 180743,
+            "end_sample": 181712,
+            "peak_amplitude": 0.0010986328125,
+            "peak_after_input_ms": 3265.4791666666665
+          },
+          {
+            "event": 4,
+            "start_sample": 232666,
+            "peak_sample": 233168,
+            "end_sample": 233642,
+            "peak_amplitude": 0.0003662109375,
+            "peak_after_input_ms": 4357.666666666667
+          },
+          {
+            "event": 5,
+            "start_sample": 285227,
+            "peak_sample": 285347,
+            "end_sample": 285622,
+            "peak_amplitude": 0.000152587890625,
+            "peak_after_input_ms": 5444.729166666667
+          }
+        ],
+        "intervals_ms": [
+          1090.875,
+          1086.75,
+          1092.1875,
+          1087.0625
+        ],
+        "median_interval_ms": 1088.96875
+      },
+      "ZTX": {
+        "events": [
+          {
+            "event": 1,
+            "start_sample": 75907,
+            "peak_sample": 76364,
+            "end_sample": 77133,
+            "peak_amplitude": 0.04827880859375,
+            "peak_after_input_ms": 1090.9166666666667
+          },
+          {
+            "event": 2,
+            "start_sample": 128459,
+            "peak_sample": 128727,
+            "end_sample": 128961,
+            "peak_amplitude": 0.02020263671875,
+            "peak_after_input_ms": 2181.8125
+          },
+          {
+            "event": 3,
+            "start_sample": 180968,
+            "peak_sample": 181088,
+            "end_sample": 181203,
+            "peak_amplitude": 0.007568359375,
+            "peak_after_input_ms": 3272.6666666666665
+          },
+          {
+            "event": 4,
+            "start_sample": 233377,
+            "peak_sample": 233443,
+            "end_sample": 233506,
+            "peak_amplitude": 0.002044677734375,
+            "peak_after_input_ms": 4363.395833333333
+          },
+          {
+            "event": 5,
+            "start_sample": 285770,
+            "peak_sample": 285824,
+            "end_sample": 285852,
+            "peak_amplitude": 0.000762939453125,
+            "peak_after_input_ms": 5454.666666666667
+          },
+          {
+            "event": 6,
+            "start_sample": 338160,
+            "peak_sample": 338186,
+            "end_sample": 338190,
+            "peak_amplitude": 0.00030517578125,
+            "peak_after_input_ms": 6545.541666666667
+          }
+        ],
+        "intervals_ms": [
+          1090.8958333333333,
+          1090.8541666666667,
+          1090.7291666666667,
+          1091.2708333333333,
+          1090.875
+        ],
+        "median_interval_ms": 1090.875
+      }
+    }
+  }
+}

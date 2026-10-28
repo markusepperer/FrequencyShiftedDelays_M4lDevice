@@ -1,0 +1,27 @@
+{
+  "purpose": "Messpatch, keine Änderung am Instrument",
+  "settings": {
+    "delay_ms": 1000,
+    "pitch_cents": 0,
+    "feedback": 0.5,
+    "filter": false,
+    "gen_window_ms": 100,
+    "trp_window_ms": 100,
+    "requested_sample_rate": 48000
+  },
+  "channels": [
+    "input",
+    "GEN Pitch1",
+    "TRP Pitch1",
+    "FFT Pitch1",
+    "ZTX Pitch1"
+  ],
+  "source": "/Users/macbook/Dropbox/KUG/ZKF Eigene Arbeiten/Frequencyshiftedelays_M4lDevice/FrequencyShiftedDelays_M4lDevice/MaxM4l/MS_Freqshiftdelayfilter2feedbacks_M4l.maxpat",
+  "source_sha256": "1578f20b0cca96ab24c632c7070d2f8e9864313072d71d464ddfa6fa136e60f6",
+  "original_amxd_sha256": "cbdf8a66d3b684b7a1d81619b44fe18f699281c72a1798797f512d96d4eef6b5",
+  "measurement_file": "/Users/macbook/Dropbox/KUG/ZKF Eigene Arbeiten/Frequencyshiftedelays_M4lDevice/FrequencyShiftedDelays_M4lDevice/FreqshiftdelaystoM4l Project/Messungen/Umlaufzeit_20261027/Pitch_Loops_1000ms_0cent.wav",
+  "status": "recorded and analysed",
+  "results": "Messergebnis.md",
+  "measurement_track_removed": true,
+  "original_device_and_abstraction_hashes_unchanged": true
+}

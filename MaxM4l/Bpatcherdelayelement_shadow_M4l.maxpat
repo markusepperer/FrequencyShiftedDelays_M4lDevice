@@ -2411,6 +2411,172 @@
                     "linecount": 3,
                     "text": "07 · PITCH SHIFT 2\nAUDIO OUT"
                 }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-receive",
+                    "maxclass": "newobj",
+                    "text": "receive ---modulonoff",
+                    "patching_rect": [
+                        950.0,
+                        600.0,
+                        145,
+                        22.0
+                    ],
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-route",
+                    "maxclass": "newobj",
+                    "text": "route #1",
+                    "patching_rect": [
+                        950.0,
+                        640.0,
+                        65,
+                        22.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "",
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-select",
+                    "maxclass": "newobj",
+                    "text": "sel 0 1",
+                    "patching_rect": [
+                        950.0,
+                        680.0,
+                        65,
+                        22.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "bang",
+                        "bang",
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-delay",
+                    "maxclass": "newobj",
+                    "text": "delay 60",
+                    "patching_rect": [
+                        950.0,
+                        725.0,
+                        65,
+                        22.0
+                    ],
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "bang"
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-off",
+                    "maxclass": "message",
+                    "text": "1 1",
+                    "patching_rect": [
+                        950.0,
+                        770.0,
+                        40,
+                        22.0
+                    ],
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-on-trigger",
+                    "maxclass": "newobj",
+                    "text": "t b b",
+                    "patching_rect": [
+                        1100.0,
+                        725.0,
+                        45,
+                        22.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "bang",
+                        "bang"
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-cancel",
+                    "maxclass": "message",
+                    "text": "stop",
+                    "patching_rect": [
+                        1160.0,
+                        770.0,
+                        40,
+                        22.0
+                    ],
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-on",
+                    "maxclass": "message",
+                    "text": "0 1",
+                    "patching_rect": [
+                        1100.0,
+                        815.0,
+                        40,
+                        22.0
+                    ],
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-module-mute-dsp",
+                    "maxclass": "newobj",
+                    "text": "mute~",
+                    "patching_rect": [
+                        950.0,
+                        860.0,
+                        45,
+                        22.0
+                    ],
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ]
+                }
             }
         ],
         "lines": [
@@ -3182,6 +3348,138 @@
                     ],
                     "destination": [
                         "shadow-pitch2-out",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-receive",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-route",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-route",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-select",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-select",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-delay",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-delay",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-off",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-off",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-dsp",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-select",
+                        1
+                    ],
+                    "destination": [
+                        "shadow-module-mute-on-trigger",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-on-trigger",
+                        1
+                    ],
+                    "destination": [
+                        "shadow-module-mute-cancel",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-cancel",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-delay",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-on-trigger",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-on",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-on",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-dsp",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-module-mute-dsp",
+                        0
+                    ],
+                    "destination": [
+                        "obj-922",
                         0
                     ]
                 }
