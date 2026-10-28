@@ -1,0 +1,24 @@
+{
+  "delay_ms": [
+    50,
+    20,
+    5
+  ],
+  "pitch_cents": 0,
+  "feedback": 0.5,
+  "gen_trp_window_ms": 100,
+  "reference_impulse_seconds": 0.5,
+  "channels": [
+    "input",
+    "GEN",
+    "TRP",
+    "FFT",
+    "ZTX"
+  ],
+  "source": "/Users/macbook/Dropbox/KUG/ZKF Eigene Arbeiten/Frequencyshiftedelays_M4lDevice/FrequencyShiftedDelays_M4lDevice/MaxM4l/MS_Freqshiftdelayfilter2feedbacks_M4l.maxpat",
+  "source_sha256": "1578f20b0cca96ab24c632c7070d2f8e9864313072d71d464ddfa6fa136e60f6",
+  "original_amxd_sha256": "cbdf8a66d3b684b7a1d81619b44fe18f699281c72a1798797f512d96d4eef6b5",
+  "status": "recorded and analysed",
+  "measurement_track_removed": true,
+  "GEN_fixed_offset_confirmed": false
+}

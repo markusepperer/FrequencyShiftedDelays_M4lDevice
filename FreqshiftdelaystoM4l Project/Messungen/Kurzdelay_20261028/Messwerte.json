@@ -1,0 +1,224 @@
+{
+  "50": {
+    "GEN": {
+      "first_peak_after_input_ms": 60.458333333333336,
+      "median_peak_interval_ms": 60.458333333333336,
+      "min_peak_interval_ms": 60.458333333333336,
+      "max_peak_interval_ms": 60.458333333333336,
+      "extra_over_tapout_ms": 10.458333333333336,
+      "peaks_samples": [
+        26902,
+        29804,
+        32706,
+        35608,
+        38510,
+        41412,
+        44314,
+        47216,
+        50118
+      ]
+    },
+    "TRP": {
+      "first_peak_after_input_ms": 106.79166666666667,
+      "median_peak_interval_ms": 106.79166666666667,
+      "min_peak_interval_ms": 106.79166666666667,
+      "max_peak_interval_ms": 106.8125,
+      "extra_over_tapout_ms": 56.79166666666667,
+      "peaks_samples": [
+        29126,
+        34252,
+        39378,
+        44504,
+        49631,
+        54757,
+        59883,
+        65009
+      ]
+    },
+    "FFT": {
+      "first_peak_after_input_ms": 139.45833333333334,
+      "median_peak_interval_ms": 139.45833333333334,
+      "min_peak_interval_ms": 139.45833333333334,
+      "max_peak_interval_ms": 139.45833333333334,
+      "extra_over_tapout_ms": 89.45833333333334,
+      "peaks_samples": [
+        30694,
+        37388,
+        44082,
+        50776,
+        57470,
+        64164,
+        70858,
+        77552,
+        84246
+      ]
+    },
+    "ZTX": {
+      "first_peak_after_input_ms": 140.875,
+      "median_peak_interval_ms": 140.89583333333334,
+      "min_peak_interval_ms": 140.875,
+      "max_peak_interval_ms": 140.89583333333334,
+      "extra_over_tapout_ms": 90.89583333333334,
+      "peaks_samples": [
+        30762,
+        37525,
+        44288,
+        51050,
+        57812,
+        64575,
+        71337,
+        78100,
+        84862,
+        91625
+      ]
+    }
+  },
+  "20": {
+    "GEN": {
+      "first_peak_after_input_ms": 30.458333333333332,
+      "median_peak_interval_ms": 30.458333333333332,
+      "min_peak_interval_ms": 30.458333333333332,
+      "max_peak_interval_ms": 30.458333333333332,
+      "extra_over_tapout_ms": 10.458333333333332,
+      "peaks_samples": [
+        25462,
+        26924,
+        28386,
+        29848,
+        31310,
+        32772,
+        34234,
+        35696,
+        37158
+      ]
+    },
+    "TRP": {
+      "first_peak_after_input_ms": 76.8125,
+      "median_peak_interval_ms": 76.8125,
+      "min_peak_interval_ms": 76.79166666666667,
+      "max_peak_interval_ms": 76.8125,
+      "extra_over_tapout_ms": 56.8125,
+      "peaks_samples": [
+        27687,
+        31374,
+        35061,
+        38748,
+        42434,
+        46121,
+        49808,
+        53495
+      ]
+    },
+    "FFT": {
+      "first_peak_after_input_ms": 109.45833333333333,
+      "median_peak_interval_ms": 109.45833333333333,
+      "min_peak_interval_ms": 109.45833333333333,
+      "max_peak_interval_ms": 109.45833333333333,
+      "extra_over_tapout_ms": 89.45833333333333,
+      "peaks_samples": [
+        29254,
+        34508,
+        39762,
+        45016,
+        50270,
+        55524,
+        60778,
+        66032,
+        71286
+      ]
+    },
+    "ZTX": {
+      "first_peak_after_input_ms": 110.875,
+      "median_peak_interval_ms": 110.89583333333333,
+      "min_peak_interval_ms": 110.875,
+      "max_peak_interval_ms": 110.89583333333333,
+      "extra_over_tapout_ms": 90.89583333333333,
+      "peaks_samples": [
+        29322,
+        34645,
+        39967,
+        45290,
+        50613,
+        55935,
+        61257,
+        66580,
+        71902,
+        77225
+      ]
+    }
+  },
+  "5": {
+    "GEN": {
+      "first_peak_after_input_ms": 15.458333333333334,
+      "median_peak_interval_ms": 15.458333333333334,
+      "min_peak_interval_ms": 15.458333333333334,
+      "max_peak_interval_ms": 15.458333333333334,
+      "extra_over_tapout_ms": 10.458333333333334,
+      "peaks_samples": [
+        24742,
+        25484,
+        26226,
+        26968,
+        27710,
+        28452,
+        29194,
+        29936,
+        30678
+      ]
+    },
+    "TRP": {
+      "first_peak_after_input_ms": 61.833333333333336,
+      "median_peak_interval_ms": 61.8125,
+      "min_peak_interval_ms": 61.8125,
+      "max_peak_interval_ms": 61.833333333333336,
+      "extra_over_tapout_ms": 56.8125,
+      "peaks_samples": [
+        26968,
+        29935,
+        32903,
+        35870,
+        38838,
+        41805,
+        44773,
+        47740
+      ]
+    },
+    "FFT": {
+      "first_peak_after_input_ms": 94.45833333333333,
+      "median_peak_interval_ms": 94.45833333333333,
+      "min_peak_interval_ms": 94.45833333333333,
+      "max_peak_interval_ms": 94.45833333333333,
+      "extra_over_tapout_ms": 89.45833333333333,
+      "peaks_samples": [
+        28534,
+        33068,
+        37602,
+        42136,
+        46670,
+        51204,
+        55738,
+        60272,
+        64806
+      ]
+    },
+    "ZTX": {
+      "first_peak_after_input_ms": 95.875,
+      "median_peak_interval_ms": 95.89583333333333,
+      "min_peak_interval_ms": 95.875,
+      "max_peak_interval_ms": 95.89583333333333,
+      "extra_over_tapout_ms": 90.89583333333333,
+      "peaks_samples": [
+        28602,
+        33205,
+        37807,
+        42410,
+        47012,
+        51615,
+        56217,
+        60820,
+        65422,
+        70025
+      ]
+    }
+  }
+}
