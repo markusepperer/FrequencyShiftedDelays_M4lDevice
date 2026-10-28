@@ -20,6 +20,81 @@
         "boxes": [
             {
                 "box": {
+                    "hint": "Frequency-Sequenz: Up-Hz und Down-Hz für eine Anzahl eingestellter Delayintervalle. Beide Beträge 0–5000 Hz.",
+                    "id": "freq-sequence-open",
+                    "maxclass": "textbutton",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "",
+                        "",
+                        "int"
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        -195.6666555404663,
+                        769.4087278842926,
+                        58.0,
+                        22.0
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        179.0,
+                        209.25,
+                        38.0,
+                        19.25
+                    ],
+                    "text": "SEQ"
+                }
+            },
+            {
+                "box": {
+                    "annotation": "Frequency-Sequenz Ein/Aus",
+                    "hint": "Aus: vorhandene manuelle Hz- und Link-Logik. Ein: zwei unabhängige Hz-Listenwerte ab der nächsten Delay-Taktkante. Fortsetzen wie bei Pitch.",
+                    "id": "freq-sequence-enabled",
+                    "maxclass": "toggle",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "int"
+                    ],
+                    "parameter_enable": 1,
+                    "patching_rect": [
+                        -282.2916558980942,
+                        833.9884107708931,
+                        33.55263125896454,
+                        33.55263125896454
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        150.0,
+                        207.8,
+                        25.0,
+                        25.0
+                    ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_enum": [
+                                "Aus",
+                                "Ein"
+                            ],
+                            "parameter_initial": [
+                                0
+                            ],
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Freqshift Sequenz Ein/Aus",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "Freqshift Sequenz",
+                            "parameter_type": 2,
+                            "parameter_unitstyle": 9
+                        }
+                    },
+                    "varname": "freqSequenceEnabled"
+                }
+            },
+            {
+                "box": {
                     "annotation": "Pitch-Sequenz Ein/Aus",
                     "hint": "Aus: manueller Pitch-Wert. Ein: Pitch-Sequenz startet beim ersten Listeneintrag.",
                     "id": "obj-102",
@@ -470,27 +545,27 @@
             {
                 "box": {
                     "activebgcolor": [
-                        0.22,
-                        0.22,
-                        0.22,
+                        0.0,
+                        0.0,
+                        0.0,
                         1.0
                     ],
                     "activebgoncolor": [
-                        0.22,
-                        0.22,
-                        0.22,
+                        0.0,
+                        0.0,
+                        0.0,
                         1.0
                     ],
                     "activetextcolor": [
-                        0.65,
-                        0.65,
-                        0.65,
+                        1.0,
+                        0.0,
+                        0.0,
                         1.0
                     ],
                     "activetextoncolor": [
-                        0.65,
-                        0.65,
-                        0.65,
+                        1.0,
+                        0.933333,
+                        0.0,
                         1.0
                     ],
                     "automation": "Unlinked",
@@ -498,7 +573,6 @@
                     "fontsize": 11.0,
                     "hint": "Linked: Pitch 1 führt. Pitch 2 zeigt ausgegraut den wirksamen Gegenwert und ist nicht bedienbar. Eigene Pitch-2-Automation bleibt im Hintergrund erhalten und gilt wieder bei Unlinked.",
                     "id": "pitch-link-button",
-                    "ignoreclick": 1,
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -2593,33 +2667,34 @@
             {
                 "box": {
                     "activebgcolor": [
-                        0.0,
-                        0.0,
-                        0.0,
+                        0.22,
+                        0.22,
+                        0.22,
                         1.0
                     ],
                     "activebgoncolor": [
-                        0.0,
-                        0.0,
-                        0.0,
+                        0.22,
+                        0.22,
+                        0.22,
                         1.0
                     ],
                     "activetextcolor": [
-                        1.0,
-                        0.0,
-                        0.0,
+                        0.65,
+                        0.65,
+                        0.65,
                         1.0
                     ],
                     "activetextoncolor": [
-                        1.0,
-                        0.933333333333333,
-                        0.0,
+                        0.65,
+                        0.65,
+                        0.65,
                         1.0
                     ],
                     "automation": "Unlinked",
                     "automationon": "Linked",
                     "fontsize": 11.0,
                     "id": "obj-53",
+                    "ignoreclick": 1,
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -4940,7 +5015,7 @@
                         107.29166257381439,
                         23.0
                     ],
-                    "text": "Beide An",
+                    "text": "Alle Aus",
                     "textjustification": 1
                 }
             },
@@ -7518,7 +7593,7 @@
                         113.0,
                         23.0
                     ],
-                    "text": "Alle Luftmikrofone",
+                    "text": "No Input",
                     "textcolor": [
                         0.0,
                         0.0,
@@ -13767,7 +13842,7 @@
                                     "outlettype": [
                                         "bang",
                                         "bang",
-                                        "int",
+                                        "",
                                         "bang"
                                     ],
                                     "patcher": {
@@ -14269,85 +14344,103 @@
                                                 "box": {
                                                     "id": "resume-one",
                                                     "maxclass": "message",
-                                                    "text": "1",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
                                                     "patching_rect": [
                                                         30.0,
                                                         365.0,
                                                         50.0,
                                                         22.0
                                                     ],
-                                                    "numinlets": 2,
-                                                    "numoutlets": 1,
-                                                    "outlettype": [
-                                                        ""
-                                                    ]
+                                                    "text": "1"
                                                 }
                                             },
                                             {
                                                 "box": {
                                                     "id": "resume-zero",
                                                     "maxclass": "message",
-                                                    "text": "0",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
                                                     "patching_rect": [
                                                         700.0,
                                                         605.0,
                                                         50.0,
                                                         22.0
                                                     ],
-                                                    "numinlets": 2,
-                                                    "numoutlets": 1,
-                                                    "outlettype": [
-                                                        ""
-                                                    ]
+                                                    "text": "0"
                                                 }
                                             },
                                             {
                                                 "box": {
                                                     "id": "resume-pending",
                                                     "maxclass": "newobj",
-                                                    "text": "i 0",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
                                                     "patching_rect": [
                                                         500.0,
                                                         525.0,
                                                         110.0,
                                                         22.0
-                                                    ]
+                                                    ],
+                                                    "text": "i 0"
                                                 }
                                             },
                                             {
                                                 "box": {
                                                     "id": "resume-select",
                                                     "maxclass": "newobj",
-                                                    "text": "sel 0 1",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
                                                     "patching_rect": [
                                                         500.0,
                                                         570.0,
                                                         110.0,
                                                         22.0
-                                                    ]
+                                                    ],
+                                                    "text": "sel 0 1"
                                                 }
                                             },
                                             {
                                                 "box": {
                                                     "id": "resume-order",
                                                     "maxclass": "newobj",
-                                                    "text": "t b b",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
                                                     "patching_rect": [
                                                         820.0,
                                                         570.0,
                                                         110.0,
                                                         22.0
-                                                    ]
+                                                    ],
+                                                    "text": "t b b"
                                                 }
                                             },
                                             {
                                                 "box": {
+                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
                                                     "id": "resume-out",
-                                                    "maxclass": "outlet",
                                                     "index": 4,
+                                                    "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
                                                     "patching_rect": [
                                                         820.0,
                                                         640.0,
@@ -14360,13 +14453,20 @@
                                                 "box": {
                                                     "id": "module-reset",
                                                     "maxclass": "newobj",
-                                                    "text": "t b b b",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
                                                     "patching_rect": [
                                                         250.0,
                                                         130.0,
                                                         110.0,
                                                         22.0
-                                                    ]
+                                                    ],
+                                                    "text": "t b b b"
                                                 }
                                             }
                                         ],
@@ -14440,6 +14540,18 @@
                                                     "source": [
                                                         "disable-order",
                                                         1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        2
                                                     ]
                                                 }
                                             },
@@ -14542,6 +14654,18 @@
                                             {
                                                 "patchline": {
                                                     "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        2
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
                                                         "pending-one",
                                                         0
                                                     ],
@@ -14559,6 +14683,54 @@
                                                     ],
                                                     "source": [
                                                         "module-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        2
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-reset",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
                                                         0
                                                     ]
                                                 }
@@ -14596,6 +14768,18 @@
                                                     "source": [
                                                         "pending-select",
                                                         1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending-select",
+                                                        0
                                                     ]
                                                 }
                                             },
@@ -14673,11 +14857,11 @@
                                             },
                                             {
                                                 "patchline": {
-                                                    "source": [
-                                                        "disable-order",
-                                                        2
-                                                    ],
                                                     "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ],
+                                                    "source": [
                                                         "resume-one",
                                                         0
                                                     ]
@@ -14685,155 +14869,71 @@
                                             },
                                             {
                                                 "patchline": {
-                                                    "source": [
-                                                        "resume-one",
-                                                        0
-                                                    ],
-                                                    "destination": [
-                                                        "resume-pending",
-                                                        1
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-zero",
-                                                        0
-                                                    ],
-                                                    "destination": [
-                                                        "resume-pending",
-                                                        1
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "pending-select",
-                                                        0
-                                                    ],
-                                                    "destination": [
-                                                        "resume-pending",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-pending",
-                                                        0
-                                                    ],
-                                                    "destination": [
-                                                        "resume-select",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-select",
-                                                        0
-                                                    ],
-                                                    "destination": [
-                                                        "advance-out",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-select",
-                                                        1
-                                                    ],
-                                                    "destination": [
-                                                        "resume-order",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-order",
-                                                        1
-                                                    ],
-                                                    "destination": [
-                                                        "resume-zero",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "resume-order",
-                                                        0
-                                                    ],
                                                     "destination": [
                                                         "resume-out",
                                                         0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "module-select",
-                                                        0
                                                     ],
-                                                    "destination": [
-                                                        "module-reset",
+                                                    "source": [
+                                                        "resume-order",
                                                         0
                                                     ]
                                                 }
                                             },
                                             {
                                                 "patchline": {
-                                                    "source": [
-                                                        "module-reset",
-                                                        2
-                                                    ],
-                                                    "destination": [
-                                                        "pending-one",
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "patchline": {
-                                                    "source": [
-                                                        "module-reset",
-                                                        1
-                                                    ],
                                                     "destination": [
                                                         "resume-zero",
                                                         0
+                                                    ],
+                                                    "source": [
+                                                        "resume-order",
+                                                        1
                                                     ]
                                                 }
                                             },
                                             {
                                                 "patchline": {
-                                                    "source": [
-                                                        "module-reset",
+                                                    "destination": [
+                                                        "resume-select",
                                                         0
                                                     ],
-                                                    "destination": [
-                                                        "active-zero",
+                                                    "source": [
+                                                        "resume-pending",
                                                         0
                                                     ]
                                                 }
                                             },
                                             {
                                                 "patchline": {
-                                                    "source": [
-                                                        "first-order",
-                                                        2
-                                                    ],
                                                     "destination": [
+                                                        "advance-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ],
+                                                    "source": [
                                                         "resume-zero",
                                                         0
                                                     ]
@@ -14874,52 +14974,74 @@
                                 "box": {
                                     "id": "resume-entry-remaining",
                                     "maxclass": "newobj",
-                                    "text": "i 0",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
                                     "patching_rect": [
                                         1280.0,
                                         480.0,
                                         110.0,
                                         22.0
-                                    ]
+                                    ],
+                                    "text": "i 0"
                                 }
                             },
                             {
                                 "box": {
                                     "id": "resume-total-remaining",
                                     "maxclass": "newobj",
-                                    "text": "i 0",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
                                     "patching_rect": [
                                         1450.0,
                                         480.0,
                                         110.0,
                                         22.0
-                                    ]
+                                    ],
+                                    "text": "i 0"
                                 }
                             },
                             {
                                 "box": {
                                     "id": "resume-subtract",
                                     "maxclass": "newobj",
-                                    "text": "- 0",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
                                     "patching_rect": [
                                         1450.0,
                                         580.0,
                                         110.0,
                                         22.0
-                                    ]
+                                    ],
+                                    "text": "- 0"
                                 }
                             },
                             {
                                 "box": {
                                     "id": "resume-skip",
                                     "maxclass": "newobj",
-                                    "text": "t b b b",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "bang"
+                                    ],
                                     "patching_rect": [
                                         1280.0,
                                         390.0,
                                         110.0,
                                         22.0
-                                    ]
+                                    ],
+                                    "text": "t b b b"
                                 }
                             }
                         ],
@@ -14988,11 +15110,24 @@
                                         490.5,
                                         475.0
                                     ],
+                                    "order": 1,
                                     "source": [
                                         "countload",
                                         1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
                                     ],
-                                    "order": 0
+                                    "order": 0,
+                                    "source": [
+                                        "countload",
+                                        1
+                                    ]
                                 }
                             },
                             {
@@ -15023,11 +15158,24 @@
                                         490.5,
                                         475.0
                                     ],
+                                    "order": 1,
                                     "source": [
                                         "countorder",
                                         2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
                                     ],
-                                    "order": 0
+                                    "order": 0,
+                                    "source": [
+                                        "countorder",
+                                        2
+                                    ]
                                 }
                             },
                             {
@@ -15307,6 +15455,18 @@
                             {
                                 "patchline": {
                                     "destination": [
+                                        "resume-skip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        3
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
                                         "runout",
                                         0
                                     ],
@@ -15373,6 +15533,78 @@
                                     "source": [
                                         "restart",
                                         2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-subtract",
+                                        1
+                                    ],
+                                    "source": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "next",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-update",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-subtract",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-subtract",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-total-remaining",
+                                        0
                                     ]
                                 }
                             },
@@ -15511,14 +15743,27 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "total-remaining",
+                                        "resume-total-remaining",
                                         1
                                     ],
+                                    "order": 0,
                                     "source": [
                                         "total-load",
                                         1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        1
                                     ],
-                                    "order": 0
+                                    "order": 1,
+                                    "source": [
+                                        "total-load",
+                                        1
+                                    ]
                                 }
                             },
                             {
@@ -15656,6 +15901,19 @@
                             {
                                 "patchline": {
                                     "destination": [
+                                        "resume-total-remaining",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "total-update",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
                                         "total-ended",
                                         0
                                     ],
@@ -15671,11 +15929,11 @@
                                         "total-remaining",
                                         1
                                     ],
+                                    "order": 1,
                                     "source": [
                                         "total-update",
                                         2
-                                    ],
-                                    "order": 0
+                                    ]
                                 }
                             },
                             {
@@ -15784,142 +16042,6 @@
                                     ],
                                     "source": [
                                         "validtime",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "countload",
-                                        1
-                                    ],
-                                    "destination": [
-                                        "resume-entry-remaining",
-                                        1
-                                    ],
-                                    "order": 1
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "countorder",
-                                        2
-                                    ],
-                                    "destination": [
-                                        "resume-entry-remaining",
-                                        1
-                                    ],
-                                    "order": 1
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "total-load",
-                                        1
-                                    ],
-                                    "destination": [
-                                        "resume-total-remaining",
-                                        1
-                                    ],
-                                    "order": 1
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "total-update",
-                                        2
-                                    ],
-                                    "destination": [
-                                        "resume-total-remaining",
-                                        1
-                                    ],
-                                    "order": 1
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "phase-control",
-                                        3
-                                    ],
-                                    "destination": [
-                                        "resume-skip",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-skip",
-                                        2
-                                    ],
-                                    "destination": [
-                                        "resume-entry-remaining",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-entry-remaining",
-                                        0
-                                    ],
-                                    "destination": [
-                                        "resume-subtract",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-skip",
-                                        1
-                                    ],
-                                    "destination": [
-                                        "resume-total-remaining",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-total-remaining",
-                                        0
-                                    ],
-                                    "destination": [
-                                        "resume-subtract",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-subtract",
-                                        0
-                                    ],
-                                    "destination": [
-                                        "total-update",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "source": [
-                                        "resume-skip",
-                                        0
-                                    ],
-                                    "destination": [
-                                        "next",
                                         0
                                     ]
                                 }
@@ -16402,6 +16524,4908 @@
                     ],
                     "text": "outputvalue"
                 }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence",
+                    "maxclass": "newobj",
+                    "numinlets": 5,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "float",
+                        "",
+                        ""
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            225.0,
+                            100.0,
+                            918.0,
+                            891.0
+                        ],
+                        "openinpresentation": 1,
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "",
+                                    "id": "obj-1",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        -33.0,
+                                        5.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "title",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        10.0,
+                                        660.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        4.065040647983551,
+                                        0.0,
+                                        317.8861786723137,
+                                        20.0
+                                    ],
+                                    "text": "Frequency-Sequenz · Takt = Delayzeit"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "runlabel",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        65.0,
+                                        90.0,
+                                        350.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        42.27642273902893,
+                                        40.65040647983551,
+                                        320.0,
+                                        20.0
+                                    ],
+                                    "text": "Sequenz Ein/Aus · pulsgetreu fortsetzen"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "run",
+                                    "maxclass": "toggle",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        90.0,
+                                        24.0,
+                                        24.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        4.065040647983551,
+                                        39.8373983502388,
+                                        24.0,
+                                        24.0
+                                    ],
+                                    "varname": "sequenceRun"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "format",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1600.0,
+                                        680.0,
+                                        47.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_linecount": 3,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        481.30081272125244,
+                                        650.0,
+                                        47.0
+                                    ],
+                                    "text": "Zeile: Nummer, Up-Hz Down-Hz Delay-Takte;\nBeispiel: 1, 50. 75. 3;\n0–5000 Hz je Wert. Down-Richtung entsteht im Shifter."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "example",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1100.0,
+                                        680.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        71.5447154045105,
+                                        467.47967451810837,
+                                        20.0
+                                    ],
+                                    "text": "Sequenz AN: Up und Down unabhängig; Link ohne Wirkung."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "delaylabel",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        400.0,
+                                        187.0,
+                                        105.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        120.32520318031311,
+                                        90.0,
+                                        20.0
+                                    ],
+                                    "text": "Takt (ms)"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "steplabel",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        825.0,
+                                        90.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        121.13821130990982,
+                                        120.32520318031311,
+                                        51.21951216459274,
+                                        20.0
+                                    ],
+                                    "text": "Schritt"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "centlabel",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        1041.463439464569,
+                                        10.97561001777649,
+                                        115.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        191.0569104552269,
+                                        120.32520318031311,
+                                        86.99186986684799,
+                                        20.0
+                                    ],
+                                    "text": "Shift Up (Hz)"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "remaininglabel",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        924.8780488967896,
+                                        650.7317066192627,
+                                        195.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        381.70731687545776,
+                                        120.32520318031311,
+                                        154.47154462337494,
+                                        20.0
+                                    ],
+                                    "text": "Delay-Takte bis Listenende"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "format": 6,
+                                    "id": "delayview",
+                                    "ignoreclick": 1,
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        400.0,
+                                        217.4878056049347,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        146.34146332740784,
+                                        90.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "id": "stepview",
+                                    "ignoreclick": 1,
+                                    "maxclass": "number",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        855.0,
+                                        85.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        121.13821130990982,
+                                        146.34146332740784,
+                                        44.71544712781906,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "format": 6,
+                                    "id": "centview",
+                                    "ignoreclick": 1,
+                                    "maxclass": "flonum",
+                                    "maximum": 5000.0,
+                                    "minimum": 0.0,
+                                    "numdecimalplaces": 2,
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        1043.9024639129639,
+                                        30.487805604934692,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        191.8699185848236,
+                                        146.34146332740784,
+                                        55.284552812576294,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "id": "remainingview",
+                                    "ignoreclick": 1,
+                                    "maxclass": "number",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        920.0,
+                                        680.0,
+                                        120.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        381.70731687545776,
+                                        146.34146332740784,
+                                        65.04065036773682,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "meaning",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1140.0,
+                                        680.0,
+                                        47.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_linecount": 3,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        195.93495923280716,
+                                        407.3170729279518,
+                                        47.0
+                                    ],
+                                    "text": "Sequenz AUS merkt den Eintrag; EIN spielt den nächsten am Delay-Takt.\nDelay-Modul AUS/EIN setzt die Liste auf Eintrag 1 zurück.\nNeue Delayzeit richtet nur den Takt neu aus; Listenposition bleibt."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
+                                    "id": "timein",
+                                    "index": 2,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        55.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "validtime",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        100.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "maximum 1."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "timeorder",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        145.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "clock",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "bang"
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            140.0,
+                                            140.0,
+                                            620.0,
+                                            620.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "id": "module-in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "id": "time-in",
+                                                    "index": 2,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-normalize",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "!= 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        165.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t i i"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        210.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "stop",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        255.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "stop"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "time-valid",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "float",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "maximum 1."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "time-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b f"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "rephase",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        260.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "running-gate",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        315.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "gate 1 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "timer",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        370.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "delay 500."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "edge",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        425.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "id": "clock-out",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        510.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "clock-note",
+                                                    "linecount": 2,
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        555.0,
+                                                        546.0,
+                                                        33.0
+                                                    ],
+                                                    "text": "Modul EIN startet; AUS stoppt. Jede gesetzte Zeit: alten Timer stoppen, neue Dauer setzen, von dort neu zählen. Kein Sequenz-Start und kein Listenindex in diesem Zeitgeber."
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "clock-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "edge",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-normalize",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-normalize",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rephase",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "stop",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "rephase",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "stop",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "rephase",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "running-gate",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "stop",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "time-valid",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rephase",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "time-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "time-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-valid",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "edge",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "timer",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        400.0,
+                                        285.0,
+                                        151.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p Gemeinsamer_Delaytakt"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "tick",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        435.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "restart",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        435.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "startpointer",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        260.0,
+                                        480.0,
+                                        55.0,
+                                        22.0
+                                    ],
+                                    "text": "start"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "first",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        525.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "next",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        680.0,
+                                        45.0,
+                                        22.0
+                                    ],
+                                    "text": "next"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "coll_data": {
+                                        "count": 4,
+                                        "data": [
+                                            {
+                                                "key": 1,
+                                                "value": [
+                                                    50.0,
+                                                    50.0,
+                                                    3
+                                                ]
+                                            },
+                                            {
+                                                "key": 2,
+                                                "value": [
+                                                    100.0,
+                                                    25.0,
+                                                    2
+                                                ]
+                                            },
+                                            {
+                                                "key": 3,
+                                                "value": [
+                                                    5.0,
+                                                    10.0,
+                                                    5
+                                                ]
+                                            },
+                                            {
+                                                "key": 4,
+                                                "value": [
+                                                    0.0,
+                                                    0.0,
+                                                    2
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "id": "data",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        725.0,
+                                        231.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "embed": 1,
+                                        "precision": 6
+                                    },
+                                    "text": "coll #0-freq-sequence-data @embed 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "unpack",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        775.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "unpack f f i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "validcount",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        540.0,
+                                        825.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "maximum 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "remaining",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        490.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "i 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "decrement",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        535.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "- 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "countorder",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "int",
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        580.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "finished",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        625.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "amountclip",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        825.0,
+                                        145.0,
+                                        22.0
+                                    ],
+                                    "text": "clip 0. 5000."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "amountorder",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "float",
+                                        "float"
+                                    ],
+                                    "patching_rect": [
+                                        165.0,
+                                        875.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t f f"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "startup",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        50.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "loadmess 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Sequenz-Transposition Shift Up in Hz",
+                                    "id": "centout",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        165.0,
+                                        980.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "0 = manueller Hz-Regler; 1 = Sequenz übernimmt Shift Up",
+                                    "id": "runout",
+                                    "index": 2,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        780.0,
+                                        980.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "countload",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        540.0,
+                                        875.0,
+                                        100.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-prepare",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        90.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-zero",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        135.0,
+                                        45.0,
+                                        22.0
+                                    ],
+                                    "text": "0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-dump",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        135.0,
+                                        65.0,
+                                        22.0
+                                    ],
+                                    "text": "dump"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "coll_data": {
+                                        "count": 4,
+                                        "data": [
+                                            {
+                                                "key": 1,
+                                                "value": [
+                                                    50.0,
+                                                    50.0,
+                                                    3
+                                                ]
+                                            },
+                                            {
+                                                "key": 2,
+                                                "value": [
+                                                    100.0,
+                                                    25.0,
+                                                    2
+                                                ]
+                                            },
+                                            {
+                                                "key": 3,
+                                                "value": [
+                                                    5.0,
+                                                    10.0,
+                                                    5
+                                                ]
+                                            },
+                                            {
+                                                "key": 4,
+                                                "value": [
+                                                    0.0,
+                                                    0.0,
+                                                    2
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "id": "total-reader",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        180.0,
+                                        195.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "embed": 1,
+                                        "precision": 6
+                                    },
+                                    "text": "coll #0-freq-sequence-data"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-unpack",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        225.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "unpack f f i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-valid-duration",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        270.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "maximum 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-sum",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        315.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "+ 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-sum-order",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        360.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-value",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        405.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-load",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        450.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-remaining",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        540.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-minus",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        585.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "- 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-update",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "int",
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        630.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-ended",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        680.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-note",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        880.0,
+                                        760.0,
+                                        387.0,
+                                        47.0
+                                    ],
+                                    "text": "Gesamtcountdown folgt der Liste. Nach Sequenz-Pause wird der nächste Eintrag gespielt; restliche Halte-Takte des pausierten Eintrags werden dabei übersprungen."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "amount2clip",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        340.0,
+                                        825.0,
+                                        145.0,
+                                        22.0
+                                    ],
+                                    "text": "clip 0. 5000."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Sequenz-Transposition Shift Down in Hz; unabhängig von Shift Up",
+                                    "id": "cent2out",
+                                    "index": 3,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        920.0,
+                                        980.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "id": "effective1in",
+                                    "index": 3,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1043.9024639129639,
+                                        -29.268293380737305,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "id": "effective2in",
+                                    "index": 4,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1204.878077507019,
+                                        -29.268293380737305,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "format": 6,
+                                    "id": "cent2view",
+                                    "ignoreclick": 1,
+                                    "maxclass": "flonum",
+                                    "maximum": 5000.0,
+                                    "minimum": 0.0,
+                                    "numdecimalplaces": 2,
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        1204.878077507019,
+                                        39.024391174316406,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        286.99186992645264,
+                                        146.34146332740784,
+                                        55.284552812576294,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "cent2label",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        1223.1707608699799,
+                                        14.634146690368652,
+                                        130.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        286.99186992645264,
+                                        120.32520318031311,
+                                        93.0,
+                                        20.0
+                                    ],
+                                    "text": "Shift Down (Hz)"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "bgcolor": [
+                                        0.16,
+                                        0.16,
+                                        0.16,
+                                        1.0
+                                    ],
+                                    "bordercolor": [
+                                        0.4,
+                                        0.4,
+                                        0.4,
+                                        1.0
+                                    ],
+                                    "fontname": "Menlo",
+                                    "fontsize": 13.0,
+                                    "id": "list-editor",
+                                    "linecount": 4,
+                                    "maxclass": "textedit",
+                                    "nosymquotes": 1,
+                                    "numinlets": 1,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "",
+                                        "int",
+                                        "",
+                                        ""
+                                    ],
+                                    "outputmode": 1,
+                                    "parameter_enable": 1,
+                                    "parameter_mappable": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1250.0,
+                                        680.0,
+                                        190.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_linecount": 4,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        281.30081284046173,
+                                        417.88617861270905,
+                                        190.2439023256302
+                                    ],
+                                    "saved_attribute_attributes": {
+                                        "valueof": {
+                                            "parameter_initial": [
+                                                "1, 50. 50. 3;\n2, 100. 25. 2;\n3, 5. 10. 5;\n4, 0. 0. 2;"
+                                            ],
+                                            "parameter_invisible": 1,
+                                            "parameter_longname": "D1 Freqshift Sequenz Liste",
+                                            "parameter_modmode": 0,
+                                            "parameter_shortname": "Sequenz Liste",
+                                            "parameter_type": 3
+                                        }
+                                    },
+                                    "tabmode": 0,
+                                    "text": "1, 50. 50. 3;\n2, 100. 25. 2;\n3, 5. 10. 5;\n4, 0. 0. 2;",
+                                    "textcolor": [
+                                        0.9,
+                                        0.9,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "varname": "freqSequenceList"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-editor-label",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1210.0,
+                                        680.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        251.21951204538345,
+                                        407.3170729279518,
+                                        20.0
+                                    ],
+                                    "text": "Sequenzliste · wird mit dem Live-Set gespeichert"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-value-observer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1250.0,
+                                        300.0,
+                                        22.0
+                                    ],
+                                    "restore": [
+                                        "1, 50. 50. 3;\n2, 100. 25. 2;\n3, 5. 10. 5;\n4, 0. 0. 2;"
+                                    ],
+                                    "saved_object_attributes": {
+                                        "parameter_enable": 0,
+                                        "parameter_mappable": 0
+                                    },
+                                    "text": "pattr listTextObserver @bindto freqSequenceList",
+                                    "varname": "listTextObserver"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-key-bang",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        500.0,
+                                        1460.0,
+                                        45.0,
+                                        22.0
+                                    ],
+                                    "text": "t b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-key-defer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        500.0,
+                                        1505.0,
+                                        75.0,
+                                        22.0
+                                    ],
+                                    "text": "deferlow"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-text-bridge",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        ""
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            150.0,
+                                            150.0,
+                                            830.0,
+                                            620.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "id": "in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "code": "inlets = 1;\noutlets = 2;\nvar previous = null;\nfunction parseRows(source) {\n    var pieces = String(source).split(';');\n    if (pieces.pop().trim() !== '') return null;\n    var number = '[+-]?(?:\\\\d+(?:\\\\.\\\\d*)?|\\\\.\\\\d+)(?:[eE][+-]?\\\\d+)?';\n    var rowPattern = new RegExp('^\\\\s*(\\\\d+)\\\\s*,\\\\s*(' + number + ')\\\\s+(' + number + ')\\\\s+(\\\\d+)\\\\s*$');\n    var rows = [], keys = {};\n    for (var i = 0; i < pieces.length; i++) {\n        if (!pieces[i].trim()) continue;\n        var match = pieces[i].match(rowPattern);\n        if (!match) return null;\n        var row = [Number(match[1]), Number(match[2]), Number(match[3]), Number(match[4])];\n        if (row[0] < 1 || row[3] < 1 || !isFinite(row[1]) || !isFinite(row[2]) || keys[row[0]]) return null;\n        keys[row[0]] = true;\n        rows.push(row);\n    }\n    return rows.length ? rows : null;\n}\nfunction receiveText(source) {\n    var rows = parseRows(source);\n    // Partial edits remain in the stored text field; play the last complete list until ready.\n    if (!rows) return;\n    var signature = JSON.stringify(rows);\n    if (signature === previous) return;\n    previous = signature;\n    outlet(0, 'clear');\n    for (var i = 0; i < rows.length; i++) outlet(0, rows[i]);\n    outlet(0, 'start');\n    outlet(1, 'bang');\n}\nfunction text() { receiveText(Array.prototype.slice.call(arguments).join(' ')); }\nfunction list() { receiveText(Array.prototype.slice.call(arguments).join(' ')); }\nfunction anything() {\n    var values = Array.prototype.slice.call(arguments);\n    if (messagename !== 'symbol') values.unshift(messagename);\n    receiveText(values.join(' '));\n}\n",
+                                                    "filename": "none",
+                                                    "fontface": 0,
+                                                    "fontname": "<Monospaced>",
+                                                    "fontsize": 12.0,
+                                                    "id": "parse",
+                                                    "maxclass": "v8.codebox",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        80.0,
+                                                        730.0,
+                                                        430.0
+                                                    ],
+                                                    "saved_object_attributes": {
+                                                        "parameter_enable": 0
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "clear; Listeneinträge; start → vorhandene coll",
+                                                    "id": "rows",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        550.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "id": "changed",
+                                                    "index": 2,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        550.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "parse",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "changed",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "parse",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rows",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "parse",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        750.0,
+                                        1330.0,
+                                        225.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p ListenSpeicherung_zu_Sequenz"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-live-ready",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1430.0,
+                                        105.0,
+                                        22.0
+                                    ],
+                                    "text": "live.thisdevice"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-live-defer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1475.0,
+                                        75.0,
+                                        22.0
+                                    ],
+                                    "text": "deferlow"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "id": "module-in",
+                                    "index": 5,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1400.0,
+                                        20.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-order",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1400.0,
+                                        75.0,
+                                        70.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "phase-control",
+                                    "maxclass": "newobj",
+                                    "numinlets": 4,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "",
+                                        "bang"
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            140.0,
+                                            140.0,
+                                            960.0,
+                                            760.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Sequenz gewünscht Ein/Aus",
+                                                    "id": "request-in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "id": "module-in",
+                                                    "index": 2,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "id": "list-in",
+                                                    "index": 3,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        450.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gemeinsame Delay-Taktkante",
+                                                    "id": "edge-in",
+                                                    "index": 4,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-normalize",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "!= 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        165.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "enable-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        130.0,
+                                                        215.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "disable-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        265.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "enabled",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        130.0,
+                                                        260.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "disabled",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        310.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-one",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        450.0,
+                                                        100.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "armed-gate",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        310.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "gate 1 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "edge-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        360.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        410.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "i 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        460.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "first-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        510.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-zero",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        700.0,
+                                                        555.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-one",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        360.0,
+                                                        410.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-zero",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        310.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        360.0,
+                                                        465.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "id": "first-out",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "id": "advance-out",
+                                                    "index": 2,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        300.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "id": "active-out",
+                                                    "index": 3,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "note",
+                                                    "linecount": 2,
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        695.0,
+                                                        705.0,
+                                                        33.0
+                                                    ],
+                                                    "text": "Sequenz AUS merkt den Eintrag; EIN spielt den nächsten Eintrag an der Taktkante. Modul AUS markiert Neustart bei Eintrag 1. Listenänderung beginnt ebenfalls bei Eintrag 1 am nächsten Takt."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-one",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        365.0,
+                                                        50.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-zero",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        700.0,
+                                                        605.0,
+                                                        50.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-pending",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        500.0,
+                                                        525.0,
+                                                        110.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "i 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        500.0,
+                                                        570.0,
+                                                        110.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        820.0,
+                                                        570.0,
+                                                        110.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "id": "resume-out",
+                                                    "index": 4,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        820.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-reset",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        130.0,
+                                                        110.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b b"
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "edge-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "armed-gate",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "disabled",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        2
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disabled",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "edge-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "enabled",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "enable-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "enabled",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "first-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        2
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "list-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        2
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-reset",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-reset",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "pending-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "first-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "pending-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-normalize",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-normalize",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "disable-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "enable-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "resume-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-pending",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "advance-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "resume-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "resume-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        30.0,
+                                        375.0,
+                                        250.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p Sequenz_Am_Delaytakt"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-entry-remaining",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1280.0,
+                                        480.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-total-remaining",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1450.0,
+                                        480.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-subtract",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1450.0,
+                                        580.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "- 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-skip",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        1280.0,
+                                        390.0,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b b"
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "cent2out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "amount2clip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "amountorder",
+                                        0
+                                    ],
+                                    "source": [
+                                        "amountclip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "centout",
+                                        0
+                                    ],
+                                    "source": [
+                                        "amountorder",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "phase-control",
+                                        3
+                                    ],
+                                    "source": [
+                                        "clock",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remaining",
+                                        1
+                                    ],
+                                    "midpoints": [
+                                        630.5,
+                                        905.0,
+                                        740.0,
+                                        905.0,
+                                        740.0,
+                                        475.0,
+                                        490.5,
+                                        475.0
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "countload",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "countload",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "finished",
+                                        0
+                                    ],
+                                    "source": [
+                                        "countorder",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remaining",
+                                        1
+                                    ],
+                                    "midpoints": [
+                                        490.5,
+                                        610.0,
+                                        710.0,
+                                        610.0,
+                                        710.0,
+                                        475.0,
+                                        490.5,
+                                        475.0
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "countorder",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "countorder",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "stepview",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        245.16666666666669,
+                                        755.0,
+                                        115.0,
+                                        755.0,
+                                        115.0,
+                                        845.0,
+                                        39.5,
+                                        845.0
+                                    ],
+                                    "source": [
+                                        "data",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "unpack",
+                                        0
+                                    ],
+                                    "source": [
+                                        "data",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "countorder",
+                                        0
+                                    ],
+                                    "source": [
+                                        "decrement",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "centview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "effective1in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "cent2view",
+                                        0
+                                    ],
+                                    "source": [
+                                        "effective2in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "next",
+                                        0
+                                    ],
+                                    "source": [
+                                        "finished",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "next",
+                                        0
+                                    ],
+                                    "source": [
+                                        "first",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-key-bang",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-editor",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-text-bridge",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-editor",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-key-defer",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-key-bang",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-editor",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-key-defer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-editor",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-live-defer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-live-defer",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-live-ready",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "data",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-text-bridge",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "phase-control",
+                                        2
+                                    ],
+                                    "source": [
+                                        "list-text-bridge",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-text-bridge",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-value-observer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "module-order",
+                                        0
+                                    ],
+                                    "source": [
+                                        "module-in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "clock",
+                                        0
+                                    ],
+                                    "source": [
+                                        "module-order",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "phase-control",
+                                        1
+                                    ],
+                                    "source": [
+                                        "module-order",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "data",
+                                        0
+                                    ],
+                                    "source": [
+                                        "next",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "run",
+                                        0
+                                    ],
+                                    "source": [
+                                        "obj-1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "restart",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-skip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        3
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "runout",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "tick",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "decrement",
+                                        0
+                                    ],
+                                    "source": [
+                                        "remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "first",
+                                        0
+                                    ],
+                                    "source": [
+                                        "restart",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "startpointer",
+                                        0
+                                    ],
+                                    "source": [
+                                        "restart",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-prepare",
+                                        0
+                                    ],
+                                    "source": [
+                                        "restart",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-subtract",
+                                        1
+                                    ],
+                                    "source": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "next",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-skip",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-update",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-subtract",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-subtract",
+                                        0
+                                    ],
+                                    "source": [
+                                        "resume-total-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "phase-control",
+                                        0
+                                    ],
+                                    "source": [
+                                        "run",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "data",
+                                        0
+                                    ],
+                                    "source": [
+                                        "startpointer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "run",
+                                        0
+                                    ],
+                                    "source": [
+                                        "startup",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "tick",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "tick",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "validtime",
+                                        0
+                                    ],
+                                    "source": [
+                                        "timein",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "clock",
+                                        1
+                                    ],
+                                    "source": [
+                                        "timeorder",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "delayview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "timeorder",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-reader",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-dump",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-prepare",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-ended",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remainingview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-load",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "total-load",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        1
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "total-load",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-update",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-minus",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-dump",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-zero",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-unpack",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-reader",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-minus",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum-order",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-sum",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-sum-order",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-sum-order",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-valid-duration",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-unpack",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remainingview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-update",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "total-update",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-ended",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-update",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        1
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "total-update",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-valid-duration",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-load",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-value",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        1
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "total-zero",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "total-zero",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "amount2clip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "unpack",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "amountclip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "unpack",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "validcount",
+                                        0
+                                    ],
+                                    "source": [
+                                        "unpack",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "countload",
+                                        0
+                                    ],
+                                    "source": [
+                                        "validcount",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "timeorder",
+                                        0
+                                    ],
+                                    "source": [
+                                        "validtime",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        -279.19273567199707,
+                        883.3332996368408,
+                        134.81774365901947,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Frequency_Sequenz",
+                    "varname": "Frequency_Sequenz"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-source",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        -251.04165709018707,
+                        1073.3859615325928,
+                        110.0,
+                        22.0
+                    ],
+                    "text": "switch 2 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-source2",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        -17.543859481811523,
+                        1122.508768081665,
+                        110.0,
+                        22.0
+                    ],
+                    "text": "switch 2 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-manual-order",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "float",
+                        "float"
+                    ],
+                    "patching_rect": [
+                        -285.4166557788849,
+                        983.3332958221436,
+                        70.0,
+                        22.0
+                    ],
+                    "text": "t f f"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-manual2-order",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "float",
+                        "float"
+                    ],
+                    "patching_rect": [
+                        42.70833170413971,
+                        1017.4090665578842,
+                        70.0,
+                        22.0
+                    ],
+                    "text": "t f f"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-manual-value",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patching_rect": [
+                        -209.3749920129776,
+                        1030.9090665578842,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "f 50."
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-manual2-value",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patching_rect": [
+                        51.041664719581604,
+                        1057.2916263341904,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "f 50."
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-mode-order",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "bang",
+                        "int"
+                    ],
+                    "patching_rect": [
+                        63.157894134521484,
+                        862.8596477508545,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "t b i"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-mode-index",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "int"
+                    ],
+                    "patching_rect": [
+                        105.20832931995392,
+                        903.1249655485153,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "+ 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-open-message",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        -195.6666555404663,
+                        804.8253931999207,
+                        45.0,
+                        22.0
+                    ],
+                    "text": "open"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-pcontrol",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        -199.99999237060547,
+                        833.9884107708931,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "pcontrol"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-state-recall",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        -291.6666555404663,
+                        804.8253931999207,
+                        95.0,
+                        22.0
+                    ],
+                    "text": "outputvalue"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-link-sequence-appearance",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            150.0,
+                            150.0,
+                            780.0,
+                            320.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "id": "in",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        20.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "sel",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        75.0,
+                                        65.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 0 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "normal",
+                                    "linecount": 3,
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        125.0,
+                                        340.0,
+                                        49.0
+                                    ],
+                                    "text": "activebgcolor 0. 0. 0. 1., activebgoncolor 0. 0. 0. 1., activetextcolor 1. 0. 0. 1., activetextoncolor 1. 0.933333 0. 1., ignoreclick 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gray",
+                                    "linecount": 3,
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        125.0,
+                                        340.0,
+                                        49.0
+                                    ],
+                                    "text": "activebgcolor 0.22 0.22 0.22 1., activebgoncolor 0.22 0.22 0.22 1., activetextcolor 0.65 0.65 0.65 1., activetextoncolor 0.65 0.65 0.65 1., ignoreclick 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "id": "out",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        245.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gray",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "sel",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "normal",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gray",
+                                        0
+                                    ],
+                                    "source": [
+                                        "sel",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "normal",
+                                        0
+                                    ],
+                                    "source": [
+                                        "sel",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        -267.70832312107086,
+                        940.7341786623001,
+                        210.0,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Frequency_Link_Buttonansicht"
+                }
+            },
+            {
+                "box": {
+                    "id": "freq-sequence-note",
+                    "linecount": 4,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        2250.0,
+                        1650.0,
+                        902.0,
+                        60.0
+                    ],
+                    "text": "Frequency-Sequenz: vorhandene Linked-/Unlinked-Logik unverändert vor den beiden Wahlschaltern.\nSequenz AUS: aktuelle manuelle Hz-Werte; Sequenz AN: zwei unabhängige Hz-Listenwerte.\nDie gewählten Hz-Beträge gehen gemeinsam an Hauptdelay und bestehende ---freqshiftamountup/down-Busse. Keine Vorzeichenumkehr und keine Cent-Umrechnung.\nEigene Listenablage #0-freq-sequence-data; Zeit-/Fortsetzungslogik wie im Pitch-System."
+                }
             }
         ],
         "lines": [
@@ -16413,6 +21437,342 @@
                     ],
                     "source": [
                         "down",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-53",
+                        0
+                    ],
+                    "source": [
+                        "freq-link-sequence-appearance",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-link-sequence-appearance",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "freq-sequence",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-mode-order",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "freq-sequence",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source",
+                        2
+                    ],
+                    "source": [
+                        "freq-sequence",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source2",
+                        2
+                    ],
+                    "source": [
+                        "freq-sequence",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence",
+                        0
+                    ],
+                    "source": [
+                        "freq-sequence-enabled",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-manual-value",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual-order",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual-value",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-manual2-value",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual2-order",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source2",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual2-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source2",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-manual2-value",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "freq-sequence-mode-index",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-source2",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "freq-sequence-mode-index",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-manual-value",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "freq-sequence-mode-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-manual2-value",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "freq-sequence-mode-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-mode-index",
+                        0
+                    ],
+                    "source": [
+                        "freq-sequence-mode-order",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-open-message",
+                        0
+                    ],
+                    "source": [
+                        "freq-sequence-open",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-pcontrol",
+                        0
+                    ],
+                    "source": [
+                        "freq-sequence-open-message",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence",
+                        1
+                    ],
+                    "source": [
+                        "freq-sequence-pcontrol",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence",
+                        2
+                    ],
+                    "order": 2,
+                    "source": [
+                        "freq-sequence-source",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-27",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "freq-sequence-source",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-922",
+                        2
+                    ],
+                    "order": 0,
+                    "source": [
+                        "freq-sequence-source",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence",
+                        3
+                    ],
+                    "order": 2,
+                    "source": [
+                        "freq-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-43",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "freq-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-922",
+                        9
+                    ],
+                    "order": 0,
+                    "source": [
+                        "freq-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-enabled",
+                        0
+                    ],
+                    "source": [
+                        "freq-sequence-state-recall",
                         0
                     ]
                 }
@@ -16704,6 +22064,19 @@
             {
                 "patchline": {
                     "destination": [
+                        "freq-sequence",
+                        1
+                    ],
+                    "order": 3,
+                    "source": [
+                        "obj-271",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "obj-74",
                         0
                     ],
@@ -16974,10 +22347,9 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-27",
+                        "freq-sequence-manual-order",
                         0
                     ],
-                    "order": 1,
                     "source": [
                         "obj-50",
                         0
@@ -16987,36 +22359,9 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-922",
-                        2
-                    ],
-                    "order": 0,
-                    "source": [
-                        "obj-50",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-43",
+                        "freq-sequence-manual2-order",
                         0
                     ],
-                    "order": 1,
-                    "source": [
-                        "obj-51",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-922",
-                        9
-                    ],
-                    "order": 0,
                     "source": [
                         "obj-51",
                         0
@@ -17622,6 +22967,19 @@
                     "order": 1,
                     "source": [
                         "obj-90",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence",
+                        4
+                    ],
+                    "order": 2,
+                    "source": [
+                        "obj-92",
                         0
                     ]
                 }
@@ -18567,6 +23925,19 @@
                     "order": 0,
                     "source": [
                         "pitch-transposition-combine",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "freq-sequence-state-recall",
+                        0
+                    ],
+                    "order": 3,
+                    "source": [
+                        "pitch-transposition-defer",
                         0
                     ]
                 }
