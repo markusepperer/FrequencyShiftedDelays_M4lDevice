@@ -23,7 +23,6 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 1670.2380793094635, 1504.761890411377, 203.75938040018082, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
                 }
             },
@@ -37,7 +36,6 @@
                     "numoutlets": 2,
                     "outlettype": [ "signal", "signal" ],
                     "patching_rect": [ 1670.2380793094635, 1436.9047482013702, 196.0, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
                 }
             },
@@ -51,7 +49,6 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 1223.1156055927277, 1488.4422447681427, 203.75938040018082, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
                 }
             },
@@ -65,7 +62,6 @@
                     "numoutlets": 2,
                     "outlettype": [ "signal", "signal" ],
                     "patching_rect": [ 1223.1156055927277, 1433.6683741807938, 196.0, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
                 }
             },
@@ -79,7 +75,6 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 992.4811148643494, 1491.729190826416, 203.75938040018082, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
                 }
             },
@@ -93,7 +88,6 @@
                     "numoutlets": 2,
                     "outlettype": [ "signal", "signal" ],
                     "patching_rect": [ 992.4811148643494, 1431.5788202285767, 196.0, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
                 }
             },
@@ -107,7 +101,6 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 537.9480943884337, 1478.1953574419022, 203.75938040018082, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
                 }
             },
@@ -121,7 +114,6 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 314.28568637371063, 1478.1953574419022, 203.75938040018082, 49.0 ],
-                    "presentation_linecount": 5,
                     "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
                 }
             },
@@ -135,7 +127,6 @@
                     "numoutlets": 2,
                     "outlettype": [ "signal", "signal" ],
                     "patching_rect": [ 541.827784588524, 1422.0859514474869, 196.0, 49.0 ],
-                    "presentation_linecount": 3,
                     "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
                 }
             },
@@ -148,7 +139,7 @@
                     "numinlets": 6,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "signal" ],
-                    "patching_rect": [ 315.33743703365326, 1417.7914727330208, 194.8349927663803, 49.0 ],
+                    "patching_rect": [ 315.33743703365326, 1417.7914727330208, 196.0, 49.0 ],
                     "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
                 }
             },
@@ -1633,14 +1624,15 @@
             },
             {
                 "box": {
-                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "activebgoncolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "activetextcolor": [ 1.0, 0.0, 0.0, 1.0 ],
-                    "activetextoncolor": [ 1.0, 0.933333, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.22, 0.22, 0.22, 1.0 ],
+                    "activebgoncolor": [ 0.22, 0.22, 0.22, 1.0 ],
+                    "activetextcolor": [ 0.65, 0.65, 0.65, 1.0 ],
+                    "activetextoncolor": [ 0.65, 0.65, 0.65, 1.0 ],
                     "automation": "Unlinked",
                     "automationon": "Linked",
                     "fontsize": 11.0,
                     "id": "obj-53",
+                    "ignoreclick": 1,
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -3780,7 +3772,7 @@
                     "presentation_rect": [ 171.35565641522408, 157.05570274591446, 57.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
-                            "parameter_initial": [ 0.0 ],
+                            "parameter_initial": [ 0.01 ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Q",
                             "parameter_mmax": 0.98,
@@ -4469,7 +4461,7 @@
                     "patching_rect": [ 222.12122786045074, 660.2847721576691, 113.0, 23.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 64.0, 171.0, 113.0, 23.0 ],
-                    "text": "No Input",
+                    "text": "Tutti",
                     "textcolor": [ 0.0, 0.0, 0.0, 1.0 ],
                     "textjustification": 1
                 }

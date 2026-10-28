@@ -2899,6 +2899,877 @@
                         ]
                     }
                 }
+            },
+            {
+                "box": {
+                    "id": "shadow-output-dynamics",
+                    "maxclass": "newobj",
+                    "text": "p Schatten_Ausgangsdynamik",
+                    "numinlets": 7,
+                    "numoutlets": 7,
+                    "outlettype": [
+                        "signal",
+                        "signal",
+                        "signal",
+                        "signal",
+                        "signal",
+                        "signal",
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        184.0,
+                        405.0,
+                        765.0,
+                        22.0
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            100.0,
+                            100.0,
+                            1660.0,
+                            490.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        30.0,
+                                        15.0,
+                                        750.0,
+                                        60.0
+                                    ],
+                                    "text": "Ausgangsdynamik der Schattenbank\nBearbeitet Frequency Up/Down, Mikrofon direkt und Pitch 1/2 vor dem Mixer mit denselben Kompressor-/Limiter-Einstellungen wie die Hauptbank. Die beiden ungeshifteten Delaywege behalten ihre bereits vorhandene interne Dynamikbearbeitung.",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-0",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        30.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 1,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Frequency Up nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-0",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        30.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Frequency Up",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "compressor-0",
+                                    "linecount": 3,
+                                    "maxclass": "newobj",
+                                    "numinlets": 6,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        165.0,
+                                        205.0,
+                                        49.0
+                                    ],
+                                    "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "limiter-0",
+                                    "linecount": 4,
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        245.0,
+                                        205.0,
+                                        62.0
+                                    ],
+                                    "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-0",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        30.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 1,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Frequency Up zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-1",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        260.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 2,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Frequency Down nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-1",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        260.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Frequency Down",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "compressor-1",
+                                    "linecount": 3,
+                                    "maxclass": "newobj",
+                                    "numinlets": 6,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        260.0,
+                                        165.0,
+                                        205.0,
+                                        49.0
+                                    ],
+                                    "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "limiter-1",
+                                    "linecount": 4,
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        260.0,
+                                        245.0,
+                                        205.0,
+                                        62.0
+                                    ],
+                                    "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-1",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        260.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 2,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Frequency Down zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-2",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        490.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 3,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Frequency-Delay ohne Shift nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-2",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        490.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Frequency-Delay ohne Shift",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-2",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        490.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 3,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Frequency-Delay ohne Shift zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-3",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        720.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 4,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Mikrofon direkt nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-3",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        720.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Mikrofon direkt",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "compressor-3",
+                                    "linecount": 3,
+                                    "maxclass": "newobj",
+                                    "numinlets": 6,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        720.0,
+                                        165.0,
+                                        205.0,
+                                        49.0
+                                    ],
+                                    "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "limiter-3",
+                                    "linecount": 4,
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        720.0,
+                                        245.0,
+                                        205.0,
+                                        62.0
+                                    ],
+                                    "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-3",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        720.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 4,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Mikrofon direkt zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-4",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        950.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 5,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Pitch 1 nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-4",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        950.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Pitch 1",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "compressor-4",
+                                    "linecount": 3,
+                                    "maxclass": "newobj",
+                                    "numinlets": 6,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        950.0,
+                                        165.0,
+                                        205.0,
+                                        49.0
+                                    ],
+                                    "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "limiter-4",
+                                    "linecount": 4,
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        950.0,
+                                        245.0,
+                                        205.0,
+                                        62.0
+                                    ],
+                                    "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-4",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        950.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 5,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Pitch 1 zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-5",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        1180.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 6,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Pitch-Delay ohne Shift nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-5",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        1180.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Pitch-Delay ohne Shift",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-5",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        1180.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 6,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Pitch-Delay ohne Shift zum Mixer"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "in-6",
+                                    "maxclass": "inlet",
+                                    "patching_rect": [
+                                        1410.0,
+                                        110.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 7,
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "signal"
+                                    ],
+                                    "comment": "Pitch 2 nach Modulfreigabe"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "label-6",
+                                    "maxclass": "comment",
+                                    "patching_rect": [
+                                        1410.0,
+                                        80.0,
+                                        205.0,
+                                        20.0
+                                    ],
+                                    "text": "Pitch 2",
+                                    "fontsize": 12.0
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "compressor-6",
+                                    "linecount": 3,
+                                    "maxclass": "newobj",
+                                    "numinlets": 6,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        1410.0,
+                                        165.0,
+                                        205.0,
+                                        49.0
+                                    ],
+                                    "text": "abl.device.compressor~ @attack 0.02 @release 0.08 @threshold -3 @ratio 4"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "color": [
+                                        0.168627450980392,
+                                        1.0,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "id": "limiter-6",
+                                    "linecount": 4,
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "signal",
+                                        "signal",
+                                        "signal"
+                                    ],
+                                    "patching_rect": [
+                                        1410.0,
+                                        245.0,
+                                        205.0,
+                                        62.0
+                                    ],
+                                    "text": "abl.device.limiter~ @ceiling -1 @mode 2 @lookahead 2 @gain -1 @autorelease 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "out-6",
+                                    "maxclass": "outlet",
+                                    "patching_rect": [
+                                        1410.0,
+                                        350.0,
+                                        30.0,
+                                        30.0
+                                    ],
+                                    "index": 7,
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "comment": "Pitch 2 zum Mixer"
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-0",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "compressor-0",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "compressor-0",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "limiter-0",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "limiter-0",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-0",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-1",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "compressor-1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "compressor-1",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "limiter-1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "limiter-1",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-1",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-2",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-2",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-3",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "compressor-3",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "compressor-3",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "limiter-3",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "limiter-3",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-3",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-4",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "compressor-4",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "compressor-4",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "limiter-4",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "limiter-4",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-4",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-5",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-5",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "in-6",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "compressor-6",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "compressor-6",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "limiter-6",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "limiter-6",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "out-6",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
             }
         ],
         "lines": [
@@ -3561,7 +4432,7 @@
                         0
                     ],
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         0
                     ]
                 }
@@ -3573,7 +4444,7 @@
                         0
                     ],
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         1
                     ]
                 }
@@ -3585,7 +4456,7 @@
                         0
                     ],
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         3
                     ]
                 }
@@ -3597,7 +4468,7 @@
                         0
                     ],
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         2
                     ]
                 }
@@ -3641,7 +4512,7 @@
             {
                 "patchline": {
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         4
                     ],
                     "destination": [
@@ -3653,7 +4524,7 @@
             {
                 "patchline": {
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         5
                     ],
                     "destination": [
@@ -3665,7 +4536,7 @@
             {
                 "patchline": {
                     "source": [
-                        "obj-922",
+                        "shadow-output-dynamics",
                         6
                     ],
                     "destination": [
@@ -3705,6 +4576,90 @@
                         645.0,
                         959.5,
                         645.0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        1
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        2
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        3
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        3
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        4
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        4
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        5
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        5
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-922",
+                        6
+                    ],
+                    "destination": [
+                        "shadow-output-dynamics",
+                        6
                     ]
                 }
             }

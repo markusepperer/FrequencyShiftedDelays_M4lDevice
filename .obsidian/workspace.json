@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Instrumenten-Notizen.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Instrumenten-Notizen"
             }
           }
         ]
@@ -190,7 +190,7 @@
   },
   "active": "951f297b4bb39c83",
   "lastOpenFiles": [
-    "Instrumenten-Notizen.md",
-    "README.md"
+    "README.md",
+    "Instrumenten-Notizen.md"
   ]
 }

@@ -109,10 +109,45 @@ Die kompositorische Idee ist, Sequenz Ein/Aus im Arrangement wiederholt als Übe
 
 ![Trennlinie](Notiz-Assets/Trennlinie.svg)
 
-### Sequenzsystem auch für die Frequency Shifter
+### ✅ Erledigt: Sequenzsystem für die Frequency Shifter
 
 **Zeitstempel:** 28.10.2026, 14:34:08 Uhr (Europe/Vienna, MEZ)
 
-Das gesamte für die Pitch Shifter aufgebaute System soll künftig auch für die **Frequency Shifter** umgesetzt werden: Sequenzlisten, Synchronisierung zum Delay-Tempo sowie das entsprechende Start-, Stopp- und Fortsetzungsverhalten.
+Das für die Pitch Shifter aufgebaute Sequenzsystem ist auch für die **Frequency Shifter** eingebaut: Sequenzlisten, Synchronisierung zum Delay-Takt sowie das entsprechende Start-, Stopp- und Fortsetzungsverhalten.
+##
 
-Dies ist ein vorgemerkter Ausbau, noch kein Auftrag zur sofortigen Implementierung.
+![Trennlinie](Notiz-Assets/Trennlinie.svg)
+
+### Pitch- und Frequency Shifting bei Slap-Aufnahmen
+
+**Zeitstempel:** 29.10.2026, 00:18:15 Uhr (Europe/Vienna, MEZ)
+
+Die Pitch- und Frequency Shifter funktionieren sehr gut bei Slap-Aufnahmen mit einzelnen Impulsen und Pausen dazwischen. Die akustischen Ereignisse gelangen zeitlich getrennt ins Mikrofon. Dadurch kommen die unterschiedlichen Einstellungen für Frequency- und Pitch-Shifting besonders gut zur Geltung.
+
+Die Pausen lassen die bearbeiteten Klänge deutlich hervortreten. Bei einem laufend einkommenden Signal würden diese Unterschiede vom neuen Eingangsmaterial überdeckt.
+
+
+![Trennlinie](Notiz-Assets/Trennlinie.svg)
+
+### Kompositionsidee: Verdichtete Steigerung mit zeitversetzten Shift-Sequenzen
+
+**Zeitstempel:** 29.10.2026, 00:38:50 Uhr (Europe/Vienna, MEZ)
+
+**Beobachtung beim Erproben**
+
+Besonders interessant war die Kombination von **Frequency Shifting Up und Pitch Shifting Down**, beide mit laufenden Sequenzen. Die Frequency- und Pitch-Sequenzen wurden zeitversetzt zueinander eingeschaltet. Das aufgenommene Ausgangsmaterial lief in Ableton als Loop.
+
+Bei wiederholtem gleichem Material und schrittweise kürzer werdenden Delayzeiten entsteht mit den zeitversetzt laufenden Sequenzen eine als „intelligent, lässig und verdichtet“ empfundene Steigerung.
+
+**Übertragung auf die Live-Elektronik**
+
+Die Wiederholung des Materials muss für die Aufführung ausdrücklich vorgesehen und ausnotiert werden. Denkbar sind zwei Möglichkeiten:
+
+- Dasselbe Material etwa **20-mal live spielen**.
+- Das Material in einen **Buffer aufnehmen und wiederholt abspielen**. Das wäre grundsätzlich ebenfalls möglich, aber aufwendiger umzusetzen.
+
+Während dieser Wiederholungen die Delayzeiten Schritt für Schritt verkürzen und die zeitversetzt gestarteten Frequency- und Pitch-Sequenzen weiterlaufen lassen.
+
+**Kompositorische Aufgabe**
+
+Diese Steigerung auskomponieren: das wiederkehrende Material, die zeitversetzten Einsätze beider Sequenzen und die stufenweise Beschleunigung der Delays festlegen. Konkrete Zeitabstände und Delaywerte sind noch offen.
