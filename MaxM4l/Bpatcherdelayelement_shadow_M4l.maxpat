@@ -2415,161 +2415,13 @@
             },
             {
                 "box": {
-                    "id": "shadow-module-mute-receive",
-                    "maxclass": "newobj",
-                    "text": "receive ---modulonoff",
-                    "patching_rect": [
-                        950.0,
-                        600.0,
-                        145,
-                        22.0
-                    ],
-                    "numinlets": 0,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-route",
-                    "maxclass": "newobj",
-                    "text": "route #1",
-                    "patching_rect": [
-                        950.0,
-                        640.0,
-                        65,
-                        22.0
-                    ],
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [
-                        "",
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-select",
-                    "maxclass": "newobj",
-                    "text": "sel 0 1",
-                    "patching_rect": [
-                        950.0,
-                        680.0,
-                        65,
-                        22.0
-                    ],
-                    "numinlets": 1,
-                    "numoutlets": 3,
-                    "outlettype": [
-                        "bang",
-                        "bang",
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-delay",
-                    "maxclass": "newobj",
-                    "text": "delay 60",
-                    "patching_rect": [
-                        950.0,
-                        725.0,
-                        65,
-                        22.0
-                    ],
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        "bang"
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-off",
-                    "maxclass": "message",
-                    "text": "1 1",
-                    "patching_rect": [
-                        950.0,
-                        770.0,
-                        40,
-                        22.0
-                    ],
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-on-trigger",
-                    "maxclass": "newobj",
-                    "text": "t b b",
-                    "patching_rect": [
-                        1100.0,
-                        725.0,
-                        45,
-                        22.0
-                    ],
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [
-                        "bang",
-                        "bang"
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-cancel",
-                    "maxclass": "message",
-                    "text": "stop",
-                    "patching_rect": [
-                        1160.0,
-                        770.0,
-                        40,
-                        22.0
-                    ],
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "id": "shadow-module-mute-on",
-                    "maxclass": "message",
-                    "text": "0 1",
-                    "patching_rect": [
-                        1100.0,
-                        815.0,
-                        40,
-                        22.0
-                    ],
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ]
-                }
-            },
-            {
-                "box": {
                     "id": "shadow-module-mute-dsp",
                     "maxclass": "newobj",
                     "text": "mute~",
                     "patching_rect": [
                         950.0,
-                        860.0,
-                        45,
+                        650.0,
+                        45.0,
                         22.0
                     ],
                     "numinlets": 1,
@@ -2577,6 +2429,439 @@
                     "outlettype": [
                         ""
                     ]
+                }
+            },
+            {
+                "box": {
+                    "id": "shadow-mute-control",
+                    "maxclass": "newobj",
+                    "text": "p Schatten_Mute_Steuerung",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        950.0,
+                        600.0,
+                        210.0,
+                        22.0
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            180.0,
+                            100.0,
+                            900.0,
+                            650.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-receive",
+                                    "maxclass": "newobj",
+                                    "text": "receive ---modulonoff",
+                                    "patching_rect": [
+                                        40.0,
+                                        110.0,
+                                        145,
+                                        22.0
+                                    ],
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-route",
+                                    "maxclass": "newobj",
+                                    "text": "route #1",
+                                    "patching_rect": [
+                                        40.0,
+                                        150.0,
+                                        65,
+                                        22.0
+                                    ],
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-select",
+                                    "maxclass": "newobj",
+                                    "text": "sel 0 1",
+                                    "patching_rect": [
+                                        40.0,
+                                        190.0,
+                                        65,
+                                        22.0
+                                    ],
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-delay",
+                                    "maxclass": "newobj",
+                                    "text": "delay 60",
+                                    "patching_rect": [
+                                        40.0,
+                                        235.0,
+                                        65,
+                                        22.0
+                                    ],
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "bang"
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-off",
+                                    "maxclass": "message",
+                                    "text": "1 1",
+                                    "patching_rect": [
+                                        40.0,
+                                        280.0,
+                                        40,
+                                        22.0
+                                    ],
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-on-trigger",
+                                    "maxclass": "newobj",
+                                    "text": "t b b",
+                                    "patching_rect": [
+                                        190.0,
+                                        235.0,
+                                        45,
+                                        22.0
+                                    ],
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang"
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-cancel",
+                                    "maxclass": "message",
+                                    "text": "stop",
+                                    "patching_rect": [
+                                        250.0,
+                                        280.0,
+                                        40,
+                                        22.0
+                                    ],
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "shadow-module-mute-on",
+                                    "maxclass": "message",
+                                    "text": "0 1",
+                                    "patching_rect": [
+                                        190.0,
+                                        325.0,
+                                        40,
+                                        22.0
+                                    ],
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "enc-out-0",
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        40.0,
+                                        412.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-receive",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-route",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        49.5,
+                                        140.0,
+                                        50.0,
+                                        140.0,
+                                        50.0,
+                                        150.0,
+                                        49.5,
+                                        150.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-route",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-select",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        49.5,
+                                        180.0,
+                                        50.0,
+                                        180.0,
+                                        50.0,
+                                        190.0,
+                                        49.5,
+                                        190.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-select",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-delay",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        49.5,
+                                        220.0,
+                                        50.0,
+                                        220.0,
+                                        50.0,
+                                        230.0,
+                                        49.5,
+                                        230.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-delay",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-off",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        49.5,
+                                        260.0,
+                                        50.0,
+                                        260.0,
+                                        50.0,
+                                        280.0,
+                                        49.5,
+                                        280.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-select",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-on-trigger",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        72.5,
+                                        220.0,
+                                        70.0,
+                                        220.0,
+                                        200.0,
+                                        220.0,
+                                        200.0,
+                                        230.0,
+                                        199.5,
+                                        230.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-on-trigger",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-cancel",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        225.5,
+                                        260.0,
+                                        230.0,
+                                        260.0,
+                                        260.0,
+                                        260.0,
+                                        260.0,
+                                        280.0,
+                                        259.5,
+                                        280.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-cancel",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-delay",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        259.5,
+                                        310.0,
+                                        260.0,
+                                        310.0,
+                                        110.0,
+                                        310.0,
+                                        110.0,
+                                        230.0,
+                                        50.0,
+                                        230.0,
+                                        49.5,
+                                        230.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-on-trigger",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "shadow-module-mute-on",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        199.5,
+                                        260.0,
+                                        200.0,
+                                        260.0,
+                                        200.0,
+                                        320.0,
+                                        199.5,
+                                        320.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-off",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "enc-out-0",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        49.5,
+                                        310.0,
+                                        50.0,
+                                        310.0,
+                                        50.0,
+                                        410.0,
+                                        49.5,
+                                        410.0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "shadow-module-mute-on",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "enc-out-0",
+                                        0
+                                    ],
+                                    "midpoints": [
+                                        199.5,
+                                        350.0,
+                                        200.0,
+                                        350.0,
+                                        200.0,
+                                        400.0,
+                                        50.0,
+                                        400.0,
+                                        50.0,
+                                        410.0,
+                                        49.5,
+                                        410.0
+                                    ]
+                                }
+                            }
+                        ]
+                    }
                 }
             }
         ],
@@ -3356,131 +3641,23 @@
             {
                 "patchline": {
                     "source": [
-                        "shadow-module-mute-receive",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-route",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-route",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-select",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-select",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-delay",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-delay",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-off",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-off",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-dsp",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-select",
-                        1
-                    ],
-                    "destination": [
-                        "shadow-module-mute-on-trigger",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-on-trigger",
-                        1
-                    ],
-                    "destination": [
-                        "shadow-module-mute-cancel",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-cancel",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-delay",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-on-trigger",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-on",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "shadow-module-mute-on",
-                        0
-                    ],
-                    "destination": [
-                        "shadow-module-mute-dsp",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
                         "shadow-module-mute-dsp",
                         0
                     ],
                     "destination": [
                         "obj-922",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "shadow-mute-control",
+                        0
+                    ],
+                    "destination": [
+                        "shadow-module-mute-dsp",
                         0
                     ]
                 }
