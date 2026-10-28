@@ -825,6 +825,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -1068,6 +1085,23 @@
                                         20.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 1\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -1737,6 +1771,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -1981,6 +2032,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 2\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -2650,6 +2718,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -2894,6 +2979,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 3\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -3563,6 +3665,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -3807,6 +3926,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 4\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -4746,6 +4882,23 @@
                                         33.0
                                     ],
                                     "text": "Vor Pegel/Pan: Up = x*Up + (1-x)*Delay; Down = x*Down + (1-x)*Delay. 0 % ohne Shift, 100 % Shift. Linear, 30 ms. Separater Delay-Fader unabhängig."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Frequency-Shift-Anteil\nÜberblendet Up und Down jeweils mit dem ungeshifteten Frequency-Delay. Damit lässt sich die Stärke der Klangveränderung vor den eigenen Lautstärke- und Panoramaverläufen einstellen.",
+                                    "patching_rect": [
+                                        770.0,
+                                        45.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -5851,6 +6004,23 @@
                                         30.0
                                     ]
                                 }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Direktsignal im Delay-Mix\nÜberblendet die sechs Delaywege jeweils mit dem direkten Mikrofon. Das geschieht vor den eigenen Pegel- und Panoramaverläufen; der separate Mikrofonkanal bleibt unabhängig.",
+                                    "patching_rect": [
+                                        1530.0,
+                                        40.0,
+                                        430.0,
+                                        88.0
+                                    ]
+                                }
                             }
                         ],
                         "lines": [
@@ -6889,6 +7059,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -7133,6 +7320,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 5\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -7631,6 +7835,23 @@
                                         420.0,
                                         30.0,
                                         30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Pitch-Shift-Anteil\nÜberblendet beide Pitch-Wege jeweils mit dem Pitch-Delay ohne Transposition. So lässt sich der Pitch-Anteil verändern, während die beiden Wege getrennt mischbar bleiben.",
+                                    "patching_rect": [
+                                        890.0,
+                                        45.0,
+                                        430.0,
+                                        88.0
                                     ]
                                 }
                             }
@@ -8541,6 +8762,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -8785,6 +9023,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 6\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],
@@ -9466,6 +9721,23 @@
                                                     ],
                                                     "text": "Equal-Power-Pan: Mitte = 0.7071 pro Seite. Fader 0 ergibt auf beiden Seiten 0. unpack setzt erst Pan (rechts), dann Pegel (links)."
                                                 }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-purpose-description",
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "fontname": "Arial",
+                                                    "fontsize": 12.0,
+                                                    "text": "Stereo-Koeffizienten\nBerechnet aus Lautstärke und Panorama zwei Equal-Power-Koeffizienten für links und rechts. Diese Werte steuern den betreffenden Kanal in der gemeinsamen Mischmatrix.",
+                                                    "patching_rect": [
+                                                        310.0,
+                                                        45.0,
+                                                        430.0,
+                                                        88.0
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "lines": [
@@ -9710,6 +9982,23 @@
                                         33.0
                                     ],
                                     "text": "Audio bleibt unverändert. Lautstärke und Pan erzeugen zwei Koeffizienten für die gemeinsame Matrix. Die Matrix glättet Änderungen über 30 ms."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Mischkanal 7\nLeitet das Kanalaudio weiter und wandelt Lautstärke und Panorama in adressierte Matrixkoeffizienten um. So erhält dieser Signalanteil eine eigene Lautstärke und Position im Stereo-Mix.",
+                                    "patching_rect": [
+                                        670.0,
+                                        25.0,
+                                        430.0,
+                                        88.0
+                                    ]
                                 }
                             }
                         ],

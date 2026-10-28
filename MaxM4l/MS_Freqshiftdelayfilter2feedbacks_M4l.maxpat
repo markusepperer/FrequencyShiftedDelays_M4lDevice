@@ -1786,6 +1786,23 @@
                                     ],
                                     "text": "Pitch Shift"
                                 }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Pitch Shifting mit überlappenden Fenstern\nVerarbeitet Audio mit dem eingebundenen Gen-Pitchshifter. Frequenzverhältnis, Fenstergröße und Dry/Wet bestimmen die Transposition und Mischung; zwei Audioausgänge führen das Ergebnis weiter.",
+                                    "patching_rect": [
+                                        557.0,
+                                        -71.0,
+                                        430.0,
+                                        88.0
+                                    ]
+                                }
                             }
                         ],
                         "lines": [
@@ -4114,6 +4131,23 @@
                                     ],
                                     "text": "Pitch Shift"
                                 }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-purpose-description",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "text": "Pitch Shifting mit überlappenden Fenstern\nVerarbeitet Audio mit dem eingebundenen Gen-Pitchshifter. Frequenzverhältnis, Fenstergröße und Dry/Wet bestimmen die Transposition und Mischung; zwei Audioausgänge führen das Ergebnis weiter.",
+                                    "patching_rect": [
+                                        557.0,
+                                        -71.0,
+                                        430.0,
+                                        88.0
+                                    ]
+                                }
                             }
                         ],
                         "lines": [
@@ -4323,25 +4357,6 @@
                         181.0
                     ],
                     "text": "Oder Granularer Pitchshifter\n\nSelber bauen\n suchen = ?\n\nIm forum suchen.\n\nFOF Synthese ? Ircam ?\nDen Pitchshifter durch da sLive Signal modulieren ?\n\n"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-52",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [
-                        "signal",
-                        ""
-                    ],
-                    "patching_rect": [
-                        466.6666738986969,
-                        879.3650929927826,
-                        63.0,
-                        22.0
-                    ],
-                    "text": "pitchshift~"
                 }
             },
             {
@@ -4610,24 +4625,6 @@
                         20.0
                     ],
                     "text": "Feedback"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-75",
-                    "maxclass": "newobj",
-                    "numinlets": 0,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        1071.3572970032692,
-                        256.0,
-                        126.0,
-                        22.0
-                    ],
-                    "text": "receive #2Filtonoff"
                 }
             },
             {
