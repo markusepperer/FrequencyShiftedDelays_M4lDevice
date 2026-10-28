@@ -20,6 +20,8 @@
         "boxes": [
             {
                 "box": {
+                    "annotation": "Pitch-Sequenz Ein/Aus",
+                    "hint": "Aus: manueller Pitch-Wert. Ein: Pitch-Sequenz startet beim ersten Listeneintrag.",
                     "id": "obj-102",
                     "maxclass": "toggle",
                     "numinlets": 1,
@@ -41,29 +43,25 @@
                         25.044649049639702,
                         25.044649049639702
                     ],
-                    "varname": "pitchSequenceEnabled",
-                    "annotation": "Pitch-Sequenz Ein/Aus",
-                    "hint": "Aus: manueller Pitch-Wert. Ein: Pitch-Sequenz startet beim ersten Listeneintrag.",
                     "saved_attribute_attributes": {
                         "valueof": {
-                            "parameter_longname": "D1 Pitch Sequenz Ein/Aus",
-                            "parameter_shortname": "Pitch Sequenz",
-                            "parameter_type": 2,
                             "parameter_enum": [
                                 "Aus",
                                 "Ein"
                             ],
-                            "parameter_mmin": 0,
-                            "parameter_mmax": 1,
-                            "parameter_invisible": 0,
-                            "parameter_modmode": 0,
-                            "parameter_unitstyle": 9,
                             "parameter_initial": [
                                 0
                             ],
-                            "parameter_initial_enable": 1
+                            "parameter_initial_enable": 1,
+                            "parameter_longname": "D1 Pitch Sequenz Ein/Aus",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "Pitch Sequenz",
+                            "parameter_type": 2,
+                            "parameter_unitstyle": 9
                         }
-                    }
+                    },
+                    "varname": "pitchSequenceEnabled"
                 }
             },
             {
@@ -491,7 +489,7 @@
                     ],
                     "activetextoncolor": [
                         1.0,
-                        0.933333333333333,
+                        0.933333,
                         0.0,
                         1.0
                     ],
@@ -687,8 +685,8 @@
                         "float"
                     ],
                     "patching_rect": [
-                        1576.5625,
-                        816.40625,
+                        1670.0,
+                        825.0,
                         75.0,
                         22.0
                     ],
@@ -1829,7 +1827,7 @@
                     "patching_rect": [
                         1469.506034686285,
                         977.3871012330055,
-                        39.0,
+                        56.0,
                         18.0
                     ],
                     "presentation": 1,
@@ -1853,11 +1851,12 @@
                             ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Pitch Feedback",
-                            "parameter_mmax": 0.98,
+                            "parameter_mmax": 0.999,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Pitch Feedback",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 1
+                            "parameter_unitstyle": 9,
+                            "parameter_units": "%.3f"
                         }
                     },
                     "textcolor": [
@@ -6061,7 +6060,7 @@
                     "comment": "02 · Panel-Steuerung (Darstellung/Hintergrund, kein Audio)",
                     "hint": "02 · Panel-Steuerung (Darstellung/Hintergrund, kein Audio)",
                     "id": "obj-26",
-                    "index": 1,
+                    "index": 2,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -6480,7 +6479,7 @@
                     "comment": "01 · Gemeinsame Delayzeit für Frequency-, Pitch- und Parallel-Delays (ms)",
                     "hint": "01 · Gemeinsame Delayzeit für Frequency-, Pitch- und Parallel-Delays (ms)",
                     "id": "obj-8",
-                    "index": 2,
+                    "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -6488,8 +6487,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        1520.0,
-                        124.11347776651382,
+                        590.0,
+                        -128.57142734527588,
                         30.0,
                         30.0
                     ]
@@ -7580,7 +7579,7 @@
                     "patching_rect": [
                         565.3225848674774,
                         756.542052924633,
-                        39.0,
+                        56.0,
                         18.0
                     ],
                     "presentation": 1,
@@ -7604,11 +7603,12 @@
                             ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "D1 Feedback",
-                            "parameter_mmax": 0.98,
+                            "parameter_mmax": 0.999,
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Feedback",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 1
+                            "parameter_unitstyle": 9,
+                            "parameter_units": "%.3f"
                         }
                     },
                     "textcolor": [
@@ -7814,8 +7814,8 @@
                         "float"
                     ],
                     "patching_rect": [
-                        1459.664050956567,
-                        868.8235510587692,
+                        1228.0,
+                        825.0,
                         75.0,
                         22.0
                     ],
@@ -8161,8 +8161,8 @@
                         ]
                     },
                     "patching_rect": [
-                        1228.125,
-                        778.5714244842529,
+                        1228.0,
+                        625.0,
                         360.0,
                         22.0
                     ],
@@ -9167,11 +9167,12 @@
                 "box": {
                     "id": "pitch-sequence",
                     "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
+                    "numinlets": 4,
+                    "numoutlets": 3,
                     "outlettype": [
                         "float",
-                        "int"
+                        "int",
+                        ""
                     ],
                     "patcher": {
                         "fileversion": 1,
@@ -9184,10 +9185,10 @@
                         },
                         "classnamespace": "box",
                         "rect": [
-                            120.0,
-                            120.0,
-                            897.0,
-                            622.0
+                            225.0,
+                            100.0,
+                            918.0,
+                            891.0
                         ],
                         "openinpresentation": 1,
                         "boxes": [
@@ -9224,9 +9225,9 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        20.0,
-                                        15.0,
-                                        560.0,
+                                        4.065040647983551,
+                                        0.0,
+                                        317.8861786723137,
                                         20.0
                                     ],
                                     "text": "Pitch-Sequenz · eingestellte Delayzeit als Takt"
@@ -9246,8 +9247,8 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        58.0,
-                                        56.0,
+                                        42.27642273902893,
+                                        40.65040647983551,
                                         300.0,
                                         20.0
                                     ],
@@ -9272,8 +9273,8 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        20.0,
-                                        55.0,
+                                        4.065040647983551,
+                                        39.8373983502388,
                                         24.0,
                                         24.0
                                     ],
@@ -9300,40 +9301,12 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        380.0,
-                                        55.0,
+                                        364.2276420593262,
+                                        39.8373983502388,
                                         100.0,
                                         24.0
                                     ],
                                     "text": "Von vorn"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "edit",
-                                    "maxclass": "textbutton",
-                                    "numinlets": 1,
-                                    "numoutlets": 3,
-                                    "outlettype": [
-                                        "",
-                                        "",
-                                        "int"
-                                    ],
-                                    "parameter_enable": 0,
-                                    "patching_rect": [
-                                        30.0,
-                                        600.0,
-                                        125.0,
-                                        26.0
-                                    ],
-                                    "presentation": 1,
-                                    "presentation_rect": [
-                                        20.0,
-                                        104.0,
-                                        145.0,
-                                        26.0
-                                    ],
-                                    "text": "Liste bearbeiten"
                                 }
                             },
                             {
@@ -9345,19 +9318,19 @@
                                     "numoutlets": 0,
                                     "patching_rect": [
                                         30.0,
-                                        1030.0,
-                                        640.0,
+                                        1600.0,
+                                        680.0,
                                         47.0
                                     ],
                                     "presentation": 1,
                                     "presentation_linecount": 3,
                                     "presentation_rect": [
-                                        185.0,
-                                        100.0,
-                                        323.0,
+                                        1.6260162591934204,
+                                        481.30081272125244,
+                                        417.88617861270905,
                                         47.0
                                     ],
-                                    "text": "Zeile: Schrittnummer, Cent-Wert Anzahl;\nBeispiel: 1, 100. 3;  → 100 Cent für 3 Durchläufe.\nAnzahl mindestens 1. Reihenfolge wird zyklisch wiederholt."
+                                    "text": "Zeile: Nummer, Pitch1-Cent Pitch2-Cent Delay-Takte;\nBeispiel: 1, 100. -250. 3;\nBeide Pitch-Werte gelten für dieselbe Dauer."
                                 }
                             },
                             {
@@ -9374,12 +9347,12 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        20.0,
-                                        170.0,
-                                        565.0,
+                                        1.6260162591934204,
+                                        71.5447154045105,
+                                        467.47967451810837,
                                         20.0
                                     ],
-                                    "text": "Startliste: 100 Cent × 3 → 0 Cent × 2 → −200 Cent × 1 → 37 Cent × 4"
+                                    "text": "Sequenz an: unabhängige Werte für Pitch 1 und Pitch 2; Link ist ohne Wirkung."
                                 }
                             },
                             {
@@ -9389,16 +9362,16 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        540.0,
-                                        115.0,
+                                        400.0,
+                                        187.0,
                                         105.0,
                                         20.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        20.0,
-                                        219.0,
-                                        105.0,
+                                        1.6260162591934204,
+                                        120.32520318031311,
+                                        90.0,
                                         20.0
                                     ],
                                     "text": "Takt (ms)"
@@ -9418,9 +9391,9 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        165.0,
-                                        219.0,
-                                        90.0,
+                                        121.13821130990982,
+                                        120.32520318031311,
+                                        51.21951216459274,
                                         20.0
                                     ],
                                     "text": "Schritt"
@@ -9433,19 +9406,19 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        300.0,
-                                        875.0,
+                                        1041.463439464569,
+                                        10.97561001777649,
                                         115.0,
                                         20.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        290.0,
-                                        219.0,
-                                        115.0,
+                                        191.0569104552269,
+                                        120.32520318031311,
+                                        86.99186986684799,
                                         20.0
                                     ],
-                                    "text": "Aktuell (Cent)"
+                                    "text": "Pitch 1 (Cent)"
                                 }
                             },
                             {
@@ -9455,19 +9428,19 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        540.0,
-                                        925.0,
-                                        170.0,
+                                        924.8780488967896,
+                                        650.7317066192627,
+                                        195.0,
                                         20.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        425.0,
-                                        219.0,
-                                        175.0,
+                                        381.70731687545776,
+                                        120.32520318031311,
+                                        154.47154462337494,
                                         20.0
                                     ],
-                                    "text": "Verbleibende Delayschritte"
+                                    "text": "Delay-Takte bis Listenende"
                                 }
                             },
                             {
@@ -9485,16 +9458,16 @@
                                     ],
                                     "parameter_enable": 0,
                                     "patching_rect": [
-                                        540.0,
-                                        145.0,
+                                        400.0,
+                                        217.4878056049347,
                                         110.0,
                                         22.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        20.0,
-                                        245.0,
-                                        110.0,
+                                        1.6260162591934204,
+                                        146.34146332740784,
+                                        90.0,
                                         22.0
                                     ]
                                 }
@@ -9520,9 +9493,9 @@
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        165.0,
-                                        245.0,
-                                        85.0,
+                                        121.13821130990982,
+                                        146.34146332740784,
+                                        44.71544712781906,
                                         22.0
                                     ]
                                 }
@@ -9534,6 +9507,7 @@
                                     "id": "centview",
                                     "ignoreclick": 1,
                                     "maxclass": "flonum",
+                                    "numdecimalplaces": 2,
                                     "numinlets": 1,
                                     "numoutlets": 2,
                                     "outlettype": [
@@ -9542,16 +9516,16 @@
                                     ],
                                     "parameter_enable": 0,
                                     "patching_rect": [
-                                        300.0,
-                                        905.0,
+                                        1043.9024639129639,
+                                        30.487805604934692,
                                         110.0,
                                         22.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        290.0,
-                                        245.0,
-                                        110.0,
+                                        191.8699185848236,
+                                        146.34146332740784,
+                                        55.284552812576294,
                                         22.0
                                     ]
                                 }
@@ -9570,16 +9544,16 @@
                                     ],
                                     "parameter_enable": 0,
                                     "patching_rect": [
-                                        535.0,
-                                        955.0,
+                                        920.0,
+                                        680.0,
                                         120.0,
                                         22.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
-                                        425.0,
-                                        245.0,
-                                        120.0,
+                                        381.70731687545776,
+                                        146.34146332740784,
+                                        65.04065036773682,
                                         22.0
                                     ]
                                 }
@@ -9600,12 +9574,12 @@
                                     "presentation": 1,
                                     "presentation_linecount": 3,
                                     "presentation_rect": [
-                                        20.0,
-                                        295.0,
-                                        427.0,
+                                        1.6260162591934204,
+                                        195.93495923280716,
+                                        407.3170729279518,
                                         47.0
                                     ],
-                                    "text": "Der Cent-Wert gilt für jeden Durchlauf dieses Schritts. 0 Cent hält die Tonhöhe.\nAus: Der bisherige Pitch-1-Regler steuert wieder. Linked spiegelt Pitch 2.\nHier zählen Zeitintervalle ab Sequenzstart, keine erkannten Audio-Echos."
+                                    "text": "Pitch-Anzeigen: tatsächlich ausgegebene Cent-Werte beider Shifter.\nSequenz aus: bisherige Pitch-Regler und Link-Einstellung gelten wieder.\nGezählt werden die eingestellten Delay-Takte bis zum Listenende."
                                 }
                             },
                             {
@@ -9688,8 +9662,9 @@
                                     "id": "tick",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 2,
+                                    "numoutlets": 3,
                                     "outlettype": [
+                                        "bang",
                                         "bang",
                                         "bang"
                                     ],
@@ -9699,7 +9674,7 @@
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "t b b"
+                                    "text": "t b b b"
                                 }
                             },
                             {
@@ -9783,8 +9758,9 @@
                                     "id": "restart",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 3,
+                                    "numoutlets": 4,
                                     "outlettype": [
+                                        "bang",
                                         "bang",
                                         "bang",
                                         "bang"
@@ -9795,7 +9771,7 @@
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "t b b b"
+                                    "text": "t b b b b"
                                 }
                             },
                             {
@@ -9861,29 +9837,33 @@
                                             {
                                                 "key": 1,
                                                 "value": [
-                                                    100.0,
+                                                    100,
+                                                    0,
                                                     3
                                                 ]
                                             },
                                             {
                                                 "key": 2,
                                                 "value": [
-                                                    0.0,
+                                                    200,
+                                                    0,
                                                     2
                                                 ]
                                             },
                                             {
                                                 "key": 3,
                                                 "value": [
-                                                    -200.0,
-                                                    1
+                                                    -300,
+                                                    0,
+                                                    5
                                                 ]
                                             },
                                             {
                                                 "key": 4,
                                                 "value": [
-                                                    37.0,
-                                                    4
+                                                    400,
+                                                    0,
+                                                    5
                                                 ]
                                             }
                                         ]
@@ -9901,14 +9881,14 @@
                                     "patching_rect": [
                                         165.0,
                                         725.0,
-                                        145.0,
+                                        231.0,
                                         22.0
                                     ],
                                     "saved_object_attributes": {
                                         "embed": 1,
                                         "precision": 6
                                     },
-                                    "text": "coll @embed 1"
+                                    "text": "coll #0-pitch-sequence-data @embed 1"
                                 }
                             },
                             {
@@ -9916,8 +9896,9 @@
                                     "id": "unpack",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 2,
+                                    "numoutlets": 3,
                                     "outlettype": [
+                                        "float",
                                         "float",
                                         "int"
                                     ],
@@ -9927,7 +9908,7 @@
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "unpack f i"
+                                    "text": "unpack f f i"
                                 }
                             },
                             {
@@ -10063,24 +10044,6 @@
                             },
                             {
                                 "box": {
-                                    "id": "openeditor",
-                                    "maxclass": "message",
-                                    "numinlets": 2,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        30.0,
-                                        650.0,
-                                        45.0,
-                                        22.0
-                                    ],
-                                    "text": "open"
-                                }
-                            },
-                            {
-                                "box": {
                                     "id": "startup",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
@@ -10099,7 +10062,7 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz-Transposition in Cent (nicht akkumuliert)",
+                                    "comment": "Sequenz-Transposition Pitch 1 in Cent",
                                     "id": "centout",
                                     "index": 1,
                                     "maxclass": "outlet",
@@ -10147,9 +10110,832 @@
                                     ],
                                     "text": "t i i"
                                 }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-prepare",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        90.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t b b b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-zero",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        135.0,
+                                        45.0,
+                                        22.0
+                                    ],
+                                    "text": "0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-dump",
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        135.0,
+                                        65.0,
+                                        22.0
+                                    ],
+                                    "text": "dump"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "coll_data": {
+                                        "count": 4,
+                                        "data": [
+                                            {
+                                                "key": 1,
+                                                "value": [
+                                                    100,
+                                                    0,
+                                                    3
+                                                ]
+                                            },
+                                            {
+                                                "key": 2,
+                                                "value": [
+                                                    200,
+                                                    0,
+                                                    2
+                                                ]
+                                            },
+                                            {
+                                                "key": 3,
+                                                "value": [
+                                                    -300,
+                                                    0,
+                                                    5
+                                                ]
+                                            },
+                                            {
+                                                "key": 4,
+                                                "value": [
+                                                    400,
+                                                    0,
+                                                    5
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "id": "total-reader",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        180.0,
+                                        195.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "embed": 1,
+                                        "precision": 6
+                                    },
+                                    "text": "coll #0-pitch-sequence-data"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-unpack",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "float",
+                                        "float",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        225.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "unpack f f i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-valid-duration",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        270.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "maximum 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-sum",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        315.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "+ 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-sum-order",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        880.0,
+                                        360.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-value",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        405.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-load",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        450.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-remaining",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        540.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "i 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-minus",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        585.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "- 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-update",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "int",
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        630.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-ended",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1080.0,
+                                        680.0,
+                                        130.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "total-note",
+                                    "linecount": 3,
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        880.0,
+                                        760.0,
+                                        387.0,
+                                        47.0
+                                    ],
+                                    "text": "Gesamtlänge = Summe der Dauern aller Listeneinträge.\nNur Anzeige; die bestehende Pitch-Sequenz bleibt unverändert.\nNach Listenänderungen neu starten, um den Countdown abzugleichen."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "amount2clip",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        340.0,
+                                        825.0,
+                                        145.0,
+                                        22.0
+                                    ],
+                                    "text": "clip -6000. 6000."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Sequenz-Transposition Pitch 2 in Cent; unabhängig von Pitch 1",
+                                    "id": "cent2out",
+                                    "index": 3,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        920.0,
+                                        980.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "id": "effective1in",
+                                    "index": 3,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1043.9024639129639,
+                                        -29.268293380737305,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "id": "effective2in",
+                                    "index": 4,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1204.878077507019,
+                                        -29.268293380737305,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "cantchange": 1,
+                                    "format": 6,
+                                    "id": "cent2view",
+                                    "ignoreclick": 1,
+                                    "maxclass": "flonum",
+                                    "numdecimalplaces": 2,
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        1204.878077507019,
+                                        39.024391174316406,
+                                        110.0,
+                                        22.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        286.99186992645264,
+                                        146.34146332740784,
+                                        55.284552812576294,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "cent2label",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        1223.1707608699799,
+                                        14.634146690368652,
+                                        130.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        286.99186992645264,
+                                        120.32520318031311,
+                                        82.92682921886444,
+                                        20.0
+                                    ],
+                                    "text": "Pitch 2 (Cent)"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "bgcolor": [
+                                        0.16,
+                                        0.16,
+                                        0.16,
+                                        1.0
+                                    ],
+                                    "bordercolor": [
+                                        0.4,
+                                        0.4,
+                                        0.4,
+                                        1.0
+                                    ],
+                                    "fontname": "Menlo",
+                                    "fontsize": 13.0,
+                                    "id": "list-editor",
+                                    "linecount": 4,
+                                    "maxclass": "textedit",
+                                    "nosymquotes": 1,
+                                    "numinlets": 1,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "",
+                                        "int",
+                                        "",
+                                        ""
+                                    ],
+                                    "outputmode": 1,
+                                    "parameter_enable": 1,
+                                    "parameter_mappable": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1250.0,
+                                        680.0,
+                                        190.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_linecount": 4,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        281.30081284046173,
+                                        417.88617861270905,
+                                        190.2439023256302
+                                    ],
+                                    "saved_attribute_attributes": {
+                                        "valueof": {
+                                            "parameter_initial": [
+                                                "1, 100.0 0.0 3;\n2, 200.0 0.0 2;\n3, -300.0 0.0 5;\n4, 400.0 0.0 5;"
+                                            ],
+                                            "parameter_invisible": 1,
+                                            "parameter_longname": "D1 Pitch Sequenz Liste",
+                                            "parameter_modmode": 0,
+                                            "parameter_shortname": "Sequenz Liste",
+                                            "parameter_type": 3
+                                        }
+                                    },
+                                    "tabmode": 0,
+                                    "text": "1, 100.0 0.0 3;\n2, 200.0 0.0 2;\n3, -300.0 0.0 5;\n4, 400.0 0.0 5;",
+                                    "textcolor": [
+                                        0.9,
+                                        0.9,
+                                        0.9,
+                                        1.0
+                                    ],
+                                    "varname": "pitchSequenceList"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-editor-label",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        1210.0,
+                                        680.0,
+                                        20.0
+                                    ],
+                                    "presentation": 1,
+                                    "presentation_rect": [
+                                        1.6260162591934204,
+                                        251.21951204538345,
+                                        407.3170729279518,
+                                        20.0
+                                    ],
+                                    "text": "Sequenzliste · wird mit dem Live-Set gespeichert"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-value-observer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1250.0,
+                                        300.0,
+                                        22.0
+                                    ],
+                                    "restore": [
+                                        "1, 100.0 0.0 3;\n2, 200.0 0.0 2;\n3, -300.0 0.0 5;\n4, 400.0 0.0 5;"
+                                    ],
+                                    "saved_object_attributes": {
+                                        "parameter_enable": 0,
+                                        "parameter_mappable": 0
+                                    },
+                                    "text": "pattr listTextObserver @bindto pitchSequenceList",
+                                    "varname": "listTextObserver"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-key-bang",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "bang"
+                                    ],
+                                    "patching_rect": [
+                                        500.0,
+                                        1460.0,
+                                        45.0,
+                                        22.0
+                                    ],
+                                    "text": "t b"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-key-defer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        500.0,
+                                        1505.0,
+                                        75.0,
+                                        22.0
+                                    ],
+                                    "text": "deferlow"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-text-bridge",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        ""
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            150.0,
+                                            150.0,
+                                            830.0,
+                                            620.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "id": "in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "code": "inlets = 1;\noutlets = 2;\nvar previous = null;\nfunction parseRows(source) {\n    var pieces = String(source).split(';');\n    if (pieces.pop().trim() !== '') return null;\n    var number = '[+-]?(?:\\\\d+(?:\\\\.\\\\d*)?|\\\\.\\\\d+)(?:[eE][+-]?\\\\d+)?';\n    var rowPattern = new RegExp('^\\\\s*(\\\\d+)\\\\s*,\\\\s*(' + number + ')\\\\s+(' + number + ')\\\\s+(\\\\d+)\\\\s*$');\n    var rows = [], keys = {};\n    for (var i = 0; i < pieces.length; i++) {\n        if (!pieces[i].trim()) continue;\n        var match = pieces[i].match(rowPattern);\n        if (!match) return null;\n        var row = [Number(match[1]), Number(match[2]), Number(match[3]), Number(match[4])];\n        if (row[0] < 1 || row[3] < 1 || !isFinite(row[1]) || !isFinite(row[2]) || keys[row[0]]) return null;\n        keys[row[0]] = true;\n        rows.push(row);\n    }\n    return rows.length ? rows : null;\n}\nfunction receiveText(source) {\n    var rows = parseRows(source);\n    // Partial edits remain in the stored text field; play the last complete list until ready.\n    if (!rows) return;\n    var signature = JSON.stringify(rows);\n    if (signature === previous) return;\n    previous = signature;\n    outlet(0, 'clear');\n    for (var i = 0; i < rows.length; i++) outlet(0, rows[i]);\n    outlet(0, 'start');\n    outlet(1, 'bang');\n}\nfunction text() { receiveText(Array.prototype.slice.call(arguments).join(' ')); }\nfunction list() { receiveText(Array.prototype.slice.call(arguments).join(' ')); }\nfunction anything() {\n    var values = Array.prototype.slice.call(arguments);\n    if (messagename !== 'symbol') values.unshift(messagename);\n    receiveText(values.join(' '));\n}\n",
+                                                    "filename": "none",
+                                                    "fontface": 0,
+                                                    "fontname": "<Monospaced>",
+                                                    "fontsize": 12.0,
+                                                    "id": "parse",
+                                                    "maxclass": "v8.codebox",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        80.0,
+                                                        730.0,
+                                                        430.0
+                                                    ],
+                                                    "saved_object_attributes": {
+                                                        "parameter_enable": 0
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "clear; Listeneinträge; start → vorhandene coll",
+                                                    "id": "rows",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        550.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "id": "changed",
+                                                    "index": 2,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        550.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "parse",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "changed",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "parse",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rows",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "parse",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        750.0,
+                                        1330.0,
+                                        225.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p ListenSpeicherung_zu_Sequenz"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-live-ready",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1430.0,
+                                        105.0,
+                                        22.0
+                                    ],
+                                    "text": "live.thisdevice"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "list-live-defer",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        750.0,
+                                        1475.0,
+                                        75.0,
+                                        22.0
+                                    ],
+                                    "text": "deferlow"
+                                }
                             }
                         ],
                         "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "cent2out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "amount2clip",
+                                        0
+                                    ]
+                                }
+                            },
                             {
                                 "patchline": {
                                     "destination": [
@@ -10171,18 +10957,6 @@
                                     "source": [
                                         "amountorder",
                                         0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "centview",
-                                        0
-                                    ],
-                                    "source": [
-                                        "amountorder",
-                                        1
                                     ]
                                 }
                             },
@@ -10223,18 +10997,6 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "remainingview",
-                                        0
-                                    ],
-                                    "source": [
-                                        "countload",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
                                         "finished",
                                         0
                                     ],
@@ -10269,23 +11031,11 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "remainingview",
-                                        0
-                                    ],
-                                    "source": [
-                                        "countorder",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
                                         "stepview",
                                         0
                                     ],
                                     "midpoints": [
-                                        216.5,
+                                        245.16666666666669,
                                         755.0,
                                         115.0,
                                         755.0,
@@ -10327,11 +11077,23 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "openeditor",
+                                        "centview",
                                         0
                                     ],
                                     "source": [
-                                        "edit",
+                                        "effective1in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "cent2view",
+                                        0
+                                    ],
+                                    "source": [
+                                        "effective2in",
                                         0
                                     ]
                                 }
@@ -10395,6 +11157,114 @@
                             {
                                 "patchline": {
                                     "destination": [
+                                        "list-key-bang",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-editor",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-text-bridge",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-editor",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-key-defer",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-key-bang",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-editor",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-key-defer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-editor",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-live-defer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-live-defer",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-live-ready",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "data",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-text-bridge",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "restart",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-text-bridge",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "list-text-bridge",
+                                        0
+                                    ],
+                                    "source": [
+                                        "list-value-observer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
                                         "data",
                                         0
                                     ],
@@ -10412,18 +11282,6 @@
                                     ],
                                     "source": [
                                         "obj-1",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "data",
-                                        0
-                                    ],
-                                    "source": [
-                                        "openeditor",
                                         0
                                     ]
                                 }
@@ -10491,6 +11349,18 @@
                                         220.0,
                                         39.5,
                                         220.0
+                                    ],
+                                    "source": [
+                                        "restart",
+                                        3
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-prepare",
+                                        0
                                     ],
                                     "source": [
                                         "restart",
@@ -10683,6 +11553,18 @@
                             {
                                 "patchline": {
                                     "destination": [
+                                        "total-remaining",
+                                        0
+                                    ],
+                                    "source": [
+                                        "tick",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
                                         "validtime",
                                         0
                                     ],
@@ -10719,6 +11601,272 @@
                             {
                                 "patchline": {
                                     "destination": [
+                                        "total-reader",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-dump",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-prepare",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-ended",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remainingview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-load",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-load",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-update",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-minus",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-dump",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-zero",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-prepare",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-unpack",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-reader",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-minus",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum-order",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-sum",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-sum-order",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-sum-order",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-valid-duration",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-unpack",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "remainingview",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-update",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-ended",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-update",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-remaining",
+                                        1
+                                    ],
+                                    "source": [
+                                        "total-update",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-valid-duration",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-load",
+                                        0
+                                    ],
+                                    "source": [
+                                        "total-value",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-sum",
+                                        1
+                                    ],
+                                    "order": 1,
+                                    "source": [
+                                        "total-zero",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "total-value",
+                                        1
+                                    ],
+                                    "order": 0,
+                                    "source": [
+                                        "total-zero",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "amount2clip",
+                                        0
+                                    ],
+                                    "source": [
+                                        "unpack",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
                                         "amountclip",
                                         0
                                     ],
@@ -10736,7 +11884,7 @@
                                     ],
                                     "source": [
                                         "unpack",
-                                        1
+                                        2
                                     ]
                                 }
                             },
@@ -10792,7 +11940,8 @@
                             1.0
                         ]
                     },
-                    "text": "p Pitch_Sequenz"
+                    "text": "p Pitch_Sequenz",
+                    "varname": "Pitch_Sequenz"
                 }
             },
             {
@@ -10806,7 +11955,7 @@
                     ],
                     "patching_rect": [
                         1228.0,
-                        710.0,
+                        780.0,
                         110.0,
                         22.0
                     ],
@@ -10824,8 +11973,8 @@
                         "float"
                     ],
                     "patching_rect": [
-                        1204.0,
-                        410.0,
+                        1228.0,
+                        680.0,
                         70.0,
                         22.0
                     ],
@@ -10842,8 +11991,8 @@
                         "float"
                     ],
                     "patching_rect": [
-                        1320.0,
-                        610.0,
+                        1360.0,
+                        730.0,
                         65.0,
                         22.0
                     ],
@@ -10931,19 +12080,18 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1400.0,
-                        670.0,
-                        390.0,
+                        1950.0,
+                        700.0,
+                        420.0,
                         60.0
                     ],
-                    "text": "Pitch 1: Umschaltung zwischen manuellem Cent-Wert und Sequenz. Gemeinsame Delayzeit → Sequenz-Takt. Ausgang vor der vorhandenen Link-Logik; dadurch gleiche Steuerung für Haupt- und Schatten-Delays."
+                    "text": "Sequenz AUS: bisherige Pitch-Regler → Link-Logik → zwei Auswahlschalter.\nSequenz AN: zwei unabhängige Listenwerte direkt an die Auswahlschalter.\nBeide Anzeigen lesen die wirksamen Cent-Werte; Haupt- und Schatten-Delays erhalten weiterhin dieselben Steuerbusse."
                 }
             },
             {
                 "box": {
                     "id": "pitch-sequence-state-recall",
                     "maxclass": "message",
-                    "text": "outputvalue",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [
@@ -10954,7 +12102,275 @@
                         245.0,
                         95.0,
                         22.0
-                    ]
+                    ],
+                    "text": "outputvalue"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-link-sequence-appearance",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            150.0,
+                            150.0,
+                            780.0,
+                            320.0
+                        ],
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "id": "in",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        20.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "sel",
+                                    "maxclass": "newobj",
+                                    "numinlets": 3,
+                                    "numoutlets": 3,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        75.0,
+                                        65.0,
+                                        22.0
+                                    ],
+                                    "text": "sel 0 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "normal",
+                                    "linecount": 3,
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        125.0,
+                                        340.0,
+                                        49.0
+                                    ],
+                                    "text": "activebgcolor 0. 0. 0. 1., activebgoncolor 0. 0. 0. 1., activetextcolor 1. 0. 0. 1., activetextoncolor 1. 0.933333 0. 1., ignoreclick 0"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "gray",
+                                    "linecount": 3,
+                                    "maxclass": "message",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        400.0,
+                                        125.0,
+                                        340.0,
+                                        49.0
+                                    ],
+                                    "text": "activebgcolor 0.22 0.22 0.22 1., activebgoncolor 0.22 0.22 0.22 1., activetextcolor 0.65 0.65 0.65 1., activetextoncolor 0.65 0.65 0.65 1., ignoreclick 1"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "id": "out",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        245.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "gray",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "sel",
+                                        0
+                                    ],
+                                    "source": [
+                                        "in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "out",
+                                        0
+                                    ],
+                                    "source": [
+                                        "normal",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "gray",
+                                        0
+                                    ],
+                                    "source": [
+                                        "sel",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "normal",
+                                        0
+                                    ],
+                                    "source": [
+                                        "sel",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "patching_rect": [
+                        1750.0,
+                        610.0,
+                        210.0,
+                        22.0
+                    ],
+                    "saved_object_attributes": {
+                        "editing_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "locked_bgcolor": [
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            0.6470588235294118,
+                            1.0
+                        ],
+                        "patchlinecolor": [
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            0.30980392156862746,
+                            1.0
+                        ]
+                    },
+                    "text": "p Pitch_Link_Buttonansicht"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-sequence-manual2-order",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [
+                        "float",
+                        "float"
+                    ],
+                    "patching_rect": [
+                        1670.0,
+                        680.0,
+                        70.0,
+                        22.0
+                    ],
+                    "text": "t f f"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-sequence-manual2-value",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        "float"
+                    ],
+                    "patching_rect": [
+                        1800.0,
+                        730.0,
+                        65.0,
+                        22.0
+                    ],
+                    "text": "f 0."
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-sequence-source2",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        1670.0,
+                        780.0,
+                        110.0,
+                        22.0
+                    ],
+                    "text": "switch 2 1"
                 }
             }
         ],
@@ -11630,10 +13046,10 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-sequence-manual-order",
+                        "pitch-mirror-link",
                         0
                     ],
-                    "order": 1,
+                    "order": 0,
                     "source": [
                         "obj-62",
                         0
@@ -11646,7 +13062,7 @@
                         "pitch1-step-current",
                         1
                     ],
-                    "order": 0,
+                    "order": 1,
                     "source": [
                         "obj-62",
                         0
@@ -12415,6 +13831,18 @@
             {
                 "patchline": {
                     "destination": [
+                        "pitch-link-button",
+                        0
+                    ],
+                    "source": [
+                        "pitch-link-sequence-appearance",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "obj-62",
                         0
                     ],
@@ -12525,10 +13953,21 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-90",
+                        "pitch-sequence-manual-order",
                         0
                     ],
-                    "order": 1,
+                    "source": [
+                        "pitch-mirror-link",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-manual2-order",
+                        0
+                    ],
                     "source": [
                         "pitch-mirror-link",
                         1
@@ -12538,24 +13977,12 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-transposition-combine",
-                        0
-                    ],
-                    "source": [
-                        "pitch-mirror-link",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "pitch2-effective-readout",
+                        "pitch-link-sequence-appearance",
                         0
                     ],
                     "order": 0,
                     "source": [
-                        "pitch-mirror-link",
+                        "pitch-sequence",
                         1
                     ]
                 }
@@ -12566,6 +13993,7 @@
                         "pitch-sequence-mode-order",
                         0
                     ],
+                    "order": 1,
                     "source": [
                         "pitch-sequence",
                         1
@@ -12587,6 +14015,18 @@
             {
                 "patchline": {
                     "destination": [
+                        "pitch-sequence-source2",
+                        2
+                    ],
+                    "source": [
+                        "pitch-sequence",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "pitch-sequence-manual-value",
                         1
                     ],
@@ -12623,9 +14063,59 @@
             {
                 "patchline": {
                     "destination": [
+                        "pitch-sequence-manual2-value",
+                        1
+                    ],
+                    "source": [
+                        "pitch-sequence-manual2-order",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-source2",
+                        1
+                    ],
+                    "source": [
+                        "pitch-sequence-manual2-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-source2",
+                        1
+                    ],
+                    "source": [
+                        "pitch-sequence-manual2-value",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "pitch-sequence-source",
                         0
                     ],
+                    "order": 1,
+                    "source": [
+                        "pitch-sequence-mode-index",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-source2",
+                        0
+                    ],
+                    "order": 0,
                     "source": [
                         "pitch-sequence-mode-index",
                         0
@@ -12638,6 +14128,20 @@
                         "pitch-sequence-manual-value",
                         0
                     ],
+                    "order": 1,
+                    "source": [
+                        "pitch-sequence-mode-order",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-manual2-value",
+                        0
+                    ],
+                    "order": 0,
                     "source": [
                         "pitch-sequence-mode-order",
                         0
@@ -12695,11 +14199,76 @@
             {
                 "patchline": {
                     "destination": [
-                        "pitch-mirror-link",
+                        "pitch-sequence",
+                        2
+                    ],
+                    "order": 0,
+                    "source": [
+                        "pitch-sequence-source",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-transposition-combine",
+                        0
+                    ],
+                    "order": 1,
+                    "source": [
+                        "pitch-sequence-source",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-90",
+                        0
+                    ],
+                    "order": 2,
+                    "source": [
+                        "pitch-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence",
+                        3
+                    ],
+                    "order": 1,
+                    "source": [
+                        "pitch-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch2-effective-readout",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "pitch-sequence-source2",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-102",
                         0
                     ],
                     "source": [
-                        "pitch-sequence-source",
+                        "pitch-sequence-state-recall",
                         0
                     ]
                 }
@@ -12952,11 +14521,24 @@
                         "pitch-link-startup",
                         0
                     ],
+                    "order": 1,
                     "source": [
                         "pitch-transposition-defer",
                         0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence-state-recall",
+                        0
                     ],
-                    "order": 0
+                    "order": 0,
+                    "source": [
+                        "pitch-transposition-defer",
+                        0
+                    ]
                 }
             },
             {
@@ -13183,31 +14765,6 @@
                     ],
                     "source": [
                         "up",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "pitch-transposition-defer",
-                        0
-                    ],
-                    "destination": [
-                        "pitch-sequence-state-recall",
-                        0
-                    ],
-                    "order": 1
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "pitch-sequence-state-recall",
-                        0
-                    ],
-                    "destination": [
-                        "obj-102",
                         0
                     ]
                 }

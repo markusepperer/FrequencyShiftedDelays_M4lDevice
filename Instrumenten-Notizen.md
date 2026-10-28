@@ -58,3 +58,21 @@ Dies dokumentiert einen gelungenen Echtzeit-Hörversuch, keine allgemeine Zusage
 **Idee für räumliche Weiterarbeit – noch nicht ausprobiert**
 
 Das Direktsignal vorne wiedergeben und die pitch-geschifteten Multi-Kurzzeit-Delays aus anderen Lautsprechern zuspielen. Erwartung: Durch die räumliche Trennung von Direktsignal und bearbeiteten Wegen könnten interessante Raumwirkungen entstehen.
+
+![Trennlinie](Notiz-Assets/Trennlinie.svg)
+
+### Pitch-Sequenzen – spätere Listenwahl nach Delayzeit
+
+**Zeitstempel:** 28.10.2026, 12:34:54 Uhr (Europe/Vienna, MEZ)
+
+**Vereinbarter späterer Ausbau – noch nicht implementiert**
+
+- Mehrere Sequenzlisten pro Delay-Modul hinterlegen; die übernommene Delayzeit bestimmt über eine Bereichsprüfung die passende Liste.
+- Die Nachricht der neu übernommenen Delayzeit löst die Prüfung aus. Eine geänderte Listennummer aktiviert die andere hinterlegte Liste. Ein `change`-Objekt verhindert erneutes Laden, solange dieselbe Listennummer gilt.
+- Bereichsprüfung und Auswahl mit normalen Max-Objekten umsetzen. Genannte Zeitgrenzen waren Beispiele und sind noch nicht festgelegt.
+- Offen: musikalische Abstimmung der Listen, Zeitgrenzen, sofortiger oder späterer Wechsel sowie Startposition der neuen Liste. Dazu wurde noch keine Regel beschlossen.
+- JavaScript nur nach vorheriger ausdrücklicher Zustimmung des Nutzers ergänzen.
+
+**Aktueller Fokus**
+
+Zuerst interessante musikalische Listen finden und am Instrument erproben. Der Nutzer sieht darin deutlich mehr Potenzial als in den bisherigen Verläufen. Den späteren automatischen Listenwechsel jetzt nicht einbauen.

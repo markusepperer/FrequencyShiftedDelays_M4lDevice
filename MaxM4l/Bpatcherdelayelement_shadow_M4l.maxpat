@@ -2036,7 +2036,7 @@
                     "format": 6,
                     "id": "obj-67",
                     "maxclass": "flonum",
-                    "maximum": 0.98,
+                    "maximum": 0.999,
                     "minimum": 0.0,
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -2065,7 +2065,8 @@
                         0.0,
                         1.0
                     ],
-                    "varname": "feedbackamount1"
+                    "varname": "feedbackamount1",
+                    "numdecimalplaces": 3
                 }
             },
             {
