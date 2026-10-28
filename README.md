@@ -1,6 +1,6 @@
 # Frequency Shifted Delays – Max for Live
 
-Ein Max-for-Live-Audioeffekt mit vier Delay-Stimmen, getrennt steuerbarem Frequency Shifting nach oben und unten sowie automatisierbaren Mischungen. Entwickelt für bewegte Klangtexturen, rhythmische Schichtungen und fließende Übergänge zwischen unterschiedlichen Delay-Patterns.
+Ein Max-for-Live-Audioeffekt mit vier Delay-Stimmen, getrennt steuerbarem Frequency Shifting, Pitch Shifting und automatisierbaren Mischungen. Entwickelt für bewegte Klangtexturen, rhythmische Schichtungen und fließende Übergänge zwischen unterschiedlichen Delay-Patterns.
 
 ## Vier Delay-Stimmen
 
@@ -17,18 +17,27 @@ Jede Stimme bietet:
 
 Frequency Shifting verschiebt Frequenzen um einen festen Hertz-Betrag. Es ist keine transponierende Tonhöhenverschiebung in Halbtonschritten.
 
+## Pitch Shifting und Sequenzen
+
+Jede Delay-Stimme bietet zusätzlich zwei unabhängige Pitch Shifter mit vier wählbaren Algorithmen. Von feinen mikrotonalen Verstimmungen bis zu großen Intervallen lassen sich damit langsame Klangbewegungen und sich verändernde Tonhöhenmuster erzeugen.
+
+Eigene Sequenzlisten steuern die beiden Pitch Shifter synchron zum Delay-Takt. Im Arrangement kann zwischen diesen Mustern und fest eingestellten Intervallen gewechselt werden. Geshiftete und ungeshiftete Delays lassen sich unabhängig mischen und im Stereoraum verteilen.
+
 ## Mixer pro Stimme
 
-Vier getrennte Signalanteile lassen sich jeweils in Lautstärke und Panorama einstellen:
+Sieben getrennte Signalanteile lassen sich jeweils in Lautstärke und Panorama einstellen:
 
-1. Shift Up
-2. Shift Down
-3. Delay ohne Frequency Shift
-4. Mikrofon direkt
+1. Mikrofon direkt
+2. Frequency Shift Up
+3. Frequency Shift Down
+4. Delay ohne Frequency Shift
+5. Pitch Shift 1
+6. Pitch Shift 2
+7. Delay ohne Pitch Shift
 
 Lautstärken und Panoramen sind in Ableton Live automatisierbar.
 
-### Shift-Mix
+### Frequency Shift Mix
 
 Blendet innerhalb der Up-/Down-Stimmen zwischen ungeshiftetem und geshiftetem Delay:
 
@@ -37,9 +46,13 @@ Blendet innerhalb der Up-/Down-Stimmen zwischen ungeshiftetem und geshiftetem De
 
 Beide Klangvarianten durchlaufen dieselben automatisierten Lautstärkekurven und Panoramen. Die komponierte Bewegung bleibt dadurch beim Überblenden erhalten. Der separate Fader „Delay ohne Shift“ bleibt als unabhängige Zusatzmischung verfügbar.
 
+### Pitch Shift Mix
+
+Blendet entsprechend zwischen den pitch-geshifteten Delays und dem Delay ohne Pitch Shift.
+
 ### Delay-Mix
 
-Blendet innerhalb der drei Delay-Zweige zwischen Originalsignal und verzögertem Signal:
+Blendet innerhalb der Delay-Zweige zwischen Originalsignal und verzögertem Signal:
 
 - **0 %:** direktes Originalsignal
 - **100 %:** vollständige Delay-Mischung
@@ -54,13 +67,9 @@ Die Numberbox **„Zeitwechsel-Fade“** bestimmt die musikalische Rückblende z
 
 Die Fade-Dauer steuert die gemeinsamen Ausgangsmatrizen. Die Schattenbank übernimmt Mixer- und Steuereinstellungen aus dem Hauptgerät und besitzt dafür keine eigenen automatisierten Parameter.
 
-**Aktuelle Einschränkung:** Aufeinanderfolgende Zeitwechsel sollten erst nach Abschluss der laufenden Umschaltung ausgelöst werden. Eine Sperre über die gesamte Umschaltdauer ist noch nicht umgesetzt.
+Während einer laufenden Umschaltung verhindert eine Sperre weitere Zeitwechsel.
 
-## Speicherung und Automation
-
-- **Gerätedateien:** enthalten die Verarbeitung, Bedienoberfläche und Initialwerte für neue Geräteinstanzen.
-- **Ableton-Geräte-Presets:** speichern abrufbare Parameterkonfigurationen.
-- **Live-Set:** speichert die Geräteinstanzen, ihre Einstellungen und die Automationskurven des Stücks.
+Sequenzlisten werden mit dem Live-Set gespeichert.
 
 Die externen `.maxpat`-Abstraktionen gehören zum Gerät und müssen zusammen mit der `.amxd`-Datei verfügbar bleiben.
 
@@ -82,5 +91,5 @@ Neue Geräteinstanzen starten mit:
 ## Geplante Erweiterungen
 
 - Weitere Absicherung der Zeitwechsel-Sequenz
-- Pitch Shifting als zusätzliche Klangbearbeitung
-- Kopplung der Delayzeiten mit Frequency- und Pitch-Shifting
+- Automatische Auswahl passender Sequenzlisten anhand der Delayzeit
+- Sequenzsteuerung auch für die Frequency Shifter

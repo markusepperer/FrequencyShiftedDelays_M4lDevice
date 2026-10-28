@@ -76,3 +76,43 @@ Das Direktsignal vorne wiedergeben und die pitch-geschifteten Multi-Kurzzeit-Del
 **Aktueller Fokus**
 
 Zuerst interessante musikalische Listen finden und am Instrument erproben. Der Nutzer sieht darin deutlich mehr Potenzial als in den bisherigen Verläufen. Den späteren automatischen Listenwechsel jetzt nicht einbauen.
+
+![Trennlinie](Notiz-Assets/Trennlinie.svg)
+
+### Synchronisierte Pitch-Sequenzen – kompositorische Zustandswechsel
+
+**Zeitstempel:** 28.10.2026, 14:32:49 Uhr (Europe/Vienna, MEZ)
+
+**Höreindruck zur Synchronisierung**
+
+Die Synchronisierung von Start und Stopp hat viel gebracht. Das Zusammenspiel der Delay-Zeiten mit dem Umschalten der Pitch-Intervalle klingt jetzt deutlich exakter.
+
+**Kompositorisch ergiebig: Wechsel zwischen Sequenz und Normalmodus**
+
+Als besonders ergiebig hat sich das Umschalten zwischen Sequenz Ein und Sequenz Aus erwiesen:
+
+- Im Normalmodus ohne Sequenz arbeiten die beiden Pitch Shifter mit fest eingestellten Intervallen, beispielsweise in Halbtönen.
+- In der Sequenz kann gleichzeitig ein völlig anderes Muster hinterlegt sein, beispielsweise zufällige mikrotonale Intervalle.
+- Wird die Sequenz ausgeschaltet, werden wieder die im Normalmodus eingestellten Intervalle hörbar.
+- Über das Arrangement lässt sich dieses Wechselmuster gestalten und variieren.
+- Während die Sequenz spielt, können die Grundeinstellungen der Pitch Shifter für den Normalmodus verändert beziehungsweise im Arrangement automatisiert werden. Beim nächsten Ausschalten der Sequenz wird dadurch ein anderer Normalzustand hörbar.
+
+Die kompositorische Idee ist, Sequenz Ein/Aus im Arrangement wiederholt als Übergang zwischen unterschiedlichen Zuständen einzusetzen: auf der einen Seite wechselnde Grundzustände der Pitch Shifter mit Halbtonintervallen, auf der anderen Seite eine Sequenz mit einer ganz anderen Intervall- und Musterstruktur.
+
+**Nächste Forschungs- und Arbeitsschritte**
+
+- Viele unterschiedliche Sequenzlisten entwickeln und musikalisch erproben.
+- Verschiedene Einstellungen und Veränderungen der Pitch Shifter untersuchen.
+- Erforschen, welche Listen zu welchen Delay-Zeiten passen: Bei sehr kurzen Delay-Zeiten sind andere Verläufe sinnvoll als bei sehr langen. Zuerst durch Hörversuche einen passenden Modus und eine musikalische Zuordnung finden.
+- Als nächste Implementierung anschließend das Auswählen beziehungsweise Triggern der zur übernommenen Delayzeit passenden Listen einbauen. Das knüpft an die bereits notierte Bereichsprüfung mit normalen Max-Objekten an.
+
+
+![Trennlinie](Notiz-Assets/Trennlinie.svg)
+
+### Sequenzsystem auch für die Frequency Shifter
+
+**Zeitstempel:** 28.10.2026, 14:34:08 Uhr (Europe/Vienna, MEZ)
+
+Das gesamte für die Pitch Shifter aufgebaute System soll künftig auch für die **Frequency Shifter** umgesetzt werden: Sequenzlisten, Synchronisierung zum Delay-Tempo sowie das entsprechende Start-, Stopp- und Fortsetzungsverhalten.
+
+Dies ist ein vorgemerkter Ausbau, noch kein Auftrag zur sofortigen Implementierung.

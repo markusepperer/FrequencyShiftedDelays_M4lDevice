@@ -31,8 +31,8 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        1589.0,
-                        441.4594336748123,
+                        1253.5911281704903,
+                        421.59090507030487,
                         33.55263125896454,
                         33.55263125896454
                     ],
@@ -260,8 +260,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        260.1009973883629,
-                        179.29292052984238,
+                        263.03031516075134,
+                        443.61812460422516,
                         150.0,
                         20.0
                     ],
@@ -470,27 +470,27 @@
             {
                 "box": {
                     "activebgcolor": [
-                        0.0,
-                        0.0,
-                        0.0,
+                        0.22,
+                        0.22,
+                        0.22,
                         1.0
                     ],
                     "activebgoncolor": [
-                        0.0,
-                        0.0,
-                        0.0,
+                        0.22,
+                        0.22,
+                        0.22,
                         1.0
                     ],
                     "activetextcolor": [
-                        1.0,
-                        0.0,
-                        0.0,
+                        0.65,
+                        0.65,
+                        0.65,
                         1.0
                     ],
                     "activetextoncolor": [
-                        1.0,
-                        0.933333,
-                        0.0,
+                        0.65,
+                        0.65,
+                        0.65,
                         1.0
                     ],
                     "automation": "Unlinked",
@@ -498,6 +498,7 @@
                     "fontsize": 11.0,
                     "hint": "Linked: Pitch 1 führt. Pitch 2 zeigt ausgegraut den wirksamen Gegenwert und ist nicht bedienbar. Eigene Pitch-2-Automation bleibt im Hintergrund erhalten und gilt wieder bei Unlinked.",
                     "id": "pitch-link-button",
+                    "ignoreclick": 1,
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -568,8 +569,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        156.30434900522232,
-                        262.82608902454376,
+                        160.00002121925354,
+                        526.951450586319,
                         150.0,
                         20.0
                     ],
@@ -596,8 +597,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        141.30434900522232,
-                        247.82608902454376,
+                        144.8485074043274,
+                        513.3150881528854,
                         150.0,
                         20.0
                     ],
@@ -1855,8 +1856,8 @@
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Pitch Feedback",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 9,
-                            "parameter_units": "%.3f"
+                            "parameter_units": "%.3f",
+                            "parameter_unitstyle": 9
                         }
                     },
                     "textcolor": [
@@ -2479,8 +2480,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        172.04761695861816,
-                        384.0,
+                        175.1515350341797,
+                        648.1635611057281,
                         46.0,
                         18.0
                     ],
@@ -3465,21 +3466,6 @@
             },
             {
                 "box": {
-                    "id": "downlabel",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        641.6363395452499,
-                        -243.93937242031097,
-                        110.0,
-                        20.0
-                    ],
-                    "text": "DOWN"
-                }
-            },
-            {
-                "box": {
                     "activebgcolor": [
                         0.0,
                         0.0,
@@ -3538,21 +3524,6 @@
                         1.0
                     ],
                     "varname": "freqshiftamountupDelay1[2]"
-                }
-            },
-            {
-                "box": {
-                    "id": "linklabel",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        502.2424124479294,
-                        -243.93937242031097,
-                        70.0,
-                        20.0
-                    ],
-                    "text": "LINK"
                 }
             },
             {
@@ -3814,8 +3785,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        670.2380888462067,
-                        140.47618913650513,
+                        673.6363395452499,
+                        405.7393400669098,
                         69.0,
                         22.0
                     ],
@@ -3904,8 +3875,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        352.38094902038574,
-                        374.9999964237213,
+                        355.45454943180084,
+                        640.5878041982651,
                         69.0,
                         22.0
                     ],
@@ -3922,8 +3893,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        399.99999618530273,
-                        283.3333306312561,
+                        403.9393936395645,
+                        548.1635699272156,
                         69.0,
                         22.0
                     ],
@@ -4011,8 +3982,8 @@
                         "int"
                     ],
                     "patching_rect": [
-                        354.7619013786316,
-                        -165.47618889808655,
+                        2027.777874469757,
+                        125.00000596046448,
                         83.0,
                         22.0
                     ],
@@ -4029,8 +4000,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        354.7619013786316,
-                        -133.33333206176758,
+                        2027.777874469757,
+                        158.333340883255,
                         85.0,
                         22.0
                     ],
@@ -4054,8 +4025,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        263.0952355861664,
-                        -133.33333206176758,
+                        1936.1112034320831,
+                        158.333340883255,
                         85.0,
                         22.0
                     ],
@@ -4080,8 +4051,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        314.28571128845215,
-                        -79.76190400123596,
+                        1988.8889837265015,
+                        211.11112117767334,
                         100.0,
                         22.0
                     ],
@@ -4743,8 +4714,8 @@
                         ]
                     },
                     "patching_rect": [
-                        574.9999945163727,
-                        114.28571319580078,
+                        578.1818025112152,
+                        378.4666152000427,
                         113.5,
                         22.0
                     ],
@@ -4785,8 +4756,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        458.33332896232605,
-                        209.52380752563477,
+                        461.5151461362839,
+                        473.92115223407745,
                         152.0,
                         47.0
                     ],
@@ -4826,8 +4797,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        578.5714230537415,
-                        -52.38095188140869,
+                        1512.9522889852524,
+                        -15.151513814926147,
                         210.0,
                         38.0
                     ],
@@ -4867,8 +4838,8 @@
                     "outputmode": 1,
                     "parameter_enable": 1,
                     "patching_rect": [
-                        161.90476036071777,
-                        58.333332777023315,
+                        164.54547536373138,
+                        323.9211654663086,
                         37.22627717256546,
                         14.59854006767273
                     ],
@@ -4957,8 +4928,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        258.3333308696747,
-                        148.8095223903656,
+                        261.5151637792587,
+                        413.31509697437286,
                         88.0,
                         23.0
                     ],
@@ -4969,7 +4940,7 @@
                         107.29166257381439,
                         23.0
                     ],
-                    "text": "Alle Aus",
+                    "text": "Beide An",
                     "textjustification": 1
                 }
             },
@@ -5973,8 +5944,8 @@
                         ]
                     },
                     "patching_rect": [
-                        308.3333303928375,
-                        113.09523701667786,
+                        311.515159368515,
+                        378.4666152000427,
                         97.0,
                         22.0
                     ],
@@ -6017,8 +5988,8 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        308.3333303928375,
-                        67.85714221000671,
+                        311.515159368515,
+                        333.0120737552643,
                         66.94444763660431,
                         38.000000953674316
                     ],
@@ -6068,8 +6039,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        816.6666588783264,
-                        -128.57142734527588,
+                        2016.6664887666702,
+                        -151.16076505184174,
                         30.0,
                         30.0
                     ]
@@ -6097,8 +6068,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        399.99999618530273,
-                        310.7142827510834,
+                        403.9393936395645,
+                        575.4362947940826,
                         135.0,
                         22.0
                     ],
@@ -6487,8 +6458,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        590.0,
-                        -128.57142734527588,
+                        1525.0735000371933,
+                        -90.90908288955688,
                         30.0,
                         30.0
                     ]
@@ -7289,8 +7260,8 @@
                         ]
                     },
                     "patching_rect": [
-                        244.04761672019958,
-                        365.4761869907379,
+                        247.8788013458252,
+                        629.9817445278168,
                         61.0,
                         22.0
                     ],
@@ -7376,8 +7347,8 @@
                     ],
                     "parameter_enable": 1,
                     "patching_rect": [
-                        324.9999969005585,
-                        190.47618865966797,
+                        328.1818245649338,
+                        455.7393356561661,
                         18.33333420753479,
                         194.0
                     ],
@@ -7479,8 +7450,8 @@
                     ],
                     "parameter_enable": 0,
                     "patching_rect": [
-                        386.90475821495056,
-                        204.76190280914307,
+                        390.303031206131,
+                        469.3756980895996,
                         63.35878300666809,
                         57.631892919540405
                     ],
@@ -7535,8 +7506,8 @@
                         ""
                     ],
                     "patching_rect": [
-                        219.04761695861816,
-                        395.23809146881104,
+                        222.12122786045074,
+                        660.2847721576691,
                         113.0,
                         23.0
                     ],
@@ -7547,7 +7518,7 @@
                         113.0,
                         23.0
                     ],
-                    "text": "No Input",
+                    "text": "Alle Luftmikrofone",
                     "textcolor": [
                         0.0,
                         0.0,
@@ -7607,8 +7578,8 @@
                             "parameter_modmode": 3,
                             "parameter_shortname": "D1 Feedback",
                             "parameter_type": 0,
-                            "parameter_unitstyle": 9,
-                            "parameter_units": "%.3f"
+                            "parameter_units": "%.3f",
+                            "parameter_unitstyle": 9
                         }
                     },
                     "textcolor": [
@@ -7697,8 +7668,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        816.6666588783264,
-                        -92.85714197158813,
+                        2016.6664887666702,
+                        -116.3122832775116,
                         227.73722505569458,
                         165.8626627922058
                     ],
@@ -7725,8 +7696,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        670.2380888462067,
-                        167.8571412563324,
+                        673.6363395452499,
+                        433.01206493377686,
                         66.0,
                         62.0
                     ],
@@ -7762,8 +7733,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        161.90476036071777,
-                        88.09523725509644,
+                        164.54547536373138,
+                        352.7090417146683,
                         123.0,
                         22.0
                     ],
@@ -7855,8 +7826,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        831.6666588783264,
-                        -77.85714197158813,
+                        2030.3028512001038,
+                        -101.16076946258545,
                         227.73722505569458,
                         165.8626627922058
                     ],
@@ -8793,8 +8764,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
-                        1428.086318552494,
-                        199.4444408416748,
+                        1434.5,
+                        130.15873217582703,
                         376.0,
                         60.0
                     ],
@@ -9167,11 +9138,11 @@
                 "box": {
                     "id": "pitch-sequence",
                     "maxclass": "newobj",
-                    "numinlets": 4,
+                    "numinlets": 5,
                     "numoutlets": 3,
                     "outlettype": [
                         "float",
-                        "int",
+                        "",
                         ""
                     ],
                     "patcher": {
@@ -9242,17 +9213,17 @@
                                     "patching_rect": [
                                         65.0,
                                         90.0,
-                                        260.0,
+                                        350.0,
                                         20.0
                                     ],
                                     "presentation": 1,
                                     "presentation_rect": [
                                         42.27642273902893,
                                         40.65040647983551,
-                                        300.0,
+                                        320.0,
                                         20.0
                                     ],
-                                    "text": "Sequenz ein / bei Start von vorn"
+                                    "text": "Sequenz Ein/Aus · pulsgetreu fortsetzen"
                                 }
                             },
                             {
@@ -9551,7 +9522,7 @@
                                         407.3170729279518,
                                         47.0
                                     ],
-                                    "text": "Pitch-Anzeigen: tatsächlich ausgegebene Cent-Werte beider Shifter.\nSequenz aus: bisherige Pitch-Regler und Link-Einstellung gelten wieder.\nGezählt werden die eingestellten Delay-Takte bis zum Listenende."
+                                    "text": "Sequenz AUS merkt den Eintrag; EIN spielt den nächsten am Delay-Takt.\nDelay-Modul AUS/EIN setzt die Liste auf Eintrag 1 zurück.\nNeue Delayzeit richtet nur den Takt neu aus; Listenposition bleibt."
                                 }
                             },
                             {
@@ -9620,13 +9591,547 @@
                                     "outlettype": [
                                         "bang"
                                     ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            140.0,
+                                            140.0,
+                                            620.0,
+                                            620.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "id": "module-in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "id": "time-in",
+                                                    "index": 2,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-normalize",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "!= 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        165.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t i i"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        210.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "stop",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        255.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "stop"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "time-valid",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "float",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "maximum 1."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "time-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "float"
+                                                    ],
+                                                    "patching_rect": [
+                                                        350.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b f"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "rephase",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        260.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "running-gate",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        315.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "gate 1 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "timer",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        370.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "delay 500."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "edge",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        425.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "id": "clock-out",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        205.0,
+                                                        510.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "clock-note",
+                                                    "linecount": 2,
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        555.0,
+                                                        546.0,
+                                                        33.0
+                                                    ],
+                                                    "text": "Modul EIN startet; AUS stoppt. Jede gesetzte Zeit: alten Timer stoppen, neue Dauer setzen, von dort neu zählen. Kein Sequenz-Start und kein Listenindex in diesem Zeitgeber."
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "clock-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "edge",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-normalize",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-normalize",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rephase",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "stop",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "running-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "rephase",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "stop",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "rephase",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "running-gate",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "stop",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "time-valid",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "rephase",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "timer",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "time-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "time-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "time-valid",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "edge",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "timer",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
                                     "patching_rect": [
                                         400.0,
-                                        385.0,
-                                        100.0,
+                                        285.0,
+                                        151.0,
                                         22.0
                                     ],
-                                    "text": "delay 500."
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p Gemeinsamer_Delaytakt"
                                 }
                             },
                             {
@@ -9634,9 +10139,8 @@
                                     "id": "tick",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 3,
+                                    "numoutlets": 2,
                                     "outlettype": [
-                                        "bang",
                                         "bang",
                                         "bang"
                                     ],
@@ -9646,83 +10150,7 @@
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "t b b b"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "schedule",
-                                    "maxclass": "newobj",
-                                    "numinlets": 2,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        400.0,
-                                        325.0,
-                                        100.0,
-                                        22.0
-                                    ],
-                                    "text": "gate 1 0"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "runorder",
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 3,
-                                    "outlettype": [
-                                        "int",
-                                        "int",
-                                        "int"
-                                    ],
-                                    "patching_rect": [
-                                        30.0,
-                                        135.0,
-                                        100.0,
-                                        22.0
-                                    ],
-                                    "text": "t i i i"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "runselect",
-                                    "maxclass": "newobj",
-                                    "numinlets": 3,
-                                    "numoutlets": 3,
-                                    "outlettype": [
-                                        "bang",
-                                        "bang",
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        30.0,
-                                        185.0,
-                                        100.0,
-                                        22.0
-                                    ],
-                                    "text": "sel 0 1"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "id": "stop",
-                                    "maxclass": "message",
-                                    "numinlets": 2,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        30.0,
-                                        235.0,
-                                        45.0,
-                                        22.0
-                                    ],
-                                    "text": "stop"
+                                    "text": "t b b"
                                 }
                             },
                             {
@@ -9730,20 +10158,19 @@
                                     "id": "restart",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 4,
+                                    "numoutlets": 3,
                                     "outlettype": [
-                                        "bang",
                                         "bang",
                                         "bang",
                                         "bang"
                                     ],
                                     "patching_rect": [
                                         165.0,
-                                        235.0,
+                                        435.0,
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "t b b b b"
+                                    "text": "t b b b"
                                 }
                             },
                             {
@@ -9757,7 +10184,7 @@
                                     ],
                                     "patching_rect": [
                                         260.0,
-                                        280.0,
+                                        480.0,
                                         55.0,
                                         22.0
                                     ],
@@ -9769,18 +10196,17 @@
                                     "id": "first",
                                     "maxclass": "newobj",
                                     "numinlets": 1,
-                                    "numoutlets": 2,
+                                    "numoutlets": 1,
                                     "outlettype": [
-                                        "bang",
                                         "bang"
                                     ],
                                     "patching_rect": [
                                         165.0,
-                                        325.0,
+                                        525.0,
                                         100.0,
                                         22.0
                                     ],
-                                    "text": "t b b"
+                                    "text": "t b"
                                 }
                             },
                             {
@@ -9804,38 +10230,1238 @@
                             {
                                 "box": {
                                     "coll_data": {
-                                        "count": 4,
+                                        "count": 154,
                                         "data": [
                                             {
                                                 "key": 1,
                                                 "value": [
-                                                    100,
-                                                    0,
-                                                    3
+                                                    2,
+                                                    -5,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 2,
                                                 "value": [
-                                                    200,
-                                                    0,
-                                                    2
+                                                    4.018602,
+                                                    -5.05648,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 3,
                                                 "value": [
-                                                    -300,
-                                                    0,
-                                                    5
+                                                    5.558667,
+                                                    -5.125993,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 4,
                                                 "value": [
-                                                    400,
-                                                    0,
-                                                    5
+                                                    7.149521,
+                                                    -5.207956,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 5,
+                                                "value": [
+                                                    8.178878,
+                                                    -5.270327,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 6,
+                                                "value": [
+                                                    9.058417,
+                                                    -5.326477,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 7,
+                                                "value": [
+                                                    10.492165,
+                                                    -5.423616,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 8,
+                                                "value": [
+                                                    12.5047,
+                                                    -5.624781,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 9,
+                                                "value": [
+                                                    13.81952,
+                                                    -5.768686,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 10,
+                                                "value": [
+                                                    15.744535,
+                                                    -5.992519,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 11,
+                                                "value": [
+                                                    17.106489,
+                                                    -6.162668,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 12,
+                                                "value": [
+                                                    18.213126,
+                                                    -6.305521,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 13,
+                                                "value": [
+                                                    19.753783,
+                                                    -6.500698,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 14,
+                                                "value": [
+                                                    21.20768,
+                                                    -6.725496,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 15,
+                                                "value": [
+                                                    23.125155,
+                                                    -7.028626,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 16,
+                                                "value": [
+                                                    24.361012,
+                                                    -7.249389,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 17,
+                                                "value": [
+                                                    25.709013,
+                                                    -7.48254,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 18,
+                                                "value": [
+                                                    27.232296,
+                                                    -7.75767,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 19,
+                                                "value": [
+                                                    29.013429,
+                                                    -8.068303,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 20,
+                                                "value": [
+                                                    30.755398,
+                                                    -8.426054,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 21,
+                                                "value": [
+                                                    32.439471,
+                                                    -8.770579,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 22,
+                                                "value": [
+                                                    34.700721,
+                                                    -9.275929,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 23,
+                                                "value": [
+                                                    36.068972,
+                                                    -9.597655,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 24,
+                                                "value": [
+                                                    37.797106,
+                                                    -9.970055,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 25,
+                                                "value": [
+                                                    39.683234,
+                                                    -10.44587,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 26,
+                                                "value": [
+                                                    40.905375,
+                                                    -10.739414,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 27,
+                                                "value": [
+                                                    42.703877,
+                                                    -11.224734,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 28,
+                                                "value": [
+                                                    44.327277,
+                                                    -11.621209,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 29,
+                                                "value": [
+                                                    45.730921,
+                                                    -12.023401,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 30,
+                                                "value": [
+                                                    47.342253,
+                                                    -12.489862,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 31,
+                                                "value": [
+                                                    48.590974,
+                                                    -12.838624,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 32,
+                                                "value": [
+                                                    50.253607,
+                                                    -13.311712,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 33,
+                                                "value": [
+                                                    52.098353,
+                                                    -13.827416,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 34,
+                                                "value": [
+                                                    53.543495,
+                                                    -14.302712,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 35,
+                                                "value": [
+                                                    54.981521,
+                                                    -14.754627,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 36,
+                                                "value": [
+                                                    56.595957,
+                                                    -15.205596,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 37,
+                                                "value": [
+                                                    58.121602,
+                                                    -15.746148,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 38,
+                                                "value": [
+                                                    59.737637,
+                                                    -16.286508,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 39,
+                                                "value": [
+                                                    61.147576,
+                                                    -16.752946,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 40,
+                                                "value": [
+                                                    74.159578,
+                                                    -20.267274,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 41,
+                                                "value": [
+                                                    93.253968,
+                                                    -27.609761,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 42,
+                                                "value": [
+                                                    113.316826,
+                                                    -37.874735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 43,
+                                                "value": [
+                                                    127.758066,
+                                                    -46.185054,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 44,
+                                                "value": [
+                                                    146.60603,
+                                                    -56.064985,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 45,
+                                                "value": [
+                                                    162.554793,
+                                                    -67.978543,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 46,
+                                                "value": [
+                                                    181.80084,
+                                                    -79.851631,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 47,
+                                                "value": [
+                                                    200.36261,
+                                                    -95.491948,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 48,
+                                                "value": [
+                                                    215.789247,
+                                                    -107.598545,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 49,
+                                                "value": [
+                                                    236.349529,
+                                                    -125.064865,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 50,
+                                                "value": [
+                                                    250.88535,
+                                                    -139.480173,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 51,
+                                                "value": [
+                                                    257.305472,
+                                                    -144.722565,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 52,
+                                                "value": [
+                                                    263.967913,
+                                                    -149.89231,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 53,
+                                                "value": [
+                                                    270.454401,
+                                                    -155.522038,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 54,
+                                                "value": [
+                                                    276.492348,
+                                                    -161.78423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 55,
+                                                "value": [
+                                                    282.079031,
+                                                    -168.434678,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 56,
+                                                "value": [
+                                                    292.2299,
+                                                    -179.861846,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 57,
+                                                "value": [
+                                                    302.112596,
+                                                    -191.498831,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 58,
+                                                "value": [
+                                                    312.892379,
+                                                    -203.825283,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 59,
+                                                "value": [
+                                                    324.922353,
+                                                    -216.595612,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 60,
+                                                "value": [
+                                                    337.607552,
+                                                    -228.906945,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 61,
+                                                "value": [
+                                                    347.977679,
+                                                    -239.880685,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 62,
+                                                "value": [
+                                                    358.817551,
+                                                    -250.346026,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 63,
+                                                "value": [
+                                                    372.182528,
+                                                    -263.911311,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 64,
+                                                "value": [
+                                                    387.661901,
+                                                    -280.827851,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 65,
+                                                "value": [
+                                                    402.522787,
+                                                    -297.925207,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 66,
+                                                "value": [
+                                                    414.368867,
+                                                    -313.481377,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 67,
+                                                "value": [
+                                                    425.651088,
+                                                    -329.551709,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 68,
+                                                "value": [
+                                                    439.118598,
+                                                    -348.389746,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 69,
+                                                "value": [
+                                                    455.140649,
+                                                    -369.856585,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 70,
+                                                "value": [
+                                                    471.569903,
+                                                    -391.464207,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 71,
+                                                "value": [
+                                                    493.742879,
+                                                    -426.073735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 72,
+                                                "value": [
+                                                    516.317076,
+                                                    -460.413414,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 73,
+                                                "value": [
+                                                    539.094931,
+                                                    -498.045632,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 74,
+                                                "value": [
+                                                    561.80032,
+                                                    -539.008703,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 75,
+                                                "value": [
+                                                    584.2,
+                                                    -579.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 76,
+                                                "value": [
+                                                    586.4,
+                                                    -586.4,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 77,
+                                                "value": [
+                                                    592.7,
+                                                    -592.7,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 78,
+                                                "value": [
+                                                    597.8,
+                                                    -597.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 79,
+                                                "value": [
+                                                    599.6,
+                                                    -599.6,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 80,
+                                                "value": [
+                                                    596.2,
+                                                    -596.2,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 81,
+                                                "value": [
+                                                    589.8,
+                                                    -589.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 82,
+                                                "value": [
+                                                    583.5,
+                                                    -583.5,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 83,
+                                                "value": [
+                                                    590.1,
+                                                    -590.1,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 84,
+                                                "value": [
+                                                    595.4,
+                                                    -595.4,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 85,
+                                                "value": [
+                                                    588.3,
+                                                    -588.3,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 86,
+                                                "value": [
+                                                    578.1,
+                                                    -590.6,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 87,
+                                                "value": [
+                                                    539.781685,
+                                                    -567.302344,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 88,
+                                                "value": [
+                                                    501.740339,
+                                                    -544.595933,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 89,
+                                                "value": [
+                                                    465.528806,
+                                                    -525.813095,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 90,
+                                                "value": [
+                                                    429.541947,
+                                                    -508.268369,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 91,
+                                                "value": [
+                                                    394.145865,
+                                                    -487.35526,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 92,
+                                                "value": [
+                                                    361.454231,
+                                                    -462.262525,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 93,
+                                                "value": [
+                                                    329.997781,
+                                                    -437.928082,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 94,
+                                                "value": [
+                                                    296.345976,
+                                                    -412.000515,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 95,
+                                                "value": [
+                                                    262.772235,
+                                                    -388.226227,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 96,
+                                                "value": [
+                                                    242.089737,
+                                                    -372.034769,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 97,
+                                                "value": [
+                                                    227.213501,
+                                                    -357.468466,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 98,
+                                                "value": [
+                                                    211.499056,
+                                                    -341.373801,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 99,
+                                                "value": [
+                                                    195.394204,
+                                                    -325.45722,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 100,
+                                                "value": [
+                                                    180.007257,
+                                                    -310.688037,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 101,
+                                                "value": [
+                                                    158.295615,
+                                                    -285.971771,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 102,
+                                                "value": [
+                                                    144.258446,
+                                                    -268.918427,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 103,
+                                                "value": [
+                                                    125.849811,
+                                                    -249.345392,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 104,
+                                                "value": [
+                                                    108.938095,
+                                                    -232.946423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 105,
+                                                "value": [
+                                                    92.526547,
+                                                    -212.932385,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 106,
+                                                "value": [
+                                                    74.63733,
+                                                    -189.280804,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 107,
+                                                "value": [
+                                                    61.266474,
+                                                    -169.120398,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 108,
+                                                "value": [
+                                                    50.445922,
+                                                    -150.360805,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 109,
+                                                "value": [
+                                                    38.713933,
+                                                    -131.942123,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 110,
+                                                "value": [
+                                                    29.988549,
+                                                    -112.859711,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 111,
+                                                "value": [
+                                                    23.123928,
+                                                    -99.047081,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 112,
+                                                "value": [
+                                                    17.432428,
+                                                    -82.52992,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 113,
+                                                "value": [
+                                                    13.448049,
+                                                    -68.562422,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 114,
+                                                "value": [
+                                                    12.920046,
+                                                    -66.627807,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 115,
+                                                "value": [
+                                                    12.305046,
+                                                    -64.630552,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 116,
+                                                "value": [
+                                                    11.689978,
+                                                    -62.715217,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 117,
+                                                "value": [
+                                                    11.251437,
+                                                    -61.096451,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 118,
+                                                "value": [
+                                                    10.758487,
+                                                    -59.47859,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 119,
+                                                "value": [
+                                                    10.236143,
+                                                    -57.625943,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 120,
+                                                "value": [
+                                                    9.616062,
+                                                    -55.253659,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 121,
+                                                "value": [
+                                                    9.206041,
+                                                    -53.678123,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 122,
+                                                "value": [
+                                                    8.659934,
+                                                    -51.577143,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 123,
+                                                "value": [
+                                                    8.265268,
+                                                    -49.970059,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 124,
+                                                "value": [
+                                                    7.88602,
+                                                    -48.29918,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 125,
+                                                "value": [
+                                                    7.506548,
+                                                    -46.688212,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 126,
+                                                "value": [
+                                                    7.117733,
+                                                    -44.916399,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 127,
+                                                "value": [
+                                                    6.683739,
+                                                    -42.869173,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 128,
+                                                "value": [
+                                                    6.296015,
+                                                    -41.18412,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 129,
+                                                "value": [
+                                                    5.984172,
+                                                    -39.50735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 130,
+                                                "value": [
+                                                    5.763965,
+                                                    -38.305187,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 131,
+                                                "value": [
+                                                    5.546136,
+                                                    -37.103401,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 132,
+                                                "value": [
+                                                    5.345297,
+                                                    -36.019066,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 133,
+                                                "value": [
+                                                    5.030694,
+                                                    -34.24922,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 134,
+                                                "value": [
+                                                    4.798946,
+                                                    -32.849242,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 135,
+                                                "value": [
+                                                    4.556686,
+                                                    -31.418504,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 136,
+                                                "value": [
+                                                    4.315656,
+                                                    -29.865391,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 137,
+                                                "value": [
+                                                    4.060052,
+                                                    -28.018529,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 138,
+                                                "value": [
+                                                    3.846127,
+                                                    -26.416482,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 139,
+                                                "value": [
+                                                    3.66467,
+                                                    -25.054813,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 140,
+                                                "value": [
+                                                    3.451784,
+                                                    -23.304957,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 141,
+                                                "value": [
+                                                    3.269224,
+                                                    -21.76145,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 142,
+                                                "value": [
+                                                    3.14799,
+                                                    -20.505368,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 143,
+                                                "value": [
+                                                    3.02241,
+                                                    -19.083603,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 144,
+                                                "value": [
+                                                    2.922787,
+                                                    -17.915581,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 145,
+                                                "value": [
+                                                    2.826244,
+                                                    -16.724581,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 146,
+                                                "value": [
+                                                    2.73176,
+                                                    -15.518235,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 147,
+                                                "value": [
+                                                    2.655566,
+                                                    -14.499566,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 148,
+                                                "value": [
+                                                    2.594431,
+                                                    -13.456102,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 149,
+                                                "value": [
+                                                    2.545115,
+                                                    -12.350679,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 150,
+                                                "value": [
+                                                    2.509874,
+                                                    -11.508758,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 151,
+                                                "value": [
+                                                    2.472334,
+                                                    -10.543423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 152,
+                                                "value": [
+                                                    2.440419,
+                                                    -9.607086,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 153,
+                                                "value": [
+                                                    2.412424,
+                                                    -8.638243,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 154,
+                                                "value": [
+                                                    2.4,
+                                                    -5,
+                                                    1
                                                 ]
                                             }
                                         ]
@@ -10142,38 +11768,1238 @@
                             {
                                 "box": {
                                     "coll_data": {
-                                        "count": 4,
+                                        "count": 154,
                                         "data": [
                                             {
                                                 "key": 1,
                                                 "value": [
-                                                    100,
-                                                    0,
-                                                    3
+                                                    2,
+                                                    -5,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 2,
                                                 "value": [
-                                                    200,
-                                                    0,
-                                                    2
+                                                    4.018602,
+                                                    -5.05648,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 3,
                                                 "value": [
-                                                    -300,
-                                                    0,
-                                                    5
+                                                    5.558667,
+                                                    -5.125993,
+                                                    1
                                                 ]
                                             },
                                             {
                                                 "key": 4,
                                                 "value": [
-                                                    400,
-                                                    0,
-                                                    5
+                                                    7.149521,
+                                                    -5.207956,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 5,
+                                                "value": [
+                                                    8.178878,
+                                                    -5.270327,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 6,
+                                                "value": [
+                                                    9.058417,
+                                                    -5.326477,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 7,
+                                                "value": [
+                                                    10.492165,
+                                                    -5.423616,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 8,
+                                                "value": [
+                                                    12.5047,
+                                                    -5.624781,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 9,
+                                                "value": [
+                                                    13.81952,
+                                                    -5.768686,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 10,
+                                                "value": [
+                                                    15.744535,
+                                                    -5.992519,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 11,
+                                                "value": [
+                                                    17.106489,
+                                                    -6.162668,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 12,
+                                                "value": [
+                                                    18.213126,
+                                                    -6.305521,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 13,
+                                                "value": [
+                                                    19.753783,
+                                                    -6.500698,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 14,
+                                                "value": [
+                                                    21.20768,
+                                                    -6.725496,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 15,
+                                                "value": [
+                                                    23.125155,
+                                                    -7.028626,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 16,
+                                                "value": [
+                                                    24.361012,
+                                                    -7.249389,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 17,
+                                                "value": [
+                                                    25.709013,
+                                                    -7.48254,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 18,
+                                                "value": [
+                                                    27.232296,
+                                                    -7.75767,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 19,
+                                                "value": [
+                                                    29.013429,
+                                                    -8.068303,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 20,
+                                                "value": [
+                                                    30.755398,
+                                                    -8.426054,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 21,
+                                                "value": [
+                                                    32.439471,
+                                                    -8.770579,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 22,
+                                                "value": [
+                                                    34.700721,
+                                                    -9.275929,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 23,
+                                                "value": [
+                                                    36.068972,
+                                                    -9.597655,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 24,
+                                                "value": [
+                                                    37.797106,
+                                                    -9.970055,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 25,
+                                                "value": [
+                                                    39.683234,
+                                                    -10.44587,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 26,
+                                                "value": [
+                                                    40.905375,
+                                                    -10.739414,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 27,
+                                                "value": [
+                                                    42.703877,
+                                                    -11.224734,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 28,
+                                                "value": [
+                                                    44.327277,
+                                                    -11.621209,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 29,
+                                                "value": [
+                                                    45.730921,
+                                                    -12.023401,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 30,
+                                                "value": [
+                                                    47.342253,
+                                                    -12.489862,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 31,
+                                                "value": [
+                                                    48.590974,
+                                                    -12.838624,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 32,
+                                                "value": [
+                                                    50.253607,
+                                                    -13.311712,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 33,
+                                                "value": [
+                                                    52.098353,
+                                                    -13.827416,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 34,
+                                                "value": [
+                                                    53.543495,
+                                                    -14.302712,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 35,
+                                                "value": [
+                                                    54.981521,
+                                                    -14.754627,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 36,
+                                                "value": [
+                                                    56.595957,
+                                                    -15.205596,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 37,
+                                                "value": [
+                                                    58.121602,
+                                                    -15.746148,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 38,
+                                                "value": [
+                                                    59.737637,
+                                                    -16.286508,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 39,
+                                                "value": [
+                                                    61.147576,
+                                                    -16.752946,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 40,
+                                                "value": [
+                                                    74.159578,
+                                                    -20.267274,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 41,
+                                                "value": [
+                                                    93.253968,
+                                                    -27.609761,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 42,
+                                                "value": [
+                                                    113.316826,
+                                                    -37.874735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 43,
+                                                "value": [
+                                                    127.758066,
+                                                    -46.185054,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 44,
+                                                "value": [
+                                                    146.60603,
+                                                    -56.064985,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 45,
+                                                "value": [
+                                                    162.554793,
+                                                    -67.978543,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 46,
+                                                "value": [
+                                                    181.80084,
+                                                    -79.851631,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 47,
+                                                "value": [
+                                                    200.36261,
+                                                    -95.491948,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 48,
+                                                "value": [
+                                                    215.789247,
+                                                    -107.598545,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 49,
+                                                "value": [
+                                                    236.349529,
+                                                    -125.064865,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 50,
+                                                "value": [
+                                                    250.88535,
+                                                    -139.480173,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 51,
+                                                "value": [
+                                                    257.305472,
+                                                    -144.722565,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 52,
+                                                "value": [
+                                                    263.967913,
+                                                    -149.89231,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 53,
+                                                "value": [
+                                                    270.454401,
+                                                    -155.522038,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 54,
+                                                "value": [
+                                                    276.492348,
+                                                    -161.78423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 55,
+                                                "value": [
+                                                    282.079031,
+                                                    -168.434678,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 56,
+                                                "value": [
+                                                    292.2299,
+                                                    -179.861846,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 57,
+                                                "value": [
+                                                    302.112596,
+                                                    -191.498831,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 58,
+                                                "value": [
+                                                    312.892379,
+                                                    -203.825283,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 59,
+                                                "value": [
+                                                    324.922353,
+                                                    -216.595612,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 60,
+                                                "value": [
+                                                    337.607552,
+                                                    -228.906945,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 61,
+                                                "value": [
+                                                    347.977679,
+                                                    -239.880685,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 62,
+                                                "value": [
+                                                    358.817551,
+                                                    -250.346026,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 63,
+                                                "value": [
+                                                    372.182528,
+                                                    -263.911311,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 64,
+                                                "value": [
+                                                    387.661901,
+                                                    -280.827851,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 65,
+                                                "value": [
+                                                    402.522787,
+                                                    -297.925207,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 66,
+                                                "value": [
+                                                    414.368867,
+                                                    -313.481377,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 67,
+                                                "value": [
+                                                    425.651088,
+                                                    -329.551709,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 68,
+                                                "value": [
+                                                    439.118598,
+                                                    -348.389746,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 69,
+                                                "value": [
+                                                    455.140649,
+                                                    -369.856585,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 70,
+                                                "value": [
+                                                    471.569903,
+                                                    -391.464207,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 71,
+                                                "value": [
+                                                    493.742879,
+                                                    -426.073735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 72,
+                                                "value": [
+                                                    516.317076,
+                                                    -460.413414,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 73,
+                                                "value": [
+                                                    539.094931,
+                                                    -498.045632,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 74,
+                                                "value": [
+                                                    561.80032,
+                                                    -539.008703,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 75,
+                                                "value": [
+                                                    584.2,
+                                                    -579.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 76,
+                                                "value": [
+                                                    586.4,
+                                                    -586.4,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 77,
+                                                "value": [
+                                                    592.7,
+                                                    -592.7,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 78,
+                                                "value": [
+                                                    597.8,
+                                                    -597.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 79,
+                                                "value": [
+                                                    599.6,
+                                                    -599.6,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 80,
+                                                "value": [
+                                                    596.2,
+                                                    -596.2,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 81,
+                                                "value": [
+                                                    589.8,
+                                                    -589.8,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 82,
+                                                "value": [
+                                                    583.5,
+                                                    -583.5,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 83,
+                                                "value": [
+                                                    590.1,
+                                                    -590.1,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 84,
+                                                "value": [
+                                                    595.4,
+                                                    -595.4,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 85,
+                                                "value": [
+                                                    588.3,
+                                                    -588.3,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 86,
+                                                "value": [
+                                                    578.1,
+                                                    -590.6,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 87,
+                                                "value": [
+                                                    539.781685,
+                                                    -567.302344,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 88,
+                                                "value": [
+                                                    501.740339,
+                                                    -544.595933,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 89,
+                                                "value": [
+                                                    465.528806,
+                                                    -525.813095,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 90,
+                                                "value": [
+                                                    429.541947,
+                                                    -508.268369,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 91,
+                                                "value": [
+                                                    394.145865,
+                                                    -487.35526,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 92,
+                                                "value": [
+                                                    361.454231,
+                                                    -462.262525,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 93,
+                                                "value": [
+                                                    329.997781,
+                                                    -437.928082,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 94,
+                                                "value": [
+                                                    296.345976,
+                                                    -412.000515,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 95,
+                                                "value": [
+                                                    262.772235,
+                                                    -388.226227,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 96,
+                                                "value": [
+                                                    242.089737,
+                                                    -372.034769,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 97,
+                                                "value": [
+                                                    227.213501,
+                                                    -357.468466,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 98,
+                                                "value": [
+                                                    211.499056,
+                                                    -341.373801,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 99,
+                                                "value": [
+                                                    195.394204,
+                                                    -325.45722,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 100,
+                                                "value": [
+                                                    180.007257,
+                                                    -310.688037,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 101,
+                                                "value": [
+                                                    158.295615,
+                                                    -285.971771,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 102,
+                                                "value": [
+                                                    144.258446,
+                                                    -268.918427,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 103,
+                                                "value": [
+                                                    125.849811,
+                                                    -249.345392,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 104,
+                                                "value": [
+                                                    108.938095,
+                                                    -232.946423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 105,
+                                                "value": [
+                                                    92.526547,
+                                                    -212.932385,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 106,
+                                                "value": [
+                                                    74.63733,
+                                                    -189.280804,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 107,
+                                                "value": [
+                                                    61.266474,
+                                                    -169.120398,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 108,
+                                                "value": [
+                                                    50.445922,
+                                                    -150.360805,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 109,
+                                                "value": [
+                                                    38.713933,
+                                                    -131.942123,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 110,
+                                                "value": [
+                                                    29.988549,
+                                                    -112.859711,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 111,
+                                                "value": [
+                                                    23.123928,
+                                                    -99.047081,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 112,
+                                                "value": [
+                                                    17.432428,
+                                                    -82.52992,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 113,
+                                                "value": [
+                                                    13.448049,
+                                                    -68.562422,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 114,
+                                                "value": [
+                                                    12.920046,
+                                                    -66.627807,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 115,
+                                                "value": [
+                                                    12.305046,
+                                                    -64.630552,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 116,
+                                                "value": [
+                                                    11.689978,
+                                                    -62.715217,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 117,
+                                                "value": [
+                                                    11.251437,
+                                                    -61.096451,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 118,
+                                                "value": [
+                                                    10.758487,
+                                                    -59.47859,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 119,
+                                                "value": [
+                                                    10.236143,
+                                                    -57.625943,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 120,
+                                                "value": [
+                                                    9.616062,
+                                                    -55.253659,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 121,
+                                                "value": [
+                                                    9.206041,
+                                                    -53.678123,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 122,
+                                                "value": [
+                                                    8.659934,
+                                                    -51.577143,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 123,
+                                                "value": [
+                                                    8.265268,
+                                                    -49.970059,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 124,
+                                                "value": [
+                                                    7.88602,
+                                                    -48.29918,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 125,
+                                                "value": [
+                                                    7.506548,
+                                                    -46.688212,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 126,
+                                                "value": [
+                                                    7.117733,
+                                                    -44.916399,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 127,
+                                                "value": [
+                                                    6.683739,
+                                                    -42.869173,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 128,
+                                                "value": [
+                                                    6.296015,
+                                                    -41.18412,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 129,
+                                                "value": [
+                                                    5.984172,
+                                                    -39.50735,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 130,
+                                                "value": [
+                                                    5.763965,
+                                                    -38.305187,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 131,
+                                                "value": [
+                                                    5.546136,
+                                                    -37.103401,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 132,
+                                                "value": [
+                                                    5.345297,
+                                                    -36.019066,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 133,
+                                                "value": [
+                                                    5.030694,
+                                                    -34.24922,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 134,
+                                                "value": [
+                                                    4.798946,
+                                                    -32.849242,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 135,
+                                                "value": [
+                                                    4.556686,
+                                                    -31.418504,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 136,
+                                                "value": [
+                                                    4.315656,
+                                                    -29.865391,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 137,
+                                                "value": [
+                                                    4.060052,
+                                                    -28.018529,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 138,
+                                                "value": [
+                                                    3.846127,
+                                                    -26.416482,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 139,
+                                                "value": [
+                                                    3.66467,
+                                                    -25.054813,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 140,
+                                                "value": [
+                                                    3.451784,
+                                                    -23.304957,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 141,
+                                                "value": [
+                                                    3.269224,
+                                                    -21.76145,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 142,
+                                                "value": [
+                                                    3.14799,
+                                                    -20.505368,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 143,
+                                                "value": [
+                                                    3.02241,
+                                                    -19.083603,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 144,
+                                                "value": [
+                                                    2.922787,
+                                                    -17.915581,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 145,
+                                                "value": [
+                                                    2.826244,
+                                                    -16.724581,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 146,
+                                                "value": [
+                                                    2.73176,
+                                                    -15.518235,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 147,
+                                                "value": [
+                                                    2.655566,
+                                                    -14.499566,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 148,
+                                                "value": [
+                                                    2.594431,
+                                                    -13.456102,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 149,
+                                                "value": [
+                                                    2.545115,
+                                                    -12.350679,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 150,
+                                                "value": [
+                                                    2.509874,
+                                                    -11.508758,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 151,
+                                                "value": [
+                                                    2.472334,
+                                                    -10.543423,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 152,
+                                                "value": [
+                                                    2.440419,
+                                                    -9.607086,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 153,
+                                                "value": [
+                                                    2.412424,
+                                                    -8.638243,
+                                                    1
+                                                ]
+                                            },
+                                            {
+                                                "key": 154,
+                                                "value": [
+                                                    2.4,
+                                                    -5,
+                                                    1
                                                 ]
                                             }
                                         ]
@@ -10402,7 +13228,7 @@
                                         387.0,
                                         47.0
                                     ],
-                                    "text": "Gesamtlänge = Summe der Dauern aller Listeneinträge.\nNur Anzeige; die bestehende Pitch-Sequenz bleibt unverändert.\nNach Listenänderungen neu starten, um den Countdown abzugleichen."
+                                    "text": "Gesamtcountdown folgt der Liste. Nach Sequenz-Pause wird der nächste Eintrag gespielt; restliche Halte-Takte des pausierten Eintrags werden dabei übersprungen."
                                 }
                             },
                             {
@@ -10546,7 +13372,7 @@
                                     "fontname": "Menlo",
                                     "fontsize": 13.0,
                                     "id": "list-editor",
-                                    "linecount": 4,
+                                    "linecount": 154,
                                     "maxclass": "textedit",
                                     "nosymquotes": 1,
                                     "numinlets": 1,
@@ -10567,7 +13393,7 @@
                                         190.0
                                     ],
                                     "presentation": 1,
-                                    "presentation_linecount": 4,
+                                    "presentation_linecount": 154,
                                     "presentation_rect": [
                                         1.6260162591934204,
                                         281.30081284046173,
@@ -10587,7 +13413,7 @@
                                         }
                                     },
                                     "tabmode": 0,
-                                    "text": "1, 100.0 0.0 3;\n2, 200.0 0.0 2;\n3, -300.0 0.0 5;\n4, 400.0 0.0 5;",
+                                    "text": "1, 2. -5. 1;\n2, 4.018602 -5.05648 1;\n3, 5.558667 -5.125993 1;\n4, 7.149521 -5.207956 1;\n5, 8.178878 -5.270327 1;\n6, 9.058417 -5.326477 1;\n7, 10.492165 -5.423616 1;\n8, 12.5047 -5.624781 1;\n9, 13.81952 -5.768686 1;\n10, 15.744535 -5.992519 1;\n11, 17.106489 -6.162668 1;\n12, 18.213126 -6.305521 1;\n13, 19.753783 -6.500698 1;\n14, 21.20768 -6.725496 1;\n15, 23.125155 -7.028626 1;\n16, 24.361012 -7.249389 1;\n17, 25.709013 -7.48254 1;\n18, 27.232296 -7.75767 1;\n19, 29.013429 -8.068303 1;\n20, 30.755398 -8.426054 1;\n21, 32.439471 -8.770579 1;\n22, 34.700721 -9.275929 1;\n23, 36.068972 -9.597655 1;\n24, 37.797106 -9.970055 1;\n25, 39.683234 -10.44587 1;\n26, 40.905375 -10.739414 1;\n27, 42.703877 -11.224734 1;\n28, 44.327277 -11.621209 1;\n29, 45.730921 -12.023401 1;\n30, 47.342253 -12.489862 1;\n31, 48.590974 -12.838624 1;\n32, 50.253607 -13.311712 1;\n33, 52.098353 -13.827416 1;\n34, 53.543495 -14.302712 1;\n35, 54.981521 -14.754627 1;\n36, 56.595957 -15.205596 1;\n37, 58.121602 -15.746148 1;\n38, 59.737637 -16.286508 1;\n39, 61.147576 -16.752946 1;\n40, 74.159578 -20.267274 1;\n41, 93.253968 -27.609761 1;\n42, 113.316826 -37.874735 1;\n43, 127.758066 -46.185054 1;\n44, 146.60603 -56.064985 1;\n45, 162.554793 -67.978543 1;\n46, 181.80084 -79.851631 1;\n47, 200.36261 -95.491948 1;\n48, 215.789247 -107.598545 1;\n49, 236.349529 -125.064865 1;\n50, 250.88535 -139.480173 1;\n51, 257.305472 -144.722565 1;\n52, 263.967913 -149.89231 1;\n53, 270.454401 -155.522038 1;\n54, 276.492348 -161.78423 1;\n55, 282.079031 -168.434678 1;\n56, 292.2299 -179.861846 1;\n57, 302.112596 -191.498831 1;\n58, 312.892379 -203.825283 1;\n59, 324.922353 -216.595612 1;\n60, 337.607552 -228.906945 1;\n61, 347.977679 -239.880685 1;\n62, 358.817551 -250.346026 1;\n63, 372.182528 -263.911311 1;\n64, 387.661901 -280.827851 1;\n65, 402.522787 -297.925207 1;\n66, 414.368867 -313.481377 1;\n67, 425.651088 -329.551709 1;\n68, 439.118598 -348.389746 1;\n69, 455.140649 -369.856585 1;\n70, 471.569903 -391.464207 1;\n71, 493.742879 -426.073735 1;\n72, 516.317076 -460.413414 1;\n73, 539.094931 -498.045632 1;\n74, 561.80032 -539.008703 1;\n75, 584.2 -579.8 1;\n76, 586.4 -586.4 1;\n77, 592.7 -592.7 1;\n78, 597.8 -597.8 1;\n79, 599.6 -599.6 1;\n80, 596.2 -596.2 1;\n81, 589.8 -589.8 1;\n82, 583.5 -583.5 1;\n83, 590.1 -590.1 1;\n84, 595.4 -595.4 1;\n85, 588.3 -588.3 1;\n86, 578.1 -590.6 1;\n87, 539.781685 -567.302344 1;\n88, 501.740339 -544.595933 1;\n89, 465.528806 -525.813095 1;\n90, 429.541947 -508.268369 1;\n91, 394.145865 -487.35526 1;\n92, 361.454231 -462.262525 1;\n93, 329.997781 -437.928082 1;\n94, 296.345976 -412.000515 1;\n95, 262.772235 -388.226227 1;\n96, 242.089737 -372.034769 1;\n97, 227.213501 -357.468466 1;\n98, 211.499056 -341.373801 1;\n99, 195.394204 -325.45722 1;\n100, 180.007257 -310.688037 1;\n101, 158.295615 -285.971771 1;\n102, 144.258446 -268.918427 1;\n103, 125.849811 -249.345392 1;\n104, 108.938095 -232.946423 1;\n105, 92.526547 -212.932385 1;\n106, 74.63733 -189.280804 1;\n107, 61.266474 -169.120398 1;\n108, 50.445922 -150.360805 1;\n109, 38.713933 -131.942123 1;\n110, 29.988549 -112.859711 1;\n111, 23.123928 -99.047081 1;\n112, 17.432428 -82.52992 1;\n113, 13.448049 -68.562422 1;\n114, 12.920046 -66.627807 1;\n115, 12.305046 -64.630552 1;\n116, 11.689978 -62.715217 1;\n117, 11.251437 -61.096451 1;\n118, 10.758487 -59.47859 1;\n119, 10.236143 -57.625943 1;\n120, 9.616062 -55.253659 1;\n121, 9.206041 -53.678123 1;\n122, 8.659934 -51.577143 1;\n123, 8.265268 -49.970059 1;\n124, 7.88602 -48.29918 1;\n125, 7.506548 -46.688212 1;\n126, 7.117733 -44.916399 1;\n127, 6.683739 -42.869173 1;\n128, 6.296015 -41.18412 1;\n129, 5.984172 -39.50735 1;\n130, 5.763965 -38.305187 1;\n131, 5.546136 -37.103401 1;\n132, 5.345297 -36.019066 1;\n133, 5.030694 -34.24922 1;\n134, 4.798946 -32.849242 1;\n135, 4.556686 -31.418504 1;\n136, 4.315656 -29.865391 1;\n137, 4.060052 -28.018529 1;\n138, 3.846127 -26.416482 1;\n139, 3.66467 -25.054813 1;\n140, 3.451784 -23.304957 1;\n141, 3.269224 -21.76145 1;\n142, 3.14799 -20.505368 1;\n143, 3.02241 -19.083603 1;\n144, 2.922787 -17.915581 1;\n145, 2.826244 -16.724581 1;\n146, 2.73176 -15.518235 1;\n147, 2.655566 -14.499566 1;\n148, 2.594431 -13.456102 1;\n149, 2.545115 -12.350679 1;\n150, 2.509874 -11.508758 1;\n151, 2.472334 -10.543423 1;\n152, 2.440419 -9.607086 1;\n153, 2.412424 -8.638243 1;\n154, 2.4 -5. 1;\n",
                                     "textcolor": [
                                         0.9,
                                         0.9,
@@ -10637,7 +13463,7 @@
                                         22.0
                                     ],
                                     "restore": [
-                                        "1, 100.0 0.0 3;\n2, 200.0 0.0 2;\n3, -300.0 0.0 5;\n4, 400.0 0.0 5;"
+                                        "1, 2. -5. 1;\n2, 4.018602 -5.05648 1;\n3, 5.558667 -5.125993 1;\n4, 7.149521 -5.207956 1;\n5, 8.178878 -5.270327 1;\n6, 9.058417 -5.326477 1;\n7, 10.492165 -5.423616 1;\n8, 12.5047 -5.624781 1;\n9, 13.81952 -5.768686 1;\n10, 15.744535 -5.992519 1;\n11, 17.106489 -6.162668 1;\n12, 18.213126 -6.305521 1;\n13, 19.753783 -6.500698 1;\n14, 21.20768 -6.725496 1;\n15, 23.125155 -7.028626 1;\n16, 24.361012 -7.249389 1;\n17, 25.709013 -7.48254 1;\n18, 27.232296 -7.75767 1;\n19, 29.013429 -8.068303 1;\n20, 30.755398 -8.426054 1;\n21, 32.439471 -8.770579 1;\n22, 34.700721 -9.275929 1;\n23, 36.068972 -9.597655 1;\n24, 37.797106 -9.970055 1;\n25, 39.683234 -10.44587 1;\n26, 40.905375 -10.739414 1;\n27, 42.703877 -11.224734 1;\n28, 44.327277 -11.621209 1;\n29, 45.730921 -12.023401 1;\n30, 47.342253 -12.489862 1;\n31, 48.590974 -12.838624 1;\n32, 50.253607 -13.311712 1;\n33, 52.098353 -13.827416 1;\n34, 53.543495 -14.302712 1;\n35, 54.981521 -14.754627 1;\n36, 56.595957 -15.205596 1;\n37, 58.121602 -15.746148 1;\n38, 59.737637 -16.286508 1;\n39, 61.147576 -16.752946 1;\n40, 74.159578 -20.267274 1;\n41, 93.253968 -27.609761 1;\n42, 113.316826 -37.874735 1;\n43, 127.758066 -46.185054 1;\n44, 146.60603 -56.064985 1;\n45, 162.554793 -67.978543 1;\n46, 181.80084 -79.851631 1;\n47, 200.36261 -95.491948 1;\n48, 215.789247 -107.598545 1;\n49, 236.349529 -125.064865 1;\n50, 250.88535 -139.480173 1;\n51, 257.305472 -144.722565 1;\n52, 263.967913 -149.89231 1;\n53, 270.454401 -155.522038 1;\n54, 276.492348 -161.78423 1;\n55, 282.079031 -168.434678 1;\n56, 292.2299 -179.861846 1;\n57, 302.112596 -191.498831 1;\n58, 312.892379 -203.825283 1;\n59, 324.922353 -216.595612 1;\n60, 337.607552 -228.906945 1;\n61, 347.977679 -239.880685 1;\n62, 358.817551 -250.346026 1;\n63, 372.182528 -263.911311 1;\n64, 387.661901 -280.827851 1;\n65, 402.522787 -297.925207 1;\n66, 414.368867 -313.481377 1;\n67, 425.651088 -329.551709 1;\n68, 439.118598 -348.389746 1;\n69, 455.140649 -369.856585 1;\n70, 471.569903 -391.464207 1;\n71, 493.742879 -426.073735 1;\n72, 516.317076 -460.413414 1;\n73, 539.094931 -498.045632 1;\n74, 561.80032 -539.008703 1;\n75, 584.2 -579.8 1;\n76, 586.4 -586.4 1;\n77, 592.7 -592.7 1;\n78, 597.8 -597.8 1;\n79, 599.6 -599.6 1;\n80, 596.2 -596.2 1;\n81, 589.8 -589.8 1;\n82, 583.5 -583.5 1;\n83, 590.1 -590.1 1;\n84, 595.4 -595.4 1;\n85, 588.3 -588.3 1;\n86, 578.1 -590.6 1;\n87, 539.781685 -567.302344 1;\n88, 501.740339 -544.595933 1;\n89, 465.528806 -525.813095 1;\n90, 429.541947 -508.268369 1;\n91, 394.145865 -487.35526 1;\n92, 361.454231 -462.262525 1;\n93, 329.997781 -437.928082 1;\n94, 296.345976 -412.000515 1;\n95, 262.772235 -388.226227 1;\n96, 242.089737 -372.034769 1;\n97, 227.213501 -357.468466 1;\n98, 211.499056 -341.373801 1;\n99, 195.394204 -325.45722 1;\n100, 180.007257 -310.688037 1;\n101, 158.295615 -285.971771 1;\n102, 144.258446 -268.918427 1;\n103, 125.849811 -249.345392 1;\n104, 108.938095 -232.946423 1;\n105, 92.526547 -212.932385 1;\n106, 74.63733 -189.280804 1;\n107, 61.266474 -169.120398 1;\n108, 50.445922 -150.360805 1;\n109, 38.713933 -131.942123 1;\n110, 29.988549 -112.859711 1;\n111, 23.123928 -99.047081 1;\n112, 17.432428 -82.52992 1;\n113, 13.448049 -68.562422 1;\n114, 12.920046 -66.627807 1;\n115, 12.305046 -64.630552 1;\n116, 11.689978 -62.715217 1;\n117, 11.251437 -61.096451 1;\n118, 10.758487 -59.47859 1;\n119, 10.236143 -57.625943 1;\n120, 9.616062 -55.253659 1;\n121, 9.206041 -53.678123 1;\n122, 8.659934 -51.577143 1;\n123, 8.265268 -49.970059 1;\n124, 7.88602 -48.29918 1;\n125, 7.506548 -46.688212 1;\n126, 7.117733 -44.916399 1;\n127, 6.683739 -42.869173 1;\n128, 6.296015 -41.18412 1;\n129, 5.984172 -39.50735 1;\n130, 5.763965 -38.305187 1;\n131, 5.546136 -37.103401 1;\n132, 5.345297 -36.019066 1;\n133, 5.030694 -34.24922 1;\n134, 4.798946 -32.849242 1;\n135, 4.556686 -31.418504 1;\n136, 4.315656 -29.865391 1;\n137, 4.060052 -28.018529 1;\n138, 3.846127 -26.416482 1;\n139, 3.66467 -25.054813 1;\n140, 3.451784 -23.304957 1;\n141, 3.269224 -21.76145 1;\n142, 3.14799 -20.505368 1;\n143, 3.02241 -19.083603 1;\n144, 2.922787 -17.915581 1;\n145, 2.826244 -16.724581 1;\n146, 2.73176 -15.518235 1;\n147, 2.655566 -14.499566 1;\n148, 2.594431 -13.456102 1;\n149, 2.545115 -12.350679 1;\n150, 2.509874 -11.508758 1;\n151, 2.472334 -10.543423 1;\n152, 2.440419 -9.607086 1;\n153, 2.412424 -8.638243 1;\n154, 2.4 -5. 1;\n"
                                     ],
                                     "saved_object_attributes": {
                                         "parameter_enable": 0,
@@ -10893,6 +13719,1208 @@
                                     ],
                                     "text": "deferlow"
                                 }
+                            },
+                            {
+                                "box": {
+                                    "comment": "Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "id": "module-in",
+                                    "index": 5,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        1400.0,
+                                        20.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "module-order",
+                                    "maxclass": "newobj",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "int",
+                                        "int"
+                                    ],
+                                    "patching_rect": [
+                                        1400.0,
+                                        75.0,
+                                        70.0,
+                                        22.0
+                                    ],
+                                    "text": "t i i"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "phase-control",
+                                    "maxclass": "newobj",
+                                    "numinlets": 4,
+                                    "numoutlets": 4,
+                                    "outlettype": [
+                                        "bang",
+                                        "bang",
+                                        "int",
+                                        "bang"
+                                    ],
+                                    "patcher": {
+                                        "fileversion": 1,
+                                        "appversion": {
+                                            "major": 9,
+                                            "minor": 1,
+                                            "revision": 4,
+                                            "architecture": "x64",
+                                            "modernui": 1
+                                        },
+                                        "classnamespace": "box",
+                                        "rect": [
+                                            140.0,
+                                            140.0,
+                                            960.0,
+                                            760.0
+                                        ],
+                                        "boxes": [
+                                            {
+                                                "box": {
+                                                    "comment": "Sequenz gewünscht Ein/Aus",
+                                                    "id": "request-in",
+                                                    "index": 1,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "id": "module-in",
+                                                    "index": 2,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "id": "list-in",
+                                                    "index": 3,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        450.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Gemeinsame Delay-Taktkante",
+                                                    "id": "edge-in",
+                                                    "index": 4,
+                                                    "maxclass": "inlet",
+                                                    "numinlets": 0,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        20.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-normalize",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "!= 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        120.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "request-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        165.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "enable-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        130.0,
+                                                        215.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "disable-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        265.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "enabled",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        130.0,
+                                                        260.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "disabled",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        310.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-one",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        450.0,
+                                                        100.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "armed-gate",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        310.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "gate 1 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "edge-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        360.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        410.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "i 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 3,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        550.0,
+                                                        460.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0 1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "first-order",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        "bang",
+                                                        "bang"
+                                                    ],
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        510.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "t b b b"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "pending-zero",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        700.0,
+                                                        555.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-one",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        360.0,
+                                                        410.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-zero",
+                                                    "maxclass": "message",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        310.0,
+                                                        60.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-select",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 2,
+                                                    "numoutlets": 2,
+                                                    "outlettype": [
+                                                        "bang",
+                                                        ""
+                                                    ],
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        75.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "sel 0"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "active-change",
+                                                    "maxclass": "newobj",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 3,
+                                                    "outlettype": [
+                                                        "",
+                                                        "int",
+                                                        "int"
+                                                    ],
+                                                    "patching_rect": [
+                                                        360.0,
+                                                        465.0,
+                                                        100.0,
+                                                        22.0
+                                                    ],
+                                                    "text": "change -1"
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "id": "first-out",
+                                                    "index": 1,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "id": "advance-out",
+                                                    "index": 2,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        300.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "comment": "Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "id": "active-out",
+                                                    "index": 3,
+                                                    "maxclass": "outlet",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        650.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "note",
+                                                    "linecount": 2,
+                                                    "maxclass": "comment",
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        695.0,
+                                                        705.0,
+                                                        33.0
+                                                    ],
+                                                    "text": "Sequenz AUS merkt den Eintrag; EIN spielt den nächsten Eintrag an der Taktkante. Modul AUS markiert Neustart bei Eintrag 1. Listenänderung beginnt ebenfalls bei Eintrag 1 am nächsten Takt."
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-one",
+                                                    "maxclass": "message",
+                                                    "text": "1",
+                                                    "patching_rect": [
+                                                        30.0,
+                                                        365.0,
+                                                        50.0,
+                                                        22.0
+                                                    ],
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-zero",
+                                                    "maxclass": "message",
+                                                    "text": "0",
+                                                    "patching_rect": [
+                                                        700.0,
+                                                        605.0,
+                                                        50.0,
+                                                        22.0
+                                                    ],
+                                                    "numinlets": 2,
+                                                    "numoutlets": 1,
+                                                    "outlettype": [
+                                                        ""
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-pending",
+                                                    "maxclass": "newobj",
+                                                    "text": "i 0",
+                                                    "patching_rect": [
+                                                        500.0,
+                                                        525.0,
+                                                        110.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-select",
+                                                    "maxclass": "newobj",
+                                                    "text": "sel 0 1",
+                                                    "patching_rect": [
+                                                        500.0,
+                                                        570.0,
+                                                        110.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-order",
+                                                    "maxclass": "newobj",
+                                                    "text": "t b b",
+                                                    "patching_rect": [
+                                                        820.0,
+                                                        570.0,
+                                                        110.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "resume-out",
+                                                    "maxclass": "outlet",
+                                                    "index": 4,
+                                                    "numinlets": 1,
+                                                    "numoutlets": 0,
+                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "patching_rect": [
+                                                        820.0,
+                                                        640.0,
+                                                        30.0,
+                                                        30.0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "box": {
+                                                    "id": "module-reset",
+                                                    "maxclass": "newobj",
+                                                    "text": "t b b b",
+                                                    "patching_rect": [
+                                                        250.0,
+                                                        130.0,
+                                                        110.0,
+                                                        22.0
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "lines": [
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "active-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "edge-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "armed-gate",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "disabled",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disable-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "disabled",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "edge-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "active-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "edge-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "enabled",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "enable-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "armed-gate",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "enabled",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "first-out",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-zero",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "first-order",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-one",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "list-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "module-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "module-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "pending-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "first-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "pending-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "pending",
+                                                        1
+                                                    ],
+                                                    "source": [
+                                                        "pending-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-select",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-change",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-normalize",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-in",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "request-change",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-normalize",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "disable-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "destination": [
+                                                        "enable-order",
+                                                        0
+                                                    ],
+                                                    "source": [
+                                                        "request-select",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "disable-order",
+                                                        2
+                                                    ],
+                                                    "destination": [
+                                                        "resume-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-one",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-zero",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        1
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "pending-select",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "resume-pending",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-pending",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "resume-select",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-select",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "advance-out",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-select",
+                                                        1
+                                                    ],
+                                                    "destination": [
+                                                        "resume-order",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-order",
+                                                        1
+                                                    ],
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "resume-order",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "resume-out",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "module-select",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "module-reset",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "module-reset",
+                                                        2
+                                                    ],
+                                                    "destination": [
+                                                        "pending-one",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "module-reset",
+                                                        1
+                                                    ],
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "module-reset",
+                                                        0
+                                                    ],
+                                                    "destination": [
+                                                        "active-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "patchline": {
+                                                    "source": [
+                                                        "first-order",
+                                                        2
+                                                    ],
+                                                    "destination": [
+                                                        "resume-zero",
+                                                        0
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "patching_rect": [
+                                        30.0,
+                                        375.0,
+                                        250.0,
+                                        22.0
+                                    ],
+                                    "saved_object_attributes": {
+                                        "editing_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "locked_bgcolor": [
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            0.6470588235294118,
+                                            1.0
+                                        ],
+                                        "patchlinecolor": [
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            0.30980392156862746,
+                                            1.0
+                                        ]
+                                    },
+                                    "text": "p Sequenz_Am_Delaytakt"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-entry-remaining",
+                                    "maxclass": "newobj",
+                                    "text": "i 0",
+                                    "patching_rect": [
+                                        1280.0,
+                                        480.0,
+                                        110.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-total-remaining",
+                                    "maxclass": "newobj",
+                                    "text": "i 0",
+                                    "patching_rect": [
+                                        1450.0,
+                                        480.0,
+                                        110.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-subtract",
+                                    "maxclass": "newobj",
+                                    "text": "- 0",
+                                    "patching_rect": [
+                                        1450.0,
+                                        580.0,
+                                        110.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "resume-skip",
+                                    "maxclass": "newobj",
+                                    "text": "t b b b",
+                                    "patching_rect": [
+                                        1280.0,
+                                        390.0,
+                                        110.0,
+                                        22.0
+                                    ]
+                                }
                             }
                         ],
                         "lines": [
@@ -10935,8 +14963,8 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "tick",
-                                        0
+                                        "phase-control",
+                                        3
                                     ],
                                     "source": [
                                         "clock",
@@ -10963,7 +14991,8 @@
                                     "source": [
                                         "countload",
                                         1
-                                    ]
+                                    ],
+                                    "order": 0
                                 }
                             },
                             {
@@ -10997,7 +15026,8 @@
                                     "source": [
                                         "countorder",
                                         2
-                                    ]
+                                    ],
+                                    "order": 0
                                 }
                             },
                             {
@@ -11087,38 +15117,6 @@
                                     "destination": [
                                         "next",
                                         0
-                                    ],
-                                    "midpoints": [
-                                        255.5,
-                                        355.0,
-                                        325.0,
-                                        355.0,
-                                        325.0,
-                                        660.0,
-                                        174.5,
-                                        660.0
-                                    ],
-                                    "source": [
-                                        "first",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "schedule",
-                                        1
-                                    ],
-                                    "midpoints": [
-                                        174.5,
-                                        355.0,
-                                        350.0,
-                                        355.0,
-                                        350.0,
-                                        305.0,
-                                        490.5,
-                                        305.0
                                     ],
                                     "source": [
                                         "first",
@@ -11213,8 +15211,8 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "restart",
-                                        0
+                                        "phase-control",
+                                        2
                                     ],
                                     "source": [
                                         "list-text-bridge",
@@ -11230,6 +15228,42 @@
                                     ],
                                     "source": [
                                         "list-value-observer",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "module-order",
+                                        0
+                                    ],
+                                    "source": [
+                                        "module-in",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "clock",
+                                        0
+                                    ],
+                                    "source": [
+                                        "module-order",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "phase-control",
+                                        1
+                                    ],
+                                    "source": [
+                                        "module-order",
                                         0
                                     ]
                                 }
@@ -11255,6 +15289,42 @@
                                     "source": [
                                         "obj-1",
                                         0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "restart",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "runout",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        2
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [
+                                        "tick",
+                                        0
+                                    ],
+                                    "source": [
+                                        "phase-control",
+                                        1
                                     ]
                                 }
                             },
@@ -11297,28 +15367,6 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "stop",
-                                        0
-                                    ],
-                                    "midpoints": [
-                                        255.5,
-                                        265.0,
-                                        330.0,
-                                        265.0,
-                                        330.0,
-                                        220.0,
-                                        39.5,
-                                        220.0
-                                    ],
-                                    "source": [
-                                        "restart",
-                                        3
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
                                         "total-prepare",
                                         0
                                     ],
@@ -11331,101 +15379,11 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "runorder",
+                                        "phase-control",
                                         0
                                     ],
                                     "source": [
                                         "run",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "runout",
-                                        0
-                                    ],
-                                    "midpoints": [
-                                        120.5,
-                                        165.0,
-                                        795.0,
-                                        165.0,
-                                        789.5,
-                                        960.0
-                                    ],
-                                    "source": [
-                                        "runorder",
-                                        2
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "runselect",
-                                        0
-                                    ],
-                                    "source": [
-                                        "runorder",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "schedule",
-                                        0
-                                    ],
-                                    "midpoints": [
-                                        80.0,
-                                        165.0,
-                                        345.0,
-                                        165.0,
-                                        345.0,
-                                        305.0,
-                                        409.5,
-                                        305.0
-                                    ],
-                                    "source": [
-                                        "runorder",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "restart",
-                                        0
-                                    ],
-                                    "source": [
-                                        "runselect",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "stop",
-                                        0
-                                    ],
-                                    "source": [
-                                        "runselect",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "clock",
-                                        0
-                                    ],
-                                    "source": [
-                                        "schedule",
                                         0
                                     ]
                                 }
@@ -11457,52 +15415,8 @@
                             {
                                 "patchline": {
                                     "destination": [
-                                        "clock",
-                                        0
-                                    ],
-                                    "midpoints": [
-                                        39.5,
-                                        265.0,
-                                        10.0,
-                                        265.0,
-                                        10.0,
-                                        370.0,
-                                        409.5,
-                                        370.0
-                                    ],
-                                    "source": [
-                                        "stop",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
                                         "remaining",
                                         0
-                                    ],
-                                    "source": [
-                                        "tick",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "schedule",
-                                        1
-                                    ],
-                                    "midpoints": [
-                                        409.5,
-                                        468.0,
-                                        730.0,
-                                        468.0,
-                                        730.0,
-                                        305.0,
-                                        490.5,
-                                        305.0
                                     ],
                                     "source": [
                                         "tick",
@@ -11518,7 +15432,7 @@
                                     ],
                                     "source": [
                                         "tick",
-                                        2
+                                        1
                                     ]
                                 }
                             },
@@ -11603,7 +15517,8 @@
                                     "source": [
                                         "total-load",
                                         1
-                                    ]
+                                    ],
+                                    "order": 0
                                 }
                             },
                             {
@@ -11759,7 +15674,8 @@
                                     "source": [
                                         "total-update",
                                         2
-                                    ]
+                                    ],
+                                    "order": 0
                                 }
                             },
                             {
@@ -11871,13 +15787,149 @@
                                         0
                                     ]
                                 }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "countload",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
+                                    ],
+                                    "order": 1
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "countorder",
+                                        2
+                                    ],
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        1
+                                    ],
+                                    "order": 1
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "total-load",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        1
+                                    ],
+                                    "order": 1
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "total-update",
+                                        2
+                                    ],
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        1
+                                    ],
+                                    "order": 1
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "phase-control",
+                                        3
+                                    ],
+                                    "destination": [
+                                        "resume-skip",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-skip",
+                                        2
+                                    ],
+                                    "destination": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-entry-remaining",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "resume-subtract",
+                                        1
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-skip",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "resume-total-remaining",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-total-remaining",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "resume-subtract",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-subtract",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "total-update",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "resume-skip",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "next",
+                                        0
+                                    ]
+                                }
                             }
                         ]
                     },
                     "patching_rect": [
-                        1589.0,
-                        483.82352018356323,
-                        180.0,
+                        1253.5911281704903,
+                        473.1481402516365,
+                        134.81774365901947,
                         22.0
                     ],
                     "saved_object_attributes": {
@@ -12101,7 +16153,7 @@
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [
-                                        "int"
+                                        ""
                                     ],
                                     "patching_rect": [
                                         30.0,
@@ -12331,6 +16383,24 @@
                         22.0
                     ],
                     "text": "switch 2 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "pitch-clock-module-recall",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        1760.0,
+                        245.0,
+                        95.0,
+                        22.0
+                    ],
+                    "text": "outputvalue"
                 }
             }
         ],
@@ -13562,6 +17632,20 @@
                         "obj-95",
                         0
                     ],
+                    "order": 1,
+                    "source": [
+                        "obj-92",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "pitch-sequence",
+                        4
+                    ],
+                    "order": 0,
                     "source": [
                         "obj-92",
                         0
@@ -13746,6 +17830,18 @@
                     ],
                     "source": [
                         "obj-98",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-36",
+                        0
+                    ],
+                    "source": [
+                        "pitch-clock-module-recall",
                         0
                     ]
                 }
@@ -14188,7 +18284,7 @@
                         "obj-90",
                         0
                     ],
-                    "order": 2,
+                    "order": 1,
                     "source": [
                         "pitch-sequence-source2",
                         0
@@ -14201,7 +18297,7 @@
                         "pitch-sequence",
                         3
                     ],
-                    "order": 1,
+                    "order": 2,
                     "source": [
                         "pitch-sequence-source2",
                         0
@@ -14478,10 +18574,23 @@
             {
                 "patchline": {
                     "destination": [
+                        "pitch-clock-module-recall",
+                        0
+                    ],
+                    "order": 0,
+                    "source": [
+                        "pitch-transposition-defer",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
                         "pitch-link-startup",
                         0
                     ],
-                    "order": 1,
+                    "order": 2,
                     "source": [
                         "pitch-transposition-defer",
                         0
@@ -14494,7 +18603,7 @@
                         "pitch-sequence-state-recall",
                         0
                     ],
-                    "order": 0,
+                    "order": 1,
                     "source": [
                         "pitch-transposition-defer",
                         0
