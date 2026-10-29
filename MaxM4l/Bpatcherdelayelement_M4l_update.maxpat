@@ -15,6 +15,32 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 9.0,
+                    "id": "obj-85",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1059.906534075737, 800.6058484315872, 145.0, 17.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 20.24682468175888, 129.27272272109985, 66.50048333406448, 17.0 ],
+                    "text": "Bandrouting"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 9.0,
+                    "id": "obj-56",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1044.906534075737, 785.6058484315872, 145.0, 17.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 21.78988289833069, 87.77272415161133, 66.50048333406448, 17.0 ],
+                    "text": "Fiter Type"
+                }
+            },
+            {
+                "box": {
                     "color": [ 0.168627450980392, 1.0, 0.0, 1.0 ],
                     "id": "obj-106",
                     "linecount": 3,
@@ -145,6 +171,7 @@
             },
             {
                 "box": {
+                    "bgcolor": [ 1.0, 0.7254901960784313, 0.00392156862745098, 1.0 ],
                     "hint": "Frequency-Sequenz: Up-Hz und Down-Hz für eine Anzahl eingestellter Delayintervalle. Beide Beträge 0–5000 Hz.",
                     "id": "freq-sequence-open",
                     "maxclass": "textbutton",
@@ -154,7 +181,12 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 370.68967461586, 1729.3104355335236, 58.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 179.0, 209.25, 38.0, 19.25 ],
+                    "presentation_rect": [ 175.45453917980194, 200.9090837240219, 49.32735592126846, 19.282511860132217 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_gain_reduction_line_color"
+                        }
+                    },
                     "text": "SEQ"
                 }
             },
@@ -170,7 +202,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 170.6896641254425, 1765.517333984375, 34.0, 34.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 150.0, 207.8, 25.0, 25.0 ],
+                    "presentation_rect": [ 149.09090375900269, 198.18181109428406, 25.0, 25.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "Aus", "Ein" ],
@@ -199,7 +231,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 900.0000472068787, 1765.517333984375, 34.0, 34.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 268.4684683084488, 207.83823369443417, 25.044649049639702, 25.044649049639702 ],
+                    "presentation_rect": [ 243.6363549232483, 198.18181109428406, 25.044649049639702, 25.044649049639702 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "Aus", "Ein" ],
@@ -218,6 +250,7 @@
             },
             {
                 "box": {
+                    "bgcolor": [ 1.0, 0.7254901960784313, 0.00392156862745098, 1.0 ],
                     "hint": "Pitch-Sequenz: Cent-Werte für eine Anzahl eingestellter Delayintervalle",
                     "id": "pitch-sequence-open",
                     "maxclass": "textbutton",
@@ -227,7 +260,12 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 1100.0000576972961, 1729.3104355335236, 58.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 297.10980463027954, 209.24853944778442, 37.57225155830383, 19.251460552215576 ],
+                    "presentation_rect": [ 272.7272629737854, 200.9090837240219, 57.399105072021484, 19.282511860132217 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_control_selection"
+                        }
+                    },
                     "text": "SEQ"
                 }
             },
@@ -273,7 +311,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 1768.3544071912766, 740.5063194036484, 110.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 248.98988682031631, 184.3434253334999, 77.0, 23.0 ],
+                    "presentation_rect": [ 249.090900182724, 162.72726690769196, 77.0, 23.0 ],
                     "textcolor": [ 0.8, 0.8, 0.8, 1.0 ],
                     "triangle": 0,
                     "varname": "pitch2EffectiveDisplay"
@@ -281,32 +319,21 @@
             },
             {
                 "box": {
+                    "bgcolor": [ 1.0, 1.0, 1.0, 0.3 ],
+                    "fontsize": 10.0,
                     "id": "obj-89",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 263.03031516075134, 443.61812460422516, 150.0, 20.0 ],
+                    "patching_rect": [ 263.03031516075134, 443.61812460422516, 128.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 248.98988682031631, 168.1818099617958, 77.0, 20.0 ],
+                    "presentation_rect": [ 255.454536318779, 146.36363112926483, 66.0, 18.0 ],
                     "text": "shifter #1 #2"
                 }
             },
             {
                 "box": {
-                    "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
-                    "fontsize": 8.0,
-                    "id": "obj-85",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1219.0873567461967, 348.43802696466446, 68.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 302.4186062812805, 132.0, 45.58139371871948, 15.0 ],
-                    "text": "100=1 HT"
-                }
-            },
-            {
-                "box": {
+                    "bgcolor": [ 0.0, 0.9333333333333333, 1.0, 1.0 ],
                     "fontsize": 10.0,
                     "hint": "Pitch 2: −1 Halbton (100 Cent); verändert den Pitch-Parameter, keine eigene Automation.",
                     "id": "pitch2-step-minus",
@@ -319,12 +346,18 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 1705.5443239212036, 903.8348727226257, 42.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 230.30301904678345, 183.3333243727684, 20.0, 21.0 ],
+                    "presentation_rect": [ 229.09090089797974, 161.81817603111267, 20.0, 21.0 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_value_arc"
+                        }
+                    },
                     "text": "−1"
                 }
             },
             {
                 "box": {
+                    "bgcolor": [ 1.0, 0.39215686274509803, 0.0, 1.0 ],
                     "fontsize": 10.0,
                     "hint": "Pitch 2: +1 Halbton (100 Cent); verändert den Pitch-Parameter, keine eigene Automation.",
                     "id": "pitch2-step-plus",
@@ -337,12 +370,18 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 1805.5443239212036, 903.8348727226257, 42.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 327.7777617573738, 183.3333243727684, 20.0, 21.0 ],
+                    "presentation_rect": [ 328.18180644512177, 163.63635778427124, 20.0, 21.0 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_key_assignment"
+                        }
+                    },
                     "text": "+1"
                 }
             },
             {
                 "box": {
+                    "bgcolor": [ 0.0, 0.9333333333333333, 1.0, 1.0 ],
                     "fontsize": 10.0,
                     "hint": "Pitch 1: −1 Halbton (100 Cent); verändert den Pitch-Parameter, keine eigene Automation.",
                     "id": "pitch1-step-minus",
@@ -355,12 +394,18 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 1200.0, 880.0, 42.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 230.546132594347, 149.0, 20.0, 21.0 ],
+                    "presentation_rect": [ 229.99999177455902, 127.27272272109985, 20.0, 21.0 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_display_line_two"
+                        }
+                    },
                     "text": "−1"
                 }
             },
             {
                 "box": {
+                    "bgcolor": [ 1.0, 0.39215686274509803, 0.0, 1.0 ],
                     "fontsize": 10.0,
                     "hint": "Pitch 1: +1 Halbton (100 Cent); verändert den Pitch-Parameter, keine eigene Automation.",
                     "id": "pitch1-step-plus",
@@ -373,7 +418,12 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 1300.0, 880.0, 42.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 328.0, 150.0, 20.0, 21.0 ],
+                    "presentation_rect": [ 328.18180644512177, 128.18181359767914, 20.0, 21.0 ],
+                    "saved_attribute_attributes": {
+                        "bgcolor": {
+                            "expression": "themecolor.live_key_assignment"
+                        }
+                    },
                     "text": "+1"
                 }
             },
@@ -404,15 +454,16 @@
             },
             {
                 "box": {
-                    "activebgcolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "activebgoncolor": [ 0.0, 0.0, 0.0, 1.0 ],
-                    "activetextcolor": [ 1.0, 0.0, 0.0, 1.0 ],
-                    "activetextoncolor": [ 1.0, 0.933333, 0.0, 1.0 ],
+                    "activebgcolor": [ 0.22, 0.22, 0.22, 1.0 ],
+                    "activebgoncolor": [ 0.22, 0.22, 0.22, 1.0 ],
+                    "activetextcolor": [ 0.65, 0.65, 0.65, 1.0 ],
+                    "activetextoncolor": [ 0.65, 0.65, 0.65, 1.0 ],
                     "automation": "Unlinked",
                     "automationon": "Linked",
                     "fontsize": 11.0,
                     "hint": "Linked: Pitch 1 führt. Pitch 2 zeigt ausgegraut den wirksamen Gegenwert und ist nicht bedienbar. Eigene Pitch-2-Automation bleibt im Hintergrund erhalten und gilt wieder bei Unlinked.",
                     "id": "pitch-link-button",
+                    "ignoreclick": 1,
                     "maxclass": "live.text",
                     "numinlets": 1,
                     "numoutlets": 2,
@@ -421,7 +472,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1353.0873567461967, 371.142943918705, 62.0, 34.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 351.90182837843895, 188.39252173900604, 76.69172251224518, 18.045111179351807 ],
+                    "presentation_rect": [ 352.72726011276245, 162.72726690769196, 76.69172251224518, 18.045111179351807 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -461,7 +512,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 160.00002121925354, 526.951450586319, 150.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 339.09771424531937, 210.52629709243774, 103.73831695318222, 20.0 ],
+                    "presentation_rect": [ 327.2727155685425, 199.99999284744263, 103.73831695318222, 20.0 ],
                     "text": "PITCHSHIFTER"
                 }
             },
@@ -474,7 +525,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 144.8485074043274, 513.3150881528854, 150.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ -1.5037592649459839, 212.78193598985672, 150.0, 20.0 ],
+                    "presentation_rect": [ 3.3482485711574554, 198.18181109428406, 93.0, 20.0 ],
                     "text": "FREQSHIFTER"
                 }
             },
@@ -491,7 +542,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1608.1857058405876, 371.142943918705, 110.0, 19.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 248.98988682031631, 184.3434253334999, 77.0, 19.0 ],
+                    "presentation_rect": [ 254.5454454421997, 164.54544866085052, 67.46412542462349, 19.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": "themecolor.live_meter_bg"
@@ -806,7 +857,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1263.5593521595001, 1008.0606029629707, 119.49152827262878, 20.0605651140213 ],
                     "presentation": 1,
-                    "presentation_rect": [ 237.68898966908455, 106.29728424549103, 85.59322237968445, 20.3389835357666 ],
+                    "presentation_rect": [ 244.54544579982758, 82.7272697687149, 85.59322237968445, 20.3389835357666 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "GEN", "TRP", "FFT", "ZTX" ],
@@ -835,7 +886,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1059.954547047615, 943.6786227226257, 68.88889217376709, 16.111111879348755 ],
                     "presentation": 1,
-                    "presentation_rect": [ 240.0699420273304, 12.249666094779968, 90.6249965429306, 23.958332419395447 ],
+                    "presentation_rect": [ 239.99999141693115, 17.27272665500641, 90.6249965429306, 23.958332419395447 ],
                     "saved_attribute_attributes": {
                         "activebgoncolor": {
                             "expression": "themecolor.live_macro_assignment"
@@ -1110,7 +1161,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1547.7272579669952, 1155.6818104982376, 56.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 353.001087218523, 60.83952754735947, 56.0, 18.0 ],
+                    "presentation_rect": [ 359.99998712539673, 35.4545441865921, 61.434979647397995, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -1159,7 +1210,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1613.636348247528, 1128.4090834856033, 42.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 386.49851205945015, -3.226524233818054, 42.0, 18.0 ],
+                    "presentation_rect": [ 389.9999860525131, -1.8181817531585693, 42.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 0.0 ],
@@ -1201,7 +1252,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1469.506034686285, 977.3871012330055, 56.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 353.16517904400826, 169.39252173900604, 74.16502118110657, 18.0 ],
+                    "presentation_rect": [ 361.8181688785553, 135.45454061031342, 64.86596263945103, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -1229,43 +1280,42 @@
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-115",
-                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1587.217904150486, 1000.0, 61.0, 47.0 ],
+                    "patching_rect": [ 1587.217904150486, 1000.0, 53.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
-                    "presentation_rect": [ 337.68898871541023, -3.226524233818054, 91.0, 33.0 ],
-                    "text": "Filter Q\nPitchshift Delay"
+                    "presentation_rect": [ 359.99998712539673, -1.8181817531585693, 33.0, 18.0 ],
+                    "text": "Filt Q"
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-104",
-                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1533.7465713760432, 1360.9090547561646, 100.95670843124344, 33.0 ],
+                    "patching_rect": [ 1533.7465713760432, 1360.9090547561646, 87.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_linecount": 2,
-                    "presentation_rect": [ 341.2634791433811, 28.12713247537613, 92.66054272651672, 33.0 ],
-                    "text": "Filter Cutoff\nPitchshift Delay"
+                    "presentation_rect": [ 359.99998712539673, 18.181817531585693, 53.0, 18.0 ],
+                    "text": "Filter Cut"
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-84",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1468.2353553771973, 954.577528834343, 150.0, 20.0 ],
+                    "patching_rect": [ 1468.2353553771973, 954.577528834343, 127.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 351.97470286488533, 149.15442669391632, 76.08695715665817, 20.0 ],
+                    "presentation_rect": [ 361.8181688785553, 118.181813955307, 65.0, 18.0 ],
                     "text": "Feedback "
                 }
             },
@@ -1281,7 +1331,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1412.4999865293503, 1119.318174481392, 51.0, 17.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 349.5937505066395, 102.72585570812225, 76.0, 17.0 ],
+                    "presentation_rect": [ 359.99998712539673, 69.09090662002563, 61.1596846729517, 17.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "D1 Pitch Transposer Fenster ms",
@@ -1308,7 +1358,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1333.7482419890518, 1262.3287007808685, 50.0, 17.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 349.5937505066395, 131.29728400707245, 76.0758490562439, 17.0 ],
+                    "presentation_rect": [ 359.99998712539673, 102.72726905345917, 61.1596846729517, 17.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "D1 Pitch Overlap Gen Fenster ms",
@@ -1350,7 +1400,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1204.0873567461967, 364.5855670571327, 110.0, 19.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 249.0, 150.0, 77.0, 19.0 ],
+                    "presentation_rect": [ 251.81817281246185, 128.18181359767914, 69.70627796649933, 19.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 0.0 ],
@@ -1387,7 +1437,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 1142.0454436540604, 1164.772719502449, 62.09677463769913, 20.16129046678543 ],
                     "presentation": 1,
-                    "presentation_rect": [ 244.8318467438221, 58.678237080574036, 62.09677463769913, 20.16129046678543 ],
+                    "presentation_rect": [ 256.3636271953583, 41.818180322647095, 62.09677463769913, 20.16129046678543 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -1463,80 +1513,71 @@
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-179",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1414.0060346862847, 1095.454538345337, 150.0, 20.0 ],
+                    "patching_rect": [ 1414.0060346862847, 1095.454538345337, 129.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 337.68898871541023, 82.48776066303253, 86.62419700622559, 20.0 ],
-                    "text": "Window Trans"
+                    "presentation_rect": [ 359.99998712539673, 50.90908908843994, 61.0, 18.0 ],
+                    "text": "Wind Trans"
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-176",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1326.898927418625, 1241.7807570695877, 80.48780679702759, 20.0 ],
+                    "patching_rect": [ 1326.898927418625, 1241.7807570695877, 69.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 350.7842266857624, 115.82109367847443, 89.80891013145447, 20.0 ],
+                    "presentation_rect": [ 359.99998712539673, 83.63636064529419, 68.0, 18.0 ],
                     "text": "Overlap Gen "
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-170",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1263.5593521595001, 983.3871012330055, 150.0, 20.0 ],
+                    "patching_rect": [ 1263.5593521595001, 983.3871012330055, 128.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 236.49851348996162, 87.24966537952423, 88.0676857829094, 20.0 ],
+                    "presentation_rect": [ 249.99999105930328, 69.09090662002563, 75.0, 18.0 ],
                     "text": "Pitchshift Type"
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
-                    "fontsize": 11.0,
+                    "fontsize": 10.0,
                     "id": "obj-169",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1204.0873567461967, 333.43802696466446, 87.0, 19.0 ],
+                    "patching_rect": [ 1204.0873567461967, 333.43802696466446, 80.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 226.0, 130.0, 122.0, 19.0 ],
+                    "presentation_rect": [ 244.54544579982758, 101.81817817687988, 85.45355361700058, 18.0 ],
                     "text": "Pitchshift (Cent)"
                 }
             },
             {
                 "box": {
                     "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
-                    "id": "obj-56",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 1126.1363528966904, 1149.9999923706055, 88.46154963970184, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 240.0699420273304, 40.821094393730164, 82.0, 20.0 ],
-                    "text": "FiltPshftonoff"
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.0, 0.549019607843137, 1.0, 0.0 ],
+                    "fontsize": 10.0,
                     "id": "obj-164",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1060.269225180149, 920.5426445007324, 88.46154963970184, 20.0 ],
+                    "patching_rect": [ 1060.269225180149, 920.5426445007324, 76.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 240.0699420273304, -3.226524233818054, 90.12346398830414, 20.0 ],
-                    "text": "FilterPShift"
+                    "presentation_rect": [ 253.63635456562042, 3.6363635063171387, 77.0, 18.0 ],
+                    "text": "Filter Type"
                 }
             },
             {
@@ -1549,7 +1590,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 172.04761695861816, 753.0, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 29.16666555404663, 172.9166600704193, 33.06451636552811, 18.0 ],
+                    "presentation_rect": [ 115.17509531974792, 149.99999463558197, 33.06451636552811, 18.0 ],
                     "text": "Input"
                 }
             },
@@ -1563,7 +1604,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 175.1515350341797, 648.1635611057281, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 24.999999046325684, 148.95832765102386, 37.90322607755661, 18.0 ],
+                    "presentation_rect": [ 134.85941690206528, 173.99999463558197, 37.90322607755661, 18.0 ],
                     "text": "Shifter"
                 }
             },
@@ -1577,7 +1618,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 605.3225848674774, 1066.5240452289581, 53.21100473403931, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 28.0, 34.0, 53.21100473403931, 18.0 ],
+                    "presentation_rect": [ 26.848248571157455, 24.90272331237793, 53.21100473403931, 18.0 ],
                     "text": "Device"
                 }
             },
@@ -1590,7 +1631,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1029.906534075737, 770.6058484315872, 145.0, 17.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 72.0, 57.0, 79.0, 17.0 ],
+                    "presentation_rect": [ 72.1347368657589, 45.979470789432526, 79.0, 17.0 ],
                     "text": "Input-Fadezeit (s)"
                 }
             },
@@ -1606,7 +1647,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 957.9439178109169, 770.6058484315872, 65.0, 15.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 26.04166567325592, 57.291664481163025, 46.0, 15.0 ],
+                    "presentation_rect": [ 26.848248571157455, 46.979470789432526, 46.0, 15.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 1.0 ],
@@ -1641,7 +1682,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 387.30187183618546, 841.0, 55.74712550640106, 34.16804027557373 ],
                     "presentation": 1,
-                    "presentation_rect": [ 114.58332896232605, 103.12499606609344, 53.645831286907196, 39.583331823349 ],
+                    "presentation_rect": [ 121.40077614784241, 102.33462861180305, 51.36186683177948, 28.142909109592438 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -2109,7 +2150,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 332.3421015739441, 852.3809475898743, 50.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 175.5223230421543, 76.10332256555557, 50.0, 18.0 ],
+                    "presentation_rect": [ 175.45453917980194, 87.27272415161133, 50.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -2146,7 +2187,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 445.675434589386, 849.0840201377869, 50.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 174.92708495259285, 118.3652269244194, 50.0, 18.0 ],
+                    "presentation_rect": [ 174.54544830322266, 125.45454096794128, 50.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -2203,7 +2244,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 434.52380537986755, 778.5714244842529, 51.11111354827881, 29.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 172.546132594347, 135.03189343214035, 57.0, 18.0 ],
+                    "presentation_rect": [ 170.90908479690552, 111.81817781925201, 58.29596608877182, 18.0 ],
                     "text": "Shift Down"
                 }
             },
@@ -2256,7 +2297,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 865.4205540418625, 929.1308364868164, 62.09677463769913, 20.16129046678543 ],
                     "presentation": 1,
-                    "presentation_rect": [ 115.88541224598885, 77.08333039283752, 52.3437480032444, 22.39583247900009 ],
+                    "presentation_rect": [ 115.17509531974792, 66.14785879850388, 52.3437480032444, 22.39583247900009 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -2466,7 +2507,7 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 2027.777874469757, 158.333340883255, 85.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 453.16517809033394, 1.535380482673645, 85.0, 22.0 ],
+                    "presentation_rect": [ 452.72725653648376, 6.363636136054993, 85.0, 22.0 ],
                     "text": "presentation 1"
                 }
             },
@@ -2479,7 +2520,7 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 1936.1112034320831, 158.333340883255, 85.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 453.16517809033394, 28.916332602500916, 85.0, 22.0 ],
+                    "presentation_rect": [ 452.72725653648376, 33.63636243343353, 85.0, 22.0 ],
                     "text": "presentation 0"
                 }
             },
@@ -2492,7 +2533,7 @@
                     "outlettype": [ "", "" ],
                     "patching_rect": [ 1988.8889837265015, 211.11112117767334, 100.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 453.16517809033394, 55.10680854320526, 67.0, 22.0 ],
+                    "presentation_rect": [ 452.72725653648376, 59.99999785423279, 67.0, 22.0 ],
                     "save": [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
                     "text": "thispatcher"
                 }
@@ -2941,7 +2982,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 164.54547536373138, 323.9211654663086, 37.22627717256546, 14.59854006767273 ],
                     "presentation": 1,
-                    "presentation_rect": [ 26.0, 9.0, 55.64516168832779, 24.923387050628662 ],
+                    "presentation_rect": [ 25.291828364133835, 3.8910505175590515, 55.64516168832779, 24.923387050628662 ],
                     "saved_attribute_attributes": {
                         "activebgoncolor": {
                             "expression": ""
@@ -2989,7 +3030,7 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 261.5151637792587, 413.31509697437286, 88.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 64.06249755620956, 147.0, 107.29166257381439, 23.0 ],
+                    "presentation_rect": [ 20.24139304459095, 147.49999463558197, 93.72197625041008, 23.0 ],
                     "text": "Beide An",
                     "textjustification": 1
                 }
@@ -3236,7 +3277,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 765.4761831760406, 810.7142813205719, 68.88889217376709, 16.111111879348755 ],
                     "presentation": 1,
-                    "presentation_rect": [ 21.874999165534973, 76.04166376590729, 90.6249965429306, 23.958332419395447 ],
+                    "presentation_rect": [ 21.78988289833069, 66.53696385025978, 90.6249965429306, 23.958332419395447 ],
                     "saved_attribute_attributes": {
                         "activebgoncolor": {
                             "expression": "themecolor.live_macro_assignment"
@@ -3609,7 +3650,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 311.515159368515, 333.0120737552643, 66.94444763660431, 38.000000953674316 ],
                     "presentation": 1,
-                    "presentation_rect": [ 21.874999165534973, 98.9583295583725, 90.6249965429306, 43.749998331069946 ],
+                    "presentation_rect": [ 21.78988289833069, 100.38910335302353, 97.27626293897629, 31.517509192228317 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_enum": [ "Alle Aus", "Oberes Band", "Unteres Band", "Beide An" ],
@@ -3753,7 +3794,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 673.6363395452499, 1009.0908855199814, 46.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 171.35565641522408, 176.10332161188126, 57.0, 18.0 ],
+                    "presentation_rect": [ 171.95453917980194, 149.99999463558197, 57.0, 18.0 ],
                     "text": "Filter Q"
                 }
             },
@@ -3769,7 +3810,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 675.4545212984085, 1031.8181574344635, 42.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 171.35565641522408, 157.05570274591446, 57.0, 18.0 ],
+                    "presentation_rect": [ 172.3662836998701, 165.3696469962597, 55.64927662909031, 18.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 0.01 ],
@@ -3795,7 +3836,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 602.7057621479034, 757.4766323566437, 53.88889145851135, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 171.35565641522408, 11.817608892917633, 53.88889145851135, 18.0 ],
+                    "presentation_rect": [ 171.8181756734848, 3.6363635063171387, 53.88889145851135, 18.0 ],
                     "text": "Feedback"
                 }
             },
@@ -3809,7 +3850,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 481.2725239396095, 1011.8181581497192, 60.22221755981445, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 170.7604183256626, 51.10332280397415, 57.0, 18.0 ],
+                    "presentation_rect": [ 169.99999392032623, 35.4545441865921, 57.0, 18.0 ],
                     "text": "FilterCutoff"
                 }
             },
@@ -3823,7 +3864,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 361.90475845336914, 780.9523768424988, 51.11111354827881, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 175.5223230421543, 92.76998907327652, 48.95833146572113, 18.0 ],
+                    "presentation_rect": [ 176.36363005638123, 71.81817924976349, 48.95833146572113, 18.0 ],
                     "text": "Shift Up"
                 }
             },
@@ -3837,7 +3878,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 1580.0, 400.0, 85.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 93.2291631102562, 33.8541653752327, 53.21100473403931, 18.0 ],
+                    "presentation_rect": [ 90.53828235715628, 28.352744042873383, 59.91813354194164, 18.0 ],
                     "text": "Delaytime"
                 }
             },
@@ -3857,7 +3898,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 1520.0, 400.0, 49.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 94.27082973718643, 11.979166209697723, 52.98183512687683, 22.0 ],
+                    "presentation_rect": [ 91.0505821108818, 5.352744042873383, 62.64186890423298, 22.0 ],
                     "textcolor": [ 1.0, 1.0, 1.0, 1.0 ],
                     "varname": "DelaytimeinabstractionDelay1"
                 }
@@ -4382,7 +4423,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 328.1818245649338, 455.7393356561661, 18.33333420753479, 194.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 5.0, 9.0, 18.0, 194.0 ],
+                    "presentation_rect": [ 2.727272629737854, 4.545454382896423, 18.0, 194.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -4460,8 +4501,8 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 222.12122786045074, 660.2847721576691, 113.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 64.0, 171.0, 113.0, 23.0 ],
-                    "text": "Tutti",
+                    "presentation_rect": [ 20.24139304459095, 171.49999463558197, 113.0, 23.0 ],
+                    "text": "Alle Luftmikrofone",
                     "textcolor": [ 0.0, 0.0, 0.0, 1.0 ],
                     "textjustification": 1
                 }
@@ -4479,7 +4520,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 565.3225848674774, 756.542052924633, 56.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 170.7604183256626, -1.2776290774345398, 56.0, 18.0 ],
+                    "presentation_rect": [ 170.90908479690552, 18.181817531585693, 56.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -4517,7 +4558,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ 479.45434218645096, 1030.9090665578842, 56.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 170.7604183256626, 35.62713247537613, 56.0, 18.0 ],
+                    "presentation_rect": [ 170.90908479690552, 50.90908908843994, 56.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -4552,7 +4593,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 2016.6664887666702, -116.3122832775116, 227.73722505569458, 165.8626627922058 ],
                     "presentation": 1,
-                    "presentation_rect": [ -1.8691588640213013, -5.607476592063904, 230.22481527924538, 238.6074765920639 ],
+                    "presentation_rect": [ -1.8181817531585693, -0.9090908765792847, 226.90583723783493, 229.59642028808594 ],
                     "proportion": 0.5,
                     "saved_attribute_attributes": {
                         "bgfillcolor": {
@@ -4649,7 +4690,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 2030.3028512001038, -101.16076946258545, 227.73722505569458, 165.8626627922058 ],
                     "presentation": 1,
-                    "presentation_rect": [ 227.81952863931656, -5.263157427310944, 213.6077770292759, 238.26315742731094 ],
+                    "presentation_rect": [ 220.90908300876617, -0.9090908765792847, 210.31390842795372, 229.14798977971077 ],
                     "proportion": 0.5,
                     "saved_attribute_attributes": {
                         "bgfillcolor": {
@@ -8850,7 +8891,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1040.0, 10.0, 430.0, 88.0 ],
+                                    "patching_rect": [ 1040.0, 10.0, 433.0, 60.0 ],
                                     "text": "Pitch-Sequenz\nSpielt zwei Pitch-Wertfolgen in Cent mit einer Dauer je Listeneintrag. Der Delay-Takt bestimmt die Fortschaltung; Start, Pause und Listenwechsel werden an dessen Taktkanten übernommen."
                                 }
                             }
