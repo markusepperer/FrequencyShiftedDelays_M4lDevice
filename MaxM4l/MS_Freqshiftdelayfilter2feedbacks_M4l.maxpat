@@ -34,7 +34,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3925.423822402954, -114.29017210006714, 150.0, 20.0 ],
+                    "patching_rect": [ 3925.423822402954, -114.29017210006714, 150.0, 22 ],
                     "text": "Pitchshift Amount 2"
                 }
             },
@@ -66,7 +66,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3790.3847419023514, 1517.3077429533005, 101.14942359924316, 20.0 ],
+                    "patching_rect": [ 3790.3847419023514, 1517.3077429533005, 101.14942359924316, 22 ],
                     "text": "Pitchshift Out 2"
                 }
             },
@@ -212,7 +212,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3698.0770465135574, 465.3846309185028, 43.29896664619446, 20.0 ],
+                    "patching_rect": [ 3698.0770465135574, 465.3846309185028, 43.29896664619446, 22 ],
                     "text": "Filtern"
                 }
             },
@@ -223,7 +223,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3698.0770465135574, 401.92309033870697, 23.94366228580475, 20.0 ],
+                    "patching_rect": [ 3698.0770465135574, 377.92309033870697, 23.94366228580475, 22 ],
                     "text": "Q"
                 }
             },
@@ -365,7 +365,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3594.2308892011642, 161.5384669303894, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 3618.2308892011642, 161.5384669303894, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -428,7 +428,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 4153.8462924957275, 1119.2308065891266, 135.0, 84.0 ],
+                    "patching_rect": [ 4153.8462924957275, 1119.2308065891266, 135.0, 90 ],
                     "text": "The pitchshift object performs Ztx-bsed pitchshifting. No abstractions or windowing needed!"
                 }
             },
@@ -471,7 +471,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3955.769362807274, 1167.30773127079, 172.0, 100.0 ],
+                    "patching_rect": [ 3955.769362807274, 1167.30773127079, 172.0, 106 ],
                     "text": "The gadget abstraction contains the FFT-based pitchshifter named gizmo~. It almost always sounds smoother than transposer, although transients are lost."
                 }
             },
@@ -484,7 +484,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3711.538585424423, 1098.0769597291946, 171.0, 84.0 ],
+                    "patching_rect": [ 3711.538585424423, 1098.0769597291946, 171.0, 90 ],
                     "text": "The transposer abstraction uses the Doppler effect.  Adjust the window size to make the windowing less noticeable."
                 }
             },
@@ -496,7 +496,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3836.5385895967484, 1038.4615731239319, 115.0, 22.0 ],
+                    "patching_rect": [ 3836.5385895967484, 1062.4615731239319, 115.0, 23 ],
                     "text": "Window Size (ms)"
                 }
             },
@@ -508,7 +508,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3842.307820558548, 903.846184015274, 69.0, 22.0 ],
+                    "patching_rect": [ 3842.307820558548, 903.846184015274, 69.0, 23 ],
                     "text": "MIDIcents"
                 }
             },
@@ -520,7 +520,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 4000.0001335144043, 1065.3846509456635, 122.0, 22.0 ],
+                    "patching_rect": [ 4000.0001335144043, 1041.3846509456635, 122.0, 23 ],
                     "text": "Transposition Ratio"
                 }
             },
@@ -658,7 +658,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3823.0770506858826, 826.9231045246124, 67.83869886398315, 20.0 ],
+                    "patching_rect": [ 3823.0770506858826, 826.9231045246124, 67.83869886398315, 22 ],
                     "text": "Halbtöne"
                 }
             },
@@ -696,7 +696,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3411.538575410843, 1069.2308049201965, 145.20546889305115, 107.0 ],
+                    "patching_rect": [ 3411.538575410843, 1069.2308049201965, 145.20546889305115, 114 ],
                     "text": "By the overlap-add method, with stochastic 'blur'\nGen~Level\n4 Abspielpositionen\nFenster kann eingestellt werden"
                 }
             },
@@ -711,7 +711,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3582.692427277565, 917.3077229261398, 42.0, 64.0 ],
+                    "patching_rect": [ 3582.692427277565, 1013.3077229261398, 42.0, 64.0 ],
                     "text": "crossfade dry / wet"
                 }
             },
@@ -742,7 +742,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3509.6155017614365, 917.3077229261398, 60.0, 64.0 ],
+                    "patching_rect": [ 3389.6155017614365, 917.3077229261398, 60.0, 64.0 ],
                     "text": "window size in milliseconds"
                 }
             },
@@ -820,78 +820,90 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 448.0, 528.0, 755.0, 985.0 ],
+                                    "patching_rect": [ 448.0, 528.0, 755.0, 1128 ],
                                     "text": "Ich habe die beiden Gen-Patches in deinem ZIP gelesen. **Dieser Pitchshifter arbeitet mit einem laufenden Audiospeicher und vier beweglichen Leseköpfen.**\n\nDas Eingangssignal wird fortlaufend gespeichert. Die Leseköpfe lesen daraus schneller oder langsamer, als das Signal hineingeschrieben wird:\n\n- **Schneller lesen → höhere Tonhöhe.**\n- **Langsamer lesen → tiefere Tonhöhe.**\n\nWeil ein Lesekopf dabei irgendwann den verfügbaren Bereich verlässt, muss er regelmäßig zurückspringen. Damit diese Sprünge möglichst unhörbar bleiben, werden die einzelnen Stimmen weich ein- und ausgeblendet und überlagert. Das ist hier mit **Overlap-add** gemeint. Die vier Stimmen werden paarweise auf die beiden Ausgänge verteilt.\n\n**1. Shift Amount — wie weit wird transponiert?**\n\nDer Wert ist ein **Frequenzverhältnis**, keine Anzahl von Halbtönen:\n\n| Shift Amount | Ergebnis |\n|---:|---|\n| `0.5` | eine Oktave tiefer |\n| `0.75` | ungefähr eine Quarte tiefer |\n| `1` | unveränderte Tonhöhe |\n| `1.5` | ungefähr eine Quinte höher |\n| `2` | eine Oktave höher |\n| `4` | zwei Oktaven höher |\n\nBei `2` wird beispielsweise aus 440 Hz ungefähr 880 Hz. **Die Gesamtdauer deines Soundfiles bleibt dabei gleich**: Die laufenden Ausschnitte werden neu zusammengesetzt.\n\n**2. Window Size — über welchen Zeitbereich arbeiten die Leseköpfe?**\n\nDer Wert ist in **Millisekunden** angegeben. Im Gen-Patch reicht er von `0.1` bis `1000`, mit einem internen Ausgangswert von `100`.\n\nGenauer bestimmt er den Bereich, über den sich die Verzögerungszeit der Leseköpfe bewegt. Bei gleicher Transposition bedeutet ein kleineres Fenster häufigere Rücksprünge und Überblendungen.\n\n| Kleineres Fenster | Größeres Fenster |\n|---|---|\n| kürzere zeitliche Ausschnitte | längere zeitliche Ausschnitte |\n| kann rhythmische Details kompakter halten | kann Anschläge verdoppeln oder zeitlich verschmieren |\n| kann stärker rau, metallisch oder summend klingen | kann bei gehaltenen Tönen ruhiger wirken |\n| geringerer Verzögerungsbereich | größerer Verzögerungsbereich |\n\n**Größer ist also nicht automatisch besser.** Du stimmst damit die Verarbeitung auf dein Klangmaterial ab.\n\nEine Besonderheit: `100 ms` bedeutet hier nicht, dass unabhängig von der Transposition alle 100 ms ein neuer Ausschnitt beginnt. Die Geschwindigkeit der Fensterbewegung hängt auch von **Shift Amount** ab.\n\n**3. Blur — wie regelmäßig arbeiten die Leseköpfe?**\n\nOhne Blur wiederholt sich die Fensterbewegung sehr regelmäßig. Diese Regelmäßigkeit kann einen metallischen Klang erzeugen. **Blur bringt Zufall in diese Bewegung**, um solche gleichförmigen Muster aufzubrechen.\n\nDein Patch enthält dafür zwei Varianten:\n\n| Variante | Was wird verändert? | Klangliche Tendenz |\n|---|---|---|\n| **PhaseBlur** — Umschalter aus | Die Phasenpositionen der Fenster werden zufällig versetzt. | unregelmäßigere Überlagerungen, diffuserer Klang |\n| **RateBlur** — Umschalter an | Der durchfahrene Verzögerungsbereich wird pro Durchlauf zufällig vergrößert; dadurch ändert sich die Lesegeschwindigkeit. | zusätzliche Tonhöhenschwankungen, stärker verstimmter Klang |\n\nBei `Blur = 0` ist diese Zufallsvariation ausgeschaltet. Höhere Werte verstärken sie. **Blur ist hier weder ein Filter noch ein Hall**, sondern greift direkt in die zeitliche Organisation des Pitchshiftings ein.\n\nZum Kennenlernen würde ich diesen konkreten Hörversuch machen:\n\n1. **Dry/Wet auf `1`**, Shift Amount auf `1.5`, Blur auf `0`.\n2. Window Size nacheinander auf **`20`, `50`, `100`, `200` ms** stellen.\n3. Bei einem Fenster bleiben und Blur mit **`0.05`, `0.1`, `0.3`** ausprobieren.\n4. Mit denselben Einstellungen zwischen **PhaseBlur und RateBlur** wechseln.\n\nSo hörst du erst den Einfluss der Fenstergröße und anschließend, was die beiden unterschiedlichen Zufallsverfahren hinzufügen."
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "04 · Dry/Wet: 0 Original, 1 bearbeitet",
                                     "id": "obj-35",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 623.1707465648651, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 623.1707465648651, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "04 · Dry/Wet: 0 Original, 1 bearbeitet",
+                                    "hint": "04 · Dry/Wet: 0 Original, 1 bearbeitet"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "03 · Gen-Fensterdauer in ms",
                                     "id": "obj-30",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 518.2926952838898, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 518.2926952838898, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "03 · Gen-Fensterdauer in ms",
+                                    "hint": "03 · Gen-Fensterdauer in ms"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
                                     "id": "obj-33",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 436.5853762626648, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 436.5853762626648, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
+                                    "hint": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75",
                                     "id": "obj-8",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 335.3658616542816, 593.9024531841278, 30.0, 30.0 ]
+                                    "patching_rect": [ 335.3658616542816, 593.9024531841278, 30.0, 30.0 ],
+                                    "annotation": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75",
+                                    "hint": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5",
                                     "id": "obj-7",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 278.0487871170044, 593.9024531841278, 30.0, 30.0 ]
+                                    "patching_rect": [ 278.0487871170044, 593.9024531841278, 30.0, 30.0 ],
+                                    "annotation": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5",
+                                    "hint": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Audioeingang zum Gen-Pitchshifter",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "signal" ],
-                                    "patching_rect": [ 181.70732140541077, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 181.70732140541077, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "01 · Audioeingang zum Gen-Pitchshifter",
+                                    "hint": "01 · Audioeingang zum Gen-Pitchshifter"
                                 }
                             },
                             {
@@ -917,7 +929,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 673.170747756958, 434.14635181427, 176.0, 35.0 ],
+                                    "patching_rect": [ 673.170747756958, 482.14635181427, 176.0, 37 ],
                                     "text": "See also the gen~.slicer.maxpat example"
                                 }
                             },
@@ -930,8 +942,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 611.2149485349655, 343.92523097991943, 103.0, 78.0 ],
-                                    "text": "Alternate algorithm for blur (modulates rate rather than phase)"
+                                    "patching_rect": [ 611.2149485349655, 343.92523097991943, 103.0, 129 ],
+                                    "text": "Hier ist PhaseBlur eingebunden. Die RateBlur-Alternative ist in diesem Subpatch nicht angeschlossen."
                                 }
                             },
                             {
@@ -1030,7 +1042,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 176.82927250862122, -37.80487895011902, 347.0, 21.0 ],
+                                    "patching_rect": [ 176.82927250862122, -13.804878950119019, 347.0, 22 ],
                                     "text": "By the overlap-add method, with stochastic 'blur'"
                                 }
                             },
@@ -1085,7 +1097,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 176.82927250862122, -70.73170900344849, 227.0, 28.0 ],
+                                    "patching_rect": [ 176.82927250862122, -70.73170900344849, 227.0, 30 ],
                                     "text": "Pitch Shift"
                                 }
                             },
@@ -1196,7 +1208,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3730.379697918892, -120.79017210006714, 150.0, 33.0 ],
+                    "patching_rect": [ 3730.379697918892, -144.79017210006714, 150.0, 37 ],
                     "text": "Filter Q\nPitchshift Delay"
                 }
             },
@@ -1223,7 +1235,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3560.759446978569, -120.79017210006714, 150.0, 33.0 ],
+                    "patching_rect": [ 3560.759446978569, -144.79017210006714, 150.0, 37 ],
                     "text": "Filter Cutoff\nPitchshift Delay"
                 }
             },
@@ -1250,7 +1262,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3388.6075505018234, -120.79017210006714, 150.0, 33.0 ],
+                    "patching_rect": [ 3388.6075505018234, -144.79017210006714, 150.0, 37 ],
                     "text": "Feedback\nPitchshift Delay"
                 }
             },
@@ -1276,7 +1288,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3212.1765983104706, -125.58625388145447, 150.0, 20.0 ],
+                    "patching_rect": [ 3212.1765983104706, -197.58625388145447, 150.0, 37 ],
                     "text": "Transposer – Fenster (ms)"
                 }
             },
@@ -1303,7 +1315,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3061.1765983104706, -132.08625388145447, 150.0, 33.0 ],
+                    "patching_rect": [ 3061.1765983104706, -156.08625388145447, 150.0, 37 ],
                     "text": "Overlap Gen – Fenster (ms)"
                 }
             },
@@ -1329,7 +1341,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2907.0589448213577, -121.48019421100616, 150.0, 20.0 ],
+                    "patching_rect": [ 2907.0589448213577, -121.48019421100616, 150.0, 22 ],
                     "text": "Pitchshift Type"
                 }
             },
@@ -1355,7 +1367,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2748.030045032501, -121.48019421100616, 150.0, 20.0 ],
+                    "patching_rect": [ 2748.030045032501, -121.48019421100616, 150.0, 22 ],
                     "text": "Pitchshift Amount 1"
                 }
             },
@@ -1382,7 +1394,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2625.7573441267014, -132.08625388145447, 88.46154963970184, 33.0 ],
+                    "patching_rect": [ 2625.7573441267014, -156.08625388145447, 88.46154963970184, 37 ],
                     "text": "Filter On OFF\nPitchshift"
                 }
             },
@@ -1409,7 +1421,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2525.481865644455, -132.08625388145447, 88.46154963970184, 33.0 ],
+                    "patching_rect": [ 2525.481865644455, -132.08625388145447, 88.46154963970184, 37 ],
                     "text": "Filter TYPE \nPitchshift"
                 }
             },
@@ -1456,7 +1468,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2682.4997441768646, 1497.4998571872711, 101.14942359924316, 20.0 ],
+                    "patching_rect": [ 2682.4997441768646, 1497.4998571872711, 101.14942359924316, 22 ],
                     "text": "Pitchshift Out 1"
                 }
             },
@@ -1602,7 +1614,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2589.999752998352, 444.9999575614929, 43.29896664619446, 20.0 ],
+                    "patching_rect": [ 2589.999752998352, 444.9999575614929, 43.29896664619446, 22 ],
                     "text": "Filtern"
                 }
             },
@@ -1613,7 +1625,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2589.999752998352, 382.4999635219574, 23.94366228580475, 20.0 ],
+                    "patching_rect": [ 2589.999752998352, 358.4999635219574, 23.94366228580475, 22 ],
                     "text": "Q"
                 }
             },
@@ -1755,7 +1767,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2487.499762773514, 142.499986410141, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 2511.499762773514, 142.499986410141, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -1818,7 +1830,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3047.499709367752, 1099.9998950958252, 135.0, 84.0 ],
+                    "patching_rect": [ 3047.499709367752, 1099.9998950958252, 135.0, 90 ],
                     "text": "The pitchshift object performs Ztx-bsed pitchshifting. No abstractions or windowing needed!"
                 }
             },
@@ -1861,7 +1873,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2848.235412955284, 1148.2353420257568, 172.0, 100.0 ],
+                    "patching_rect": [ 2848.235412955284, 1148.2353420257568, 172.0, 106 ],
                     "text": "The gadget abstraction contains the FFT-based pitchshifter named gizmo~. It almost always sounds smoother than transposer, although transients are lost."
                 }
             },
@@ -1874,7 +1886,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2604.9997515678406, 1077.4998972415924, 171.0, 84.0 ],
+                    "patching_rect": [ 2604.9997515678406, 1077.4998972415924, 171.0, 90 ],
                     "text": "The transposer abstraction uses the Doppler effect.  Adjust the window size to make the windowing less noticeable."
                 }
             },
@@ -1886,7 +1898,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2729.2497379779816, 1017.9776093959808, 115.0, 22.0 ],
+                    "patching_rect": [ 2729.2497379779816, 1041.9776093959808, 115.0, 23 ],
                     "text": "Window Size (ms)"
                 }
             },
@@ -1898,7 +1910,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2734.9997391700745, 884.999915599823, 69.0, 22.0 ],
+                    "patching_rect": [ 2734.9997391700745, 884.999915599823, 69.0, 23 ],
                     "text": "MIDIcents"
                 }
             },
@@ -1910,7 +1922,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2892.9412971735, 1045.8823965787888, 122.0, 22.0 ],
+                    "patching_rect": [ 2892.9412971735, 1021.8823965787888, 122.0, 23 ],
                     "text": "Transposition Ratio"
                 }
             },
@@ -2048,7 +2060,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2714.999741077423, 807.499922990799, 67.83869886398315, 20.0 ],
+                    "patching_rect": [ 2714.999741077423, 807.499922990799, 67.83869886398315, 22 ],
                     "text": "Halbtöne"
                 }
             },
@@ -2086,7 +2098,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2304.705978512764, 1049.4118084907532, 145.20546889305115, 107.0 ],
+                    "patching_rect": [ 2304.705978512764, 1049.4118084907532, 145.20546889305115, 114 ],
                     "text": "By the overlap-add method, with stochastic 'blur'\nGen~Level\n4 Abspielpositionen\nFenster kann eingestellt werden"
                 }
             },
@@ -2101,7 +2113,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2475.2942209243774, 897.6470962762833, 42.0, 64.0 ],
+                    "patching_rect": [ 2475.2942209243774, 993.6470962762833, 42.0, 64.0 ],
                     "text": "crossfade dry / wet"
                 }
             },
@@ -2132,7 +2144,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2402.353041410446, 897.6470962762833, 60.0, 64.0 ],
+                    "patching_rect": [ 2282.353041410446, 897.6470962762833, 60.0, 64.0 ],
                     "text": "window size in milliseconds"
                 }
             },
@@ -2210,78 +2222,90 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 448.0, 528.0, 755.0, 985.0 ],
+                                    "patching_rect": [ 448.0, 528.0, 755.0, 1128 ],
                                     "text": "Ich habe die beiden Gen-Patches in deinem ZIP gelesen. **Dieser Pitchshifter arbeitet mit einem laufenden Audiospeicher und vier beweglichen Leseköpfen.**\n\nDas Eingangssignal wird fortlaufend gespeichert. Die Leseköpfe lesen daraus schneller oder langsamer, als das Signal hineingeschrieben wird:\n\n- **Schneller lesen → höhere Tonhöhe.**\n- **Langsamer lesen → tiefere Tonhöhe.**\n\nWeil ein Lesekopf dabei irgendwann den verfügbaren Bereich verlässt, muss er regelmäßig zurückspringen. Damit diese Sprünge möglichst unhörbar bleiben, werden die einzelnen Stimmen weich ein- und ausgeblendet und überlagert. Das ist hier mit **Overlap-add** gemeint. Die vier Stimmen werden paarweise auf die beiden Ausgänge verteilt.\n\n**1. Shift Amount — wie weit wird transponiert?**\n\nDer Wert ist ein **Frequenzverhältnis**, keine Anzahl von Halbtönen:\n\n| Shift Amount | Ergebnis |\n|---:|---|\n| `0.5` | eine Oktave tiefer |\n| `0.75` | ungefähr eine Quarte tiefer |\n| `1` | unveränderte Tonhöhe |\n| `1.5` | ungefähr eine Quinte höher |\n| `2` | eine Oktave höher |\n| `4` | zwei Oktaven höher |\n\nBei `2` wird beispielsweise aus 440 Hz ungefähr 880 Hz. **Die Gesamtdauer deines Soundfiles bleibt dabei gleich**: Die laufenden Ausschnitte werden neu zusammengesetzt.\n\n**2. Window Size — über welchen Zeitbereich arbeiten die Leseköpfe?**\n\nDer Wert ist in **Millisekunden** angegeben. Im Gen-Patch reicht er von `0.1` bis `1000`, mit einem internen Ausgangswert von `100`.\n\nGenauer bestimmt er den Bereich, über den sich die Verzögerungszeit der Leseköpfe bewegt. Bei gleicher Transposition bedeutet ein kleineres Fenster häufigere Rücksprünge und Überblendungen.\n\n| Kleineres Fenster | Größeres Fenster |\n|---|---|\n| kürzere zeitliche Ausschnitte | längere zeitliche Ausschnitte |\n| kann rhythmische Details kompakter halten | kann Anschläge verdoppeln oder zeitlich verschmieren |\n| kann stärker rau, metallisch oder summend klingen | kann bei gehaltenen Tönen ruhiger wirken |\n| geringerer Verzögerungsbereich | größerer Verzögerungsbereich |\n\n**Größer ist also nicht automatisch besser.** Du stimmst damit die Verarbeitung auf dein Klangmaterial ab.\n\nEine Besonderheit: `100 ms` bedeutet hier nicht, dass unabhängig von der Transposition alle 100 ms ein neuer Ausschnitt beginnt. Die Geschwindigkeit der Fensterbewegung hängt auch von **Shift Amount** ab.\n\n**3. Blur — wie regelmäßig arbeiten die Leseköpfe?**\n\nOhne Blur wiederholt sich die Fensterbewegung sehr regelmäßig. Diese Regelmäßigkeit kann einen metallischen Klang erzeugen. **Blur bringt Zufall in diese Bewegung**, um solche gleichförmigen Muster aufzubrechen.\n\nDein Patch enthält dafür zwei Varianten:\n\n| Variante | Was wird verändert? | Klangliche Tendenz |\n|---|---|---|\n| **PhaseBlur** — Umschalter aus | Die Phasenpositionen der Fenster werden zufällig versetzt. | unregelmäßigere Überlagerungen, diffuserer Klang |\n| **RateBlur** — Umschalter an | Der durchfahrene Verzögerungsbereich wird pro Durchlauf zufällig vergrößert; dadurch ändert sich die Lesegeschwindigkeit. | zusätzliche Tonhöhenschwankungen, stärker verstimmter Klang |\n\nBei `Blur = 0` ist diese Zufallsvariation ausgeschaltet. Höhere Werte verstärken sie. **Blur ist hier weder ein Filter noch ein Hall**, sondern greift direkt in die zeitliche Organisation des Pitchshiftings ein.\n\nZum Kennenlernen würde ich diesen konkreten Hörversuch machen:\n\n1. **Dry/Wet auf `1`**, Shift Amount auf `1.5`, Blur auf `0`.\n2. Window Size nacheinander auf **`20`, `50`, `100`, `200` ms** stellen.\n3. Bei einem Fenster bleiben und Blur mit **`0.05`, `0.1`, `0.3`** ausprobieren.\n4. Mit denselben Einstellungen zwischen **PhaseBlur und RateBlur** wechseln.\n\nSo hörst du erst den Einfluss der Fenstergröße und anschließend, was die beiden unterschiedlichen Zufallsverfahren hinzufügen."
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "04 · Dry/Wet: 0 Original, 1 bearbeitet",
                                     "id": "obj-35",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 623.1707465648651, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 623.1707465648651, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "04 · Dry/Wet: 0 Original, 1 bearbeitet",
+                                    "hint": "04 · Dry/Wet: 0 Original, 1 bearbeitet"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "03 · Gen-Fensterdauer in ms",
                                     "id": "obj-30",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 518.2926952838898, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 518.2926952838898, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "03 · Gen-Fensterdauer in ms",
+                                    "hint": "03 · Gen-Fensterdauer in ms"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
                                     "id": "obj-33",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 436.5853762626648, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 436.5853762626648, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
+                                    "hint": "02 · Transpositionsfaktor: 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75",
                                     "id": "obj-8",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 335.3658616542816, 593.9024531841278, 30.0, 30.0 ]
+                                    "patching_rect": [ 335.3658616542816, 593.9024531841278, 30.0, 30.0 ],
+                                    "annotation": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75",
+                                    "hint": "02 · Gen-Audioausgang 2: Lesekopf-Paar 0.25 und 0.75"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5",
                                     "id": "obj-7",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 278.0487871170044, 593.9024531841278, 30.0, 30.0 ]
+                                    "patching_rect": [ 278.0487871170044, 593.9024531841278, 30.0, 30.0 ],
+                                    "annotation": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5",
+                                    "hint": "01 · Gen-Audioausgang 1: Lesekopf-Paar 0 und 0.5"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Audioeingang zum Gen-Pitchshifter",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "signal" ],
-                                    "patching_rect": [ 181.70732140541077, 34.146342277526855, 30.0, 30.0 ]
+                                    "patching_rect": [ 181.70732140541077, 34.146342277526855, 30.0, 30.0 ],
+                                    "annotation": "01 · Audioeingang zum Gen-Pitchshifter",
+                                    "hint": "01 · Audioeingang zum Gen-Pitchshifter"
                                 }
                             },
                             {
@@ -2307,7 +2331,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 673.170747756958, 434.14635181427, 176.0, 35.0 ],
+                                    "patching_rect": [ 673.170747756958, 482.14635181427, 176.0, 37 ],
                                     "text": "See also the gen~.slicer.maxpat example"
                                 }
                             },
@@ -2320,8 +2344,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 611.2149485349655, 343.92523097991943, 103.0, 78.0 ],
-                                    "text": "Alternate algorithm for blur (modulates rate rather than phase)"
+                                    "patching_rect": [ 611.2149485349655, 343.92523097991943, 103.0, 129 ],
+                                    "text": "Hier ist PhaseBlur eingebunden. Die RateBlur-Alternative ist in diesem Subpatch nicht angeschlossen."
                                 }
                             },
                             {
@@ -2420,7 +2444,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 176.82927250862122, -37.80487895011902, 347.0, 21.0 ],
+                                    "patching_rect": [ 176.82927250862122, -13.804878950119019, 347.0, 22 ],
                                     "text": "By the overlap-add method, with stochastic 'blur'"
                                 }
                             },
@@ -2475,7 +2499,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 176.82927250862122, -70.73170900344849, 227.0, 28.0 ],
+                                    "patching_rect": [ 176.82927250862122, -70.73170900344849, 227.0, 30 ],
                                     "text": "Pitch Shift"
                                 }
                             },
@@ -2585,7 +2609,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2002.4998090267181, 486.77419781684875, 153.0, 114.0 ],
+                    "patching_rect": [ 2098.499809026718, 486.77419781684875, 153.0, 129 ],
                     "text": "Feedback und Filter Cutoff \nKoppeln wegen dem Übersteuern\n\n+ Kompressor\nanpassen Threshold\nkönnte auch ein Thema sein."
                 }
             },
@@ -2596,7 +2620,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 466.6666738986969, 915.0, 150.0, 181.0 ],
+                    "patching_rect": [ 466.6666738986969, 915.0, 150.0, 206 ],
                     "text": "Oder Granularer Pitchshifter\n\nSelber bauen\n suchen = ?\n\nIm forum suchen.\n\nFOF Synthese ? Ircam ?\nDen Pitchshifter durch da sLive Signal modulieren ?\n\n"
                 }
             },
@@ -2608,7 +2632,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2384.9997725486755, -107.69231796264648, 59.0, 60.0 ],
+                    "patching_rect": [ 2384.9997725486755, -107.69231796264648, 59.0, 68 ],
                     "text": "Freqshift amount Down\n"
                 }
             },
@@ -2679,7 +2703,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1350.0, 44.63291072845459, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 1350.0, 44.63291072845459, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -2690,7 +2714,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1249.0, 142.0, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 1249.0, 142.0, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -2747,7 +2771,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1494.2215194106102, 141.0, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 1494.2215194106102, 141.0, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -2757,7 +2781,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1588.0, 400.0, 150.0, 20.0 ],
+                    "patching_rect": [ 1588.0, 400.0, 150.0, 22 ],
                     "text": "Filtertyp"
                 }
             },
@@ -2768,7 +2792,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1257.0, 219.0, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 1257.0, 219.0, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -2819,7 +2843,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2200.0002098083496, -149.2307834625244, 88.46154963970184, 34.0 ],
+                    "patching_rect": [ 2200.0002098083496, -149.2307834625244, 88.46154963970184, 37 ],
                     "text": "FilterOnOff\n"
                 }
             },
@@ -2884,7 +2908,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 604.8192994594574, 437.0, 150.0, 100.0 ],
+                    "patching_rect": [ 604.8192994594574, 437.0, 150.0, 114 ],
                     "text": "Hochpass wegen\nFaltungen bei 0 HZ\nin der Abwärtsbewegung\n8. Ordnung Biquad\nWird mit der Dreq Shift Amount an der Cutoff FREQ mitgeführt"
                 }
             },
@@ -2895,7 +2919,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1797.1377039551735, 301.6666752099991, 76.1762307882309, 20.0 ],
+                    "patching_rect": [ 1797.1377039551735, 301.6666752099991, 76.1762307882309, 22 ],
                     "text": "Delayzeit IN"
                 }
             },
@@ -2906,7 +2930,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1228.5715860128403, 286.9497992992401, 76.1762307882309, 20.0 ],
+                    "patching_rect": [ 1228.5715860128403, 262.9497992992401, 76.1762307882309, 22 ],
                     "text": "Delayzeit IN"
                 }
             },
@@ -2917,7 +2941,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1456.9232158660889, -140.00001335144043, 64.5569611787796, 20.0 ],
+                    "patching_rect": [ 1456.9232158660889, -164.00001335144043, 64.5569611787796, 22 ],
                     "text": "Feedback"
                 }
             },
@@ -2927,7 +2951,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.5025887489319, 1008.8607462644577, 101.14942359924316, 20.0 ],
+                    "patching_rect": [ 900.5025887489319, 1032.8607462644577, 101.14942359924316, 22 ],
                     "text": "Freqshift DOWN"
                 }
             },
@@ -2937,7 +2961,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 768.3544203042984, 1008.8607462644577, 89.65517091751099, 20.0 ],
+                    "patching_rect": [ 768.3544203042984, 1008.8607462644577, 89.65517091751099, 22 ],
                     "text": "Freqshift UP"
                 }
             },
@@ -2950,7 +2974,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1334.9033024311066, 1008.8607462644577, 650.0, 85.0 ],
+                    "patching_rect": [ 1334.9033024311066, 1008.8607462644577, 650.0, 96 ],
                     "text": "FREQUENZSHIFT-DELAY – zwei Rückkopplungsschleifen\nZwei tapin~-Speicher mit je 150 s Kapazität. Je Zweig: variable Verzögerung → SVF-Filter mit Bypass → Feedbackfaktor → Kompressor/Limiter → Frequenzverschiebung. Im DOWN-Zweig liegt zusätzlich ein Hochpass 8. Ordnung vor dem Shifter. Die Bandwahl schaltet UP, DOWN, beide oder keinen Zweig ein; die vorgesehenen Modi halten die Rückkopplungen getrennt."
                 }
             },
@@ -2963,8 +2987,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 536.8421001434326, 611.7741978168488, 242.0, 132.0 ],
-                    "text": "freqshift~ verschiebt alle Frequenzen um denselben Hz-Betrag. Hier wird vom linken Shifter Ausgang 0 und vom rechten Shifter Ausgang 1 benutzt. Beide erhalten denselben Shiftwert, liefern aber entgegengesetzte Seitenbänder.\n"
+                    "patching_rect": [ 536.8421001434326, 611.7741978168488, 242.0, 168 ],
+                    "text": "Frequency UP und DOWN verwenden zwei getrennte freqshift~-Objekte mit unabhängig einstellbaren Hz-Beträgen. UP nutzt den ersten Ausgang des linken Shifters, DOWN den zweiten Ausgang des rechten. Vor dem Downshifter sitzt der mitgeführte Hochpass 8. Ordnung."
                 }
             },
             {
@@ -3015,7 +3039,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2055.384811401367, -149.2307834625244, 88.46154963970184, 33.0 ],
+                    "patching_rect": [ 2055.384811401367, -149.2307834625244, 88.46154963970184, 37 ],
                     "text": "Filter TYPE \nMTRX CTL"
                 }
             },
@@ -3040,7 +3064,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1973.846342086792, -129.23078155517578, 30.379746437072754, 20.0 ],
+                    "patching_rect": [ 1973.846342086792, -129.23078155517578, 30.379746437072754, 22 ],
                     "text": "Q"
                 }
             },
@@ -3182,7 +3206,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1343.2071121931076, 323.42342323064804, 47.56097674369812, 20.0 ],
+                    "patching_rect": [ 1343.2071121931076, 299.42342323064804, 47.56097674369812, 22 ],
                     "text": "Cutoff"
                 }
             },
@@ -3206,7 +3230,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1441.4053103327751, 419.8198195695877, 43.29896664619446, 20.0 ],
+                    "patching_rect": [ 1441.4053103327751, 419.8198195695877, 43.29896664619446, 22 ],
                     "text": "Filtern"
                 }
             },
@@ -3217,7 +3241,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1430.594499528408, 345.9459457397461, 28.16901445388794, 20.0 ],
+                    "patching_rect": [ 1430.594499528408, 345.9459457397461, 28.16901445388794, 22 ],
                     "text": "Q"
                 }
             },
@@ -3312,7 +3336,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1935.8042033314705, 305.0135028362274, 47.56097674369812, 20.0 ],
+                    "patching_rect": [ 1935.8042033314705, 305.0135028362274, 47.56097674369812, 22 ],
                     "text": "Cutoff"
                 }
             },
@@ -3324,7 +3348,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1334.9033024311066, 1095.527417063713, 330.0, 100.0 ],
+                    "patching_rect": [ 1334.9033024311066, 1119.527417063713, 330.0, 114 ],
                     "text": "SEITENBÄNDER\nUP nutzt das positive, DOWN das negative Seitenband.\n\nDie Bandwahl schaltet die beiden getrennten Schleifen ein oder aus. „Beide An“ aktiviert beide Zweige; ihre Kombination ist wegen der getrennten Rückkopplungen nicht pauschal ein Ringmodulator."
                 }
             },
@@ -3335,7 +3359,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1288.0, -146.1538600921631, 99.02912485599518, 20.0 ],
+                    "patching_rect": [ 1288.0, -146.1538600921631, 99.02912485599518, 22 ],
                     "text": "soundin MONO"
                 }
             },
@@ -3373,7 +3397,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 950.7142767906189, -137.6785699725151, 59.0, 60.0 ],
+                    "patching_rect": [ 950.7142767906189, -137.6785699725151, 59.0, 68 ],
                     "text": "Freqshift amount Up\n"
                 }
             },
@@ -3399,7 +3423,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 193.75, -124.1785699725151, 137.89474177360535, 33.0 ],
+                    "patching_rect": [ 193.75, -124.1785699725151, 137.89474177360535, 37 ],
                     "text": "Freqshift Bänder schalten"
                 }
             },
@@ -3452,7 +3476,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 779.7468252182007, 982.278468132019, 58.23526108264923, 20.0 ],
+                    "patching_rect": [ 779.7468252182007, 982.278468132019, 58.23526108264923, 22 ],
                     "text": "UP Out"
                 }
             },
@@ -3463,7 +3487,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 911.8949936628342, 983.5442909002304, 69.0, 20.0 ],
+                    "patching_rect": [ 911.8949936628342, 983.5442909002304, 69.0, 37 ],
                     "text": "DOWN Out"
                 }
             },
@@ -3553,7 +3577,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1787.6924781799316, -143.07693672180176, 71.0, 33.0 ],
+                    "patching_rect": [ 1787.6924781799316, -167.07693672180176, 71.0, 37 ],
                     "text": "Delayzeit IN"
                 }
             },
@@ -3564,7 +3588,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1690.7693920135498, -146.1538600921631, 47.56097674369812, 20.0 ],
+                    "patching_rect": [ 1690.7693920135498, -146.1538600921631, 47.56097674369812, 22 ],
                     "text": "Cutoff"
                 }
             },
@@ -3575,7 +3599,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2041.0215269327164, 420.8228623867035, 43.29896664619446, 20.0 ],
+                    "patching_rect": [ 2041.0215269327164, 420.8228623867035, 43.29896664619446, 22 ],
                     "text": "Filtern"
                 }
             },
@@ -3586,7 +3610,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 2041.0215269327164, 356.0, 23.94366228580475, 20.0 ],
+                    "patching_rect": [ 2041.0215269327164, 332.0, 23.94366228580475, 22 ],
                     "text": "Q"
                 }
             },
@@ -3764,7 +3788,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 711.4285628795624, 113.0, 430.0, 20.0 ],
+                    "patching_rect": [ 711.4285628795624, 113.0, 430.0, 22 ],
                     "text": "HP8 Cutoff = |Freqshift| x 1.3; 30 ms geglättet (Hz)"
                 }
             },
@@ -3918,7 +3942,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 781.927739739418, 50.60241150856018, 340.0, 20.0 ],
+                    "patching_rect": [ 781.927739739418, 50.60241150856018, 340.0, 22 ],
                     "text": "HP 8. Ordnung · Butterworth · 48 dB/Okt."
                 }
             },

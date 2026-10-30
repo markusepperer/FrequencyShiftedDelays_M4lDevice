@@ -21,7 +21,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 297.0, 279.0, 160.0, 22.0 ],
+                    "patching_rect": [ 297.0, 279.0, 160.0, 23 ],
                     "text": "A gizmo~ inside a gadget."
                 }
             },
@@ -34,7 +34,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 205.0, 181.0, 182.0, 38.0 ],
+                    "patching_rect": [ 205.0, 181.0, 182.0, 40 ],
                     "text": "Disallow transposition ratios less than or equal to zero."
                 }
             },
@@ -46,7 +46,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 107.0, 238.0, 113.0, 22.0 ],
+                    "patching_rect": [ 131.0, 238.0, 113.0, 23 ],
                     "text": "transposition ratio"
                 }
             },
@@ -59,7 +59,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 268.0, 65.0, 181.0, 38.0 ],
+                    "patching_rect": [ 292.0, 65.0, 181.0, 40 ],
                     "text": "Non-numerical messages are sent to gizmo~'s left inlet."
                 }
             },
@@ -139,7 +139,10 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 181.0, 34.0, 33.0, 24.0 ],
-                    "text": "in 2"
+                    "text": "in 2",
+                    "comment": "Steuereingang 2: positiver Transpositionsfaktor; weitere Nachrichten an gizmo~",
+                    "annotation": "Steuereingang 2: positiver Transpositionsfaktor; weitere Nachrichten an gizmo~",
+                    "hint": "Steuereingang 2: positiver Transpositionsfaktor; weitere Nachrichten an gizmo~"
                 }
             },
             {
@@ -151,7 +154,10 @@
                     "numinlets": 2,
                     "numoutlets": 0,
                     "patching_rect": [ 17.0, 279.0, 92.0, 24.0 ],
-                    "text": "fftout~ 1"
+                    "text": "fftout~ 1",
+                    "comment": "FFT-Audioausgang: komplexes Spektrum",
+                    "annotation": "FFT-Audioausgang: komplexes Spektrum",
+                    "hint": "FFT-Audioausgang: komplexes Spektrum"
                 }
             },
             {
@@ -178,7 +184,10 @@
                     "numoutlets": 3,
                     "outlettype": [ "signal", "signal", "signal" ],
                     "patching_rect": [ 18.0, 31.0, 88.0, 24.0 ],
-                    "text": "fftin~ 1"
+                    "text": "fftin~ 1",
+                    "comment": "FFT-Audioeingang: komplexes Spektrum",
+                    "annotation": "FFT-Audioeingang: komplexes Spektrum",
+                    "hint": "FFT-Audioeingang: komplexes Spektrum"
                 }
             }
         ],

@@ -39,7 +39,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 100.0, 1111.0, 3224.0 ],
+                                    "patching_rect": [ 50.0, 100.0, 1111.0, 3693 ],
                                     "text": "Ja. Die Aufteilung hat den Zusammenhang zerrissen. Hier ist **dein Gen-Pitchshifter als ein durchgehender Ablauf – vom Eingang bis zum Ausgang.**\n\nWir betrachten zuerst **Blur = 0**. Dann ergänzen wir, was Blur an genau diesem Ablauf verändert.\n\n**1. Das Eingangssignal wird laufend in einen Speicher geschrieben**\n\nDas Audio kommt über `in 1` in:\n\n```max\ndelay 88200 4\n```\n\nDieses Objekt speichert die zuletzt eingegangenen **88.200 Samples**. Bei 44,1 kHz entspricht das zwei Sekunden. Neue Samples kommen laufend hinzu, die ältesten werden überschrieben.\n\nDie `4` bedeutet: **Vier Leseköpfe können denselben Speicher gleichzeitig an unterschiedlichen Stellen auslesen.** Die vier zusätzlichen Eingänge von `delay` bestimmen ihre jeweilige Verzögerung in Samples.\n\nEine Verzögerung von beispielsweise 441 Samples bedeutet bei 44,1 kHz: „Lies das Signal von vor 10 ms.“\n\n**2. Die Tonhöhenänderung entsteht durch eine laufende Änderung dieser Verzögerung**\n\nBei einer **konstanten Verzögerung** kommt das Signal einfach später heraus. Seine Tonhöhe bleibt gleich.\n\nWenn die Verzögerung dagegen **kleiner wird**, holt der Lesekopf gegenüber dem Eingang auf. Er liest mehr Audiomaterial pro Sekunde: Die Tonhöhe steigt.\n\nWenn die Verzögerung **größer wird**, fällt der Lesekopf zurück. Er liest weniger Audiomaterial pro Sekunde: Die Tonhöhe sinkt.\n\nEin konkretes Beispiel: Während 10 ms vergehen, sinkt die Verzögerung von 100 auf 90 ms. Der Eingang ist inzwischen 10 ms weitergelaufen, und der Lesekopf hat zusätzlich 10 ms aufgeholt. Er liest also **20 ms Audiomaterial in 10 ms**. Das ergibt doppelte Frequenzen: eine Oktave höher.\n\n**3. Shift Amount und Window Size bestimmen diese Bewegung**\n\n**Shift Amount ist der gewünschte Geschwindigkeits- beziehungsweise Tonhöhenfaktor:**\n\n| Shift Amount | Transposition |\n|---:|---|\n| `0.5` | eine Oktave tiefer |\n| `1` | keine Transposition |\n| `2` | eine Oktave höher |\n\n**Window Size bestimmt den Verzögerungsbereich in Millisekunden**, über den sich die Leseköpfe bewegen.\n\nDie Berechnung in deinem Patch lautet:\n\n```max\nin 2\n!- 1.\n* 1000\n/\nphasor\n```\n\nAm rechten Eingang von `/` liegt die Fenstergröße. Daraus ergibt sich:\n\n\\[\n\\text{Phasorfrequenz}=\\frac{(1-\\text{Shift Amount})\\cdot1000}{\\text{Window Size in ms}}\n\\]\n\nBei **Shift `2` und Window `100 ms`** ergibt das `−10 Hz`.\n\nDer `phasor` erzeugt damit eine wiederkehrende, **abwärts laufende Rampe von nahe 1 Richtung 0**, zehn Durchläufe pro Sekunde.\n\n**4. Aus der Rampe wird die tatsächliche Verzögerungszeit**\n\nDie Fenstergröße wird mit:\n\n```max\nmstosamps\n```\n\nvon Millisekunden in Samples umgerechnet. Bei 44,1 kHz werden aus `100 ms` genau `4410 Samples`.\n\nDann wird die Phase mit dieser Fenstergröße multipliziert:\n\n| Phase | Verzögerung |\n|---:|---:|\n| `0.75` | 75 ms |\n| `0.5` | 50 ms |\n| `0.25` | 25 ms |\n| `0` | 0 ms |\n\nBei unserem Beispiel sinkt die Verzögerung innerhalb von 100 ms um 100 ms. Der Lesekopf holt also genauso schnell auf, wie der Eingang voranschreitet: **Er liest mit doppelter Geschwindigkeit.**\n\nBei Shift `0.5` ergibt die Berechnung stattdessen `+5 Hz`. Die Verzögerung steigt in 200 ms um 100 ms. Der Lesekopf liest mit halber Geschwindigkeit: eine Oktave tiefer.\n\nBei Shift `1` ergibt sich `0 Hz`: Die Phase steht still, die Verzögerung bleibt konstant, die Tonhöhe bleibt unverändert.\n\n**5. Weil die Verzögerung nicht endlos weiterlaufen kann, muss sie zurückspringen**\n\nEine abnehmende Verzögerung erreicht irgendwann null. Danach müsste der Lesekopf in die Zukunft lesen – das geht nicht.\n\nDeshalb beginnt die Rampe wieder am anderen Ende. In unserem Beispiel springt die Verzögerung von ungefähr **0 zurück auf 100 ms**.\n\nDabei springt auch die gelesene Stelle im Audiosignal. Ohne weitere Maßnahmen könnte das deutlich knacken.\n\n**Deshalb hat dein Patch mehrere Leseköpfe, die abwechselnd hörbar sind.**\n\n**6. Die vier Leseköpfe arbeiten zeitlich versetzt**\n\nDie gemeinsame Phasorrampe wird auf vier Wege verteilt. Dort werden diese Versätze addiert:\n\n```max\n+ 0.\n+ 0.25\n+ 0.5\n+ 0.75\n```\n\nAnschließend bringt `% 1` die Werte wieder in den Bereich von `0` bis unter `1`. Beispielsweise wird aus `1.2` wieder `0.2`.\n\nDamit laufen alle vier Leseköpfe gleich schnell, befinden sich aber an verschiedenen Stellen ihres Durchlaufs. **Ihre Rücksprünge finden zu unterschiedlichen Zeitpunkten statt.**\n\nJede dieser vier Phasen steuert nun gleichzeitig:\n\n- die **Verzögerungszeit** ihres Lesekopfs;\n- die **Lautstärke** seiner Ausgabe.\n\n**7. Eine Hüllkurve macht den jeweiligen Lesekopf beim Rücksprung stumm**\n\nFür die Lautstärkesteuerung durchläuft jede Phase:\n\n```max\n- 0.5\n* pi\ncos\n```\n\nDas Ergebnis wird anschließend mit sich selbst multipliziert, also quadriert.\n\nSo entsteht diese Hüllkurve:\n\n| Phase | Lautstärkefaktor |\n|---:|---:|\n| `0` | 0 |\n| `0.25` | 0.5 |\n| `0.5` | 1 |\n| `0.75` | 0.5 |\n| `1` | 0 |\n\nDie Ausgabe des Lesekopfs wird mit diesem Faktor multipliziert.\n\n**Am Anfang und Ende seines Durchlaufs ist er stumm; in der Mitte ist er voll hörbar.** Sein Rücksprung liegt damit an der stummen Stelle.\n\nWährend eine Stimme ausgeblendet wird, wird eine andere eingeblendet. Dieses Überlagern der mit Hüllkurven versehenen Ausschnitte ist das **Overlap-add-Prinzip** deines Pitchshifters.\n\n**8. `delta` und `sah` sorgen dafür, dass bestimmte Werte pro Durchlauf übernommen werden**\n\nDie Fenstergröße soll für einen Lesekopf innerhalb seines Durchlaufs konstant bleiben. Deshalb wird sie nicht einfach direkt durchgereicht, sondern mit:\n\n```max\nsah 0\n```\n\nübernommen und gehalten. `sah` steht für **Sample and Hold**: einen Wert abgreifen und bis zur nächsten Auslösung beibehalten.\n\nWann ein neuer Wert übernommen wird, erkennt der Patch mithilfe von:\n\n```max\ndelta\n```\n\n`delta` berechnet die Änderung der Phase gegenüber dem vorherigen Sample. Während der Rampe ist diese Änderung klein; beim Rücksprung ändert sie abrupt ihr Vorzeichen. `sah 0` reagiert auf den Übergang seines Steuersignals von höchstens null zu positiv.\n\nSo erfolgt die Übernahme nahe dem Durchlaufwechsel. Beim Verstellen der Fenstergröße reagiert die Phasorfrequenz allerdings unmittelbar, während die Leseköpfe ihre Fensterwerte einzeln übernehmen. **Während des Verstellens können deshalb zusätzliche Klangveränderungen entstehen.**\n\nBis hierhin ist die Grundfunktion vollständig: **Speichern → mit veränderlicher Verzögerung lesen → Rücksprünge durch Überblendung verdecken.**\n\n**9. Blur verändert die Regelmäßigkeit dieses Ablaufs**\n\nOhne Blur wiederholen sich die Lesebewegungen und Überblendungen regelmäßig. Das kann als metallische Färbung oder periodische Struktur hörbar werden.\n\nBeide Blur-Varianten verwenden für jeden Lesekopf eine eigene Zufallsquelle:\n\n```max\nnoise\nabs\n```\n\n`noise` erzeugt positive und negative Zufallswerte; `abs` macht daraus positive Werte zwischen ungefähr `0` und `1`. Die Multiplikation mit **Blur** bestimmt die Stärke. Die daraus gewonnenen Werte werden jeweils für einen Durchlauf gehalten.\n\nDie zwei Varianten setzen diesen Zufall an unterschiedlichen Stellen ein.\n\n**PhaseBlur verschiebt die Fensterpositionen.**\n\nDer Zufallswert wird zur Phase des jeweiligen Lesekopfs addiert. Bei Blur `0.1` kann dieser zusätzliche Versatz bis zu einem Zehntel eines Zyklus betragen.\n\nDadurch verändern sich die zeitlichen Abstände zwischen den vier Stimmen. Zwischen den Aktualisierungen bleibt die Steigung der Rampen unverändert; die Lesegeschwindigkeit innerhalb dieser Abschnitte bleibt damit grundsätzlich gleich.\n\nDie verschobene Phase steuert sowohl die Leseposition als auch die Hüllkurve. Die Überlagerung wird unregelmäßiger und kann diffuser klingen.\n\nHier stehen außerdem `history`-Objekte: Die Phase bestimmt den Aktualisierungszeitpunkt des Zufallsversatzes, der wiederum die Phase verändert. **`history` verzögert diese Rückführung um ein Sample**, damit die Berechnung nicht unmittelbar von ihrem eigenen Ergebnis abhängt.\n\n**RateBlur verändert den durchfahrenen Verzögerungsbereich.**\n\nHier wird die Fenstergröße pro Lesekopf zufällig vergrößert:\n\n\\[\n\\text{Effektiver Bereich}\n=\n\\text{Fenstergröße}\\cdot(1+\\text{Zufallswert}\\cdot\\text{Blur})\n\\]\n\nDie Phasorrampe läuft weiterhin mit der ursprünglich berechneten Geschwindigkeit. Sie durchfährt jetzt aber einen größeren Verzögerungsbereich in derselben Zeit. **Dadurch verändert sich tatsächlich die Lesegeschwindigkeit und damit die Tonhöhe.**\n\nBei Shift `2` und einer zufälligen Bereichsvergrößerung um 10 % ergibt sich beispielsweise eine Lesegeschwindigkeit von `2.1`. Bei Shift `0.5` ergibt sich unter derselben Bedingung `0.45`.\n\nRateBlur erzeugt also zusätzliche Verstimmungen. In dieser Implementierung verstärkt der positive Zufallswert die Abweichung von der normalen Lesegeschwindigkeit, statt symmetrisch um die gewünschte Transposition zu schwanken.\n\n**10. Die vier Stimmen werden paarweise auf zwei Ausgänge verteilt**\n\nNach der Lautstärkehüllkurve werden die Stimmen zusammengemischt:\n\n| Ausgang | Stimmen mit ursprünglichem Phasenversatz |\n|---|---|\n| 1 | `0` und `0.5` |\n| 2 | `0.25` und `0.75` |\n\nOhne Blur ergänzen sich die Hüllkurven jedes Paars zu einer konstanten Summe von `1`. Das verhindert eine allein durch die Hüllkurven verursachte Lautstärkepulsation; die überlagerten Audiosignale können trotzdem miteinander interferieren.\n\n**Beide Ausgänge entstehen aus demselben Eingangssignal.** Sie unterscheiden sich durch die zeitlich versetzten Lesefenster.\n\nZum Schluss mischt `mix` an jedem Ausgang das bearbeitete Signal mit dem Original:\n\n| `xfade` | Ergebnis |\n|---:|---|\n| `0` | nur Original |\n| `0.5` | je zur Hälfte Original und bearbeitet |\n| `1` | nur bearbeitet |\n\nDamit kannst du die drei Hauptparameter direkt im Ablauf verorten: **Shift Amount bestimmt, wie schnell gelesen wird. Window Size bestimmt, über welchen Zeitbereich sich die Leseköpfe bewegen. Blur verändert die Regelmäßigkeit ihrer Positionen oder Geschwindigkeiten.**\n"
                                 }
                             }
@@ -59,7 +59,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 104.333328, 202.0, 136.0, 50.0 ],
+                    "patching_rect": [ -87.666672, 202.0, 136.0, 68 ],
                     "text": "sah hält; history verzögert um 1 Sample. Erklärung 05–09 rechts."
                 }
             },
@@ -253,13 +253,13 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 541.0, 752.0, 309.0, 21.0 ],
+                    "patching_rect": [ 541.0, 752.0, 309.0, 37 ],
                     "text": "Zwei versetzte Lesekopf-Paare an getrennten Ausgängen."
                 }
             },
             {
                 "box": {
-                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus.",
+                    "annotation": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-85",
@@ -268,12 +268,14 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 318.416656, 724.0, 30.0, 23.0 ],
-                    "text": "in 1"
+                    "text": "in 1",
+                    "comment": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
+                    "hint": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab"
                 }
             },
             {
                 "box": {
-                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus.",
+                    "annotation": "Gen-Audioausgang 1: Pitchshifting mit Dry/Wet-Mischung",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-83",
@@ -281,7 +283,9 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 365.0, 752.0, 37.0, 23.0 ],
-                    "text": "out 1"
+                    "text": "out 1",
+                    "comment": "Gen-Audioausgang 1: Pitchshifting mit Dry/Wet-Mischung",
+                    "hint": "Gen-Audioausgang 1: Pitchshifting mit Dry/Wet-Mischung"
                 }
             },
             {
@@ -300,7 +304,7 @@
             },
             {
                 "box": {
-                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus.",
+                    "annotation": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-82",
@@ -309,12 +313,14 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 441.333313, 724.0, 30.0, 23.0 ],
-                    "text": "in 1"
+                    "text": "in 1",
+                    "comment": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
+                    "hint": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab"
                 }
             },
             {
                 "box": {
-                    "annotation": "19 — mix, xfade, in 1 UND out — mix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus.",
+                    "annotation": "Gen-Audioausgang 2: Pitchshifting mit Dry/Wet-Mischung",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-80",
@@ -322,7 +328,9 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 482.333313, 752.0, 37.0, 23.0 ],
-                    "text": "out 2"
+                    "text": "out 2",
+                    "comment": "Gen-Audioausgang 2: Pitchshifting mit Dry/Wet-Mischung",
+                    "hint": "Gen-Audioausgang 2: Pitchshifting mit Dry/Wet-Mischung"
                 }
             },
             {
@@ -348,7 +356,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 688.0, 71.0, 136.0, 35.0 ],
+                    "patching_rect": [ 688.0, 47.0, 136.0, 53 ],
                     "text": "noise / abs / blur: Erklärung 02–03 rechts."
                 }
             },
@@ -417,7 +425,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 56.333328, 313.0, 123.0, 50.0 ],
+                    "patching_rect": [ 56.333328, 289.0, 123.0, 53 ],
                     "text": "delta → sah: Erklärung 04–06 und 09 rechts."
                 }
             },
@@ -654,7 +662,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 56.333328, 421.0, 125.0, 35.0 ],
+                    "patching_rect": [ 56.333328, 541.0, 125.0, 68 ],
                     "text": "Phase in Verzögerung (Samples) umrechnen."
                 }
             },
@@ -667,7 +675,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 732.0, 571.0, 117.0, 35.0 ],
+                    "patching_rect": [ 732.0, 571.0, 117.0, 53 ],
                     "text": "Phase in Bogenmaß umrechnen."
                 }
             },
@@ -680,7 +688,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 732.0, 299.0, 125.0, 35.0 ],
+                    "patching_rect": [ 756.0, 299.0, 125.0, 37 ],
                     "text": "Vier Phasen: 0, ¼, ½ und ¾ Zyklus."
                 }
             },
@@ -693,7 +701,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 732.0, 629.0, 117.0, 64.0 ],
+                    "patching_rect": [ 732.0, 629.0, 117.0, 68 ],
                     "text": "Zwei um ½ Zyklus versetzte Cosinus²-Fenster ergänzen sich zu 1."
                 }
             },
@@ -965,7 +973,7 @@
             },
             {
                 "box": {
-                    "annotation": "10 — in 2, !- 1., * 1000 UND / — in 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase.",
+                    "annotation": "Eingang 2: Transpositionsfaktor, 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-22",
@@ -974,7 +982,9 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 56.333328, 144.0, 172.0, 23.0 ],
-                    "text": "in 2 @comment \"shift amount\""
+                    "text": "in 2 @comment \"shift amount\"",
+                    "comment": "Eingang 2: Transpositionsfaktor, 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts",
+                    "hint": "Eingang 2: Transpositionsfaktor, 1 Original, 2 Oktave aufwärts, 0.5 Oktave abwärts"
                 }
             },
             {
@@ -1217,7 +1227,7 @@
             },
             {
                 "box": {
-                    "annotation": "16 — delay 88200 4: EIN SPEICHER, VIER LESEKÖPFE — Der linke Eingang schreibt das Audiosignal. Die vier weiteren Eingänge geben die vier Verzögerungen in Samples vor; die vier Ausgänge liefern die entsprechenden Audiosignale. 88200 ist die Speicherkapazität in Samples, 4 die Zahl der Leseköpfe. Bei 48000 Hz entspricht die Kapazität etwa 1837.5 ms. Das ist kein buffer~-Dateiname.",
+                    "annotation": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
                     "fontname": "Lato",
                     "fontsize": 12.0,
                     "id": "obj-1",
@@ -1227,7 +1237,9 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 23.5, 458.0, 103.0, 37.0 ],
-                    "text": "in 1 @comment \"input to shift\""
+                    "text": "in 1 @comment \"input to shift\"",
+                    "comment": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab",
+                    "hint": "Eingang 1: Original-Audio; mehrfaches in 1 greift dasselbe Signal ab"
                 }
             },
             {
@@ -1239,7 +1251,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 10.0, 550.0, 79.0 ],
+                    "patching_rect": [ 900.0, 10.0, 550.0, 90 ],
                     "text": "01 — GEN RECHNET SAMPLE FÜR SAMPLE\nGen verarbeitet pro Audiokanal jeden einzelnen Samplewert. Bei 48000 Hz passiert das 48000-mal pro Sekunde. Die Kabel übertragen Zahlenfolgen: Audiosamples, Phasen, Verzögerungen oder Steuersignale. Ein Sample ist ein einzelner Wert, kein kompletter Klangabschnitt."
                 }
             },
@@ -1252,7 +1264,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 10.0, 550.0, 65.0 ],
+                    "patching_rect": [ 1470.0, 10.0, 550.0, 73 ],
                     "text": "02 — noise UND abs\nnoise erzeugt bei jedem Sample einen neuen Zufallswert ungefähr zwischen −1 und +1. abs bildet den Betrag: −0.7 wird +0.7, +0.3 bleibt +0.3. So wird daraus ein nichtnegativer Zufallswert von 0 bis ungefähr 1. abs glättet nichts und speichert nichts."
                 }
             },
@@ -1265,7 +1277,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 215.0, 550.0, 65.0 ],
+                    "patching_rect": [ 900.0, 215.0, 550.0, 73 ],
                     "text": "03 — param blur 0 UND MULTIPLIKATION\nparam blur 0 stellt einen von außen steuerbaren Parameter bereit; der Anfangswert ist 0. Die Multiplikation noise → abs → * blur begrenzt die Zufallsstärke. Beispiel: abs liefert 0.8, blur ist 0.1, Ergebnis 0.08. Bei blur = 0 ist der Zufallsbeitrag null."
                 }
             },
@@ -1278,7 +1290,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 215.0, 550.0, 79.0 ],
+                    "patching_rect": [ 1470.0, 215.0, 550.0, 90 ],
                     "text": "04 — delta: DIFFERENZ ZUM VORHERIGEN SAMPLE\ndelta berechnet aktueller Eingang minus vorheriger Eingang. Beispiel: 0.20 → 0.21 ergibt +0.01. Ein Phasensprung 0.99 → 0.00 ergibt −0.99. Bei einer rückwärts laufenden Phase kehren sich die Vorzeichen um. Hier wird delta mit der Phase gespeist; es analysiert NICHT die Lautstärke des Audios."
                 }
             },
@@ -1291,7 +1303,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 420.0, 553.0, 94.0 ],
+                    "patching_rect": [ 900.0, 420.0, 553.0, 106 ],
                     "text": "05 — sah 0: SAMPLE AND HOLD\nLinker Eingang: die Zahl, die übernommen werden soll. Rechter Eingang: das Triggersignal. Die 0 ist die Triggerschwelle. Wechselt der rechte Eingang von höchstens 0 auf größer als 0, übernimmt sah den linken Wert. Anschließend gibt es genau diesen Wert weiter aus, bis zum nächsten solchen Übergang. Beispiel: 0.08 bleibt konstant, auch wenn links neue Zufallswerte anliegen."
                 }
             },
@@ -1304,7 +1316,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 420.0, 550.0, 94.0 ],
+                    "patching_rect": [ 1470.0, 420.0, 550.0, 106 ],
                     "text": "06 — WARUM delta → RECHTER sah-EINGANG?\nWährend einer gleichmäßig laufenden Phase hat delta annähernd ein konstantes Vorzeichen. Am Umlauf ändert es sich kurz. sah reagiert auf den Übergang von nichtpositiv zu positiv. Bei steigender Phase geschieht das im regulären Lauf ein Sample nach dem Rücksprung, bei fallender Phase am Rücksprung selbst. So werden Werte an den Umlauf gekoppelt; ein negativer Impuls allein ist noch kein sah-Trigger."
                 }
             },
@@ -1317,7 +1329,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 625.0, 550.0, 79.0 ],
+                    "patching_rect": [ 900.0, 625.0, 550.0, 90 ],
                     "text": "07 — history: GENAU EIN SAMPLE SPEICHER\nhistory gibt den Eingangswert des vorherigen Samples aus: y[n] = x[n−1]. Anfangs ist der gespeicherte Wert hier 0. Bei 48000 Hz sind ein Sample etwa 0.0208 ms. history hält NICHT selbst einen Wert für ein ganzes Fenster und glättet nichts. Das längere Halten übernimmt sah. History unterbricht eine sonst unmittelbare Rückkopplung im Rechenweg."
                 }
             },
@@ -1330,7 +1342,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 625.0, 550.0, 79.0 ],
+                    "patching_rect": [ 1470.0, 625.0, 550.0, 90 ],
                     "text": "08 — HISTORY IM KONKRETEN PHASEBLUR-ZWEIG\nNur PhaseBlur enthält history: sah übernimmt einen Zufallsversatz, history reicht ihn ein Sample später an + 0., + 0.25, + 0.5 oder + 0.75 weiter. Diese Phase geht über % 1 und delta zum Trigger desselben sah zurück. history macht diese Rückkopplung berechenbar. RateBlur hat diesen Rückkopplungsweg nicht und enthält deshalb kein history."
                 }
             },
@@ -1343,7 +1355,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 830.0, 550.0, 79.0 ],
+                    "patching_rect": [ 900.0, 830.0, 550.0, 90 ],
                     "text": "09 — DIE ZWEI ARTEN VON sah IN DIESEM PROJEKT\nBei PhaseBlur halten die oberen sah den Zufallsversatz; die unteren sah halten die Fensterlänge in Samples. Bei RateBlur gibt es nur die unteren sah: Sie halten die bereits zufällig skalierte Fensterlänge. Der gehaltene Wert bleibt über einen Lesedurchlauf konstant. Neue Reglerwerte werden daher nicht überall unmittelbar übernommen."
                 }
             },
@@ -1356,7 +1368,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 830.0, 550.0, 79.0 ],
+                    "patching_rect": [ 1470.0, 830.0, 550.0, 90 ],
                     "text": "10 — in 2, !- 1., * 1000 UND /\nin 2 empfängt den Pitch-Faktor r: 1 = Original, 2 = Oktave aufwärts, 0.5 = Oktave abwärts. !- 1. bedeutet 1 minus Eingang, also 1−r. * 1000 und / window rechnen daraus eine Phasor-Frequenz in Hz: (1−r) × 1000 / Fensterdauer in ms. Das Vorzeichen bestimmt die Laufrichtung der Phase."
                 }
             },
@@ -1369,7 +1381,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 1035.0, 551.0, 79.0 ],
+                    "patching_rect": [ 900.0, 1035.0, 551.0, 90 ],
                     "text": "11 — phasor, PHASENVERSATZ UND % 1\nphasor erzeugt eine zyklische Rampe. Die Additionen + 0., + 0.25, + 0.5, + 0.75 versetzen die vier Leseköpfe um Viertelzyklen. % 1 nimmt den Rest bei Division durch 1: zum Beispiel 1.27 → 0.27. So werden die versetzten Phasen wieder in einen Zyklus zurückgeführt. Bei Pitch-Faktor 1 ist die berechnete Frequenz 0: der Phasor steht."
                 }
             },
@@ -1382,7 +1394,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 1035.0, 550.0, 94.0 ],
+                    "patching_rect": [ 1470.0, 1035.0, 550.0, 106 ],
                     "text": "12 — param window UND mstosamps\nwindow ist die Fensterdauer in Millisekunden, voreingestellt auf 100; erlaubt sind 0.1 bis 1000 ms. mstosamps rechnet bei der aktuellen Abtastrate in Samples um. Beispiel: 100 ms bei 48000 Hz ergeben 4800 Samples. Größere Fenster verändern zeitliche Überlagerungen, Klangfarbe und Wiederholungsrate. Beim Verstellen können zusätzliche Tonhöhenbewegungen auftreten."
                 }
             },
@@ -1395,7 +1407,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 1240.0, 552.0, 94.0 ],
+                    "patching_rect": [ 900.0, 1240.0, 552.0, 106 ],
                     "text": "13 — PHASEBLUR: WO GREIFT DER ZUFALL EIN?\nDie Phasenadditionen erhalten zusätzlich den von sah und history bereitgestellten Zufallsversatz. Die Fensterlänge wird davon getrennt gehalten. Der Zufall verschiebt somit die Lage des nächsten Lesedurchlaufs. Bei konstantem Fenster bleibt die Delay-Steigung zwischen den Änderungen gleich. Die Änderungen können trotzdem hörbare Artefakte verursachen."
                 }
             },
@@ -1408,7 +1420,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 1240.0, 550.0, 94.0 ],
+                    "patching_rect": [ 1470.0, 1240.0, 550.0, 106 ],
                     "text": "14 — RATEBLUR: WOZU + 1?\nHier folgt auf abs(noise) × blur ein + 1. So entsteht ein Faktor zwischen 1 und 1 + blur. Dieser wird mit der Fensterlänge in Samples multipliziert und durch sah gehalten. Die Phase wird mit dieser Länge multipliziert: Die Delay-Steigung und damit die Lesegeschwindigkeit ändern sich. Das erzeugt zusätzliche Tonhöhenstreuung; sie ist nicht symmetrisch um die Grundtransposition."
                 }
             },
@@ -1421,7 +1433,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 1445.0, 550.0, 79.0 ],
+                    "patching_rect": [ 900.0, 1445.0, 550.0, 90 ],
                     "text": "15 — PHASE × GEHALTENE LÄNGE → DELAY\nDie vier Multiplikationen vor delay rechnen jeweils Phase × Fensterlänge. Beispiel: Phase 0.25 × 4800 Samples = 1200 Samples Verzögerung. Diese Zahl geht in den zugehörigen Delay-Steuereingang. Weil sich die Phase ständig verändert, bewegt sich die Leseposition. Aus dieser Bewegung entsteht die Tonhöhenverschiebung."
                 }
             },
@@ -1434,7 +1446,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 1445.0, 550.0, 79.0 ],
+                    "patching_rect": [ 1470.0, 1445.0, 550.0, 90 ],
                     "text": "16 — delay 88200 4: EIN SPEICHER, VIER LESEKÖPFE\nDer linke Eingang schreibt das Audiosignal. Die vier weiteren Eingänge geben die vier Verzögerungen in Samples vor; die vier Ausgänge liefern die entsprechenden Audiosignale. 88200 ist die Speicherkapazität in Samples, 4 die Zahl der Leseköpfe. Bei 48000 Hz entspricht die Kapazität etwa 1837.5 ms. Das ist kein buffer~-Dateiname."
                 }
             },
@@ -1447,7 +1459,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 1650.0, 550.0, 79.0 ],
+                    "patching_rect": [ 900.0, 1650.0, 550.0, 90 ],
                     "text": "17 — − 0.5 → * pi → cos → QUADRAT\nDie Phase wird um −0.5 verschoben und mit pi in Bogenmaß umgerechnet. cos bildet daraus ein Fenster; das nachfolgende * erhält denselben Wert an beiden Eingängen und quadriert ihn. Ergebnis: cos²(pi × (Phase−0.5)). Es ist an den Zyklusenden null und in der Mitte eins. Der Phasensprung soll dadurch möglichst unhörbar werden."
                 }
             },
@@ -1460,7 +1472,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 1650.0, 551.0, 94.0 ],
+                    "patching_rect": [ 1470.0, 1650.0, 551.0, 106 ],
                     "text": "18 — AUDIO × FENSTER UND SUMMIERUNG\nDie unteren Multiplikationen multiplizieren jeden Delay-Ausgang mit seinem Fenster: null blendet ihn aus, eins lässt ihn durch. Zwei Leseköpfe mit einem halben Zyklus Abstand gehen jeweils auf denselben mix-Eingang und werden dort addiert. Ihre Fenstergewichte ergänzen sich zu 1; ihre Audiosignale sind aber verschieden. Deshalb sind Auslöschungen und Schwebungen weiterhin möglich."
                 }
             },
@@ -1473,7 +1485,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0, 1855.0, 552.0, 79.0 ],
+                    "patching_rect": [ 900.0, 1855.0, 552.0, 90 ],
                     "text": "19 — mix, xfade, in 1 UND out\nmix hat drei Eingänge: links trockenes Audio, Mitte bearbeitetes Audio, rechts den Mischfaktor xfade. Ergebnis: trocken × (1−xfade) + bearbeitet × xfade. 0 = trocken, 1 = bearbeitet. Die zusätzlichen in 1 lesen denselben Eingang nochmals für den trockenen Weg. out 1 und out 2 geben die beiden versetzten Lesekopf-Paare aus."
                 }
             },
@@ -1486,7 +1498,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1470.0, 1855.0, 550.0, 94.0 ],
+                    "patching_rect": [ 1470.0, 1855.0, 550.0, 106 ],
                     "text": "20 — ZUM NACHVOLLZIEHEN UND HÖREN\nBeide Varianten enthalten Blur. Zuerst blur = 0 und xfade = 1 setzen, dann einen konstanten Pitch-Faktor ungleich 1 wählen. Erst danach Blur langsam erhöhen. PhaseBlur verändert die zeitlichen Versätze; RateBlur zusätzlich die Geschwindigkeit. Blur ist eine Klangveränderung, keine verlässliche Reparatur von Artefakten. Hinweise zu jedem Objekt stehen außerdem in seiner Annotation (Clue-Fenster)."
                 }
             }

@@ -20,7 +20,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1059.906534075737, 800.6058484315872, 145.0, 17.0 ],
+                    "patching_rect": [ 1059.906534075737, 704.6058484315872, 145.0, 17.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 20.24682468175888, 129.27272272109985, 66.50048333406448, 17.0 ],
                     "text": "Bandrouting"
@@ -33,7 +33,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1044.906534075737, 785.6058484315872, 145.0, 17.0 ],
+                    "patching_rect": [ 1068.906534075737, 785.6058484315872, 145.0, 17.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 21.78988289833069, 87.77272415161133, 66.50048333406448, 17.0 ],
                     "text": "Fiter Type"
@@ -325,7 +325,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 263.03031516075134, 443.61812460422516, 128.0, 18.0 ],
+                    "patching_rect": [ 191.03031516075134, 443.61812460422516, 128.0, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 255.454536318779, 146.36363112926483, 66.0, 18.0 ],
                     "text": "shifter #1 #2"
@@ -448,7 +448,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1669.0476031303406, 1611.9047465324402, 205.0, 33.0 ],
+                    "patching_rect": [ 1672.6190316677094, 1613.8095088005066, 205.0, 37 ],
                     "text": "07 · Pitch Shift 2\nAUDIO OUT"
                 }
             },
@@ -510,7 +510,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 160.00002121925354, 526.951450586319, 150.0, 20.0 ],
+                    "patching_rect": [ 160.00002121925354, 550.951450586319, 150.0, 20.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 327.2727155685425, 199.99999284744263, 103.73831695318222, 20.0 ],
                     "text": "PITCHSHIFTER"
@@ -600,7 +600,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1441.666652917862, 1601.1904609203339, 205.0, 47.0 ],
+                    "patching_rect": [ 1446.4285576343536, 1598.3333184719086, 205.0, 53 ],
                     "text": "06 · Pitch-Delay ohne Shift\nReferenz für Pitch 1 und 2\nAUDIO OUT"
                 }
             },
@@ -645,7 +645,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [ 300.0, 40.0, 431.0, 69.0 ],
-                                    "text": "FILTER REMOTER\nÜbersetzt den Filter-Tab (0–3) in Zellbefehle für die Filtermatrix. Der Ausgang enthält Steuerdaten, kein Audiosignal. Die eigentliche Filterung erfolgt im DSP-Patch."
+                                    "text": "PITCH-ALGORITHMUSWAHL\nTab-Indizes: 0 GEN, 1 TRP, 2 FFT/Gadget, 3 ZTX. Gibt Steuerlisten an die Algorithmusmatrix aus, kein Audio."
                                 }
                             },
                             {
@@ -658,7 +658,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [ 300.0, 180.0, 430.0, 53.0 ],
-                                    "text": "Die langen Listen enthalten Tripel: Spalte, Zeile, Wert. Für die Modi 1, 2 und 3 wird jeweils eine Zelle aktiviert; die übrigen Zellen werden explizit auf 0 gesetzt."
+                                    "text": "Die Liste setzt alle vier Eingänge der Algorithmusmatrix. Ein Algorithmus erhält Pegel 1, die übrigen Pegel 0."
                                 }
                             },
                             {
@@ -671,7 +671,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [ 300.0, 290.0, 434.0, 53.0 ],
-                                    "text": "Auch Modus 0 (Lowpass) setzt die vollständige Filterzeile. Alle vier Modi schalten genau einen Filterausgang ein und die übrigen ausdrücklich aus."
+                                    "text": "Index 0 aktiviert GEN. Diese Auswahl betrifft Pitch-Algorithmen, keine Lowpass-/Highpass-Filter."
                                 }
                             },
                             {
@@ -682,8 +682,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 440.0, 756.0, 22.0 ],
-                                    "text": "Gemeinsamer Ausgang: Die gewählte Liste wird unverändert an die Filtermatrix im übergeordneten Patch weitergereicht."
+                                    "patching_rect": [ 50.0, 440.0, 756.0, 24 ],
+                                    "text": "Ausgang: Matrixliste aus Tripeln Eingang, Ausgang, Pegel."
                                 }
                             },
                             {
@@ -743,25 +743,29 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Algorithmusindex: 0 GEN, 1 TRP, 2 FFT, 3 ZTX",
                                     "id": "obj-57",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ]
+                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ],
+                                    "annotation": "01 · Algorithmusindex: 0 GEN, 1 TRP, 2 FFT, 3 ZTX",
+                                    "hint": "01 · Algorithmusindex: 0 GEN, 1 TRP, 2 FFT, 3 ZTX"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
                                     "id": "obj-58",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ]
+                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ],
+                                    "annotation": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
+                                    "hint": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier"
                                 }
                             },
                             {
@@ -774,7 +778,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [ 764.0, 40.0, 430.0, 88.0 ],
-                                    "text": "Filterwahl\nÜbersetzt die gewählte Filterart in Befehle für die Filtermatrix. Damit wird der passende Filterweg im zugehörigen Delay ausgewählt."
+                                    "text": "Pitch-Algorithmuswahl\nÜbersetzt GEN/TRP/FFT/ZTX in Matrixbefehle für die beiden Pitch-Zweige."
                                 }
                             }
                         ],
@@ -935,7 +939,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 40.0, 431.0, 69.0 ],
+                                    "patching_rect": [ 300.0, 40.0, 431.0, 78 ],
                                     "text": "FILTER REMOTER\nÜbersetzt den Filter-Tab (0–3) in Zellbefehle für die Filtermatrix. Der Ausgang enthält Steuerdaten, kein Audiosignal. Die eigentliche Filterung erfolgt im DSP-Patch."
                                 }
                             },
@@ -948,7 +952,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 180.0, 430.0, 53.0 ],
+                                    "patching_rect": [ 300.0, 180.0, 430.0, 60 ],
                                     "text": "Die langen Listen enthalten Tripel: Spalte, Zeile, Wert. Für die Modi 1, 2 und 3 wird jeweils eine Zelle aktiviert; die übrigen Zellen werden explizit auf 0 gesetzt."
                                 }
                             },
@@ -961,7 +965,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 290.0, 434.0, 53.0 ],
+                                    "patching_rect": [ 300.0, 290.0, 434.0, 60 ],
                                     "text": "Auch Modus 0 (Lowpass) setzt die vollständige Filterzeile. Alle vier Modi schalten genau einen Filterausgang ein und die übrigen ausdrücklich aus."
                                 }
                             },
@@ -973,7 +977,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 440.0, 756.0, 22.0 ],
+                                    "patching_rect": [ 50.0, 440.0, 756.0, 42 ],
                                     "text": "Gemeinsamer Ausgang: Die gewählte Liste wird unverändert an die Filtermatrix im übergeordneten Patch weitergereicht."
                                 }
                             },
@@ -1034,25 +1038,29 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch",
                                     "id": "obj-57",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ]
+                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ],
+                                    "annotation": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch",
+                                    "hint": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
                                     "id": "obj-58",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ]
+                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ],
+                                    "annotation": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
+                                    "hint": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier"
                                 }
                             },
                             {
@@ -1143,7 +1151,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1548.8636215925217, 1135.227265238762, 60.22221755981445, 18.0 ],
+                    "patching_rect": [ 1548.8636215925217, 1111.227265238762, 60.22221755981445, 19 ],
                     "text": "FilterCutoff"
                 }
             },
@@ -1193,7 +1201,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1612.4999846220016, 1105.6818109750748, 46.0, 18.0 ],
+                    "patching_rect": [ 1612.4999846220016, 1081.6818109750748, 46.0, 19 ],
                     "text": "Filter Q"
                 }
             },
@@ -1234,7 +1242,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1509.4118276834488, 985.3871012330055, 53.88889145851135, 18.0 ],
+                    "patching_rect": [ 1533.4118276834488, 985.3871012330055, 53.88889145851135, 19 ],
                     "text": "Feedback"
                 }
             },
@@ -1285,7 +1293,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1587.217904150486, 1000.0, 53.0, 18.0 ],
+                    "patching_rect": [ 1587.217904150486, 1024.0, 53.0, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 359.99998712539673, -1.8181817531585693, 33.0, 18.0 ],
                     "text": "Filt Q"
@@ -1506,7 +1514,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1216.6666550636292, 1604.7618894577026, 205.0, 33.0 ],
+                    "patching_rect": [ 1226.1904644966125, 1611.4285564422607, 205.0, 37 ],
                     "text": "05 · Pitch Shift 1\nAUDIO OUT"
                 }
             },
@@ -1532,7 +1540,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1326.898927418625, 1241.7807570695877, 69.0, 18.0 ],
+                    "patching_rect": [ 1326.898927418625, 1169.7807570695877, 69.0, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 359.99998712539673, 83.63636064529419, 68.0, 18.0 ],
                     "text": "Overlap Gen "
@@ -1546,7 +1554,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1263.5593521595001, 983.3871012330055, 128.0, 18.0 ],
+                    "patching_rect": [ 1263.5593521595001, 1079.3871012330055, 128.0, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 249.99999105930328, 69.09090662002563, 75.0, 18.0 ],
                     "text": "Pitchshift Type"
@@ -1602,7 +1610,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 175.1515350341797, 648.1635611057281, 46.0, 18.0 ],
+                    "patching_rect": [ 175.1515350341797, 624.1635611057281, 46.0, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 134.85941690206528, 173.99999463558197, 37.90322607755661, 18.0 ],
                     "text": "Shifter"
@@ -1629,7 +1637,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1029.906534075737, 770.6058484315872, 145.0, 17.0 ],
+                    "patching_rect": [ 957.9439178109169, 743.6058484315872, 145.0, 17.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 72.1347368657589, 45.979470789432526, 79.0, 17.0 ],
                     "text": "Input-Fadezeit (s)"
@@ -1719,7 +1727,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 481.2725239396095, 961.077528834343, 47.32142812013626, 20.0 ],
+                    "patching_rect": [ 481.2725239396095, 961.077528834343, 47.32142812013626, 22 ],
                     "text": "down"
                 }
             },
@@ -1889,82 +1897,96 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Eingang: t f f f · Anschluss 1",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 50.0, 40.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 50.0, 40.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Eingang: t f f f · Anschluss 1",
+                                    "hint": "01 · Eingang: t f f f · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Eingang: t i i · Anschluss 1",
                                     "id": "obj-2",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 250.0, 40.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 250.0, 40.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Eingang: t i i · Anschluss 1",
+                                    "hint": "02 · Eingang: t i i · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "03 · Eingang: t f f f · Anschluss 1",
                                     "id": "obj-3",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 390.0, 40.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 390.0, 40.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Eingang: t f f f · Anschluss 1",
+                                    "hint": "03 · Eingang: t f f f · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Ausgang: t f f · Anschluss 1; t f f f · Anschluss 2",
                                     "id": "obj-4",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 214.0, 352.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 214.0, 352.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Ausgang: t f f · Anschluss 1; t f f f · Anschluss 2",
+                                    "hint": "02 · Ausgang: t f f · Anschluss 1; t f f f · Anschluss 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "03 · Ausgang: t f f f · Anschluss 2; t f f · Anschluss 1",
                                     "id": "obj-5",
                                     "index": 3,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 249.0, 352.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 249.0, 352.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Ausgang: t f f f · Anschluss 2; t f f · Anschluss 1",
+                                    "hint": "03 · Ausgang: t f f f · Anschluss 2; t f f · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Ausgang: set $1 · Anschluss 1",
                                     "id": "obj-6",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 150.0, 352.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 150.0, 352.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Ausgang: set $1 · Anschluss 1",
+                                    "hint": "01 · Ausgang: set $1 · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "04 · Ausgang: set $1 · Anschluss 1; f 0. · Anschluss 1",
                                     "id": "obj-7",
                                     "index": 4,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 364.0, 352.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 364.0, 352.0, 30.0, 30.0 ],
+                                    "annotation": "04 · Ausgang: set $1 · Anschluss 1; f 0. · Anschluss 1",
+                                    "hint": "04 · Ausgang: set $1 · Anschluss 1; f 0. · Anschluss 1"
                                 }
                             },
                             {
@@ -2133,7 +2155,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 301.78571140766144, 961.077528834343, 47.32142812013626, 20.0 ],
+                    "patching_rect": [ 301.78571140766144, 961.077528834343, 47.32142812013626, 22 ],
                     "text": "UP"
                 }
             },
@@ -2334,7 +2356,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 573.9049534797668, 958.3871012330055, 86.04626750946045, 60.0 ],
+                    "patching_rect": [ 573.9049534797668, 958.3871012330055, 86.04626750946045, 68 ],
                     "text": "wird nicht\nhier gesetzt\nschattendelays andere send"
                 }
             },
@@ -2359,7 +2381,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 989.2857048511505, 1604.7618894577026, 205.0, 33.0 ],
+                    "patching_rect": [ 992.4811148643494, 1598.3333184719086, 205.0, 37 ],
                     "text": "04 · Mikrofon direkt\nAUDIO OUT"
                 }
             },
@@ -2459,7 +2481,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 527.3809473514557, 1604.7618894577026, 205.0, 33.0 ],
+                    "patching_rect": [ 533.3333282470703, 1605.4761755466461, 205.0, 37 ],
                     "text": "02 · Frequency Shift DOWN\nAUDIO OUT"
                 }
             },
@@ -2471,7 +2493,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 304.76190185546875, 1592.8571276664734, 205.0, 33.0 ],
+                    "patching_rect": [ 315.4761874675751, 1598.3333184719086, 205.0, 37 ],
                     "text": "01 · Frequency Shift UP\nAUDIO OUT"
                 }
             },
@@ -2483,7 +2505,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 758.3333261013031, 1601.1904609203339, 205.0, 47.0 ],
+                    "patching_rect": [ 764.2857069969177, 1598.3333184719086, 205.0, 53 ],
                     "text": "03 · Frequency-Delay\nohne Shift\nAUDIO OUT"
                 }
             },
@@ -2659,135 +2681,159 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Eingang: gate 1 0 · Anschluss 2",
                                     "id": "obj-57",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 586.0, 315.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 586.0, 315.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Eingang: gate 1 0 · Anschluss 2",
+                                    "hint": "01 · Eingang: gate 1 0 · Anschluss 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Ausgang: t b b b b b b b b b b · Anschluss 2",
                                     "id": "obj-58",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 49.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 49.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "01 · Ausgang: t b b b b b b b b b b · Anschluss 2",
+                                    "hint": "01 · Ausgang: t b b b b b b b b b b · Anschluss 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Ausgang: t b b b b b b b b b b · Anschluss 3",
                                     "id": "obj-60",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 84.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 84.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "02 · Ausgang: t b b b b b b b b b b · Anschluss 3",
+                                    "hint": "02 · Ausgang: t b b b b b b b b b b · Anschluss 3"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "03 · Ausgang: t b b b b b b b b b b · Anschluss 4",
                                     "id": "obj-62",
                                     "index": 3,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 119.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 119.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "03 · Ausgang: t b b b b b b b b b b · Anschluss 4",
+                                    "hint": "03 · Ausgang: t b b b b b b b b b b · Anschluss 4"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "04 · Ausgang: t b b b b b b b b b b · Anschluss 5",
                                     "id": "obj-63",
                                     "index": 4,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 154.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 154.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "04 · Ausgang: t b b b b b b b b b b · Anschluss 5",
+                                    "hint": "04 · Ausgang: t b b b b b b b b b b · Anschluss 5"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "05 · Ausgang: t b b b b b b b b b b · Anschluss 6",
                                     "id": "obj-68",
                                     "index": 5,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 189.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 189.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "05 · Ausgang: t b b b b b b b b b b · Anschluss 6",
+                                    "hint": "05 · Ausgang: t b b b b b b b b b b · Anschluss 6"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "06 · Ausgang: t b b b b b b b b b b · Anschluss 7",
                                     "id": "obj-69",
                                     "index": 6,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 224.99999301931763, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 224.99999301931763, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "06 · Ausgang: t b b b b b b b b b b · Anschluss 7",
+                                    "hint": "06 · Ausgang: t b b b b b b b b b b · Anschluss 7"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "07 · Ausgang: t b b b b b b b b b b · Anschluss 8",
                                     "id": "obj-70",
                                     "index": 7,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 259.9999930193176, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 259.9999930193176, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "07 · Ausgang: t b b b b b b b b b b · Anschluss 8",
+                                    "hint": "07 · Ausgang: t b b b b b b b b b b · Anschluss 8"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "08 · Ausgang: t b b b · Anschluss 2",
                                     "id": "obj-72",
                                     "index": 8,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 329.9999930193176, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 329.9999930193176, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "08 · Ausgang: t b b b · Anschluss 2",
+                                    "hint": "08 · Ausgang: t b b b · Anschluss 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "09 · Ausgang: gate 1 0 · Anschluss 1",
                                     "id": "obj-73",
                                     "index": 9,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 364.9999930193176, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 364.9999930193176, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "09 · Ausgang: gate 1 0 · Anschluss 1",
+                                    "hint": "09 · Ausgang: gate 1 0 · Anschluss 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "DOWN Hz: wiederhergestellten Parameterwert ausgeben",
+                                    "comment": "10 · DOWN Hz: wiederhergestellten Parameterwert ausgeben",
                                     "id": "init-down-outlet",
                                     "index": 10,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 464.9999930193176, 417.1351257574463, 30.0, 30.0 ]
+                                    "patching_rect": [ 464.9999930193176, 417.1351257574463, 30.0, 30.0 ],
+                                    "annotation": "10 · DOWN Hz: wiederhergestellten Parameterwert ausgeben",
+                                    "hint": "10 · DOWN Hz: wiederhergestellten Parameterwert ausgeben"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Fadezeit vor Quellenauswahl ausgeben",
+                                    "comment": "11 · Fadezeit vor Quellenauswahl ausgeben",
                                     "id": "input-fade-init-out",
                                     "index": 11,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 550.0, 417.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 550.0, 417.0, 30.0, 30.0 ],
+                                    "annotation": "11 · Fadezeit vor Quellenauswahl ausgeben",
+                                    "hint": "11 · Fadezeit vor Quellenauswahl ausgeben"
                                 }
                             },
                             {
@@ -2938,7 +2984,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 461.5151461362839, 473.92115223407745, 152.0, 47.0 ],
+                    "patching_rect": [ 461.5151461362839, 473.92115223407745, 152.0, 53 ],
                     "text": "Auswählen welche der beiden Freqshiftbänder an sind "
                 }
             },
@@ -2962,7 +3008,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1512.9522889852524, -15.151513814926147, 210.0, 38.0 ],
+                    "patching_rect": [ 1512.9522889852524, -15.151513814926147, 210.0, 60 ],
                     "text": "Ein/Aus sendet den Modulstatus\nan den lokalen Enabled-Bus."
                 }
             },
@@ -3064,7 +3110,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 40.0, 431.0, 69.0 ],
+                                    "patching_rect": [ 300.0, 40.0, 431.0, 78 ],
                                     "text": "FILTER REMOTER\nÜbersetzt den Filter-Tab (0–3) in Zellbefehle für die Filtermatrix. Der Ausgang enthält Steuerdaten, kein Audiosignal. Die eigentliche Filterung erfolgt im DSP-Patch."
                                 }
                             },
@@ -3077,7 +3123,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 180.0, 430.0, 53.0 ],
+                                    "patching_rect": [ 300.0, 180.0, 430.0, 60 ],
                                     "text": "Die langen Listen enthalten Tripel: Spalte, Zeile, Wert. Für die Modi 1, 2 und 3 wird jeweils eine Zelle aktiviert; die übrigen Zellen werden explizit auf 0 gesetzt."
                                 }
                             },
@@ -3090,7 +3136,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 290.0, 434.0, 53.0 ],
+                                    "patching_rect": [ 300.0, 290.0, 434.0, 60 ],
                                     "text": "Auch Modus 0 (Lowpass) setzt die vollständige Filterzeile. Alle vier Modi schalten genau einen Filterausgang ein und die übrigen ausdrücklich aus."
                                 }
                             },
@@ -3102,7 +3148,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 440.0, 756.0, 22.0 ],
+                                    "patching_rect": [ 50.0, 440.0, 756.0, 42 ],
                                     "text": "Gemeinsamer Ausgang: Die gewählte Liste wird unverändert an die Filtermatrix im übergeordneten Patch weitergereicht."
                                 }
                             },
@@ -3163,25 +3209,29 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch",
                                     "id": "obj-57",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ]
+                                    "patching_rect": [ 50.00000398984528, 39.99999739866638, 30.0, 30.0 ],
+                                    "annotation": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch",
+                                    "hint": "01 · Filterindex: 0 LP, 1 HP, 2 BP, 3 Notch"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
                                     "id": "obj-58",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ]
+                                    "patching_rect": [ 44.00000398984528, 356.07405639866636, 30.0, 30.0 ],
+                                    "annotation": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier",
+                                    "hint": "01 · Matrixliste: Eingang Ausgang Pegel; ein aktiver Eingang von vier"
                                 }
                             },
                             {
@@ -3326,7 +3376,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 300.0, 20.0, 430.0, 69.0 ],
+                                    "patching_rect": [ 300.0, 20.0, 430.0, 78 ],
                                     "text": "BANDMATRIX – Algorithmus\nDer Tab-Index wählt eine vorbereitete Liste für die Seitenband-Matrix und gleichzeitig den passenden Anzeigenamen. Audio wird hier nicht verarbeitet."
                                 }
                             },
@@ -3339,7 +3389,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 360.0, 270.0, 370.0, 69.0 ],
+                                    "patching_rect": [ 360.0, 270.0, 370.0, 78 ],
                                     "text": "Listen-Ausgang (2): Tripel aus Spalte, Zeile und Wert setzen die Kreuzpunkte der übergeordneten matrixctrl. Die vier Modi heißen Alle Aus, Oberes Band, Unteres Band und Beide An."
                                 }
                             },
@@ -3352,7 +3402,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 440.0, 680.0, 38.0 ],
+                                    "patching_rect": [ 50.0, 440.0, 680.0, 42 ],
                                     "text": "Jeder Modus setzt alle vier Kreuzpunkte genau einmal. Nicht gewählte Verbindungen werden ausdrücklich auf 0 gesetzt; dadurch hängt die Bandwahl nicht vom vorherigen Matrixzustand ab."
                                 }
                             },
@@ -3364,7 +3414,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 550.0, 735.0, 22.0 ],
+                                    "patching_rect": [ 50.0, 550.0, 735.0, 42 ],
                                     "text": "Text-Ausgang (1): Aktualisiert ausschließlich die Beschriftung der Bandwahl; der zweite Ausgang steuert das Routing."
                                 }
                             },
@@ -3414,13 +3464,15 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Bandname als Text zur Anzeige",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 122.0, 331.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 122.0, 331.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Bandname als Text zur Anzeige",
+                                    "hint": "01 · Bandname als Text zur Anzeige"
                                 }
                             },
                             {
@@ -3480,25 +3532,29 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Bandwahl: 0 alle aus, 1 Up, 2 Down, 3 beide",
                                     "id": "obj-42",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 156.36363245720293, 39.99999931585694, 30.0, 30.0 ]
+                                    "patching_rect": [ 156.36363245720293, 39.99999931585694, 30.0, 30.0 ],
+                                    "annotation": "01 · Bandwahl: 0 alle aus, 1 Up, 2 Down, 3 beide",
+                                    "hint": "01 · Bandwahl: 0 alle aus, 1 Up, 2 Down, 3 beide"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "02 · Bandmatrix-Steuerliste: Eingang Ausgang Pegel",
                                     "id": "obj-43",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 250.0, 269.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 250.0, 269.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Bandmatrix-Steuerliste: Eingang Ausgang Pegel",
+                                    "hint": "02 · Bandmatrix-Steuerliste: Eingang Ausgang Pegel"
                                 }
                             },
                             {
@@ -3834,7 +3890,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 602.7057621479034, 757.4766323566437, 53.88889145851135, 18.0 ],
+                    "patching_rect": [ 602.7057621479034, 733.4766323566437, 53.88889145851135, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 171.8181756734848, 3.6363635063171387, 53.88889145851135, 18.0 ],
                     "text": "Feedback"
@@ -3848,7 +3904,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 481.2725239396095, 1011.8181581497192, 60.22221755981445, 18.0 ],
+                    "patching_rect": [ 481.2725239396095, 987.8181581497192, 60.22221755981445, 18.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 169.99999392032623, 35.4545441865921, 57.0, 18.0 ],
                     "text": "FilterCutoff"
@@ -3984,8 +4040,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 650.0, 50.0, 600.0, 69.0 ],
-                                    "text": "QUELLENANZEIGE\nOrdnet dem Mikrofon-Auswahlindex 0–7 einen festen Namen zu. Dieser Patch aktualisiert nur die GUI-Beschriftung. Die Audioquellen werden separat in MS_Delayelementextended geroutet."
+                                    "patching_rect": [ 650.0, 50.0, 600.0, 78 ],
+                                    "text": "QUELLENANZEIGE\nOrdnet dem Mikrofon-Auswahlindex 0–7 einen festen Namen zu. Dieser Patch aktualisiert nur die GUI-Beschriftung. Die Audioquellen werden separat in MS_Delayelementextended_M4l_update geroutet."
                                 }
                             },
                             {
@@ -3997,7 +4053,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 600.0, 200.0, 650.0, 38.0 ],
+                                    "patching_rect": [ 600.0, 200.0, 650.0, 42 ],
                                     "text": "Zuordnung 0–7: No Input, DPA oben, DPA unten, Schertler oben, Schertler unten, Alle Luftmikrofone, Alle Klappen, Tutti."
                                 }
                             },
@@ -4022,20 +4078,22 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 50.0, 700.0, 923.0, 22.0 ],
+                                    "patching_rect": [ 50.0, 700.0, 923.0, 42 ],
                                     "text": "Ausgang: setzt im Elternpatch den Anzeigetext über den kalten Eingang der Nachricht „Tutti“. Hier werden keine Pegel oder Audiosignale verändert."
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Mikrofon-Auswahlindex 0–7",
                                     "id": "obj-7",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 345.0, 63.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 345.0, 63.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Mikrofon-Auswahlindex 0–7",
+                                    "hint": "01 · Mikrofon-Auswahlindex 0–7"
                                 }
                             },
                             {
@@ -4161,13 +4219,15 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Name der ausgewählten Mikrofonquelle als Text",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 433.0, 609.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 433.0, 609.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Name der ausgewählten Mikrofonquelle als Text",
+                                    "hint": "01 · Name der ausgewählten Mikrofonquelle als Text"
                                 }
                             },
                             {
@@ -4621,7 +4681,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1099.0, 46.0, 637.0, 60.0 ],
+                    "patching_rect": [ 1099.0, 70.0, 637.0, 68 ],
                     "text": "STARTABGLEICH: Nach Device-Initialisierung werden die geladenen Hauptwerte ausgegeben. Filter- und Bandwahl kommen aus den Live-Tabs; die vollständigen Matrixlisten werden an Haupt- und Schatten-DSP übertragen. Die aktuelle Delayzeit wird beim Initialisieren an die Schatten gesendet; spätere Zeitwechsel nutzen die Umschaltsequenz."
                 }
             },
@@ -5271,7 +5331,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1434.5, 130.15873217582703, 376.0, 60.0 ],
+                    "patching_rect": [ 1434.5, 154.15873217582703, 376.0, 68 ],
                     "text": "PITCH → SCHATTEN: aktuelle GUI-Werte mit prepend #1 über ---Gerätebusse. Transpositionen sind hier bereits Halbtöne (Cent / 100). Bestehender Ladeablauf gibt alle Pitch-Steuerwerte erneut aus."
                 }
             },
@@ -5320,14 +5380,16 @@
                         "boxes": [
                             {
                                 "box": {
-                                    "comment": "Link 0/1: nur Anzeige-/Bedienzustand ändern",
+                                    "comment": "01 · Link 0/1: nur Anzeige-/Bedienzustand ändern",
                                     "id": "link",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 40.0, 30.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 40.0, 30.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Link 0/1: nur Anzeige-/Bedienzustand ändern",
+                                    "hint": "01 · Link 0/1: nur Anzeige-/Bedienzustand ändern"
                                 }
                             },
                             {
@@ -5382,7 +5444,9 @@
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 40.0, 265.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 40.0, 265.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Originalfeld: Sichtbarkeit",
+                                    "hint": "01 · Originalfeld: Sichtbarkeit"
                                 }
                             },
                             {
@@ -5393,7 +5457,9 @@
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 250.0, 265.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 250.0, 265.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Wirksame Anzeige: Sichtbarkeit",
+                                    "hint": "02 · Wirksame Anzeige: Sichtbarkeit"
                                 }
                             },
                             {
@@ -5404,7 +5470,9 @@
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 460.0, 265.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 460.0, 265.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Pitch-2-Buttons: Bedienbarkeit",
+                                    "hint": "03 · Pitch-2-Buttons: Bedienbarkeit"
                                 }
                             },
                             {
@@ -5501,14 +5569,16 @@
                         "boxes": [
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Eingang: toggle · Anschluss 1",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "int" ],
-                                    "patching_rect": [ 20.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 20.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Eingang: toggle · Anschluss 1",
+                                    "hint": "01 · Eingang: toggle · Anschluss 1"
                                 }
                             },
                             {
@@ -5702,14 +5772,16 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
+                                    "comment": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
                                     "id": "timein",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 290.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 290.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
+                                    "hint": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur"
                                 }
                             },
                             {
@@ -5755,26 +5827,30 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "comment": "01 · Delay-Modul Ein/Aus",
                                                     "id": "module-in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Delay-Modul Ein/Aus",
+                                                    "hint": "01 · Delay-Modul Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "comment": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
                                                     "id": "time-in",
                                                     "index": 2,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "float" ],
-                                                    "patching_rect": [ 255.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 255.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "hint": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu"
                                                 }
                                             },
                                             {
@@ -5900,13 +5976,15 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "comment": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
                                                     "id": "clock-out",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 150.0, 410.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 150.0, 410.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "hint": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen"
                                                 }
                                             },
                                             {
@@ -5916,7 +5994,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 445.0, 400.0, 33.0 ],
+                                                    "patching_rect": [ 20.0, 445.0, 400.0, 53 ],
                                                     "text": "Modul EIN startet; AUS stoppt. Jede gesetzte Zeit: alten Timer stoppen, neue Dauer setzen, von dort neu zählen. Kein Sequenz-Start und kein Listenindex in diesem Zeitgeber."
                                                 }
                                             },
@@ -6864,24 +6942,28 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz-Transposition Pitch 1 in Cent",
+                                    "comment": "01 · Sequenz-Transposition Pitch 1 in Cent",
                                     "id": "centout",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 20.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Sequenz-Transposition Pitch 1 in Cent",
+                                    "hint": "01 · Sequenz-Transposition Pitch 1 in Cent"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "0 = manueller Pitch-Regler; 1 = Sequenz übernimmt Pitch 1",
+                                    "comment": "02 · 0 = manueller Pitch-Regler; 1 = Sequenz übernimmt Pitch 1",
                                     "id": "runout",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 315.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "02 · 0 = manueller Pitch-Regler; 1 = Sequenz übernimmt Pitch 1",
+                                    "hint": "02 · 0 = manueller Pitch-Regler; 1 = Sequenz übernimmt Pitch 1"
                                 }
                             },
                             {
@@ -7681,7 +7763,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 885.0, 530.0, 452.0, 33.0 ],
+                                    "patching_rect": [ 885.0, 530.0, 452.0, 53 ],
                                     "text": "Gesamtcountdown folgt der Liste. Nach Sequenz-Pause wird der nächste Eintrag gespielt; restliche Halte-Takte des pausierten Eintrags werden dabei übersprungen."
                                 }
                             },
@@ -7698,37 +7780,43 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz-Transposition Pitch 2 in Cent; unabhängig von Pitch 1",
+                                    "comment": "03 · Sequenz-Transposition Pitch 2 in Cent; unabhängig von Pitch 1",
                                     "id": "cent2out",
                                     "index": 3,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 575.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 575.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Sequenz-Transposition Pitch 2 in Cent; unabhängig von Pitch 1",
+                                    "hint": "03 · Sequenz-Transposition Pitch 2 in Cent; unabhängig von Pitch 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "comment": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Cent)",
                                     "id": "effective1in",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 575.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 575.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "hint": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Cent)"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "comment": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Cent)",
                                     "id": "effective2in",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 715.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 715.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Cent)",
+                                    "hint": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Cent)"
                                 }
                             },
                             {
@@ -7868,14 +7956,16 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "comment": "01 · Gesamter Listentext aus gespeichertem Textfeld",
                                                     "id": "in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "hint": "01 · Gesamter Listentext aus gespeichertem Textfeld"
                                                 }
                                             },
                                             {
@@ -7898,24 +7988,28 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "clear; Listeneinträge; start → vorhandene coll",
+                                                    "comment": "01 · clear; Listeneinträge; start → vorhandene coll",
                                                     "id": "rows",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 440.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 440.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · clear; Listeneinträge; start → vorhandene coll",
+                                                    "hint": "01 · clear; Listeneinträge; start → vorhandene coll"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "comment": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
                                                     "id": "changed",
                                                     "index": 2,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 475.0, 440.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 475.0, 440.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "hint": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen"
                                                 }
                                             },
                                             {
@@ -7989,14 +8083,16 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "comment": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
                                     "id": "module-in",
                                     "index": 5,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 985.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 985.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "hint": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten"
                                 }
                             },
                             {
@@ -8031,50 +8127,58 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Sequenz gewünscht Ein/Aus",
+                                                    "comment": "01 · Sequenz gewünscht Ein/Aus",
                                                     "id": "request-in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 20.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Sequenz gewünscht Ein/Aus",
+                                                    "hint": "01 · Sequenz gewünscht Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "comment": "02 · Delay-Modul Ein/Aus",
                                                     "id": "module-in",
                                                     "index": 2,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 220.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 220.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Delay-Modul Ein/Aus",
+                                                    "hint": "02 · Delay-Modul Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "comment": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
                                                     "id": "list-in",
                                                     "index": 3,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 415.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 415.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "hint": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gemeinsame Delay-Taktkante",
+                                                    "comment": "04 · Gemeinsame Delay-Taktkante",
                                                     "id": "edge-in",
                                                     "index": 4,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "bang" ],
-                                                    "patching_rect": [ 765.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 765.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "04 · Gemeinsame Delay-Taktkante",
+                                                    "hint": "04 · Gemeinsame Delay-Taktkante"
                                                 }
                                             },
                                             {
@@ -8277,35 +8381,41 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "comment": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante",
                                                     "id": "first-out",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "hint": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "comment": "02 · Nächster logischer Delay-Takt der laufenden Liste",
                                                     "id": "advance-out",
                                                     "index": 2,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 290.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 290.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "hint": "02 · Nächster logischer Delay-Takt der laufenden Liste"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "comment": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
                                                     "id": "active-out",
                                                     "index": 3,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 575.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 575.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "hint": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1"
                                                 }
                                             },
                                             {
@@ -8375,13 +8485,15 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "comment": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
                                                     "id": "resume-out",
                                                     "index": 4,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 985.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 985.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "hint": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen"
                                                 }
                                             },
                                             {
@@ -8402,7 +8514,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, -10.0, 170.0, 22.0 ],
+                                                    "patching_rect": [ 20.0, -10.0, 170.0, 23 ],
                                                     "text": "Sequenzwunsch",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -8414,7 +8526,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 220.0, -10.0, 305.0, 22.0 ],
+                                                    "patching_rect": [ 220.0, -10.0, 305.0, 23 ],
                                                     "text": "Modul / Listenwechsel",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -8426,7 +8538,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 765.0, 80.0, 290.0, 22.0 ],
+                                                    "patching_rect": [ 765.0, 80.0, 290.0, 23 ],
                                                     "text": "Nächste Delay-Taktkante",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -8781,7 +8893,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 215.0, 240.0, 23.0 ],
+                                    "patching_rect": [ 20.0, 215.0, 240.0, 26 ],
                                     "text": "Ablauf / Listeneinträge",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8793,7 +8905,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 270.0, 220.0, 23.0 ],
+                                    "patching_rect": [ 315.0, 270.0, 220.0, 26 ],
                                     "text": "Dauer pro Eintrag",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8805,7 +8917,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 600.0, 215.0, 220.0, 23.0 ],
+                                    "patching_rect": [ 600.0, 215.0, 220.0, 26 ],
                                     "text": "Listenlänge berechnen",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8817,7 +8929,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 885.0, 270.0, 170.0, 23.0 ],
+                                    "patching_rect": [ 885.0, 270.0, 170.0, 26 ],
                                     "text": "Restliche Delay-Takte",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8829,7 +8941,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1060.0, 215.0, 220.0, 23.0 ],
+                                    "patching_rect": [ 1060.0, 215.0, 220.0, 26 ],
                                     "text": "Fortsetzen nach Pause",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8841,7 +8953,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 675.0, 830.0, 475.0, 23.0 ],
+                                    "patching_rect": [ 675.0, 830.0, 475.0, 26 ],
                                     "text": "Listentext übernehmen / speichern",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8853,7 +8965,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 810.0, 80.0, 21.0 ],
+                                    "patching_rect": [ 20.0, 810.0, 80.0, 23 ],
                                     "text": "Wert 1",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8865,7 +8977,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 810.0, 95.0, 21.0 ],
+                                    "patching_rect": [ 315.0, 810.0, 95.0, 23 ],
                                     "text": "Sequenz aktiv",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8877,7 +8989,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 575.0, 810.0, 80.0, 21.0 ],
+                                    "patching_rect": [ 575.0, 810.0, 80.0, 23 ],
                                     "text": "Wert 2",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -8891,7 +9003,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1040.0, 10.0, 433.0, 60.0 ],
+                                    "patching_rect": [ 1040.0, 10.0, 433.0, 68 ],
                                     "text": "Pitch-Sequenz\nSpielt zwei Pitch-Wertfolgen in Cent mit einer Dauer je Listeneintrag. Der Delay-Takt bestimmt die Fortschaltung; Start, Pause und Listenwechsel werden an dessen Taktkanten übernommen."
                                 }
                             }
@@ -9508,7 +9620,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1010.3448805809021, 1984.4828627109528, 521.6, 60.0 ],
+                    "patching_rect": [ 1010.3448805809021, 1984.4828627109528, 521.6, 68 ],
                     "text": "Sequenz AUS: bisherige Pitch-Regler → Link-Logik → zwei Auswahlschalter.\nSequenz AN: zwei unabhängige Listenwerte direkt an die Auswahlschalter.\nBeide Anzeigen lesen die wirksamen Cent-Werte; Haupt- und Schatten-Delays erhalten weiterhin dieselben Steuerbusse."
                 }
             },
@@ -9544,14 +9656,16 @@
                         "boxes": [
                             {
                                 "box": {
-                                    "comment": "Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "comment": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
                                     "id": "in",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "hint": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt"
                                 }
                             },
                             {
@@ -9591,13 +9705,15 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "comment": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
                                     "id": "out",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 245.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 245.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "hint": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active"
                                 }
                             },
                             {
@@ -9689,14 +9805,16 @@
                         "boxes": [
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Eingang: toggle · Anschluss 1",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "int" ],
-                                    "patching_rect": [ 20.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 20.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Eingang: toggle · Anschluss 1",
+                                    "hint": "01 · Eingang: toggle · Anschluss 1"
                                 }
                             },
                             {
@@ -9893,14 +10011,16 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
+                                    "comment": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
                                     "id": "timein",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 290.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 290.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur",
+                                    "hint": "02 · Eingestellte Delayzeit in Millisekunden; keine Latenzkorrektur"
                                 }
                             },
                             {
@@ -9946,26 +10066,30 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "comment": "01 · Delay-Modul Ein/Aus",
                                                     "id": "module-in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Delay-Modul Ein/Aus",
+                                                    "hint": "01 · Delay-Modul Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "comment": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
                                                     "id": "time-in",
                                                     "index": 2,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "float" ],
-                                                    "patching_rect": [ 255.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 255.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu",
+                                                    "hint": "02 · Übernommene Delayzeit in ms; jede Nachricht setzt die Phase neu"
                                                 }
                                             },
                                             {
@@ -10091,13 +10215,15 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "comment": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
                                                     "id": "clock-out",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 150.0, 410.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 150.0, 410.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen",
+                                                    "hint": "01 · Gemeinsame Taktkante: erster Bang eine Delayzeit nach Ein/Setzen"
                                                 }
                                             },
                                             {
@@ -10107,7 +10233,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 445.0, 400.0, 33.0 ],
+                                                    "patching_rect": [ 20.0, 445.0, 400.0, 53 ],
                                                     "text": "Modul EIN startet; AUS stoppt. Jede gesetzte Zeit: alten Timer stoppen, neue Dauer setzen, von dort neu zählen. Kein Sequenz-Start und kein Listenindex in diesem Zeitgeber."
                                                 }
                                             },
@@ -11056,24 +11182,28 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz-Transposition Shift Up in Hz",
+                                    "comment": "01 · Sequenz-Transposition Shift Up in Hz",
                                     "id": "centout",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 20.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Sequenz-Transposition Shift Up in Hz",
+                                    "hint": "01 · Sequenz-Transposition Shift Up in Hz"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "0 = manueller Hz-Regler; 1 = Sequenz übernimmt Shift Up",
+                                    "comment": "02 · 0 = manueller Hz-Regler; 1 = Sequenz übernimmt Shift Up",
                                     "id": "runout",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 315.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "02 · 0 = manueller Hz-Regler; 1 = Sequenz übernimmt Shift Up",
+                                    "hint": "02 · 0 = manueller Hz-Regler; 1 = Sequenz übernimmt Shift Up"
                                 }
                             },
                             {
@@ -11891,37 +12021,43 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz-Transposition Shift Down in Hz; unabhängig von Shift Up",
+                                    "comment": "03 · Sequenz-Transposition Shift Down in Hz; unabhängig von Shift Up",
                                     "id": "cent2out",
                                     "index": 3,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 575.0, 775.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 575.0, 775.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Sequenz-Transposition Shift Down in Hz; unabhängig von Shift Up",
+                                    "hint": "03 · Sequenz-Transposition Shift Down in Hz; unabhängig von Shift Up"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "comment": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Hz)",
                                     "id": "effective1in",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 575.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 575.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "hint": "03 · Wirksamer Pitch-1-Wert nach Auswahl manuell/Sequenz (Hz)"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "comment": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Hz)",
                                     "id": "effective2in",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 715.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 715.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Hz)",
+                                    "hint": "04 · Wirksamer Pitch-2-Wert nach Auswahl manuell/Sequenz (Hz)"
                                 }
                             },
                             {
@@ -12063,14 +12199,16 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "comment": "01 · Gesamter Listentext aus gespeichertem Textfeld",
                                                     "id": "in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 15.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Gesamter Listentext aus gespeichertem Textfeld",
+                                                    "hint": "01 · Gesamter Listentext aus gespeichertem Textfeld"
                                                 }
                                             },
                                             {
@@ -12093,24 +12231,28 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "clear; Listeneinträge; start → vorhandene coll",
+                                                    "comment": "01 · clear; Listeneinträge; start → vorhandene coll",
                                                     "id": "rows",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 440.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 440.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · clear; Listeneinträge; start → vorhandene coll",
+                                                    "hint": "01 · clear; Listeneinträge; start → vorhandene coll"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "comment": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
                                                     "id": "changed",
                                                     "index": 2,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 475.0, 440.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 475.0, 440.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen",
+                                                    "hint": "02 · Gültige Liste geändert/geladen: Sequenz und Countdown neu beginnen"
                                                 }
                                             },
                                             {
@@ -12184,14 +12326,16 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "comment": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
                                     "id": "module-in",
                                     "index": 5,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 985.0, 45.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 985.0, 45.0, 30.0, 30.0 ],
+                                    "annotation": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten",
+                                    "hint": "05 · Ein/Aus desselben Delay-Moduls: Takt starten/stoppen, Listenposition behalten"
                                 }
                             },
                             {
@@ -12226,50 +12370,58 @@
                                         "boxes": [
                                             {
                                                 "box": {
-                                                    "comment": "Sequenz gewünscht Ein/Aus",
+                                                    "comment": "01 · Sequenz gewünscht Ein/Aus",
                                                     "id": "request-in",
                                                     "index": 1,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 20.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Sequenz gewünscht Ein/Aus",
+                                                    "hint": "01 · Sequenz gewünscht Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Delay-Modul Ein/Aus",
+                                                    "comment": "02 · Delay-Modul Ein/Aus",
                                                     "id": "module-in",
                                                     "index": 2,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "int" ],
-                                                    "patching_rect": [ 220.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 220.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Delay-Modul Ein/Aus",
+                                                    "hint": "02 · Delay-Modul Ein/Aus"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "comment": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
                                                     "id": "list-in",
                                                     "index": 3,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "" ],
-                                                    "patching_rect": [ 415.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 415.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken",
+                                                    "hint": "03 · Liste geändert: ersten Eintrag für nächste Taktkante vormerken"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Gemeinsame Delay-Taktkante",
+                                                    "comment": "04 · Gemeinsame Delay-Taktkante",
                                                     "id": "edge-in",
                                                     "index": 4,
                                                     "maxclass": "inlet",
                                                     "numinlets": 0,
                                                     "numoutlets": 1,
                                                     "outlettype": [ "bang" ],
-                                                    "patching_rect": [ 765.0, 25.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 765.0, 25.0, 30.0, 30.0 ],
+                                                    "annotation": "04 · Gemeinsame Delay-Taktkante",
+                                                    "hint": "04 · Gemeinsame Delay-Taktkante"
                                                 }
                                             },
                                             {
@@ -12472,35 +12624,41 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "comment": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante",
                                                     "id": "first-out",
                                                     "index": 1,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 20.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante",
+                                                    "hint": "01 · Erster Listeneintrag, ausschließlich an einer Taktkante"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "comment": "02 · Nächster logischer Delay-Takt der laufenden Liste",
                                                     "id": "advance-out",
                                                     "index": 2,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 290.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 290.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "02 · Nächster logischer Delay-Takt der laufenden Liste",
+                                                    "hint": "02 · Nächster logischer Delay-Takt der laufenden Liste"
                                                 }
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "comment": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
                                                     "id": "active-out",
                                                     "index": 3,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 575.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 575.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1",
+                                                    "hint": "03 · Tatsächliche Sequenz-Übernahme der Pitch-Steuerung 0/1"
                                                 }
                                             },
                                             {
@@ -12570,13 +12728,15 @@
                                             },
                                             {
                                                 "box": {
-                                                    "comment": "Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "comment": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
                                                     "id": "resume-out",
                                                     "index": 4,
                                                     "maxclass": "outlet",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 985.0, 585.0, 30.0, 30.0 ]
+                                                    "patching_rect": [ 985.0, 585.0, 30.0, 30.0 ],
+                                                    "annotation": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen",
+                                                    "hint": "04 · Nach Sequenz-Pause: nächsten Listeneintrag an Taktkante spielen"
                                                 }
                                             },
                                             {
@@ -12597,7 +12757,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 20.0, -10.0, 170.0, 22.0 ],
+                                                    "patching_rect": [ 20.0, -10.0, 170.0, 23 ],
                                                     "text": "Sequenzwunsch",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -12609,7 +12769,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 220.0, -10.0, 305.0, 22.0 ],
+                                                    "patching_rect": [ 220.0, -10.0, 305.0, 23 ],
                                                     "text": "Modul / Listenwechsel",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -12621,7 +12781,7 @@
                                                     "maxclass": "comment",
                                                     "numinlets": 1,
                                                     "numoutlets": 0,
-                                                    "patching_rect": [ 765.0, 80.0, 290.0, 22.0 ],
+                                                    "patching_rect": [ 765.0, 80.0, 290.0, 23 ],
                                                     "text": "Nächste Delay-Taktkante",
                                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                                 }
@@ -12976,7 +13136,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 215.0, 240.0, 24.0 ],
+                                    "patching_rect": [ 20.0, 215.0, 240.0, 26 ],
                                     "text": "Ablauf / Listeneinträge",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -12988,7 +13148,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 270.0, 220.0, 24.0 ],
+                                    "patching_rect": [ 315.0, 270.0, 220.0, 26 ],
                                     "text": "Dauer pro Eintrag",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13000,7 +13160,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 600.0, 215.0, 220.0, 24.0 ],
+                                    "patching_rect": [ 600.0, 215.0, 220.0, 26 ],
                                     "text": "Listenlänge berechnen",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13012,7 +13172,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 885.0, 270.0, 170.0, 24.0 ],
+                                    "patching_rect": [ 885.0, 270.0, 170.0, 26 ],
                                     "text": "Restliche Delay-Takte",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13024,7 +13184,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 1060.0, 215.0, 220.0, 24.0 ],
+                                    "patching_rect": [ 1060.0, 215.0, 220.0, 26 ],
                                     "text": "Fortsetzen nach Pause",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13036,7 +13196,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 675.0, 830.0, 475.0, 24.0 ],
+                                    "patching_rect": [ 675.0, 830.0, 475.0, 26 ],
                                     "text": "Listentext übernehmen / speichern",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13048,7 +13208,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 20.0, 810.0, 80.0, 22.0 ],
+                                    "patching_rect": [ 20.0, 810.0, 80.0, 23 ],
                                     "text": "Wert 1",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13060,7 +13220,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 315.0, 810.0, 95.0, 22.0 ],
+                                    "patching_rect": [ 315.0, 810.0, 95.0, 23 ],
                                     "text": "Sequenz aktiv",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13072,7 +13232,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 575.0, 810.0, 80.0, 22.0 ],
+                                    "patching_rect": [ 575.0, 810.0, 80.0, 23 ],
                                     "text": "Wert 2",
                                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                                 }
@@ -13728,14 +13888,16 @@
                         "boxes": [
                             {
                                 "box": {
-                                    "comment": "Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "comment": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
                                     "id": "in",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt",
+                                    "hint": "01 · Sequenzstatus: 0 = normale Farben und Maus; 1 = grau und Maus gesperrt"
                                 }
                             },
                             {
@@ -13775,13 +13937,15 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "comment": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
                                     "id": "out",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 245.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 245.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active",
+                                    "hint": "01 · Nur Farbattribute und ignoreclick; kein Wert, kein hidden, kein active"
                                 }
                             },
                             {
@@ -13847,7 +14011,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 56.896554708480835, 1979.3104486465454, 902.0, 60.0 ],
+                    "patching_rect": [ 56.896554708480835, 1979.3104486465454, 902.0, 83 ],
                     "text": "Frequency-Sequenz: vorhandene Linked-/Unlinked-Logik unverändert vor den beiden Wahlschaltern.\nSequenz AUS: aktuelle manuelle Hz-Werte; Sequenz AN: zwei unabhängige Hz-Listenwerte.\nDie gewählten Hz-Beträge gehen gemeinsam an Hauptdelay und bestehende ---freqshiftamountup/down-Busse. Keine Vorzeichenumkehr und keine Cent-Umrechnung.\nEigene Listenablage #0-freq-sequence-data; Zeit-/Fortsetzungslogik wie im Pitch-System."
                 }
             },
@@ -13858,7 +14022,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 170.6896641254425, 1677.58629488945, 680.0, 27.0 ],
+                    "patching_rect": [ 170.6896641254425, 1677.58629488945, 680.0, 30 ],
                     "text": "FREQUENCY · Sequenz und manuelle Werte",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -13870,7 +14034,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 450.00002360343933, 1808.620784521103, 216.0, 21.0 ],
+                    "patching_rect": [ 450.00002360343933, 1808.620784521103, 216.0, 23 ],
                     "text": "Sequenzstatus / Link-Anzeige",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -13882,7 +14046,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 215.51725268363953, 1768.9656100273132, 88.0, 21.0 ],
+                    "patching_rect": [ 215.51725268363953, 1768.9656100273132, 88.0, 23 ],
                     "text": "Ein/Aus",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -13894,7 +14058,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 900.0000472068787, 1677.58629488945, 680.0, 27.0 ],
+                    "patching_rect": [ 900.0000472068787, 1677.58629488945, 680.0, 30 ],
                     "text": "PITCH · Sequenz und manuelle Werte",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -13906,7 +14070,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1179.3104066848755, 1808.620784521103, 216.0, 21.0 ],
+                    "patching_rect": [ 1179.3104066848755, 1808.620784521103, 216.0, 23 ],
                     "text": "Sequenzstatus / Link-Anzeige",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -13918,7 +14082,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 944.8276357650757, 1768.9656100273132, 88.0, 21.0 ],
+                    "patching_rect": [ 944.8276357650757, 1768.9656100273132, 88.0, 23 ],
                     "text": "Ein/Aus",
                     "textcolor": [ 0.22, 0.43, 0.48, 1.0 ]
                 }
@@ -14032,84 +14196,98 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Manueller Wert 1",
+                                    "comment": "01 · Manueller Wert 1",
                                     "id": "enc-in-0",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Manueller Wert 1",
+                                    "hint": "01 · Manueller Wert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Manueller Wert 2",
+                                    "comment": "02 · Manueller Wert 2",
                                     "id": "enc-in-1",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 150.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 150.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Manueller Wert 2",
+                                    "hint": "02 · Manueller Wert 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenzwert 1",
+                                    "comment": "03 · Sequenzwert 1",
                                     "id": "enc-in-2",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "float" ],
-                                    "patching_rect": [ 270.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 270.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Sequenzwert 1",
+                                    "hint": "03 · Sequenzwert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenzwert 2",
+                                    "comment": "04 · Sequenzwert 2",
                                     "id": "enc-in-3",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 390.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 390.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "04 · Sequenzwert 2",
+                                    "hint": "04 · Sequenzwert 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz aktiv",
+                                    "comment": "05 · Sequenz aktiv",
                                     "id": "enc-in-4",
                                     "index": 5,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 510.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 510.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "05 · Sequenz aktiv",
+                                    "hint": "05 · Sequenz aktiv"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Wert 1",
+                                    "comment": "01 · Wirksamer Wert 1",
                                     "id": "enc-out-0",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 270.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 270.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Wirksamer Wert 1",
+                                    "hint": "01 · Wirksamer Wert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Wert 2",
+                                    "comment": "02 · Wirksamer Wert 2",
                                     "id": "enc-out-1",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 270.0, 270.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 270.0, 270.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Wirksamer Wert 2",
+                                    "hint": "02 · Wirksamer Wert 2"
                                 }
                             },
                             {
@@ -14377,84 +14555,98 @@
                             },
                             {
                                 "box": {
-                                    "comment": "Manueller Wert 1",
+                                    "comment": "01 · Manueller Wert 1",
                                     "id": "enc-in-0",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "float" ],
-                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Manueller Wert 1",
+                                    "hint": "01 · Manueller Wert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Manueller Wert 2",
+                                    "comment": "02 · Manueller Wert 2",
                                     "id": "enc-in-1",
                                     "index": 2,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 150.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 150.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Manueller Wert 2",
+                                    "hint": "02 · Manueller Wert 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenzwert 1",
+                                    "comment": "03 · Sequenzwert 1",
                                     "id": "enc-in-2",
                                     "index": 3,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "float" ],
-                                    "patching_rect": [ 270.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 270.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "03 · Sequenzwert 1",
+                                    "hint": "03 · Sequenzwert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenzwert 2",
+                                    "comment": "04 · Sequenzwert 2",
                                     "id": "enc-in-3",
                                     "index": 4,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 390.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 390.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "04 · Sequenzwert 2",
+                                    "hint": "04 · Sequenzwert 2"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Sequenz aktiv",
+                                    "comment": "05 · Sequenz aktiv",
                                     "id": "enc-in-4",
                                     "index": 5,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 510.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 510.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "05 · Sequenz aktiv",
+                                    "hint": "05 · Sequenz aktiv"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Wert 1",
+                                    "comment": "01 · Wirksamer Wert 1",
                                     "id": "enc-out-0",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 270.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 270.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Wirksamer Wert 1",
+                                    "hint": "01 · Wirksamer Wert 1"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "Wirksamer Wert 2",
+                                    "comment": "02 · Wirksamer Wert 2",
                                     "id": "enc-out-1",
                                     "index": 2,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 270.0, 270.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 270.0, 270.0, 30.0, 30.0 ],
+                                    "annotation": "02 · Wirksamer Wert 2",
+                                    "hint": "02 · Wirksamer Wert 2"
                                 }
                             },
                             {
@@ -14700,25 +14892,29 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Modulstatus 0/1: aus nach 60 ms, ein sofort; Ein stoppt wartende Abschaltung",
                                     "id": "enc-in-0",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 20.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Modulstatus 0/1: aus nach 60 ms, ein sofort; Ein stoppt wartende Abschaltung",
+                                    "hint": "01 · Modulstatus 0/1: aus nach 60 ms, ein sofort; Ein stoppt wartende Abschaltung"
                                 }
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Mute-Liste: 1 1 Verarbeitung samt Unterpatchern aus, 0 1 ein",
                                     "id": "enc-out-0",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 30.0, 275.0, 30.0, 30.0 ]
+                                    "patching_rect": [ 30.0, 275.0, 30.0, 30.0 ],
+                                    "annotation": "01 · Mute-Liste: 1 1 Verarbeitung samt Unterpatchern aus, 0 1 ein",
+                                    "hint": "01 · Mute-Liste: 1 1 Verarbeitung samt Unterpatchern aus, 0 1 ein"
                                 }
                             },
                             {

@@ -116,7 +116,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 36.0, 302.5, 85.5, 100.0 ],
+                    "patching_rect": [ 36.0, 302.5, 85.5, 106 ],
                     "text": "Maximum delay time is one signal vector plus maximum window size."
                 }
             },
@@ -144,7 +144,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 511.0, 433.0, 231.0, 42.0 ],
+                    "patching_rect": [ 535.0, 433.0, 231.0, 42.0 ],
                     "text": "Guarantee that tapout~ delay time will be at least one signal vector"
                 }
             },
@@ -159,7 +159,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 754.0, 334.0, 124.0, 57.0 ],
+                    "patching_rect": [ 778.0, 334.0, 124.0, 57.0 ],
                     "text": "Calculate length of one signal vector in ms."
                 }
             },
@@ -172,7 +172,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 259.0, 360.5, 124.0, 38.0 ],
+                    "patching_rect": [ 259.0, 360.5, 124.0, 40 ],
                     "text": "phasor~ scans one window of sound."
                 }
             },
@@ -184,7 +184,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 36.0, 171.0, 132.0, 22.0 ],
+                    "patching_rect": [ 12.0, 171.0, 132.0, 23 ],
                     "text": "midicents to midifloat"
                 }
             },
@@ -223,7 +223,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 554.5, 195.0, 145.0, 53.0 ],
+                    "patching_rect": [ 578.5, 195.0, 145.0, 56 ],
                     "text": "When tranposition is 0, phase is reset to avoid doubled transients."
                 }
             },
@@ -235,7 +235,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 4.0, 4.0, 143.0, 22.0 ],
+                    "patching_rect": [ 4.0, 4.0, 143.0, 23 ],
                     "text": "audio to be transposed"
                 }
             },
@@ -248,7 +248,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 170.0, 4.0, 159.0, 38.0 ],
+                    "patching_rect": [ 170.0, -20.0, 159.0, 40 ],
                     "text": "transposition in midicents (±2400 = ±2 octaves)"
                 }
             },
@@ -260,7 +260,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 437.0, 3.0, 110.0, 22.0 ],
+                    "patching_rect": [ 437.0, 3.0, 110.0, 23 ],
                     "text": "window size (ms)"
                 }
             },
@@ -272,7 +272,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 196.0, 620.0, 134.0, 22.0 ],
+                    "patching_rect": [ 220.0, 620.0, 134.0, 23 ],
                     "text": "transposed signal out"
                 }
             },
@@ -285,7 +285,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 620.0, 47.0, 351.0, 116.0 ],
+                    "patching_rect": [ 620.0, 47.0, 351.0, 123 ],
                     "text": "Increasing the phasor~ frequency, increases the \"playback speed\" of tapout~. The resulting Doppler effect shifts the pitch of the sound. Since the delay time can't increase indefinitely, the output sound is taken from two alternating  tapout~ objects, whose outputs are cross-faded by a window function. The second phasor~ and cycle~ are exactly out of phase with the first."
                 }
             },
@@ -380,14 +380,16 @@
                             },
                             {
                                 "box": {
-                                    "comment": "",
+                                    "comment": "01 · Bang: Überblendungstabelle im instanzlokalen Buffer erzeugen",
                                     "id": "obj-1",
                                     "index": 1,
                                     "maxclass": "inlet",
                                     "numinlets": 0,
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
-                                    "patching_rect": [ 19.0, 2.0, 25.0, 25.0 ]
+                                    "patching_rect": [ 19.0, 2.0, 25.0, 25.0 ],
+                                    "annotation": "01 · Bang: Überblendungstabelle im instanzlokalen Buffer erzeugen",
+                                    "hint": "01 · Bang: Überblendungstabelle im instanzlokalen Buffer erzeugen"
                                 }
                             },
                             {
@@ -399,7 +401,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 146.5, 183.0, 197.0, 84.0 ],
+                                    "patching_rect": [ 146.5, 111.0, 197.0, 90 ],
                                     "text": "In listening tests, several classic window functions (hanning, hamming, squareroot, sinusoid) were tried. The sine function seemed to sound the best."
                                 }
                             },
@@ -412,8 +414,8 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 277.0, 346.0, 238.0, 131.0 ],
-                                    "text": "This subpatcher creates a window (amplitude envelope) which crossfades the two tapout~ outputs with negligible drop in power. In particular, at the phasor~ reset moment, no click is heard (thanks to the .1). Larger signal vector sizes result in higher resolution buffer~ waveform."
+                                    "patching_rect": [ 301.0, 346.0, 238.0, 131.0 ],
+                                    "text": "Erzeugt die Überblendungsfunktion im instanzlokalen #0windo-Buffer. peek~ schreibt die Tabelle; cycle~ liest sie im Transposer. Die Tabellenlänge wird durch die Größenbefehle und den uzi-Durchlauf im Patch festgelegt, nicht durch die Signalvektorgröße."
                                 }
                             },
                             {
@@ -431,13 +433,15 @@
                             },
                             {
                                 "box": {
-                                    "comment": "notify cycle~ of change",
+                                    "comment": "01 · Set-Nachricht: cycle~ an #0windo anbinden",
                                     "id": "obj-3",
                                     "index": 1,
                                     "maxclass": "outlet",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 46.5, 463.5, 25.0, 25.0 ]
+                                    "patching_rect": [ 46.5, 463.5, 25.0, 25.0 ],
+                                    "annotation": "01 · Set-Nachricht: cycle~ an #0windo anbinden",
+                                    "hint": "01 · Set-Nachricht: cycle~ an #0windo anbinden"
                                 }
                             },
                             {
@@ -631,13 +635,15 @@
             },
             {
                 "box": {
-                    "comment": "transposed signal out",
+                    "comment": "01 · transposed signal out",
                     "id": "obj-49",
                     "index": 1,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 170.0, 618.0, 25.0, 25.0 ]
+                    "patching_rect": [ 170.0, 618.0, 25.0, 25.0 ],
+                    "annotation": "01 · transposed signal out",
+                    "hint": "01 · transposed signal out"
                 }
             },
             {
@@ -903,14 +909,16 @@
             },
             {
                 "box": {
-                    "comment": "(float) window size, ms",
+                    "comment": "03 · (float) window size, ms",
                     "id": "obj-17",
                     "index": 3,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 436.0, 40.0, 25.0, 25.0 ]
+                    "patching_rect": [ 436.0, 40.0, 25.0, 25.0 ],
+                    "annotation": "03 · (float) window size, ms",
+                    "hint": "03 · (float) window size, ms"
                 }
             },
             {
@@ -1006,14 +1014,16 @@
             },
             {
                 "box": {
-                    "comment": "(float) transposition in midicents",
+                    "comment": "02 · (float) transposition in midicents",
                     "id": "obj-5",
                     "index": 2,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 170.0, 41.0, 25.0, 25.0 ]
+                    "patching_rect": [ 170.0, 41.0, 25.0, 25.0 ],
+                    "annotation": "02 · (float) transposition in midicents",
+                    "hint": "02 · (float) transposition in midicents"
                 }
             },
             {
@@ -1031,14 +1041,16 @@
             },
             {
                 "box": {
-                    "comment": "(signal) sound to be transposed",
+                    "comment": "01 · (signal) sound to be transposed",
                     "id": "obj-2",
                     "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 17.0, 41.0, 25.0, 25.0 ]
+                    "patching_rect": [ 17.0, 41.0, 25.0, 25.0 ],
+                    "annotation": "01 · (signal) sound to be transposed",
+                    "hint": "01 · (signal) sound to be transposed"
                 }
             }
         ],
